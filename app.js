@@ -2,7 +2,7 @@ import * as E from './engine.js';
 const $=id=>document.getElementById(id), esc=x=>String(x??'').replace(/[&<>"']/g,y=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[y]));
 const display=n=>roster.find(c=>c.asset_name===n)?.full_name||n;
 const KEY='sgc-browser-v1-save',DIRDB='sgc_browser_feasibility',HANDKEY='assets-directory';
-let roster=[],packs={},view='menu',mode='dice',game=null,selected=['Ahsoka','Jack'],human='Ahsoka',rosterTab=0,search='',spectator=false,playerName='Player',gender='male',confidence=3,background='Nightclub',discard=new Set(),folder=null,assets=new Map(),objects=new Map(),loadedImgs=new Map(),sceneSprites=new Map(),folderInfo='',lastSpin=-1;
+let roster=[],packs={},view='menu',mode='dice',game=null,selected=['Ahsoka','Jack'],human='Ahsoka',rosterTab=0,search='',spectator=false,playerName='Player',gender='male',confidence=3,background='Nightclub',discard=new Set(),folder=null,assets=new Map(),objects=new Map(),loadedImgs=new Map(),sceneSprites=new Map(),folderInfo='',lastSpin=-1,immersive=false,sceneViewerData='',sceneZoom=1;
 const menuModes=[['dice','🎲','Dice','Highest chooses. Lowest loses.'],['memory','🃏','Strip Memory','Reveal a character, choose a penalty.'],['wheel','🎡','Wheel of Misfortune','Sixteen segments, votes and recovery.'],['holdem','♠','Strip Hold’em','Flop, turn, river and showdown.'],['draw','♥','Five-Card Draw','Two exchange rounds per hand.']];
 const backgroundFiles={'Nightclub':'Background_Nightclub.png','Strip Club':'Background_Strip_Club.png','Sleek Office':'Background_Sleek_Office.png','Market Square':'Background_Market_Square.png','London Eye':'Background_London_Eye.png','The White House':'Background_The_Whitehouse.png','Skyscraper Roof':'Background_Skyscraper_Roof.png','Park':'Background_Park.png','Field':'Background_Field.png','Tropical Beach':'Background_Tropical_Beach.png','Mars':'Background_Mars.png','Dungeon':'Background_Dungeon.png','Sex Shop':'Background_Sex_Shop.png','Theatre':'Background_Theatre.png','Haunted Church':'Background_Haunted_Church.png','Haunted Graveyard':'Background_Haunted_Graveyard.png','Enchanted Forest':'Background_Enchanted_Forest.png'};
 const saveAll=()=>{try{localStorage.setItem(KEY,JSON.stringify({games:saves,selected,human,playerName,gender,confidence,background,spectator,mode}))}catch(e){console.warn('Could not save game',e);toast('Browser storage is full; export your saves.')}};
@@ -20,7 +20,7 @@ const has=n=>assets.has(n.toLowerCase());
 async function urlFor(filename){let key=filename.toLowerCase();if(objects.has(key))return objects.get(key);const h=assets.get(key);if(!h)return null;const f=await h.getFile(),url=URL.createObjectURL(f);objects.set(key,url);return url;}
 async function imgFor(filename){const key=filename.toLowerCase();if(loadedImgs.has(key))return loadedImgs.get(key);const url=await urlFor(filename);if(!url)return null;let image=new Image();image.src=url;try{await image.decode();loadedImgs.set(key,image);return image;}catch(_e){return null;}}
 function filename(asset,state='TJBP'){return `${asset}_${state}.png`}
-function header(){return `<header class="top"><div class="brand" data-nav="menu"><span class="emblem">✦</span><div><div class="eyebrow">STRIP GAMES COMPENDIUM</div><div class="brand-title">THE PRIVATE CLUB <small>Browser Edition</small></div></div></div><div class="top-actions"><span class="pill">v1.0.3</span><button class="small-btn" data-action="folder">${folder?'📁 '+assets.size:'📁 Assets'}</button></div></header>`;}
+function header(){return `<header class="top"><div class="brand" data-nav="menu"><span class="emblem">✦</span><div><div class="eyebrow">STRIP GAMES COMPENDIUM</div><div class="brand-title">THE PRIVATE CLUB <small>Browser Edition</small></div></div></div><div class="top-actions"><span class="pill">v1.0.4</span><button class="small-btn" data-action="folder">${folder?'📁 '+assets.size:'📁 Assets'}</button></div></header>`;}
 function frame(content){$('app').innerHTML=`${header()}<main class="main">${content}</main>`;}
 function menu(){const tiles=menuModes.map(([id,ico,title,descr])=>`<button class="menu-tile" data-open="${id}"><span class="menu-icon">${ico}</span><span class="menu-title">${esc(title)}</span><span class="menu-description">${esc(descr)}</span><span class="menu-resume">${saves[id]?'RESUME OR NEW GAME':'CHOOSE PLAYERS'}</span></button>`).join('');
  frame(`<section class="menu"><div class="menu-heading"><span class="eyebrow">OFFLINE • FIVE GAMES • 65 CHARACTERS</span><h1>Choose your game</h1><p>Entirely on your phone. All artwork stays in your own separate Assets folder.</p></div><div class="menu-tiles">${tiles}</div><div class="menu-bottom"><span>${folder?'✓ '+esc(folderInfo):'⚠ Connect your separate Assets folder to display portraits'}</span><button class="small-btn" data-nav="settings">Assets &amp; saves</button></div></section>`);}
@@ -55,8 +55,17 @@ function wheelActions(){const g=game,spinner=E.wheelSpinner(g);let html=`<div cl
 function cardArt(c){if(!c)return `<span class="card back">${has('card_back.png')?'<img data-asset="card_back.png" alt="Face-down card">':'🂠'}</span>`;const rankName= c.r===14?'ace':c.r===13?'king':c.r===12?'queen':c.r===11?'jack':String(c.r),suit=['spades','hearts','diamonds','clubs'][c.s];const file=`${rankName}_of_${suit}${c.r>=11&&c.r<=13?'2':''}.png`;
  return `<span class="card ${c.s===1||c.s===2?'red':''}"><span class="card-label">${esc(E.cardLabel(c))}</span>${has(file)?`<img data-asset="${file}" alt="" loading="lazy">`:''}</span>`;}
 function drawActions(){const g=game;let html=`<div class="hand-caption">Hand ${g.handNum} · Draw round ${g.drawRound} / 2 · ${esc(g.phase==='draw'?E.pokerActor(g).name+' to exchange':'Showdown')}</div>`;
- if(g.phase==='draw'){const actor=E.pokerActor(g);html+=`<div class="playing-row">${actor.hand.map((c,i)=>`<button class="select-card ${discard.has(i)?'discarded':''}" data-discard="${i}" ${actor.id!==g.human?'disabled':''}>${cardArt(c)}<small>${discard.has(i)?'EXCHANGE':'KEEP'}</small></button>`).join('')}</div>`;html+=actor.id===g.human?actionBtn(`Exchange ${discard.size} selected / Stand pat`,'exchange','','primary'):actionBtn(`Play ${actor.name}'s exchange`,'ai','','primary');}
- else html+=`<div class="showdown-rows">${g.showdown.map(s=>`<span>${esc(s.name)}: <strong>${esc(s.rank.label)}</strong></span>`).join('')}</div>`+pokerButtons();return html;}
+ if(g.phase==='draw'){
+  const actor=E.pokerActor(g),isHuman=!!g.human&&actor.id===g.human;
+  html+=isHuman?`<p class="guide">Your hand — tap cards to exchange.</p>`:`<p class="guide">${esc(actor.name)} is exchanging cards. Opponents' hands remain face-down until showdown.</p>`;
+  html+=`<div class="playing-row">${actor.hand.map((c,i)=>isHuman?`<button class="select-card ${discard.has(i)?'discarded':''}" data-discard="${i}" aria-label="${discard.has(i)?'Exchange':'Keep'} ${esc(E.cardLabel(c))}">${cardArt(c)}<small>${discard.has(i)?'EXCHANGE':'KEEP'}</small></button>`:`<span class="select-card ai-card">${cardArt(null)}<small>HIDDEN</small></span>`).join('')}</div>`;
+  html+=isHuman?actionBtn(`Exchange ${discard.size} selected / Stand pat`,'exchange','','primary'):actionBtn(`Play ${actor.name}'s exchange`,'ai','','primary');
+ }else{
+  html+=`<div class="showdown-rows poker-showdown">${g.showdown.map(s=>{
+   const p=g.people.find(p=>p.id===s.id);
+   return `<div class="showdown-hand"><div class="showdown-title">${esc(s.name)}: <strong>${esc(s.rank.label)}</strong></div><div class="playing-row showdown-cards">${(p?.hand||[]).map(cardArt).join('')}</div></div>`;
+  }).join('')}</div>`+pokerButtons();
+ }return html;}
 function holdemActions(){const g=game;let html=`<div class="hand-caption">Hand ${g.handNum} · ${esc(g.phase==='preflop'?'Pre-flop':g.phase)}</div><div class="playing-row board">${g.board.map((c,i)=>i<g.revealed?cardArt(c):cardArt(null)).join('')}</div>`;
  const user=g.people.find(p=>p.id===g.human);if(user)html+=`<div class="hand-caption">Your cards</div><div class="playing-row hole">${user.hand.map(cardArt).join('')}</div>`;
  if(g.phase==='preflop')html+=actionBtn('Reveal flop','holdemNext','','primary');else if(g.phase==='flop')html+=actionBtn('Reveal turn','holdemNext','','primary');else if(g.phase==='turn')html+=actionBtn('Reveal river','holdemNext','','primary');else if(g.phase==='river')html+=actionBtn('Showdown','holdemNext','','primary');else html+=`<div class="showdown-rows">${g.showdown.map(s=>`<span>${esc(s.name)}: <strong>${esc(s.rank.label)}</strong></span>`).join('')}</div>`+pokerButtons();return html;}
@@ -147,8 +156,93 @@ async function drawScene(){
 }
 async function fillAssets(){const images=document.querySelectorAll('img[data-asset]');await Promise.all([...images].map(async el=>{let file=el.dataset.asset,url=await urlFor(file);if(el.isConnected&&url)el.src=url;}));}
 function gameView(){if(!game){view='setup';setupView();return;}const g=game;const words=g.dialogue||roster.find(c=>c.asset_name===g.people.find(p=>p.id===g.highlight)?.asset)?.stage_dialogue?.[E.stateOf(g.people.find(p=>p.id===g.highlight)||g.people[0])]||'';
- frame(`<div class="game-screen"><div class="game-top"><button class="small-btn" data-nav="menu">← Menu</button><span class="game-name">${esc(E.MODES[g.mode])} <small>· ${esc(g.phase.replaceAll('_',' '))}</small></span><button class="small-btn" data-action="new">New game</button></div><div class="game-main"><div class="scene-wrap"><canvas id="scene" width="1180" height="590" role="img" aria-label="Current game scene with all players"></canvas></div><section class="game-controls panel"><div class="turn-info"><span class="eyebrow">ROUND ${g.round||g.handNum||1} · ${esc(g.phase.replaceAll('_',' ').toUpperCase())}</span><p class="notice">${esc(g.notice)}</p></div><div class="actions-scroll">${phaseActions()}</div>${words?`<div class="speech"><b>${esc(actorName(g.highlight))}</b> ${esc(words)}</div>`:''}</section></div>${participants()}</div>`);drawScene().catch(console.warn);fillAssets();if(g.mode==='wheel')animateWheel();}
+ frame(`<div class="game-screen"><div class="game-top"><button class="small-btn" data-nav="menu">← Menu</button><span class="game-name">${esc(E.MODES[g.mode])} <small>· ${esc(g.phase.replaceAll('_',' '))}</small></span><button class="small-btn" data-action="new">New game</button></div><div class="game-main"><div class="scene-wrap" title="Double-tap scene to toggle toolbars"><canvas id="scene" width="1180" height="590" role="img" aria-label="Current game scene with all players"></canvas><button class="scene-expand" data-action="sceneView" aria-label="View, zoom and save scene image">⛶ View / Save</button></div><section class="game-controls panel"><div class="turn-info"><span class="eyebrow">ROUND ${g.round||g.handNum||1} · ${esc(g.phase.replaceAll('_',' ').toUpperCase())}</span><p class="notice">${esc(g.notice)}</p></div><div class="actions-scroll">${phaseActions()}</div>${words?`<div class="speech"><b>${esc(actorName(g.highlight))}</b> ${esc(words)}</div>`:''}</section></div>${participants()}</div>`);drawScene().catch(console.warn);fillAssets();if(g.mode==='wheel')animateWheel();}
 function animateWheel(){const el=$('wheelDisc');if(!el)return;const angle=game.spinAngle||0;if(game.wheelIndex>=0&&lastSpin!==angle){el.style.transform='rotate(0deg)';requestAnimationFrame(()=>requestAnimationFrame(()=>{if(el.isConnected)el.style.transform=`rotate(${angle}deg)`;}));lastSpin=angle;}else el.style.transform=`rotate(${angle%360}deg)`;}
+// Scene viewer: the image is exported from the *local* canvas. Nothing is uploaded.
+function sceneSnapshot(){
+ const cv=$('scene');if(!cv)throw Error('Scene not available yet.');
+ return cv.toDataURL('image/png');
+}
+function openSceneViewer(){
+ try{
+  sceneViewerData=sceneSnapshot();sceneZoom=1;
+  const old=$('sceneViewer');if(old)old.remove();
+  const el=document.createElement('div');el.id='sceneViewer';el.className='scene-view';
+  el.setAttribute('role','dialog');el.setAttribute('aria-modal','true');el.setAttribute('aria-label','Scene image viewer');
+  el.innerHTML=`<div class="scene-view-toolbar"><button data-view-action="close">✕ Close</button><button data-view-action="minus" aria-label="Zoom out">−</button><button data-view-action="reset">100%</button><button data-view-action="plus" aria-label="Zoom in">+</button><button data-view-action="full">⛶ Full screen</button><button class="primary" data-view-action="save">⬇ Save PNG</button></div><div class="scene-view-scroll" id="sceneViewScroll"><div class="scene-view-zoom" id="sceneViewZoom"><img id="sceneViewImage" alt="Current Compendium scene" src="${sceneViewerData}"></div></div><div class="scene-view-hint">Pinch or use +/− to zoom · Drag to move the image</div>`;
+  document.body.appendChild(el);
+  // Pinch zoom without causing Chrome to scroll the underlying game.
+  const scroll=$('sceneViewScroll');let baseDistance=0,baseZoom=1;
+  const separation=ev=>Math.hypot(ev.touches[0].clientX-ev.touches[1].clientX,ev.touches[0].clientY-ev.touches[1].clientY);
+  scroll.addEventListener('touchstart',ev=>{if(ev.touches.length===2){baseDistance=separation(ev);baseZoom=sceneZoom;}},{passive:true});
+  scroll.addEventListener('touchmove',ev=>{if(ev.touches.length===2&&baseDistance){ev.preventDefault();setSceneZoom(baseZoom*separation(ev)/baseDistance);}},{passive:false});
+  scroll.addEventListener('touchend',ev=>{if(ev.touches.length<2)baseDistance=0;},{passive:true});
+  scroll.addEventListener('wheel',ev=>{if(ev.ctrlKey){ev.preventDefault();setSceneZoom(sceneZoom*(ev.deltaY>0?.85:1.15));}},{passive:false});
+ }catch(err){console.warn(err);toast(`Cannot open scene: ${err.message}`)}
+}
+function setSceneZoom(value){
+ sceneZoom=Math.max(.5,Math.min(5,Math.round(value*100)/100));
+ const z=$('sceneViewZoom'),scroll=$('sceneViewScroll');if(!z||!scroll)return;
+ const oldW=z.getBoundingClientRect().width,oldH=z.getBoundingClientRect().height;
+ const x=(scroll.scrollLeft+scroll.clientWidth/2)/(oldW||1),y=(scroll.scrollTop+scroll.clientHeight/2)/(oldH||1);
+ z.style.width=`${sceneZoom*100}%`;
+ const newW=z.getBoundingClientRect().width,newH=z.getBoundingClientRect().height;
+ scroll.scrollLeft=x*newW-scroll.clientWidth/2;scroll.scrollTop=y*newH-scroll.clientHeight/2;
+ const reset=$('sceneViewer')?.querySelector('[data-view-action="reset"]');if(reset)reset.textContent=`${Math.round(sceneZoom*100)}%`;
+}
+async function closeSceneViewer(){const el=$('sceneViewer');if(!el)return;
+ if(document.fullscreenElement===el){try{await document.exitFullscreen();}catch(_e){}}
+ el.remove();sceneViewerData='';
+}
+function saveScene(){
+ try{
+  const data=sceneViewerData||sceneSnapshot();const a=document.createElement('a');
+  const stamp=new Date().toISOString().slice(0,19).replaceAll(':','-');
+  a.href=data;a.download=`Compendium_${game?.mode||'Scene'}_${stamp}.png`;
+  document.body.appendChild(a);a.click();a.remove();
+  toast('Scene image sent to your Downloads folder.');
+ }catch(err){toast(`Image save failed: ${err.message}`)}
+}
+async function sceneViewAction(action){
+ const el=$('sceneViewer');if(!el)return;
+ switch(action){
+  case'close':await closeSceneViewer();break;
+  case'plus':setSceneZoom(sceneZoom*1.3);break;
+  case'minus':setSceneZoom(sceneZoom/1.3);break;
+  case'reset':setSceneZoom(1);break;
+  case'save':saveScene();break;
+  case'full':
+   try{
+    if(document.fullscreenElement===el)await document.exitFullscreen();
+    else if(el.requestFullscreen)await el.requestFullscreen({navigationUI:'hide'});
+    else toast('Full-screen mode unavailable in this browser.');
+   }catch(_err){toast('Chrome could not enter full-screen mode; the scene viewer still fills the page.');}
+   break;
+ }
+}
+async function toggleImmersive(){
+ if(view!=='game'||!game||$('sceneViewer'))return;
+ immersive=!immersive;$('app').classList.toggle('immersive',immersive);
+ if(immersive){
+  // Fullscreen API is browser-dependent; CSS HUD hiding also works offline.
+  try{if(!document.fullscreenElement&&document.documentElement.requestFullscreen)await document.documentElement.requestFullscreen({navigationUI:'hide'});}catch(_e){}
+  toast('Game bars hidden. Double-tap scene again to restore.');
+ }else{
+  if(document.fullscreenElement===document.documentElement)try{await document.exitFullscreen();}catch(_e){}
+  toast('Game bars restored.');
+ }
+}
+let lastSceneTap=0,lastSceneTapX=0,lastSceneTapY=0;
+document.addEventListener('pointerup',ev=>{
+ if(view!=='game'||!ev.target.closest('.scene-wrap')||ev.target.closest('button'))return;
+ if(ev.pointerType==='mouse'&&ev.button!==0)return;
+ const now=performance.now(),double=now-lastSceneTap<370&&Math.hypot(ev.clientX-lastSceneTapX,ev.clientY-lastSceneTapY)<75;
+ lastSceneTap=now;lastSceneTapX=ev.clientX;lastSceneTapY=ev.clientY;
+ if(double){lastSceneTap=0;toggleImmersive();}
+});
+document.addEventListener('keydown',ev=>{
+ if(ev.key==='Escape'&&$('sceneViewer'))closeSceneViewer();
+});
 function render(){if(view==='menu')menu();else if(view==='setup')setupView();else if(view==='settings')settingsView();else if(view==='game')gameView();}
 function saveGame(){if(game){saves[game.mode]=game;saveAll();}}
 function uiAction(fn){try{fn();if(game){let p=game.people.find(p=>p.id===game.highlight);if(p&&(!['diceApply','memoryApply','wheelApply','pokerApply'].includes(window.__sgcAction)||!game.dialogue)){let event=game.phase==='game_over'?'winner':game.mode==='wheel'?(game.segment||'spin'):game.mode==='dice'?'low_single':game.mode==='memory'?'reveal':game.mode==='holdem'?'showdown_lose':'showdown_lose';if(game.mode==='memory'&&['memoryApply','memoryNext'].includes(window.__sgcAction||''))event='after';const line=dialogueText(event,p.id);if(line)game.dialogue=line;}}
@@ -160,13 +254,13 @@ function gameAction(action,value){uiAction(()=>{const g=game;window.__sgcAction=
 function doStart(){uiAction(()=>{if(!folder)toast('Select your Assets folder to display character images.');let settings={selected:[...selected],human:human||selected[0],playerName,gender,confidence,background,spectator};game=E.start(mode,roster,settings);view='game';saveGame();discard.clear();lastSpin=-1;});}
 async function exportSaves(){const blob=new Blob([JSON.stringify({format:'compendium-browser-saves-v1',games:saves,options:{selected,human,background}},null,2)],{type:'application/json'});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download=`compendium-backup-${new Date().toISOString().slice(0,10)}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(u),2500);}
 async function importSaves(file){try{const data=JSON.parse(await file.text());if(data.format!=='compendium-browser-saves-v1'||typeof data.games!=='object')throw Error('Not a Compendium Browser backup.');if(!confirm('Replace existing saved games with the imported backup?'))return;saves=data.games;game=null;view='menu';saveAll();render();toast('Saved games restored.');}catch(err){toast(`Import failed: ${err.message}`);}}
-document.addEventListener('click',async event=>{const b=event.target.closest('button,[data-nav],.file-btn');if(!b)return;let nav=b.dataset.nav,act=b.dataset.action,go=b.dataset.go;if(nav){view=nav;render();return;}
+document.addEventListener('click',async event=>{const v=event.target.closest('[data-view-action]');if(v){await sceneViewAction(v.dataset.viewAction);return;}const b=event.target.closest('button,[data-nav],.file-btn');if(!b)return;let nav=b.dataset.nav,act=b.dataset.action,go=b.dataset.go;if(nav){view=nav;if(nav!=='game'){immersive=false;$('app').classList.remove('immersive');if(document.fullscreenElement===document.documentElement)document.exitFullscreen().catch(()=>{});}render();return;}
  if(b.dataset.open){mode=b.dataset.open;game=saves[mode]||null;view='setup';search='';rosterTab=0;render();return;}
  if(b.dataset.tab!==undefined){rosterTab=+b.dataset.tab;search='';render();return;}
  if(b.dataset.pick){const name=b.dataset.pick;selected=selected.includes(name)?selected.filter(x=>x!==name):selected.length<(spectator?5:4)?[...selected,name]:selected;if(!selected.includes(human))human=selected[0];saveAll();const x=document.querySelector('.roster-viewport');const old=x?.scrollTop||0;setupView();document.querySelector('.roster-viewport')?.scrollTo(0,old);return;}
  if(b.dataset.discard!==undefined){selectedFile(b.dataset.discard);return;}
  if(go){gameAction(go,b.dataset.value);return;}
- if(act==='folder')return selectFolder();if(act==='reconnect')return reconnect();if(act==='start')return doStart();if(act==='resume'){game=saves[mode];view='game';render();return;}if(act==='new'){if(!confirm('Start a new game? Your current game is saved and can be resumed from setup until you replace it.'))return;view='setup';render();return;}
+ if(act==='sceneView')return openSceneViewer();if(act==='folder')return selectFolder();if(act==='reconnect')return reconnect();if(act==='start')return doStart();if(act==='resume'){game=saves[mode];view='game';render();return;}if(act==='new'){if(!confirm('Start a new game? Your current game is saved and can be resumed from setup until you replace it.'))return;view='setup';render();return;}
  if(act==='export')exportSaves();});
 document.addEventListener('input',ev=>{if(ev.target.id==='search'){search=ev.target.value;rosterTab=0;const dest=$('rosterHere');if(dest){dest.innerHTML=rosterGrid();fillAssets();}}if(ev.target.id==='playerName')playerName=ev.target.value;});
 document.addEventListener('change',ev=>{const el=ev.target;switch(el.id){case'human':human=el.value;break;case'spectator':spectator=el.value==='true';if(selected.length>(spectator?5:4))selected=selected.slice(0,4);render();break;case'gender':gender=el.value;break;case'confidence':confidence=+el.value;break;case'background':background=el.value;break;case'import':if(el.files?.[0])importSaves(el.files[0]);break;}saveAll();});

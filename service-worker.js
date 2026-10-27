@@ -1,6 +1,6 @@
 'use strict';
-const CACHE='sgc-five-games-browser-v1.0.3';
-const SHELL=['./','./index.html','./app.js','./app.js?v=scene103','./engine.js','./boot-guard.js','./boot-guard.js?v=fix101','./style.css','./style.css?v=scene103','./manifest.webmanifest','./icon.svg'];
+const CACHE='sgc-five-games-browser-v1.0.4';
+const SHELL=['./','./index.html','./app.js','./app.js?v=scene104','./engine.js','./boot-guard.js','./boot-guard.js?v=fix101','./style.css','./style.css?v=scene104','./manifest.webmanifest','./icon.svg'];
 const DATA=['characters','dice_dialogue','wheel_dialogue','holdem_dialogue','poker_dialogue','memory_dialogue'];
 self.addEventListener('install',e=>e.waitUntil((async()=>{
  const c=await caches.open(CACHE);
