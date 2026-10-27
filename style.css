@@ -3,3 +3,61 @@
 @media(max-width:375px), (max-height:680px){.menu-heading h1{font-size:21px}.menu-heading p{margin:3px 0}.top{height:52px;flex-basis:52px}.setup-top{max-height:44px}.setup-top h1{font-size:16px}.setup-options{padding:5px}.setup-options input,.setup-options select{height:26px}.roster-heading{height:27px}.tab{padding:4px}.portrait-name{font-size:8.5px}.game-name{font-size:13px}.scene-wrap{height:34%}.wheel-assembly{height:120px}.wheel-disc{height:112px;width:112px}}
 .wheel-result{text-align:center;color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.08em;margin-bottom:3px}.memory-revealed{display:grid;place-items:center;max-height:115px}.memory-revealed img{max-height:110px;max-width:150px;object-fit:contain}.memory-revealed span{font-size:18px;color:var(--gold)}
 #toast{pointer-events:none}.dice-pair{display:flex;gap:3px;align-items:center}.dice-token{height:25px;width:25px;object-fit:contain}.dice-pair span:last-child{padding-left:4px}.memory-card img{max-width:52px;height:57px;object-fit:contain;pointer-events:none}.card.back img{object-fit:cover;opacity:.92}
+
+/* ============================================================
+   Browser Edition v1.0.2 - Android phone orientation redesign
+   Landscape: full-height composite art beside compact controls.
+   Portrait: scene above scroll-contained actions, no page scroll.
+   ============================================================ */
+@media (orientation:landscape) and (min-width:600px) and (max-height:680px) {
+  .top {height:40px;flex-basis:40px;padding:3px 10px}
+  .top .emblem {width:29px;height:29px;border-radius:7px;font-size:19px}
+  .top .brand {gap:7px}
+  .top .eyebrow,.top .pill,.brand-title small {display:none}
+  .top .brand-title {font-size:14px;white-space:nowrap}
+  .top-actions .small-btn {padding:5px 9px;font-size:11px}
+  .main {padding:5px 7px max(4px,env(safe-area-inset-bottom))}
+  .game-screen {gap:5px}
+  .game-top {height:30px;flex-basis:30px}
+  .game-top .small-btn {font-size:12px;padding:5px 9px}
+  .game-name {font-size:15px}
+  .game-name small {display:inline;font-size:10px}
+  .game-main {display:grid;grid-template-columns:minmax(0,1.9fr) minmax(255px,1fr);grid-template-rows:minmax(0,1fr);gap:7px;min-height:0;flex:1}
+  .scene-wrap {width:100%;height:100%;min-width:0;min-height:0;flex:none;align-self:stretch;border-radius:10px}
+  #scene {display:block;width:100%;height:100%;object-fit:contain}
+  .game-controls {width:100%;min-width:0;height:100%;min-height:0;flex:none;padding:7px 9px;gap:4px;overflow:hidden;border-radius:10px}
+  .turn-info {min-width:0}
+  .turn-info .eyebrow {font-size:9px;letter-spacing:.08em}
+  .notice {margin:3px 0 4px;font-size:12px;line-height:1.22}
+  .actions-scroll {min-width:0;min-height:0;flex:1;gap:5px;overflow:auto;overscroll-behavior:contain;touch-action:pan-y}
+  .game-controls button {padding:7px 8px;font-size:11px}
+  .dice-rolls {gap:4px}
+  .roll-pill {flex:1 1 calc(50% - 4px);min-width:0;gap:3px;padding:5px 6px;font-size:10px;line-height:1.2}
+  .roll-pill>span {min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .roll-pill strong {font-size:11px;flex-shrink:0}
+  .dice-token {width:21px;height:21px}
+  .action-row {gap:5px}
+  .speech {flex:0 0 auto;max-height:min(15vh,55px);font-size:10px;padding-top:4px;overflow:auto}
+  .people {flex:0 0 auto;height:29px;max-height:29px;gap:4px;overflow-x:auto;overflow-y:hidden}
+  .person {padding:3px 7px;font-size:10px;white-space:nowrap;border-radius:6px}
+  .playing-row {gap:4px;padding:0}
+  .card {width:clamp(36px,5.5vw,64px);height:clamp(51px,8vw,88px)}
+  .memory-deck {gap:5px}
+  .memory-card {min-width:42px;min-height:54px;font-size:24px}
+  .wheel-assembly {height:142px}
+  .wheel-disc {height:129px;width:129px}
+}
+/* On narrow portrait phones, keep the page fixed but allow the game
+   control panel to use its available height without clipping actions. */
+@media (orientation:portrait) and (max-width:650px) {
+  .game-controls {overflow:hidden}
+  .actions-scroll {overscroll-behavior:contain;touch-action:pan-y}
+  .game-top .small-btn {white-space:nowrap}
+}
+@media (orientation:landscape) and (min-width:600px) and (max-height:345px) {
+  .top {height:33px;flex-basis:33px}
+  .game-top {height:28px;flex-basis:28px}
+  .people {height:24px;max-height:24px}
+  .game-main {grid-template-columns:minmax(0,1.7fr) minmax(248px,1fr)}
+  .speech {max-height:40px}
+}
