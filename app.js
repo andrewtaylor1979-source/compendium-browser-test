@@ -20,7 +20,7 @@ const has=n=>assets.has(n.toLowerCase());
 async function urlFor(filename){let key=filename.toLowerCase();if(objects.has(key))return objects.get(key);const h=assets.get(key);if(!h)return null;const f=await h.getFile(),url=URL.createObjectURL(f);objects.set(key,url);return url;}
 async function imgFor(filename){const key=filename.toLowerCase();if(loadedImgs.has(key))return loadedImgs.get(key);const url=await urlFor(filename);if(!url)return null;let image=new Image();image.src=url;try{await image.decode();loadedImgs.set(key,image);return image;}catch(_e){return null;}}
 function filename(asset,state='TJBP'){return `${asset}_${state}.png`}
-function header(){return `<header class="top"><div class="brand" data-nav="menu"><span class="emblem">✦</span><div><div class="eyebrow">STRIP GAMES COMPENDIUM</div><div class="brand-title">THE PRIVATE CLUB <small>Browser Edition</small></div></div></div><div class="top-actions"><span class="pill">v1.0</span><button class="small-btn" data-action="folder">${folder?'📁 '+assets.size:'📁 Assets'}</button></div></header>`;}
+function header(){return `<header class="top"><div class="brand" data-nav="menu"><span class="emblem">✦</span><div><div class="eyebrow">STRIP GAMES COMPENDIUM</div><div class="brand-title">THE PRIVATE CLUB <small>Browser Edition</small></div></div></div><div class="top-actions"><span class="pill">v1.0.1</span><button class="small-btn" data-action="folder">${folder?'📁 '+assets.size:'📁 Assets'}</button></div></header>`;}
 function frame(content){$('app').innerHTML=`${header()}<main class="main">${content}</main>`;}
 function menu(){const tiles=menuModes.map(([id,ico,title,descr])=>`<button class="menu-tile" data-open="${id}"><span class="menu-icon">${ico}</span><span class="menu-title">${esc(title)}</span><span class="menu-description">${esc(descr)}</span><span class="menu-resume">${saves[id]?'RESUME OR NEW GAME':'CHOOSE PLAYERS'}</span></button>`).join('');
  frame(`<section class="menu"><div class="menu-heading"><span class="eyebrow">OFFLINE • FIVE GAMES • 65 CHARACTERS</span><h1>Choose your game</h1><p>Entirely on your phone. All artwork stays in your own separate Assets folder.</p></div><div class="menu-tiles">${tiles}</div><div class="menu-bottom"><span>${folder?'✓ '+esc(folderInfo):'⚠ Connect your separate Assets folder to display portraits'}</span><button class="small-btn" data-nav="settings">Assets &amp; saves</button></div></section>`);}
@@ -96,8 +96,22 @@ document.addEventListener('click',async event=>{const b=event.target.closest('bu
  if(act==='export')exportSaves();});
 document.addEventListener('input',ev=>{if(ev.target.id==='search'){search=ev.target.value;rosterTab=0;const dest=$('rosterHere');if(dest){dest.innerHTML=rosterGrid();fillAssets();}}if(ev.target.id==='playerName')playerName=ev.target.value;});
 document.addEventListener('change',ev=>{const el=ev.target;switch(el.id){case'human':human=el.value;break;case'spectator':spectator=el.value==='true';if(selected.length>(spectator?5:4))selected=selected.slice(0,4);render();break;case'gender':gender=el.value;break;case'confidence':confidence=+el.value;break;case'background':background=el.value;break;case'import':if(el.files?.[0])importSaves(el.files[0]);break;}saveAll();});
-(async()=>{try{const [characters,dice,wheel,holdem,draw,memory]=await Promise.all(['characters','dice_dialogue','wheel_dialogue','holdem_dialogue','poker_dialogue','memory_dialogue'].map(n=>fetch(`./data/${n}.json`).then(r=>{if(!r.ok)throw Error(`Missing ${n}.json`);return r.json()})));
+// Accept either GitHub layout: data/characters.json OR characters.json in repository root.
+// GitHub's browser uploader often flattens the folder when files are dragged in.
+async function loadDataFile(name){
+ const errors=[];
+ for (const path of [`./data/${name}.json`,`./${name}.json`]){
+  try {
+   const response=await fetch(path,{cache:'no-store'});
+   if (!response.ok){errors.push(`${path}: HTTP ${response.status}`);continue;}
+   const body=await response.json();
+   return body;
+  } catch(err){errors.push(`${path}: ${err.message}`);}
+ }
+ throw new Error(`Cannot load ${name}.json. Looked in data/ and repository root. ${errors.join(' | ')}`);
+}
+(async()=>{try{const [characters,dice,wheel,holdem,draw,memory]=await Promise.all(['characters','dice_dialogue','wheel_dialogue','holdem_dialogue','poker_dialogue','memory_dialogue'].map(loadDataFile));
  roster=characters;for(const c of roster)c.gender=['Kristoff','Bananaman','Jason','Hank','Hulk','Donkey','Homer','Thing','Donald','Captain','Batman','Jack'].includes(c.asset_name)?'male':'female';packs={dice,wheel,holdem,draw,memory};loadSaved();render();
  if('serviceWorker' in navigator)navigator.serviceWorker.register('./service-worker.js',{scope:'./'}).catch(console.warn);
  let h=await dbHandle('load').catch(()=>null);if(h){folder=h;let perm=await h.queryPermission({mode:'read'});if(perm==='granted')await connect(h);else toast('Previously selected folder found. Tap Assets → Reconnect to enable artwork.');}
- }catch(err){console.error(err);$('app').innerHTML=`<section class="fatal">Failed to load the local game files: ${esc(err.message)}. Check the uploaded GitHub files and refresh.</section>`;}})();
+ }catch(err){console.error(err);$('app').innerHTML=`<section class="fatal">Could not start Compendium: ${esc(err.message)}. Check the uploaded GitHub files. Open the website again after fixing the files.</section>`;}})();
