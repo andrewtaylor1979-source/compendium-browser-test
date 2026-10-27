@@ -1,0 +1,1 @@
+{"name":"Compendium Browser Feasibility Test","short_name":"Compendium Test","description":"Offline shell and local asset folder read feasibility test","start_url":"./","scope":"./","display":"standalone","background_color":"#120d0d","theme_color":"#211418","icons":[{"src":"./icon.svg","type":"image/svg+xml","sizes":"any","purpose":"any maskable"}]}
