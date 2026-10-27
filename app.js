@@ -2,7 +2,7 @@ import * as E from './engine.js';
 const $=id=>document.getElementById(id), esc=x=>String(x??'').replace(/[&<>"']/g,y=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[y]));
 const display=n=>roster.find(c=>c.asset_name===n)?.full_name||n;
 const KEY='sgc-browser-v1-save',DIRDB='sgc_browser_feasibility',HANDKEY='assets-directory';
-let roster=[],packs={},view='menu',mode='dice',game=null,selected=['Ahsoka','Jack'],human='Ahsoka',rosterTab=0,search='',spectator=false,playerName='Player',gender='male',confidence=3,background='Nightclub',discard=new Set(),folder=null,assets=new Map(),objects=new Map(),loadedImgs=new Map(),folderInfo='',lastSpin=-1;
+let roster=[],packs={},view='menu',mode='dice',game=null,selected=['Ahsoka','Jack'],human='Ahsoka',rosterTab=0,search='',spectator=false,playerName='Player',gender='male',confidence=3,background='Nightclub',discard=new Set(),folder=null,assets=new Map(),objects=new Map(),loadedImgs=new Map(),sceneSprites=new Map(),folderInfo='',lastSpin=-1;
 const menuModes=[['dice','🎲','Dice','Highest chooses. Lowest loses.'],['memory','🃏','Strip Memory','Reveal a character, choose a penalty.'],['wheel','🎡','Wheel of Misfortune','Sixteen segments, votes and recovery.'],['holdem','♠','Strip Hold’em','Flop, turn, river and showdown.'],['draw','♥','Five-Card Draw','Two exchange rounds per hand.']];
 const backgroundFiles={'Nightclub':'Background_Nightclub.png','Strip Club':'Background_Strip_Club.png','Sleek Office':'Background_Sleek_Office.png','Market Square':'Background_Market_Square.png','London Eye':'Background_London_Eye.png','The White House':'Background_The_Whitehouse.png','Skyscraper Roof':'Background_Skyscraper_Roof.png','Park':'Background_Park.png','Field':'Background_Field.png','Tropical Beach':'Background_Tropical_Beach.png','Mars':'Background_Mars.png','Dungeon':'Background_Dungeon.png','Sex Shop':'Background_Sex_Shop.png','Theatre':'Background_Theatre.png','Haunted Church':'Background_Haunted_Church.png','Haunted Graveyard':'Background_Haunted_Graveyard.png','Enchanted Forest':'Background_Enchanted_Forest.png'};
 const saveAll=()=>{try{localStorage.setItem(KEY,JSON.stringify({games:saves,selected,human,playerName,gender,confidence,background,spectator,mode}))}catch(e){console.warn('Could not save game',e);toast('Browser storage is full; export your saves.')}};
@@ -11,7 +11,7 @@ function loadSaved(){try{const o=JSON.parse(localStorage.getItem(KEY)||'{}');sav
 function toast(message){const t=$('toast');if(!t)return;t.textContent=message;t.hidden=false;clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.hidden=true,4500);}
 function openDb(){return new Promise((resolve,reject)=>{const req=indexedDB.open(DIRDB,1);req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains('settings'))req.result.createObjectStore('settings')};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});}
 async function dbHandle(action,h){const db=await openDb();try{return await new Promise((resolve,reject)=>{const tx=db.transaction('settings',action==='save'?'readwrite':'readonly');const r=action==='save'?tx.objectStore('settings').put(h,HANDKEY):tx.objectStore('settings').get(HANDKEY);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});}finally{db.close()}}
-function cleanAssets(){for(const url of objects.values())URL.revokeObjectURL(url);objects.clear();loadedImgs.clear();}
+function cleanAssets(){for(const url of objects.values())URL.revokeObjectURL(url);objects.clear();loadedImgs.clear();sceneSprites.clear();}
 async function connect(handle){let m=new Map();for await(const entry of handle.values())if(entry.kind==='file'&&/\.(png|webp|jpe?g)$/i.test(entry.name))m.set(entry.name.toLowerCase(),entry);
  folder=handle;assets=m;cleanAssets();folderInfo=`${handle.name}: ${m.size} image files`;render();toast(`Assets connected — ${m.size} images available.`);}
 async function selectFolder(){try{const h=await window.showDirectoryPicker({id:'compendium-assets',mode:'read'});await dbHandle('save',h);await connect(h);}catch(err){if(err.name!=='AbortError')toast(`Folder error: ${err.message}`)}}
@@ -20,7 +20,7 @@ const has=n=>assets.has(n.toLowerCase());
 async function urlFor(filename){let key=filename.toLowerCase();if(objects.has(key))return objects.get(key);const h=assets.get(key);if(!h)return null;const f=await h.getFile(),url=URL.createObjectURL(f);objects.set(key,url);return url;}
 async function imgFor(filename){const key=filename.toLowerCase();if(loadedImgs.has(key))return loadedImgs.get(key);const url=await urlFor(filename);if(!url)return null;let image=new Image();image.src=url;try{await image.decode();loadedImgs.set(key,image);return image;}catch(_e){return null;}}
 function filename(asset,state='TJBP'){return `${asset}_${state}.png`}
-function header(){return `<header class="top"><div class="brand" data-nav="menu"><span class="emblem">✦</span><div><div class="eyebrow">STRIP GAMES COMPENDIUM</div><div class="brand-title">THE PRIVATE CLUB <small>Browser Edition</small></div></div></div><div class="top-actions"><span class="pill">v1.0.2</span><button class="small-btn" data-action="folder">${folder?'📁 '+assets.size:'📁 Assets'}</button></div></header>`;}
+function header(){return `<header class="top"><div class="brand" data-nav="menu"><span class="emblem">✦</span><div><div class="eyebrow">STRIP GAMES COMPENDIUM</div><div class="brand-title">THE PRIVATE CLUB <small>Browser Edition</small></div></div></div><div class="top-actions"><span class="pill">v1.0.3</span><button class="small-btn" data-action="folder">${folder?'📁 '+assets.size:'📁 Assets'}</button></div></header>`;}
 function frame(content){$('app').innerHTML=`${header()}<main class="main">${content}</main>`;}
 function menu(){const tiles=menuModes.map(([id,ico,title,descr])=>`<button class="menu-tile" data-open="${id}"><span class="menu-icon">${ico}</span><span class="menu-title">${esc(title)}</span><span class="menu-description">${esc(descr)}</span><span class="menu-resume">${saves[id]?'RESUME OR NEW GAME':'CHOOSE PLAYERS'}</span></button>`).join('');
  frame(`<section class="menu"><div class="menu-heading"><span class="eyebrow">OFFLINE • FIVE GAMES • 65 CHARACTERS</span><h1>Choose your game</h1><p>Entirely on your phone. All artwork stays in your own separate Assets folder.</p></div><div class="menu-tiles">${tiles}</div><div class="menu-bottom"><span>${folder?'✓ '+esc(folderInfo):'⚠ Connect your separate Assets folder to display portraits'}</span><button class="small-btn" data-nav="settings">Assets &amp; saves</button></div></section>`);}
@@ -65,12 +65,86 @@ function dieImage(num){const file=has('Dice_'+num+'.png')?'Dice_'+num+'.png':has
 function diceActions(){const g=game;let buttons='';if(['ready','between_rounds'].includes(g.phase))buttons=actionBtn('Roll two dice for everyone','diceRoll','','primary');else if(g.phase==='choose_loser')buttons=g.low.map(id=>actionBtn(actorName(id),'diceLoser',id)).join('');else if(g.phase==='choose_penalty')buttons=choosePenaltyButtons();else if(g.phase==='apply')buttons=actionBtn('Apply selected penalty','diceApply','','primary');return `<div class="dice-rolls">${g.rolls.map(r=>`<div class="roll-pill ${g.chooser===r.id?'high':''} ${g.low?.includes(r.id)?'low':''}"><span>${esc(r.name)}</span><strong class="dice-pair">${dieImage(r.die1)}${dieImage(r.die2)}<span>${r.total}</span></strong></div>`).join('')}</div><div class="action-row">${buttons}</div>`;}
 function phaseActions(){if(game.phase==='game_over')return `<div class="winner">🏆 ${esc(game.winner)} wins!</div>`;switch(game.mode){case 'dice':return diceActions();case 'memory':return playMemory();case 'wheel':return wheelActions();case 'holdem':return holdemActions();case 'draw':return drawActions();}}
 function participants(){return `<div class="people">${game.people.map(p=>`<div class="person ${p.id===game.highlight?'focus':''} ${p.eliminated?'out':''}"><span>${esc(p.name)}</span><strong>${esc(E.stateOf(p))}</strong></div>`).join('')}</div>`;}
-async function drawScene(){const cv=$('scene');if(!cv||!game)return;const ctx=cv.getContext('2d');const W=cv.width,H=cv.height;ctx.fillStyle='#160f14';ctx.fillRect(0,0,W,H);let b=await imgFor(backgroundFiles[game.settings.background]||'Background_Nightclub.png');if(b){let s=Math.max(W/b.width,H/b.height);ctx.globalAlpha=.48;ctx.drawImage(b,(W-b.width*s)/2,(H-b.height*s)/2,b.width*s,b.height*s);ctx.globalAlpha=1;}
- const people=game.people;const count=people.length;for(let i=0;i<count;i++){let p=people[i],slotW=W/count,x=i*slotW,st=E.stateOf(p),img=await imgFor(filename(p.asset,st));if(!img&&st!=='TJBP')img=await imgFor(filename(p.asset,'TJBP'));
- if(p.id===game.highlight){ctx.fillStyle='rgba(222,181,97,.14)';ctx.fillRect(x+3,0,slotW-6,H-50)}
- if(img){let scale=Math.min((slotW-8)/img.width,(H-45)/img.height);let dw=img.width*scale,dh=img.height*scale;ctx.drawImage(img,x+(slotW-dw)/2,H-42-dh,dw,dh);}else{ctx.fillStyle='#50333a';ctx.fillRect(x+14,H*.27,slotW-28,H*.60);ctx.fillStyle='#eee1ce';ctx.textAlign='center';ctx.font='18px system-ui';ctx.fillText('No artwork',x+slotW/2,H*.58);}
- ctx.fillStyle='rgba(14,9,14,.87)';ctx.fillRect(x+2,H-43,slotW-4,43);ctx.fillStyle='#f3e6d9';ctx.textAlign='center';ctx.font=`bold ${Math.max(11,17-count)}px system-ui`;ctx.fillText(p.name.slice(0,Math.round(slotW/10)),x+slotW/2,H-23);ctx.fillStyle=p.eliminated?'#e5a2a2':'#dabb82';ctx.font='12px system-ui';ctx.fillText(st+(p.eliminated?' · OUT':''),x+slotW/2,H-6);
- }}
+// Make a display-only cut-out for the scene. Character assets often contain
+// broad transparent or near-white borders which must NOT count as figure width.
+// Nothing is written back to the user's selected Assets folder.
+async function sceneSprite(file){
+ const key=file.toLowerCase();
+ if(sceneSprites.has(key))return sceneSprites.get(key);
+ const image=await imgFor(file);if(!image)return null;
+ // Downsample large artwork to a practical drawing resolution on Android.
+ const k=Math.min(1,800/image.naturalHeight);
+ const w=Math.max(1,Math.round(image.naturalWidth*k)),h=Math.max(1,Math.round(image.naturalHeight*k));
+ const surface=document.createElement('canvas');surface.width=w;surface.height=h;
+ const cx=surface.getContext('2d',{willReadFrequently:true});cx.drawImage(image,0,0,w,h);
+ const pixels=cx.getImageData(0,0,w,h),rgba=pixels.data;
+ const pixel=(x,y)=>4*(y*w+x);
+ // Some older Compendium character files are opaque on an almost-white field.
+ // Only remove pale pixels connected to the OUTER EDGE, not enclosed white
+ // clothing, faces or highlights. Transparent PNGs need no colour-keying.
+ const pale=(i)=>{const r=rgba[i],g=rgba[i+1],b=rgba[i+2];return rgba[i+3]<16||(Math.min(r,g,b)>216&&Math.max(r,g,b)-Math.min(r,g,b)<48)};
+ const corners=[[0,0],[w-1,0],[0,h-1],[w-1,h-1]];
+ const whiteCorners=corners.filter(([x,y])=>{const i=pixel(x,y);return rgba[i+3]>220&&pale(i)}).length;
+ if(whiteCorners>=3){
+   const seen=new Uint8Array(w*h),queue=new Int32Array(w*h);let front=0,back=0;
+   const add=(pos)=>{if(seen[pos])return;seen[pos]=1;if(pale(pos*4))queue[back++]=pos;};
+   for(let x=0;x<w;x++){add(x);add((h-1)*w+x)}
+   for(let y=0;y<h;y++){add(y*w);add(y*w+w-1)}
+   while(front<back){const p=queue[front++],i=p*4;rgba[i+3]=0;
+     const x=p%w,y=(p-x)/w;
+     if(x>0)add(p-1);if(x<w-1)add(p+1);
+     if(y>0)add(p-w);if(y<h-1)add(p+w);
+   }
+   cx.putImageData(pixels,0,0);
+ }
+ let minX=w,minY=h,maxX=-1,maxY=-1;
+ // Scan remaining visible artwork, ignoring nearly invisible antialias pixels.
+ for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+   if(rgba[pixel(x,y)+3]<24)continue;
+   if(x<minX)minX=x;if(x>maxX)maxX=x;
+   if(y<minY)minY=y;if(y>maxY)maxY=y;
+ }
+ if(maxX<0){minX=minY=0;maxX=w-1;maxY=h-1}
+ const padX=Math.max(2,Math.round(w*.006)),padY=Math.max(2,Math.round(h*.006));
+ const sx=Math.max(0,minX-padX),sy=Math.max(0,minY-padY);
+ const ex=Math.min(w,maxX+1+padX),ey=Math.min(h,maxY+1+padY);
+ const sprite={surface,sx,sy,sw:ex-sx,sh:ey-sy};
+ sceneSprites.set(key,sprite);return sprite;
+}
+async function drawScene(){
+ const cv=$('scene');if(!cv||!game)return;
+ const ctx=cv.getContext('2d');const W=cv.width,H=cv.height;
+ ctx.fillStyle='#160f14';ctx.fillRect(0,0,W,H);
+ const b=await imgFor(backgroundFiles[game.settings.background]||'Background_Nightclub.png');
+ if(b){const s=Math.max(W/b.width,H/b.height);ctx.globalAlpha=.48;ctx.drawImage(b,(W-b.width*s)/2,(H-b.height*s)/2,b.width*s,b.height*s);ctx.globalAlpha=1;}
+ const people=game.people,count=people.length,slotW=W/count,feet=H-44,usableHeight=feet-12;
+ for(let i=0;i<count;i++){
+   // The game may have re-rendered while a different file was being decoded.
+   if(!cv.isConnected)return;
+   const p=people[i],x=i*slotW,st=E.stateOf(p);
+   let sprite=await sceneSprite(filename(p.asset,st));
+   if(!sprite&&st!=='TJBP')sprite=await sceneSprite(filename(p.asset,'TJBP'));
+   if(p.id===game.highlight){ctx.fillStyle='rgba(222,181,97,.14)';ctx.fillRect(x+3,0,slotW-6,feet-5);}
+   if(sprite){
+     // Fit the VISIBLE character, not the empty padding in the original PNG.
+     // A small overlap allowance is useful for capes/wide poses without
+     // allowing one player to hide a neighbouring character.
+     const scale=Math.min((slotW+12)/sprite.sw,usableHeight/sprite.sh);
+     const dw=sprite.sw*scale,dh=sprite.sh*scale;
+     ctx.drawImage(sprite.surface,sprite.sx,sprite.sy,sprite.sw,sprite.sh,
+       x+(slotW-dw)/2,feet-dh,dw,dh);
+   }else{
+     ctx.fillStyle='#50333a';ctx.fillRect(x+14,H*.27,slotW-28,H*.60);
+     ctx.fillStyle='#eee1ce';ctx.textAlign='center';ctx.font='18px system-ui';
+     ctx.fillText('No artwork',x+slotW/2,H*.58);
+   }
+   ctx.fillStyle='rgba(14,9,14,.87)';ctx.fillRect(x+2,H-43,slotW-4,43);
+   ctx.fillStyle='#f3e6d9';ctx.textAlign='center';ctx.font=`bold ${Math.max(11,17-count)}px system-ui`;
+   ctx.fillText(p.name.slice(0,Math.round(slotW/10)),x+slotW/2,H-23);
+   ctx.fillStyle=p.eliminated?'#e5a2a2':'#dabb82';ctx.font='12px system-ui';
+   ctx.fillText(st+(p.eliminated?' · OUT':''),x+slotW/2,H-6);
+ }
+}
 async function fillAssets(){const images=document.querySelectorAll('img[data-asset]');await Promise.all([...images].map(async el=>{let file=el.dataset.asset,url=await urlFor(file);if(el.isConnected&&url)el.src=url;}));}
 function gameView(){if(!game){view='setup';setupView();return;}const g=game;const words=g.dialogue||roster.find(c=>c.asset_name===g.people.find(p=>p.id===g.highlight)?.asset)?.stage_dialogue?.[E.stateOf(g.people.find(p=>p.id===g.highlight)||g.people[0])]||'';
  frame(`<div class="game-screen"><div class="game-top"><button class="small-btn" data-nav="menu">← Menu</button><span class="game-name">${esc(E.MODES[g.mode])} <small>· ${esc(g.phase.replaceAll('_',' '))}</small></span><button class="small-btn" data-action="new">New game</button></div><div class="game-main"><div class="scene-wrap"><canvas id="scene" width="1180" height="590" role="img" aria-label="Current game scene with all players"></canvas></div><section class="game-controls panel"><div class="turn-info"><span class="eyebrow">ROUND ${g.round||g.handNum||1} · ${esc(g.phase.replaceAll('_',' ').toUpperCase())}</span><p class="notice">${esc(g.notice)}</p></div><div class="actions-scroll">${phaseActions()}</div>${words?`<div class="speech"><b>${esc(actorName(g.highlight))}</b> ${esc(words)}</div>`:''}</section></div>${participants()}</div>`);drawScene().catch(console.warn);fillAssets();if(g.mode==='wheel')animateWheel();}
