@@ -249,3 +249,12 @@
 }
 #app.immersive .unified-game .game-top,#app.immersive .unified-game .game-toolbar{display:none!important}
 #app.immersive .unified-game .game-main{height:100%;flex:1;min-height:0}
+
+/* v1.2.1: one-on-one displays every currently legal garment choice. */
+#app .unified-game .one-removal-label{margin:10px 0 5px;color:var(--gold);font-weight:750;font-size:13px}
+#app .unified-game .one-removal-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,185px),1fr));gap:8px}
+#app .unified-game .one-removal-options .solo-remove{min-height:49px;width:100%;background:#6b343c;border:1px solid #bd8c84;color:#fff;font-weight:800;padding:10px 12px;white-space:normal;text-align:center;line-height:1.2}
+#app .unified-game .one-removal-options .solo-remove:active{background:#86404d}
+#app .unified-game .one-removal-options .one-advance{grid-column:1/-1;margin-top:0}
+@media (max-width:650px){#app .unified-game .one-removal-options{grid-template-columns:repeat(2,minmax(0,1fr))}#app .unified-game .one-removal-options .solo-remove{font-size:12px;min-height:53px;padding:8px 5px}}
+@media (max-height:470px) and (orientation:landscape){#app .unified-game .one-removal-options .solo-remove{min-height:40px;padding:6px 7px;font-size:11px}}

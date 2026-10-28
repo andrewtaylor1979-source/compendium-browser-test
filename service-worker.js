@@ -1,6 +1,6 @@
 'use strict';
-const CACHE='sgc-six-games-browser-v1.2';
-const SHELL=['./','./index.html','./app.js','./app.js?v=six120','./engine.js','./engine.js?v=six120','./boot-guard.js','./boot-guard.js?v=fix101','./style.css','./style.css?v=six120','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
+const CACHE='sgc-six-games-browser-v1.2.1';
+const SHELL=['./','./index.html','./app.js','./app.js?v=solo121','./engine.js','./engine.js?v=solo121','./boot-guard.js','./boot-guard.js?v=fix101','./style.css','./style.css?v=solo121','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
 const DATA=['characters','dice_dialogue','wheel_dialogue','holdem_dialogue','poker_dialogue','memory_dialogue'];
 self.addEventListener('install',e=>e.waitUntil((async()=>{
  const c=await caches.open(CACHE);

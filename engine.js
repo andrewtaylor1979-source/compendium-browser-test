@@ -175,14 +175,14 @@ export function oneInteract(g, style, line) {
  g.dialogue=String(line||'').slice(0,800);g.speaker=g.people[0].name;
  g.highlight=g.people[0].id;
 }
-export function oneAdvance(g, line) {
+export function oneAdvance(g, item, line) {
  if(g.mode!=='one'||g.phase!=='interact')throw Error('The private-booth scene has ended.');
  const p=g.people[0];
- // Choose a legal outer layer first. Once dressed layers are gone, each
- // subsequent advance moves to the next supported naked-pose image state.
+ // The visitor chooses any legal garment. The same dependency rules apply
+ // as in the multiplayer games: a top must precede a bra; jeans precede pants.
+ // Only the next pose is offered after every garment is gone.
  const options=allowed(p);
- const item=['J','T','B','P','Naked'].find(k=>options.includes(k));
- if(!item){g.phase='game_over';return null;}
+ if(!options.includes(item))throw Error('Choose one of the available clothing options.');
  const state=remove(p,item);g.round++;
  g.one.lastItem=item;
  g.notice=p.eliminated?`${p.name} has reached the final pose. Session complete.`:
