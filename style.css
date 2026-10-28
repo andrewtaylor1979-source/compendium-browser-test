@@ -95,3 +95,53 @@
 .scene-view-hint{flex:0 0 auto;padding:5px 8px max(5px,env(safe-area-inset-bottom));font-size:11px;text-align:center;color:#dcc29f;background:#26191f}
 @media(orientation:portrait){.scene-view-scroll{display:flex;flex-direction:column;justify-content:safe center}.scene-view-zoom{flex:0 0 auto}}
 @media(orientation:landscape) and (max-height:500px){.scene-view-toolbar{padding:3px 6px;gap:4px}.scene-view-toolbar button{padding:5px 8px;font-size:11px}.scene-view-hint{padding:2px 5px;font-size:9px}}
+
+
+/* === Browser Edition v1.1: compact game panels and deliberate mobile pacing === */
+.turn-meta{display:flex;align-items:center;justify-content:space-between;gap:7px;min-width:0}
+.turn-meta .eyebrow{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ai-switch{flex-shrink:0;border:1px solid #b89a61;color:#f2d6a3;background:#3c2930;padding:5px 7px;border-radius:8px;font-size:11px;font-weight:750;line-height:1.2}
+.ai-switch:hover{background:#53313a}
+.turn-hint{border-left:3px solid #c4a267;background:#39292a;color:#ead2ac;padding:5px 8px;font-size:11px;line-height:1.25;border-radius:3px 7px 7px 3px;margin-top:3px}
+.game-controls .notice{line-height:1.27;margin:4px 0 2px}
+.game-controls .speech{background:#302126;border:1px solid #65454a;border-left:3px solid #be9b65;border-radius:7px;margin:0;padding:6px 8px;max-height:min(15vh,85px);font-size:12px;line-height:1.35;overflow:auto}
+.game-controls .actions-scroll{gap:6px}
+.settings-subhead{color:var(--gold);border-top:1px solid #5e4147;margin:16px 0 10px;padding-top:12px;font-weight:800;font-size:14px}
+/* Portrait: controls consume only as much height as required, so the
+   composite gets the remainder instead of a half-empty control box. */
+@media (orientation:portrait) and (max-width:650px){
+ .game-main{display:flex;flex-direction:column;min-height:0}
+ #app .game-screen .scene-wrap{height:auto;min-height:25%;flex:1 1 0;max-height:none}
+ #app .game-screen .game-controls{height:auto;min-height:105px;max-height:65%;flex:0 1 auto;overflow:hidden;gap:5px;padding:7px 10px}
+ #app .game-screen .actions-scroll{flex:0 1 auto;min-height:0;max-height:39dvh;overflow:auto}
+ #app .game-screen .speech{max-height:12dvh;font-size:11px;padding:5px 7px}
+ #app .game-screen .turn-hint{font-size:10px;padding:4px 6px}
+ #app.immersive .game-screen .scene-wrap{height:auto;flex:1 1 0}
+}
+@media (orientation:landscape) and (min-width:600px) and (max-height:680px){
+ .game-controls .turn-hint{font-size:10px;padding:3px 6px;margin-top:2px}
+ .game-controls .speech{font-size:10px;padding:3px 6px;max-height:53px;line-height:1.2}
+ .game-controls .ai-switch{font-size:10px;padding:3px 5px}
+ .game-controls .notice{line-height:1.18;margin:2px 0}
+ .game-controls .actions-scroll{flex:1 1 auto;max-height:none}
+}
+@media (max-width:375px), (max-height:680px){.game-controls .ai-switch{padding:3px 5px;font-size:10px}}
+/* Keep portrait composite at its native 2:1 aspect ratio. Without this,
+   a compact action panel makes the image's container grow very tall,
+   letterboxing the actual characters in an almost-empty scene. */
+@media (orientation:portrait) and (max-width:650px){
+ #app .game-screen .scene-wrap{aspect-ratio:2/1;height:auto;min-height:0;max-height:min(42dvh,420px);flex:0 0 auto;align-self:stretch}
+ #app .game-screen .game-controls{flex:0 0 auto;max-height:min(63dvh,520px)}
+ #app .game-screen .actions-scroll{max-height:min(38dvh,390px)}
+ #app.immersive .game-screen .scene-wrap{height:auto;flex:0 0 auto}
+}
+
+/* v1.1: optional short in-game history, inside the controls, never body scroll */
+.recent-log{font-size:11px;color:#dac1ac;border-top:1px solid #513b3d;padding-top:6px;margin-top:3px}
+.recent-log summary{cursor:pointer;font-weight:750;color:#eacb94;padding:2px 0;touch-action:manipulation}
+.recent-log ol{margin:5px 0 2px;padding-left:18px;line-height:1.35}
+.recent-log li{padding:2px 0}
+@media (orientation:portrait) and (max-width:650px){
+ .game-controls .card{width:clamp(40px,15.5vw,65px);height:clamp(57px,22vw,91px)}
+ .game-controls .dice-token{height:29px;width:29px}
+}
