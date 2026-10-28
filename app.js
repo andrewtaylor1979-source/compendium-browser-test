@@ -1,4 +1,4 @@
-import * as E from './engine.js?v=solo123';
+import * as E from './engine.js?v=solo124';
 const $=id=>document.getElementById(id), esc=x=>String(x??'').replace(/[&<>"']/g,y=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[y]));
 const display=n=>roster.find(c=>c.asset_name===n)?.full_name||n;
 const KEY='sgc-browser-v1-save',DIRDB='sgc_browser_feasibility',HANDKEY='assets-directory';
@@ -314,7 +314,14 @@ async function drawBoothScene(cv,ctx,W,H){
  if(!sprite&&st!=='TJBP')sprite=await sceneSprite(filename(p.asset));
  if(!cv.isConnected)return;
  if(sprite){
-  const usable=H*.93,feet=H*.975;
+  // Protect the entire visible figure, including feet, from the 50px
+  // nameplate drawn below. Previously feet=97.5% placed the bottoms of
+  // the character INSIDE that nameplate, so the bar hid their feet.
+  const nameplateTop=H-50;
+  const floorGap=Math.max(10,Math.round(H*.012));
+  const headGap=Math.max(16,Math.round(H*.018));
+  const feet=nameplateTop-floorGap;
+  const usable=Math.min(H*.93,feet-headGap);
   const scale=Math.min(W*.91/sprite.sw,usable/sprite.sh);
   const dw=sprite.sw*scale,dh=sprite.sh*scale;
   ctx.shadowColor='rgba(0,0,0,.60)';ctx.shadowBlur=22;
