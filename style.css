@@ -271,3 +271,20 @@
 @media(max-width:650px){.top .compendium-header-logo{width:125px;max-height:46px}.top .brand-subtitle{font-size:10px}.top .brand-subtitle small{display:none}}
 @media(max-width:380px){.top .compendium-header-logo{width:118px}.top .brand-subtitle{font-size:9px}.top .brand{gap:4px}}
 @media(max-height:470px) and (orientation:landscape){.top .compendium-header-logo{width:95px;max-height:30px}.top .brand-subtitle{font-size:9px}.solo-setup .solo-visitor-gender select{height:28px}}
+
+/* v1.2.3 — Solo booth: no clipped dialogue.
+   The complete quote stays in the existing internally scrollable action region.
+   The browser document is still fixed; only the controls region may scroll. */
+#app .unified-game.solo-game .actions-scroll{overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;min-height:0;flex:1 1 auto;display:flex;flex-direction:column;align-items:stretch;gap:8px}
+#app .unified-game.solo-game .actions-scroll .solo-full-speech{
+  display:block!important;max-height:none!important;min-height:0;overflow:visible!important;
+  -webkit-line-clamp:unset!important;-webkit-box-orient:initial!important;
+  flex:0 0 auto;white-space:normal;overflow-wrap:break-word;
+  font-size:clamp(12px,3vw,15px);line-height:1.45;
+  padding:9px 11px;margin:0;border-left:3px solid var(--gold);border-top:0;
+  background:rgba(104,65,69,.20);border-radius:8px;color:#f0ddd3;
+}
+#app .unified-game.solo-game .solo-full-speech b{color:var(--gold)}
+@media (orientation:landscape) and (min-width:600px){
+ #app .unified-game.solo-game .actions-scroll .solo-full-speech{font-size:clamp(11px,1.4vw,14px);padding:6px 9px;line-height:1.35}
+}
