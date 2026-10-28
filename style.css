@@ -258,3 +258,16 @@
 #app .unified-game .one-removal-options .one-advance{grid-column:1/-1;margin-top:0}
 @media (max-width:650px){#app .unified-game .one-removal-options{grid-template-columns:repeat(2,minmax(0,1fr))}#app .unified-game .one-removal-options .solo-remove{font-size:12px;min-height:53px;padding:8px 5px}}
 @media (max-height:470px) and (orientation:landscape){#app .unified-game .one-removal-options .solo-remove{min-height:40px;padding:6px 7px;font-size:11px}}
+
+/* Official desktop Compendium branding, rather than a generic emblem. */
+.top .brand{display:flex;align-items:center;gap:11px;min-width:0}
+.top .compendium-header-logo{display:block;width:clamp(122px,25vw,205px);height:auto;max-height:54px;object-fit:contain;flex:0 0 auto}
+.top .brand-subtitle{font:700 clamp(11px,1.25vw,17px) Georgia,serif;color:var(--gold);letter-spacing:.03em;white-space:nowrap}
+.top .brand-subtitle small{font:11px system-ui;color:var(--mute);font-weight:400}
+.solo-setup .setup-bottom{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 9px;align-items:center}
+.solo-setup .setup-bottom .solo-visitor-gender{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--gold);font-size:12px;font-weight:650}
+.solo-setup .solo-visitor-gender select{min-width:125px;max-width:65%;padding:7px 12px;height:36px;color:var(--text);border:1px solid #72545a;border-radius:8px;background:#2a2023;font-size:12px}
+.solo-setup .setup-bottom>span{min-width:0}
+@media(max-width:650px){.top .compendium-header-logo{width:125px;max-height:46px}.top .brand-subtitle{font-size:10px}.top .brand-subtitle small{display:none}}
+@media(max-width:380px){.top .compendium-header-logo{width:118px}.top .brand-subtitle{font-size:9px}.top .brand{gap:4px}}
+@media(max-height:470px) and (orientation:landscape){.top .compendium-header-logo{width:95px;max-height:30px}.top .brand-subtitle{font-size:9px}.solo-setup .solo-visitor-gender select{height:28px}}

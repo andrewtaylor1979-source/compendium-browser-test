@@ -164,7 +164,7 @@ export function startOne(profiles, settings={}) {
  return {version:2,mode:'one',people:[p],human:'__user__',settings,
   phase:'interact',round:1,notice:`${p.name} joins you in the private booth.`,
   dialogue:'',speaker:p.name,highlight:p.id,winner:'',pending:null,
-  history:[],one:{talks:0,lastLine:'',lastStyle:'',lastLines:[],lastItem:''}};
+  history:[],one:{talks:0,lastLine:'',lastStyle:'',lastLines:[],lastItem:'',order:[]}};
 }
 export function oneInteract(g, style, line) {
  if(g.mode!=='one'||g.phase!=='interact')throw Error('No private-booth conversation is active.');
@@ -185,6 +185,7 @@ export function oneAdvance(g, item, line) {
  if(!options.includes(item))throw Error('Choose one of the available clothing options.');
  const state=remove(p,item);g.round++;
  g.one.lastItem=item;
+ g.one.order??=[];g.one.order.push({item,stage:state});
  g.notice=p.eliminated?`${p.name} has reached the final pose. Session complete.`:
    `${p.name} moves to ${state}.`;
  g.dialogue=String(line||'').slice(0,1200);
