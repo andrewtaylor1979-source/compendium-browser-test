@@ -5,7 +5,7 @@ export const NAKED=['Naked','Naked2','Naked3','Naked4','Naked5'];
 export const OUTFITS=['TJBP','JBP','TBP','JP','TB','BP','B','P'];
 export const WHEEL_SEGMENTS=['self_remove','target_remove','safe','self_remove','recover','target_remove','self_remove_two','safe','target_remove','self_remove','safe','recover','self_remove_two','target_remove','self_remove','safe'];
 export const WHEEL_LABEL={self_remove:'REMOVE 1',target_remove:'CHOOSE 1',safe:'SAFE',recover:'RECOVER 1',self_remove_two:'REMOVE 2'};
-export const MODES={dice:'Dice',memory:'Strip Memory',wheel:'Wheel of Misfortune',holdem:"Strip Hold’em",draw:'Five-Card Draw'};
+export const MODES={dice:'Dice',memory:'Strip Memory',wheel:'Wheel of Misfortune',holdem:"Strip Hold’em",draw:'Five-Card Draw',one:'One-on-One'};
 const OPP=['T','J','B','P'];
 const DEPS={B:'T',P:'J','T-Shirt':'Hoodie','Boxer Shorts':'Jeans',Knickers:'Jeans',Underwear:'Jeans'};
 const USER_MAP={Hoodie:'T',Jeans:'J','T-Shirt':'B','Boxer Shorts':'P',Knickers:'P',Underwear:'P'};
@@ -25,6 +25,7 @@ const active=g=>g.people.filter(p=>!p.eliminated);
 const byId=(g,id)=>g.people.find(p=>p.id===id);
 const win=g=>{const a=active(g);if(a.length===1){g.phase='game_over';g.winner=a[0].name;return true;}return false};
 export const start=(mode,profiles,settings={})=>{
+ if(mode==='one')return startOne(profiles,settings);
  const names=uniq(settings.selected||[]);if(names.length<2||names.length>5)throw Error('Choose between 2 and 5 roster characters.');
  const by=new Map(profiles.map(c=>[c.asset_name,c]));if(names.some(n=>!by.has(n)))throw Error('Character not in the roster.');
  let people;
@@ -151,3 +152,43 @@ export function stepAi(g){if(g.mode==='memory'&&g.phase==='choose_card'&&memoryC
  }
  if(g.mode==='draw'&&g.phase==='draw'&&pokerActor(g).id!==g.human){drawExchange(g,aiDiscards(pokerActor(g).hand));return true;}
  return false;}
+
+
+// Private Booth: single-opponent experience. Shares the exact clothing and pose
+// progression of the five competitive game engines; no separate image formats.
+export function startOne(profiles, settings={}) {
+ const id=settings.selected?.[0];
+ const c=profiles.find(x=>x.asset_name===id);
+ if(!c)throw Error('Choose one opponent from the roster.');
+ const p=makePlayer(c);
+ return {version:2,mode:'one',people:[p],human:'__user__',settings,
+  phase:'interact',round:1,notice:`${p.name} joins you in the private booth.`,
+  dialogue:'',speaker:p.name,highlight:p.id,winner:'',pending:null,
+  history:[],one:{talks:0,lastLine:'',lastStyle:'',lastLines:[],lastItem:''}};
+}
+export function oneInteract(g, style, line) {
+ if(g.mode!=='one'||g.phase!=='interact')throw Error('No private-booth conversation is active.');
+ if(!['tease','compliment','challenge'].includes(style))throw Error('Choose an interaction.');
+ g.one??={talks:0,lastLines:[]};g.one.talks++;
+ g.one.lastStyle=style;
+ g.notice=style==='tease'?'A playful tease.':style==='compliment'?'A thoughtful compliment.':'A confident challenge.';
+ g.dialogue=String(line||'').slice(0,800);g.speaker=g.people[0].name;
+ g.highlight=g.people[0].id;
+}
+export function oneAdvance(g, line) {
+ if(g.mode!=='one'||g.phase!=='interact')throw Error('The private-booth scene has ended.');
+ const p=g.people[0];
+ // Choose a legal outer layer first. Once dressed layers are gone, each
+ // subsequent advance moves to the next supported naked-pose image state.
+ const options=allowed(p);
+ const item=['J','T','B','P','Naked'].find(k=>options.includes(k));
+ if(!item){g.phase='game_over';return null;}
+ const state=remove(p,item);g.round++;
+ g.one.lastItem=item;
+ g.notice=p.eliminated?`${p.name} has reached the final pose. Session complete.`:
+   `${p.name} moves to ${state}.`;
+ g.dialogue=String(line||'').slice(0,1200);
+ g.speaker=p.name;g.highlight=p.id;
+ if(p.eliminated){g.phase='game_over';g.winner=p.name;}
+ return {item,state,finished:p.eliminated};
+}

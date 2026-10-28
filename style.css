@@ -145,3 +145,107 @@
  .game-controls .card{width:clamp(40px,15.5vw,65px);height:clamp(57px,22vw,91px)}
  .game-controls .dice-token{height:29px;width:29px}
 }
+
+/* ===============================================
+   v1.2: one unified scene-first layout across SIX modes.
+   All page scrolling remains disabled; interactive cards and
+   details scroll within their own allocated mobile panels.
+   =============================================== */
+#app .main.game-only{flex:1;min-height:0;padding:env(safe-area-inset-top) max(5px,env(safe-area-inset-right)) max(4px,env(safe-area-inset-bottom)) max(5px,env(safe-area-inset-left));overflow:hidden}
+#app .unified-game{height:100%;width:100%;max-width:1480px;margin:auto;display:flex;flex-direction:column;gap:5px;position:relative;min-height:0}
+#app .unified-game .game-top{height:43px;flex:0 0 43px;display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 4px}
+#app .unified-game .game-name{font-size:clamp(16px,3.7vw,22px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center}
+#app .unified-game .game-top button{height:38px;padding:4px 12px;min-width:57px;font-size:13px}
+#app .unified-game .game-main{display:flex;flex-direction:column;flex:1;gap:6px;min-height:0;overflow:hidden}
+#app .unified-game .scene-wrap{height:auto;aspect-ratio:2/1;max-height:min(42dvh,380px);min-height:0;flex:0 0 auto;align-self:stretch;position:relative;border-radius:12px;background:#150e13}
+#app .unified-game .scene-wrap #scene{display:block;width:100%;height:100%;object-fit:contain}
+#app .unified-game .scene-expand{font-size:15px;top:6px;right:6px;padding:6px 10px;min-width:36px;min-height:33px}
+#app .unified-game .game-controls{display:flex;flex-direction:column;flex:1 1 auto;min-height:0;max-height:none;height:auto;padding:9px 10px 6px;border-radius:12px;gap:5px;overflow:hidden}
+#app .unified-game .turn-info{flex:0 0 auto;min-height:0}
+#app .unified-game .turn-meta{gap:5px}
+#app .unified-game .turn-meta .eyebrow{font-size:10px;letter-spacing:.10em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#app .unified-game .turn-info .notice{font-size:clamp(12px,3.25vw,16px);line-height:1.25;margin:4px 0 2px;font-weight:700}
+#app .unified-game .ai-switch{padding:4px 9px;font-size:11px;min-height:30px}
+#app .unified-game .compact-speech{flex:0 0 auto;max-height:45px;font-size:12px;line-height:1.35;padding:5px 8px;margin:0;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+#app .unified-game .compact-speech b{color:var(--gold)}
+#app .unified-game .actions-scroll{flex:1 1 auto;min-height:0;max-height:none;overflow:auto;overscroll-behavior:contain;touch-action:pan-y;scrollbar-width:thin;gap:7px;padding:3px 1px 4px}
+#app .unified-game .actions-scroll button{min-height:43px;font-size:clamp(12px,3vw,15px);font-weight:700}
+#app .unified-game .primary-dock{flex:0 0 auto;padding:2px 0 1px;background:linear-gradient(transparent,#21171b 10%)}
+#app .unified-game .primary-dock .primary{width:100%;min-height:48px;font-weight:800;font-size:clamp(14px,3.5vw,17px);border-color:#cfaaa0}
+#app .unified-game .game-toolbar{height:43px;flex:0 0 43px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;padding-bottom:2px}
+#app .unified-game .game-toolbar button{background:#332228;border:1px solid #715054;border-radius:9px;padding:5px 1px;color:#ead8bd;font-size:11px;font-weight:700;min-width:0;white-space:nowrap}
+#app .unified-game .game-toolbar button:active{background:#63404b}
+#app .unified-game .playing-row{max-width:100%;gap:clamp(3px,.9vw,9px);padding:2px 0;justify-content:center}
+#app .unified-game .card{width:clamp(41px,16vw,85px);height:clamp(59px,23vw,119px);flex:0 1 auto;min-width:0;overflow:hidden}
+#app .unified-game .card .card-label{font-size:clamp(13px,3vw,18px)}
+#app .unified-game .playing-row .select-card{min-width:0;flex:0 1 19%;padding:0 0 3px;display:flex;flex-direction:column;align-items:center}
+#app .unified-game .playing-row .select-card .card{width:100%;height:auto;aspect-ratio:5/7}
+#app .unified-game .playing-row .select-card small{font-size:10px}
+#app .unified-game .playing-row .select-card.discarded{border-color:#e8b369;box-shadow:0 0 0 2px #e8b36980}
+#app .unified-game .dice-rolls{gap:6px}
+#app .unified-game .roll-pill{min-height:39px}
+#app .unified-game .dice-token{width:33px;height:33px}
+#app .unified-game .wheel-assembly{flex:0 0 auto;height:min(31dvh,205px)}
+#app .unified-game .wheel-disc{width:min(29dvh,192px);height:min(29dvh,192px)}
+#app .unified-game .memory-card{min-height:56px;min-width:45px}
+#app .unified-game .action-row{gap:7px}
+#app .unified-game .recent-log{display:none}
+#app .drawer-shade{position:fixed;inset:0;background:#080508b9;z-index:180;cursor:pointer}
+#app .game-drawer{position:fixed;left:max(5px,env(safe-area-inset-left));right:max(5px,env(safe-area-inset-right));bottom:max(5px,env(safe-area-inset-bottom));z-index:181;max-height:72dvh;overflow:auto;padding:14px;background:#2b1c22;border:1px solid #b48d70;box-shadow:0 -12px 50px #0009;border-radius:18px 18px 12px 12px}
+#app .drawer-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;color:var(--gold);font-size:17px}
+#app .drawer-head button{width:40px;height:37px;padding:0;font-size:19px}
+#app .drawer-players{display:grid;gap:7px}
+#app .drawer-players>div{display:flex;justify-content:space-between;gap:15px;padding:11px;border:1px solid #68515a;border-radius:9px}
+#app .drawer-players span{color:var(--gold)}
+#app .drawer-quote{font-size:17px;line-height:1.6;color:#f5e4cf;padding:8px}
+#app .drawer-history{margin:0;padding:0 6px 0 24px;line-height:1.55}
+#app .drawer-history li{padding:9px 4px;border-bottom:1px solid #574046}
+#app .drawer-settings{display:grid;gap:9px}
+#app .drawer-settings button{min-height:47px;font-size:14px;text-align:left}
+#app .unified-game.solo-game .scene-wrap{aspect-ratio:3/4;max-height:min(49dvh,440px);align-self:center;width:min(100%,340px)}
+#app .unified-game.solo-game .scene-wrap canvas{object-fit:contain}
+#app .unified-game .one-prompt{font-size:13px;color:#f2d3a2;margin:3px 0 6px}
+#app .unified-game .one-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+#app .unified-game .one-choices button{padding:10px 2px;font-size:12px;min-height:50px}
+#app .unified-game .one-advance{width:100%;min-height:49px;margin-top:6px}
+#app .unified-game.solo-game .compact-speech{max-height:76px;-webkit-line-clamp:3}
+#app .solo-setup .roster-panel{min-height:0;flex:1;overflow:hidden}
+#app .solo-setup .setup-bottom span{font-size:10px}
+@media (orientation:portrait) and (max-width:650px){
+ #app .unified-game .game-main{min-height:0;display:flex;flex-direction:column}
+ #app .unified-game .scene-wrap{flex:0 0 auto;max-height:min(37dvh,320px);width:100%;height:auto;aspect-ratio:2/1}
+ #app .unified-game .game-controls{flex:1 1 auto;min-height:0;max-height:none;height:auto;padding:8px}
+ #app .unified-game .actions-scroll{flex:1 1 auto;max-height:none;overflow-y:auto}
+ #app .unified-game.solo-game .scene-wrap{width:min(75vw,335px);max-height:min(46dvh,395px);aspect-ratio:3/4}
+}
+@media (orientation:landscape) and (min-width:600px){
+ #app .unified-game .game-top{height:35px;flex-basis:35px}
+ #app .unified-game .game-top button{height:31px;min-width:58px;font-size:11px}
+ #app .unified-game .game-main{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(258px,1fr);grid-template-rows:minmax(0,1fr);min-height:0;flex:1;gap:6px}
+ #app .unified-game .scene-wrap{width:100%;height:100%;max-height:none;min-height:0;aspect-ratio:auto;align-self:stretch;flex:1}
+ #app .unified-game .game-controls{width:100%;height:100%;min-height:0;max-height:none;padding:6px 9px;gap:3px;flex:1;overflow:hidden}
+ #app .unified-game .game-controls .turn-info .notice{font-size:12px;margin:2px 0}
+ #app .unified-game .compact-speech{font-size:10px;max-height:33px;-webkit-line-clamp:2;padding:2px 6px}
+ #app .unified-game .actions-scroll{min-height:0;max-height:none;flex:1 1 auto;gap:5px}
+ #app .unified-game .actions-scroll button{min-height:31px;font-size:11px;padding:5px}
+ #app .unified-game .primary-dock .primary{min-height:39px;font-size:12px;padding:6px}
+ #app .unified-game .game-toolbar{height:28px;flex-basis:28px}
+ #app .unified-game .game-toolbar button{font-size:10px;padding:2px}
+ #app .unified-game .turn-meta .eyebrow{font-size:9px}
+ #app .unified-game .card{width:clamp(30px,5.5vw,65px);height:clamp(42px,8vw,87px)}
+ #app .unified-game .playing-row .select-card .card{width:100%;height:auto}
+ #app .unified-game .playing-row .select-card small{font-size:8px}
+ #app .unified-game .dice-token{width:24px;height:24px}
+ #app .unified-game .wheel-assembly{height:135px}
+ #app .unified-game .wheel-disc{width:122px;height:122px}
+ #app .unified-game.solo-game .game-main{grid-template-columns:minmax(0,1.45fr) minmax(260px,1fr)}
+ #app .unified-game.solo-game .scene-wrap{max-height:none;height:100%;width:100%;aspect-ratio:auto;align-self:stretch}
+ #app .unified-game.solo-game .scene-wrap #scene{height:100%;width:100%;object-fit:contain}
+ #app .unified-game .game-drawer{left:20%;right:20%;max-height:90dvh}
+}
+@media (max-height:530px) and (orientation:portrait){
+ #app .unified-game .scene-wrap{max-height:30dvh}
+ #app .unified-game.solo-game .scene-wrap{max-height:36dvh}
+}
+#app.immersive .unified-game .game-top,#app.immersive .unified-game .game-toolbar{display:none!important}
+#app.immersive .unified-game .game-main{height:100%;flex:1;min-height:0}
