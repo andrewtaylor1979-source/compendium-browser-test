@@ -1,4 +1,4 @@
-import * as E from './engine.js';
+import * as E from './engine.js?v=draw111';
 const $=id=>document.getElementById(id), esc=x=>String(x??'').replace(/[&<>"']/g,y=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[y]));
 const display=n=>roster.find(c=>c.asset_name===n)?.full_name||n;
 const KEY='sgc-browser-v1-save',DIRDB='sgc_browser_feasibility',HANDKEY='assets-directory';
@@ -94,7 +94,7 @@ const has=n=>assets.has(n.toLowerCase());
 async function urlFor(filename){let key=filename.toLowerCase();if(objects.has(key))return objects.get(key);const h=assets.get(key);if(!h)return null;const f=await h.getFile(),url=URL.createObjectURL(f);objects.set(key,url);return url;}
 async function imgFor(filename){const key=filename.toLowerCase();if(loadedImgs.has(key))return loadedImgs.get(key);const url=await urlFor(filename);if(!url)return null;let image=new Image();image.src=url;try{await image.decode();loadedImgs.set(key,image);return image;}catch(_e){return null;}}
 function filename(asset,state='TJBP'){return `${asset}_${state}.png`}
-function header(){return `<header class="top"><div class="brand" data-nav="menu"><span class="emblem">✦</span><div><div class="eyebrow">STRIP GAMES COMPENDIUM</div><div class="brand-title">THE PRIVATE CLUB <small>Browser Edition</small></div></div></div><div class="top-actions"><span class="pill">v1.1</span><button class="small-btn" data-action="folder">${folder?'📁 '+assets.size:'📁 Assets'}</button></div></header>`;}
+function header(){return `<header class="top"><div class="brand" data-nav="menu"><span class="emblem">✦</span><div><div class="eyebrow">STRIP GAMES COMPENDIUM</div><div class="brand-title">THE PRIVATE CLUB <small>Browser Edition</small></div></div></div><div class="top-actions"><span class="pill">v1.1.1</span><button class="small-btn" data-action="folder">${folder?'📁 '+assets.size:'📁 Assets'}</button></div></header>`;}
 function frame(content){$('app').innerHTML=`${header()}<main class="main">${content}</main>`;}
 function menu(){const tiles=menuModes.map(([id,ico,title,descr])=>`<button class="menu-tile" data-open="${id}"><span class="menu-icon">${ico}</span><span class="menu-title">${esc(title)}</span><span class="menu-description">${esc(descr)}</span><span class="menu-resume">${saves[id]?'RESUME OR NEW GAME':'CHOOSE PLAYERS'}</span></button>`).join('');
  frame(`<section class="menu"><div class="menu-heading"><span class="eyebrow">OFFLINE • FIVE GAMES • 65 CHARACTERS</span><h1>Choose your game</h1><p>Entirely on your phone. All artwork stays in your own separate Assets folder.</p></div><div class="menu-tiles">${tiles}</div><div class="menu-bottom"><span>${folder?'✓ '+esc(folderInfo):'⚠ Connect your separate Assets folder to display portraits'}</span><button class="small-btn" data-nav="settings">Assets &amp; saves</button></div></section>`);}

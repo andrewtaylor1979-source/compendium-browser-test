@@ -98,8 +98,45 @@ export function holdemNext(g){const stages={preflop:['flop',3],flop:['turn',4],t
 export function pokerActor(g){return byId(g,g.turnOrder[g.actorIndex]);}
 export function aiDiscards(cards){const value=rank5(cards);if(value.key[0]>=4)return [];const counts={};cards.forEach(c=>counts[c.r]=(counts[c.r]||0)+1);const keep=cards.map((c,i)=>({c,i})).filter(({c})=>counts[c.r]>=2).map(x=>x.i);
  if(keep.length)return [0,1,2,3,4].filter(i=>!keep.includes(i));const suitCounts={};cards.forEach(c=>suitCounts[c.s]=(suitCounts[c.s]||0)+1);let suit=Object.keys(suitCounts).find(s=>suitCounts[s]===4);if(suit!==undefined)return cards.map((c,i)=>c.s!=suit?i:-1).filter(x=>x>=0);return [0,1,2].filter(i=>cards[i].r<12);}
-export function drawExchange(g,indices){if(g.phase!=='draw')throw Error('Not in an exchange round.');const p=pokerActor(g);const ids=uniq(indices.map(Number)).sort((a,b)=>a-b);if(ids.some(i=>i<0||i>4)||ids.length>g.deck.length)throw Error('Invalid discard selection.');ids.forEach(i=>p.hand[i]=g.deck.pop());note(g,`${p.name} ${ids.length?'exchanged '+ids.length+' card'+(ids.length>1?'s':''):'stood pat'} — round ${g.drawRound}.`,p.id);
- g.actorIndex++;if(g.actorIndex===g.turnOrder.length){if(g.drawRound===1){g.drawRound=2;g.actorIndex=0;g.deck.push(...g.disc);g.deck=shuffle(g.deck);note(g,`Round 1 finished. Begin second and final exchange round.`);}else {g.phase='showdown';showdown(g);}}
+// Every replaced card enters a discard pile. In a five-player game, the 27
+// remaining cards are enough for the first draw (at most 25 replacements).
+// Before the second draw, recycle only round-one discards into the deck.
+// Discards made during the second draw stay out of play until the next hand.
+// This also keeps a full 52-card deck valid throughout both draw rounds.
+const cardKey=c=>`${c.r}:${c.s}`;
+function repairLegacyDrawDeck(g,needed){
+ if(g.deck.length>=needed)return;
+ // v1.0-v1.1 omitted the discard pile entirely. An unfinished saved game
+ // from those releases can therefore run out of cards during round two.
+ // Recover only cards NOT currently in any live hand or the draw deck.
+ const inPlay=new Set([...g.deck,...active(g).flatMap(p=>p.hand)].map(cardKey));
+ const available=pokerDeck().filter(c=>!inPlay.has(cardKey(c)));
+ const shortfall=needed-g.deck.length;
+ if(available.length<shortfall)throw Error('Unable to recover enough distinct cards for this draw.');
+ shuffle(available);
+ g.deck.push(...available.slice(0,shortfall));
+ g.drawDeckRecovered=true;
+}
+export function drawExchange(g,indices){
+ if(g.phase!=='draw')throw Error('Not in an exchange round.');
+ if(!Array.isArray(indices))throw Error('Invalid discard selection.');
+ const p=pokerActor(g);
+ if(!p)throw Error('No player is available for this exchange.');
+ const ids=uniq(indices.map(Number)).sort((a,b)=>a-b);
+ if(ids.some(i=>!Number.isInteger(i)||i<0||i>=p.hand.length))throw Error('Invalid discard selection.');
+ repairLegacyDrawDeck(g,ids.length);
+ if(!Array.isArray(g.disc))g.disc=[]; // older saved games
+ ids.forEach(i=>{const removed=p.hand[i];p.hand[i]=g.deck.pop();g.disc.push(removed);});
+ note(g,`${p.name} ${ids.length?'exchanged '+ids.length+' card'+(ids.length>1?'s':''):'stood pat'} — round ${g.drawRound}.`,p.id);
+ g.actorIndex++;
+ if(g.actorIndex===g.turnOrder.length){
+  if(g.drawRound===1){
+   g.drawRound=2;g.actorIndex=0;
+   // No second-round card may be dealt until all first-round players finish.
+   g.deck.push(...g.disc);g.disc=[];shuffle(g.deck);
+   note(g,`Round 1 finished. Begin second and final exchange round.`);
+  }else {g.phase='showdown';showdown(g);}
+ }
 }
 export function showdown(g){if(g.phase!=='showdown')throw Error('Cards must be revealed first.');g.showdown=active(g).map(p=>({id:p.id,name:p.name,rank:g.mode==='holdem'?rank7([...p.hand,...g.board]):rank5(p.hand)}));const sorted=[...g.showdown].sort((a,b)=>compare(a.rank.key,b.rank.key));const low=sorted.filter(x=>compare(x.rank.key,sorted[0].rank.key)===0);const high=sorted.filter(x=>compare(x.rank.key,sorted.at(-1).rank.key)===0);const loser=choice(low);const candidates=high.filter(p=>p.id!==loser.id);const chooser=choice(candidates.length?candidates:sorted.filter(p=>p.id!==loser.id));g.pending={loser:loser.id,chooser:chooser.id,item:null};g.phase='showdown_penalty';note(g,`${loser.name} has the weakest hand (${loser.rank.label}). ${chooser.name} has the highest hand and chooses the penalty.`,loser.id);}
 export function showdownPenalty(g){if(g.phase!=='showdown_penalty')throw Error('Resolve the showdown first.');const p=byId(g,g.pending.loser),opts=allowed(p);if(!opts.length)throw Error('No legal penalty.');g.phase=g.pending.chooser===g.human&&opts.length>1?'choose_penalty':'apply';if(g.phase==='apply')g.pending.item=choice(opts.slice().reverse().slice(0,2));note(g,`${byId(g,g.pending.chooser).name} chooses ${p.name}'s penalty.`,p.id);}
