@@ -3904,6 +3904,73 @@
           "I should have seen that coming. I won't make the same mistake twice. I make my own luck."
         ]
       }
+    },
+    "Smurfette": {
+      "vulgarity": 1,
+      "swears": [
+        "oh stars",
+        "goodness",
+        "crumbs",
+        "blimey"
+      ],
+      "events": {
+        "deal": [
+          "Two cards to start. Tiny beginning, enormous consequences.",
+          "Opening cards received. I would like some luck and slightly fewer witnesses, please.",
+          "Two hole cards. My smile is cute; my nerves are very real.",
+          "All right, we are off. Nerves steady, face steady, heartbeat less steady.",
+          "Starting hand noted. I am pretending that counts as confidence.",
+          "Two cards and a table full of eyes. Perfectly manageable. Probably."
+        ],
+        "flop": [
+          "The flop is down. That helps... I think.",
+          "Three on the board. The picture is clearer and somehow more dangerous.",
+          "Flop. I feel a little better, which may be wildly premature.",
+          "There is the flop. More information, more pressure, same blush.",
+          "Three community cards. My nerves are trying to look calm for me.",
+          "The flop changes things. I just hope it changes them kindly."
+        ],
+        "turn": [
+          "Turn card. Oh, this is getting serious now.",
+          "Fourth card. I can feel the whole table leaning into the tension.",
+          "The turn arrives and my brave smile is under review.",
+          "One more card to go. I would love a little magical intervention.",
+          "That turn card has made me very aware of my remaining clothes.",
+          "Fourth card down. I am still smiling, but only just."
+        ],
+        "river": [
+          "River. Final card, final truth, nowhere to hide.",
+          "Last community card. Time to find out whether the smurf tale survives.",
+          "The river settles it. I am either glowing or doomed.",
+          "Final card. My stomach has done a somersault worthy of an acrobat blue-haired.",
+          "River down. Whatever happens next, it will be dramatic.",
+          "That is the whole board. Wish me luck and perhaps a screen."
+        ],
+        "showdown_win": [
+          "Winner! Oh, that feels delightful.",
+          "I take it. Little smurf, mighty hand.",
+          "Best hand. I knew the playful instinct was right.",
+          "I win. My confidence has officially fidgeted upward.",
+          "That is mine. I might actually look smug for a moment.",
+          "Victory. I am practically glowing."
+        ],
+        "showdown_safe": [
+          "Safe. Not glorious, but very, very welcome.",
+          "Not last. I will treasure that small mercy.",
+          "Safe from the consequence. My outfit thanks the cards.",
+          "I survived the showdown. That is good enough for me.",
+          "Not the loser. I shall gladly let someone else take the spotlight.",
+          "Safe. I can breathe again."
+        ],
+        "showdown_lose": [
+          "Last. Oh no. I can feel the room getting much more interested in me.",
+          "I lose. Please choose with a little kindness, if that exists here.",
+          "Bottom hand. That is a terrible feeling for a small smurf.",
+          "I am last. My smile has become entirely decorative.",
+          "Loss confirmed. This is where bravery gets much harder.",
+          "That is me at the bottom. I was afraid of that."
+        ]
+      }
     }
   },
   "final_pose": {
@@ -4977,6 +5044,23 @@
         "naked5_shame": [
           "I'm embarrassed, but honestly quite proud of myself.",
           "I came here on my own terms. That's what I'll remember."
+        ]
+      },
+      "Smurfette": {
+        "naked4_warning": [
+          "Tinkerbell, one more bad board and the final pose is next. My nerves are not helping my dignity right now.",
+          "One more slip and I am at the final pose. That is a terrifying amount of pressure for one little smurf.",
+          "I am trying to stay brave, but the final pose is fidgeting far too close now."
+        ],
+        "naked5_tease": [
+          "The shy little smurf made it all the way to the final pose. Apparently blue-haired pride has limits after all.",
+          "So this is the spectacular smurf finale. I was hoping for sparkles, not this much exposure.",
+          "Well, the nerves survived. My dignity is another matter entirely."
+        ],
+        "naked5_shame": [
+          "Final pose... oh stars. I feel like every eye in the room is pinning my nerves in place.",
+          "That is the final pose? I am trying to smile, but I am also one blush away from evaporating into blue-haired dust.",
+          "I knew this game got wild, but I still was not prepared to end up here quite this naked and quite this on display."
         ]
       }
     },

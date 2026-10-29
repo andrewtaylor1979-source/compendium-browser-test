@@ -4500,6 +4500,80 @@
           "That went rather well. Care for a rematch? I make my own luck."
         ]
       }
+    },
+    "Smurfette": {
+      "vulgarity": 1,
+      "swears": [
+        "oh stars",
+        "goodness",
+        "crumbs",
+        "blimey"
+      ],
+      "events": {
+        "high_unique": [
+          "{total}. Highest! Ooh, that feels splendid.",
+          "A {total}. Top roll and top grin.",
+          "{total} and highest. The little smurf triumphs.",
+          "High on {total}. I shall try not to look too pleased with myself.",
+          "{total}. Lovely roll. I approve enormously."
+        ],
+        "high_tie": [
+          "Tied high on {total}. So close to neat victory.",
+          "{total} and a high tie. Even luck wants more drama.",
+          "High tie at {total}. Why is winning never simple?",
+          "A tied {total}. All right, then. More suspense.",
+          "{total} but shared high. We are dragging this out beautifully."
+        ],
+        "low_single": [
+          "{total}. Lowest. Oh, that is ominous.",
+          "A {total}. Too low, too obvious and much too public.",
+          "{total} and bottom. I do not like where this is going.",
+          "Lowest with {total}. My stomach just dropped with it.",
+          "{total}. Bottom roll. I can already hear the wicked suggestions forming."
+        ],
+        "low_tie": [
+          "Tied low. Somehow that feels even crueler.",
+          "A low tie. Great. Shared danger, shared dread.",
+          "Joint bottom. My nerves have started fidgeting.",
+          "Tied for lowest. I would prefer an immediate miracle.",
+          "Low tie. The uncertainty is not helping my nerves."
+        ],
+        "choose_loser": [
+          "I choose {target}. Little smurf, temporary power.",
+          "{target}, you are my choice. Do not look at me like that.",
+          "My selection is {target}. Mischief guided the decision.",
+          "{target}, I am picking you. Please remember I am adorable.",
+          "I choose {target}. I feel both guilty and thrilled."
+        ],
+        "choose_removal": [
+          "{garment}, {target}. That is my choice.",
+          "I am selecting {garment}, {target}. Gentle in tone, not in outcome.",
+          "{target}, the {garment}. Smurf justice can be terribly revealing.",
+          "The {garment}, {target}. I hope the nerves make me look less mean.",
+          "{garment} comes off, {target}. So says the lucky little sprite."
+        ],
+        "penalty_reaction": [
+          "All right, {chooser}. The {garment} is coming off.",
+          "{garment}? Oh stars, {chooser}. Fine.",
+          "Right then, {chooser}: the {garment}. I am being very brave about this.",
+          "The {garment}, {chooser}? I object softly and comply anyway.",
+          "I heard you, {chooser}. {garment} off. Nerves up, courage up."
+        ],
+        "eliminated": [
+          "That is me eliminated. My luck slipped away without warning.",
+          "Out. I would like to fold my nerves around myself and vanish for a bit.",
+          "Eliminated. Those dice were brutal little things.",
+          "I am out. Please admire my courage more than my predicament.",
+          "Finished. The game won and my dignity barely survived."
+        ],
+        "winner": [
+          "I win! Smurf luck for the victory.",
+          "Winner. I may be small, but I am absolutely celebrating this.",
+          "That is victory. I feel twice my size right now.",
+          "I won. The nerves are practically buzzing with delight.",
+          "Winner. I shall treasure this moment of triumph."
+        ]
+      }
     }
   },
   "final_pose": {
@@ -4750,6 +4824,23 @@
         "naked5_shame": [
           "Even the bravest adventure has a final chapter.",
           "You'll have to work much harder to make me give up."
+        ]
+      },
+      "Smurfette": {
+        "naked4_warning": [
+          "Tinkerbell, one more bad roll and the final pose is next. My nerves are not helping my dignity right now.",
+          "One more slip and I am at the final pose. That is a terrifying amount of pressure for one little smurf.",
+          "I am trying to stay brave, but the final pose is fidgeting far too close now."
+        ],
+        "naked5_tease": [
+          "The shy little smurf made it all the way to the final pose. Apparently blue-haired pride has limits after all.",
+          "So this is the spectacular smurf finale. I was hoping for sparkles, not this much exposure.",
+          "Well, the nerves survived. My dignity is another matter entirely."
+        ],
+        "naked5_shame": [
+          "Final pose... oh stars. I feel like every eye in the room is pinning my nerves in place.",
+          "That is the final pose? I am trying to smile, but I am also one blush away from evaporating into blue-haired dust.",
+          "I knew this game got wild, but I still was not prepared to end up here quite this naked and quite this on display."
         ]
       }
     }

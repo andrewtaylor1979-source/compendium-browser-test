@@ -3634,6 +3634,59 @@
           "That went rather well. Care for a rematch? I make my own luck."
         ]
       }
+    },
+    "Smurfette": {
+      "vulgarity": 1,
+      "swears": [
+        "oh stars",
+        "goodness",
+        "crumbs",
+        "blimey"
+      ],
+      "events": {
+        "spin": [
+          "Spin it. I am trusting luck more than wisdom now.",
+          "Round and round. My stomach is copying the wheel.",
+          "There it goes. Please land kindly, shiny wheel.",
+          "Spin time. This is a lot of power for a painted circle.",
+          "Off it goes. Fingers crossed for mercy."
+        ],
+        "safe": [
+          "Safe! Oh, what a lovely sound that is.",
+          "I am safe. I could hug that wheel.",
+          "Safe result. I will not waste this breath of relief.",
+          "Nothing happens to me. Delightful.",
+          "Safe. My smile just became genuine."
+        ],
+        "self_remove": [
+          "My own {garment}? Oh, that is rude.",
+          "It landed on me. Fine... the {garment} goes.",
+          "Self-removal. My blush would like a moment.",
+          "The wheel chose me and my {garment}. Of course it did.",
+          "Right then, my {garment}. Let us get this over with."
+        ],
+        "target_remove": [
+          "{target}, the wheel grants me your {garment}.",
+          "Your {garment}, {target}. The wheel has spoken and I am merely the cute messenger.",
+          "{target}, you lose the {garment}. I did not make the rules, just the smile.",
+          "The result is your {garment}, {target}. Very dramatic.",
+          "{target}, the wheel wants your {garment}. Who am I to argue?"
+        ],
+        "recover": [
+          "At least it was only a wheel spin and not complete disaster.",
+          "I am recovering my nerve. Slowly, but still.",
+          "That was exciting in a way I may regret later.",
+          "Deep breath. I am still here, still blue-skinned and still game.",
+          "All right. Panic fidget contained for the moment."
+        ],
+        "winner": [
+          "I win the wheel. That feels positively sparkling.",
+          "Winner. The wheel finally behaved itself.",
+          "Victory! I shall spin in celebration later.",
+          "I won. Little smurf triumph, duly noted.",
+          "Winner. I am officially in a much better mood."
+        ]
+      }
     }
   },
   "final_pose": {
@@ -4699,6 +4752,23 @@
         "naked5_shame": [
           "I'm embarrassed, but honestly quite proud of myself.",
           "I came here on my own terms. That's what I'll remember."
+        ]
+      },
+      "Smurfette": {
+        "naked4_warning": [
+          "Tinkerbell, one more bad spin and the final pose is next. My nerves are not helping my dignity right now.",
+          "One more slip and I am at the final pose. That is a terrifying amount of pressure for one little smurf.",
+          "I am trying to stay brave, but the final pose is fidgeting far too close now."
+        ],
+        "naked5_tease": [
+          "The shy little smurf made it all the way to the final pose. Apparently blue-haired pride has limits after all.",
+          "So this is the spectacular smurf finale. I was hoping for sparkles, not this much exposure.",
+          "Well, the nerves survived. My dignity is another matter entirely."
+        ],
+        "naked5_shame": [
+          "Final pose... oh stars. I feel like every eye in the room is pinning my nerves in place.",
+          "That is the final pose? I am trying to smile, but I am also one blush away from evaporating into blue-haired dust.",
+          "I knew this game got wild, but I still was not prepared to end up here quite this naked and quite this on display."
         ]
       }
     },

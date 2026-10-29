@@ -2112,5 +2112,37 @@
     },
     "roster_added_on": "2026-10-29",
     "roster_added_note": "Adult interpretation (age 24), provided by user with 13 separately stored images. Independent, spirited, intelligent, confident, adventurous and quick-witted. Favourite drink: fresh mint tea. Loves freedom, markets, animals, honest people and exploring; dislikes being patronised, restrictive protocol and boastful opponents. Stubbornness is her weakness, and she fears losing the freedom to choose her own future. Often adjusts her hair jewel when thinking; her royal composure gives way to sharp sarcasm under pressure."
+  },
+  {
+    "asset_name": "Smurfette",
+    "full_name": "Smurfette",
+    "age": 19,
+    "occupation": "Smurf Village sweetheart",
+    "favourite_drink": "Sarsaparilla berry fizz",
+    "confidence_level": 3,
+    "nudity_quote": "I can be playful and cheeky, but that does not mean I do not notice every daring little choice you make.",
+    "clothing": {
+      "T": "Black sleeveless top",
+      "J": "Pink mini skirt",
+      "B": "Pink bra",
+      "P": "Pink panties"
+    },
+    "stage_dialogue": {
+      "JBP": "Top off first? Oh! Straight for the daring option, are you? You do not waste much time.",
+      "TBP": "Skirt first? That feels cheekier than I expected. You really are enjoying this.",
+      "JP": "Bra gone already? My smile is staying put, but that definitely caught me by surprise.",
+      "TB": "Panties first while the top stays? That is a very bold sort of logic, and I am not sure I approve. Entirely.",
+      "BP": "Down to bra and panties. I am still smiling, but you are making me feel very watched all of a sudden.",
+      "B": "Only the bra left. That is not much comfort, is it? I hope you are pleased with yourself.",
+      "P": "Just the panties now. This is getting far more exposing than my usual kind of mischief.",
+      "Naked": "Completely naked and covering up. I did not think this game would leave me feeling quite this vulnerable.",
+      "Naked2": "Hands away too? Oh goodness. That is a whole new level of daring.",
+      "Naked3": "Bent over? You really do like seeing how flustered you can make me.",
+      "Naked4": "On all fours and one step from the end. I am trying to look playful, but I am blushing too much to hide it.",
+      "Naked5": "Final pose. Well... if I am going to be this exposed, I may as well try to look cute doing it.",
+      "Eliminated": "Eliminated. All right, you win this one. I hope you are very happy with your scandalous little victory."
+    },
+    "roster_added_on": "2026-10-29",
+    "roster_added_note": "Adult interpretation (age 19), provided by user with 13 separately stored images. Playful, bubbly and mischievous, but only moderately confident; sweet and teasing when comfortable, visibly more bashful when the stakes become personal. Favourite drink: sarsaparilla berry fizz. Loves attention, teasing banter, dancing and being admired; dislikes being underestimated, being rushed and losing control of the mood. Her white hat is part of her iconic look and is intentionally not treated as a removable TJBP clothing item."
   }
 ]

@@ -2474,6 +2474,43 @@
         "Naked4": "{garment}? You're enjoying this. Just remember that a princess doesn't concede easily.",
         "Naked5": "{garment}? You're enjoying this. Just remember that a princess doesn't concede easily."
       }
+    },
+    {
+      "asset_name": "Smurfette",
+      "dialogue": {
+        "deal": "Five cards. Right then. Deep breath, brave smile, nerves steady.",
+        "stand_pat": "Keeping them. Sometimes a smurf has to trust the first fidget of instinct.",
+        "draw_one": "Just one. A tiny tweak might turn this from nervous to lovely.",
+        "draw_two": "Two new cards, please. A little extra luck would be nice.",
+        "draw_many": "Most of these can go. Even smurf optimism has limits.",
+        "improved": "Ooh, that is better. I feel much brighter about this hand now.",
+        "no_improvement": "Well... that did not sparkle the way I hoped it would.",
+        "showdown_win": "I win! Tiny, blue-skinned and still dangerous. That feels wonderful.",
+        "showdown_safe": "Not last. I will happily take surviving with my outfit mostly intact.",
+        "showdown_lose": "I lose. Oh stars... please be gentle with your choice."
+      },
+      "winner_choice": {
+        "T": "The {garment}, {loser}. A smurf likes a dramatic start.",
+        "J": "Your {garment}, {loser}. I did not mean to sound that pleased, but here we are.",
+        "B": "The {garment}, {loser}. I promise I am blushing almost as much as you are.",
+        "P": "Your {garment}, {loser}. This game does not believe in subtle punishments, does it?",
+        "Naked": "Naked, {loser}. You can keep your hands for the moment.",
+        "Naked2": "Hands away, {loser}. Full smurf-honesty time, apparently.",
+        "Naked3": "Turn and bend over, {loser}. I know, I know... it is terribly mean.",
+        "Naked4": "Hands and knees, {loser}. We are very close to the big finish now.",
+        "Naked5": "Final pose, {loser}. Try to look enchanting for me."
+      },
+      "loser_response": {
+        "T": "My {garment}? Right. That is manageable... probably.",
+        "J": "The {garment}? Oh dear. My legs suddenly feel very observed.",
+        "B": "My {garment}? That is rather intimate for one card game, {winner}.",
+        "P": "My {garment}? You really do go for the dangerous choices, {winner}.",
+        "Naked": "Completely naked and covering up. This is a very bold sort of smurf evening.",
+        "Naked2": "Hands away too? Oh stars, {winner}. That is merciless.",
+        "Naked3": "Bent over? You are enjoying this a little too much, {winner}.",
+        "Naked4": "Hands and knees. I can feel my blush reaching my nerves.",
+        "Naked5": "The final pose, {winner}? I hope you appreciate just how much courage this takes."
+      }
     }
   ],
   "final_pose": {
@@ -3550,6 +3587,23 @@
         "naked5_shame": [
           "I'm embarrassed, but honestly quite proud of myself.",
           "I came here on my own terms. That's what I'll remember."
+        ]
+      },
+      "Smurfette": {
+        "naked4_warning": [
+          "Tinkerbell, one more bad card draw and the final pose is next. My nerves are not helping my dignity right now.",
+          "One more slip and I am at the final pose. That is a terrifying amount of pressure for one little smurf.",
+          "I am trying to stay brave, but the final pose is fidgeting far too close now."
+        ],
+        "naked5_tease": [
+          "The shy little smurf made it all the way to the final pose. Apparently blue-haired pride has limits after all.",
+          "So this is the spectacular smurf finale. I was hoping for sparkles, not this much exposure.",
+          "Well, the nerves survived. My dignity is another matter entirely."
+        ],
+        "naked5_shame": [
+          "Final pose... oh stars. I feel like every eye in the room is pinning my nerves in place.",
+          "That is the final pose? I am trying to smile, but I am also one blush away from evaporating into blue-haired dust.",
+          "I knew this game got wild, but I still was not prepared to end up here quite this naked and quite this on display."
         ]
       }
     },
