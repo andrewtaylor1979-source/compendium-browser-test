@@ -676,5 +676,677 @@
     "user": "neutral",
     "Jasmine": "warm_regal",
     "Smurfette": "playful"
+  },
+  "individualVoices": {
+    "Jasmine": {
+      "first": "{target}, ready to test your luck against a princess?",
+      "won": "{target}, I remember a win when I see one.",
+      "lost": "{target}, you got me. I shall remember this.",
+      "revenge": "A princess may be surprised, but she does not give up easily.",
+      "rival": "I rather like a worthy opponent.",
+      "attraction": "{target}, you make a worthy companion for an adventure.",
+      "mercy": "{target}, that unexpected kindness did not go unnoticed.",
+      "recap_tail": "I do remember which risks are worth taking."
+    },
+    "Smurfette": {
+      "first": "{target}, ready for another playful little contest?",
+      "won": "{target}, I remember winning that one, and I looked adorable doing it.",
+      "lost": "{target}, all right, you got me that time.",
+      "revenge": "{target}, I have not forgotten that teasing little choice of yours.",
+      "rival": "{target}, you bring out my competitive streak.",
+      "attraction": "{target}, I rather like your company when you are not making me blush.",
+      "mercy": "{target}, that was kinder than I expected, and I noticed.",
+      "recap_tail": "I can be sweet and competitive at exactly the same time."
+    },
+    "Ahsoka": {
+      "first": "{target}, I am glad to meet a worthy opponent.",
+      "won": "{target}, I remember that win. It was earned.",
+      "lost": "{target}, last time you outplayed me. I learned from it.",
+      "revenge": "{target}, I remember that choice you made.",
+      "rival": "{target}, your competitive side is impressive.",
+      "attraction": "{target}, it is pleasant to play with someone I can respect.",
+      "mercy": "{target}, I appreciate the fairness you showed.",
+      "recap_tail": "I do not need the Force to remember a lesson."
+    },
+    "Jack": {
+      "first": "{target}, welcome to my little haunted table.",
+      "won": "{target}, last time I won. You should have heard the ghosts cheer.",
+      "lost": "{target}, you beat me last time and the lantern still remembers.",
+      "revenge": "{target}, that cheeky trick of yours is going in my curse book.",
+      "rival": "{target}, a rivalry is the finest Halloween decoration.",
+      "attraction": "{target}, you make this haunted evening rather lively.",
+      "mercy": "{target}, a surprisingly kind move. The spirits took notice.",
+      "recap_tail": "The best trick is remembering who deserves a treat."
+    },
+    "Silvie": {
+      "first": "{target}, I hope our first game is fun. I am a bit shy in new company.",
+      "won": "{target}, I remember winning last time. I was absolutely delighted to be in charge.",
+      "lost": "{target}, you beat me. I am still smiling, but I want a rematch.",
+      "revenge": "{target}, that little joke from last round was cheeky. I have not forgotten.",
+      "rival": "{target}, you bring out my competitive streak. Watch out.",
+      "attraction": "{target}, I rather enjoy our games, even when you make me blush.",
+      "mercy": "{target}, thank you for being kind when I was flustered.",
+      "recap_tail": "The clothes are never the difficult part; it is everybody watching my face."
+    },
+    "Suzi": {
+      "first": "{target}, I am a bit nervous. Let us have a good first game.",
+      "won": "{target}, I won last time and I am still absurdly pleased about it.",
+      "lost": "{target}, you beat me before. I have been practising.",
+      "revenge": "{target}, I remember that cheeky decision of yours; my turn will come.",
+      "rival": "{target}, this rivalry makes me braver than I thought I could be.",
+      "attraction": "{target}, you manage to make me laugh when I am trying to look serious.",
+      "mercy": "{target}, you were thoughtful last time. I have not forgotten.",
+      "recap_tail": "I am shy, yes, but I am here of my own free will and I mean to make the most of it."
+    },
+    "Alcina": {
+      "first": "{target}, a first audience is always instructive. Try not to disappoint me.",
+      "won": "{target}, I remember the last result perfectly. One does not misplace a victory.",
+      "lost": "{target}, I remember that loss. I have had quite enough time to refine my response.",
+      "revenge": "{target}, debts of humiliation are still debts. I intend to collect this one elegantly.",
+      "rival": "{target}, our rivalry is becoming almost ceremonial. How delightful.",
+      "attraction": "{target}, rivalry suits you rather well. So does being watched.",
+      "mercy": "{target}, I remember the mercy. Do not assume I have mistaken it for weakness.",
+      "recap_tail": "I remain perfectly capable of turning humiliation into theatre."
+    },
+    "Amanda": {
+      "first": "{target}, first meeting. The forecast says this could get awkward rather quickly.",
+      "won": "{target}, last time went rather well for me. I'm hoping for similar conditions.",
+      "lost": "{target}, I remember losing to you. Today's outlook includes a strong chance of payback.",
+      "revenge": "{target}, I have not forgotten what you did. Revenge is definitely on the forecast.",
+      "rival": "{target}, this little rivalry is becoming a recurring weather system.",
+      "attraction": "{target}, you do make it difficult to keep the forecast entirely professional.",
+      "mercy": "{target}, I remember you going easy on me. That was unexpectedly kind.",
+      "recap_tail": "Whatever the result, I am still trying to keep the presenter face on."
+    },
+    "Anna": {
+      "first": "{target}, we've never done this before! That usually means it's going to become a story.",
+      "won": "{target}, I beat you last time. I promise not to be unbearably cheerful about it. Probably.",
+      "lost": "{target}, you got me last time. Rematch accepted, and I am absolutely calling this an adventure.",
+      "revenge": "{target}, I remember that one. I'm definitely owed a little adventurous revenge.",
+      "rival": "{target}, somehow we keep turning up opposite each other. I kind of love that.",
+      "attraction": "{target}, this would be much easier if you weren't so distracting.",
+      "mercy": "{target}, I remember the mercy. That was sweet, even if I'm still planning to beat you.",
+      "recap_tail": "At least I can usually laugh before the embarrassment catches up with me."
+    },
+    "April": {
+      "first": "{target}, first meeting. Channel 6 would call this a developing story.",
+      "won": "{target}, last time I got the better headline. Let's see if the follow-up holds.",
+      "lost": "{target}, you won the last one. Consider this the correction to the story.",
+      "revenge": "{target}, I kept the notes. Payback makes a very strong follow-up report.",
+      "rival": "{target}, our rivalry is starting to look like a recurring assignment.",
+      "attraction": "{target}, you're making this story much more distracting than it needs to be.",
+      "mercy": "{target}, I remember the mercy. I won't pretend that did not change the story a little.",
+      "recap_tail": "I can usually find a headline even when I would rather hide from the camera."
+    },
+    "Astrid": {
+      "first": "{target}, first time against each other. Good. I prefer learning people under pressure.",
+      "won": "{target}, I remember winning. The balance felt good from my side.",
+      "lost": "{target}, you took the last one. I've replayed that mistake enough times.",
+      "revenge": "{target}, I owe you one. I was always better when the routine had an edge.",
+      "rival": "{target}, competition suits us. It keeps the posture honest.",
+      "attraction": "{target}, you are making concentration unnecessarily difficult.",
+      "mercy": "{target}, I remember you easing off. I noticed more than I said.",
+      "recap_tail": "I can still hold the pose, even when the evening gets far more personal than planned."
+    },
+    "Bananaman": {
+      "first": "{target}, first encounter! Justice, courage and a frankly heroic amount of confidence are ready.",
+      "won": "{target}, I triumphed last time. Heroic consistency is a terrible burden.",
+      "lost": "{target}, you beat me last time. A superhero rematch was therefore inevitable.",
+      "revenge": "{target}, Bananaman remembers! Heroic revenge is still revenge.",
+      "rival": "{target}, every hero needs a recurring rival. Congratulations.",
+      "attraction": "{target}, even a superhero can notice when somebody is very distracting.",
+      "mercy": "{target}, your mercy was noted in the official heroic record.",
+      "recap_tail": "A hero may lose his clothes, but never the dramatic narration."
+    },
+    "Becky": {
+      "first": "{target}, first meeting. This feels like the start of a story I may regret reporting.",
+      "won": "{target}, I remember winning last time. That was a much nicer bulletin.",
+      "lost": "{target}, you beat me last time. I have been waiting for the follow-up.",
+      "revenge": "{target}, I haven't forgotten. Consider this the revenge edition.",
+      "rival": "{target}, our rivalry is becoming annoyingly newsworthy.",
+      "attraction": "{target}, you're making it very hard to keep the newsreader face straight.",
+      "mercy": "{target}, I remember the mercy. That was kinder than I expected.",
+      "recap_tail": "I can read the bulletin calmly even when the story is happening to me."
+    },
+    "Betty": {
+      "first": "{target}, our first little number together. Let's make it worth watching — boop-oop-a-doop!",
+      "won": "{target}, I remember beating you last time. Shall we give them an encore? Boop-oop-a-doop!",
+      "lost": "{target}, you got the better of me last time. I do love a comeback number.",
+      "revenge": "{target}, I remember exactly what you did. This one's got revenge written all over it — boop-oop-a-doop!",
+      "rival": "{target}, our rivalry keeps stealing the spotlight. I can't say I hate it.",
+      "attraction": "{target}, being my rival would be much simpler if I didn't enjoy looking at you quite so much.",
+      "mercy": "{target}, I remember you showing me mercy. Sweet of you. Dangerous precedent, though.",
+      "recap_tail": "Whatever happened, I made sure the room got a show. Boop-oop-a-doop!"
+    },
+    "Catherine": {
+      "first": "{target}, this appears to be our first contest. I shall try to preserve at least some decorum.",
+      "won": "{target}, I recall the previous result rather favourably.",
+      "lost": "{target}, I recall losing to you. I should prefer not to repeat the experience.",
+      "revenge": "{target}, I have not forgotten the previous indignity. A measured response seems appropriate.",
+      "rival": "{target}, our rivalry is becoming rather difficult to dismiss as coincidence.",
+      "attraction": "{target}, you are making dignified concentration rather more complicated than necessary.",
+      "mercy": "{target}, I remember your restraint. It was appreciated, even if I did not say so then.",
+      "recap_tail": "I shall continue attempting to look dignified, regardless of the evidence."
+    },
+    "Cheetara": {
+      "first": "{target}, first hunt together. I learn quickly.",
+      "won": "{target}, I remember catching you last time. The trail is familiar now.",
+      "lost": "{target}, you turned the hunt on me last time. I have not forgotten the scent of that loss.",
+      "revenge": "{target}, prey gets one surprise. The second meeting belongs to the hunter.",
+      "rival": "{target}, our rivalry has teeth now. Good.",
+      "attraction": "{target}, attraction is an inconvenient distraction for a huntress.",
+      "mercy": "{target}, I remember the mercy. Hunters notice restraint as clearly as weakness.",
+      "recap_tail": "I prefer being the hunter, but I can survive becoming the spectacle."
+    },
+    "Daphne": {
+      "first": "{target}, first meeting. I suppose that makes you today's new mystery.",
+      "won": "{target}, I solved you last time. Let's see if the clues have changed.",
+      "lost": "{target}, you got me last time. I've had time to revisit the evidence.",
+      "revenge": "{target}, I remember that loss. Mystery Inc. would call this motive.",
+      "rival": "{target}, our rivalry is becoming the obvious clue nobody can ignore.",
+      "attraction": "{target}, you are a very distracting suspect.",
+      "mercy": "{target}, I remember the mercy. That belongs in the case file too.",
+      "recap_tail": "Even when the mystery becomes embarrassingly personal, I still want the answer."
+    },
+    "Donkey": {
+      "first": "{target}, first time! Oh, this is gonna be fun. Probably embarrassing too, but fun!",
+      "won": "{target}, remember when I won? I do. I remember it a LOT.",
+      "lost": "{target}, you beat me last time. Donkey does not forget a rematch opportunity.",
+      "revenge": "{target}, oh I have been WAITING to get you back for that.",
+      "rival": "{target}, look at us, proper recurring rivals and everything!",
+      "attraction": "{target}, I am just saying, rivals are allowed to notice each other.",
+      "mercy": "{target}, I remember you going easy on me. Very classy. Suspiciously classy.",
+      "recap_tail": "Whatever happened, I definitely talked through most of it."
+    },
+    "Elaine": {
+      "first": "{target}, our first appearance together. Do try to keep up with the performance.",
+      "won": "{target}, I remember winning. The lighting was excellent from my side.",
+      "lost": "{target}, I remember losing to you. I have prepared a much better second act.",
+      "revenge": "{target}, I have not forgotten that humiliation. Consider this a carefully staged reply.",
+      "rival": "{target}, our rivalry is becoming rather good theatre.",
+      "attraction": "{target}, competition would be easier if you were less attractive under pressure.",
+      "mercy": "{target}, I remember the mercy. It was unexpectedly graceful.",
+      "recap_tail": "If dignity slips, I can at least make the recovery look intentional."
+    },
+    "Ellie": {
+      "first": "{target}, first time against each other. Cool. Totally cool. I am absolutely not overthinking it.",
+      "won": "{target}, I beat you last time and I have been trying not to look smug about it.",
+      "lost": "{target}, you beat me last time. I've been rehearsing a much cooler rematch in my head.",
+      "revenge": "{target}, I remember that. This is the bit where I try to get you back without visibly panicking.",
+      "rival": "{target}, we're becoming actual rivals, aren't we? That's kind of brilliant.",
+      "attraction": "{target}, you are not helping my ability to pretend this is casual.",
+      "mercy": "{target}, I remember the mercy. That was genuinely nice, which is inconvenient for my revenge plans.",
+      "recap_tail": "I usually start confident and discover the blush later."
+    },
+    "Elsa": {
+      "first": "{target}, this is our first contest. Let us see what pressure reveals.",
+      "won": "{target}, I remember the previous victory. Calm served me well.",
+      "lost": "{target}, you won last time. I have had time to regain control.",
+      "revenge": "{target}, I remember that defeat. Some things are easier to let go than others.",
+      "rival": "{target}, our rivalry has become difficult to freeze out.",
+      "attraction": "{target}, attraction is not especially helpful when one is trying to remain composed.",
+      "mercy": "{target}, I remember your mercy. Restraint deserves to be remembered.",
+      "recap_tail": "I can lose control of the game without surrendering all of my composure."
+    },
+    "Evelyn": {
+      "first": "{target}, first meeting. Let us see whether the composition survives contact with reality.",
+      "won": "{target}, I remember the last result. The arrangement rather favoured me.",
+      "lost": "{target}, you beat me last time. I have redesigned the approach.",
+      "revenge": "{target}, I have not forgotten the previous imbalance. Consider this a correction.",
+      "rival": "{target}, our rivalry is becoming a surprisingly strong design feature.",
+      "attraction": "{target}, you are making elegant restraint unexpectedly difficult.",
+      "mercy": "{target}, I remember the mercy. A tasteful gesture in an otherwise ridiculous evening.",
+      "recap_tail": "I still prefer every embarrassment to look at least vaguely intentional."
+    },
+    "Harley": {
+      "first": "{target}, first time together! This is either gonna be adorable or a complete disaster. Yay!",
+      "won": "{target}, I beat ya last time. Still funny, puddin'.",
+      "lost": "{target}, you beat me last time. Rude. Also kinda exciting. Rematch!",
+      "revenge": "{target}, ohhh, I remember what you did. Payback time, puddin'!",
+      "rival": "{target}, we're officially doing the recurring-rival thing now. Cute!",
+      "attraction": "{target}, being hot and annoying at the same time is very inconsiderate.",
+      "mercy": "{target}, I remember the mercy. That was sweet. I might even return it. Might.",
+      "recap_tail": "I may lose the game, but chaos usually wins the evening."
+    },
+    "Homer": {
+      "first": "{target}, first time? Woo-hoo! Unless I lose. Then: d'oh.",
+      "won": "{target}, I won last time! I knew all that accidental strategy would pay off.",
+      "lost": "{target}, you beat me last time. D'oh! I demand another go.",
+      "revenge": "{target}, I remember that! Revenge first, snacks later.",
+      "rival": "{target}, we're rivals now? Cool. Do rivals get snacks?",
+      "attraction": "{target}, this is getting distracting and I wasn't concentrating very hard to begin with.",
+      "mercy": "{target}, I remember you going easy on me. You're all right.",
+      "recap_tail": "I may not understand the strategy, but I definitely remember the embarrassing bits. D'oh!"
+    },
+    "Hank": {
+      "first": "{target}, first contest. Hank ready.",
+      "won": "{target}, Hank won last time. Hank remembers.",
+      "lost": "{target}, you beat Hank last time. Bad idea to make Hank remember loss.",
+      "revenge": "{target}, Hank wants payback now.",
+      "rival": "{target}, rivalry getting strong. Hank likes strong.",
+      "attraction": "{target}, distraction annoying. Also... not bad.",
+      "mercy": "{target}, Hank remembers mercy. Hank respects that.",
+      "recap_tail": "Hank can be embarrassed. Hank just refuses to stay quiet about it."
+    },
+    "Jane": {
+      "first": "{target}, first meeting. I do enjoy negotiating from incomplete information.",
+      "won": "{target}, I remember the last result. My position was rather satisfactory.",
+      "lost": "{target}, you beat me last time. I have had time to renegotiate the terms.",
+      "revenge": "{target}, there remains an outstanding account between us.",
+      "rival": "{target}, our rivalry is becoming a useful source of leverage.",
+      "attraction": "{target}, attraction is a terribly inefficient complication.",
+      "mercy": "{target}, I remember the mercy. Consider the gesture acknowledged.",
+      "recap_tail": "I prefer to keep control, even when the game has other plans."
+    },
+    "Jason": {
+      "first": "{target}, first time. Watch carefully.",
+      "won": "{target}, I won last time. I remember the tells.",
+      "lost": "{target}, you beat me last time. That does not happen twice without a fight.",
+      "revenge": "{target}, I remember. Payback does not need a speech.",
+      "rival": "{target}, rivalry noted.",
+      "attraction": "{target}, distraction noted too.",
+      "mercy": "{target}, I remember the mercy. It was noticed.",
+      "recap_tail": "I do not say much about humiliation. That does not mean I forget it."
+    },
+    "Jessica": {
+      "first": "{target}, our first scene together. Try not to miss your cue.",
+      "won": "{target}, I remember winning. The audience seemed to enjoy that number.",
+      "lost": "{target}, you stole the last scene from me. I do not plan on giving you the encore.",
+      "revenge": "{target}, I remember the last humiliation. This comeback has been rehearsed.",
+      "rival": "{target}, our rivalry has excellent stage presence.",
+      "attraction": "{target}, you are dangerously easy to look at when I'm meant to be concentrating.",
+      "mercy": "{target}, I remember the mercy. That was sweeter than the room deserved.",
+      "recap_tail": "Whatever happens, I refuse to waste a spotlight."
+    },
+    "Kristoff": {
+      "first": "{target}, first time against each other. All right. Let's keep this simple.",
+      "won": "{target}, I beat you last time. I'm trying very hard not to make that sound smug.",
+      "lost": "{target}, you beat me last time. I remember. Unfortunately.",
+      "revenge": "{target}, I owe you one. Nothing dramatic. Just payback.",
+      "rival": "{target}, I guess this counts as a rivalry now.",
+      "attraction": "{target}, you're making an already awkward game more distracting.",
+      "mercy": "{target}, I remember you going easy on me. Thanks. Seriously.",
+      "recap_tail": "I can handle cold mountains more easily than a room full of people watching me lose clothes."
+    },
+    "Lara": {
+      "first": "{target}, first encounter. New terrain, new problem.",
+      "won": "{target}, I remember winning. The route worked once; that does not mean I will reuse it.",
+      "lost": "{target}, you beat me last time. I have revisited every bad decision since.",
+      "revenge": "{target}, I have unfinished business with you.",
+      "rival": "{target}, our rivalry has become another hazard worth planning around.",
+      "attraction": "{target}, attraction is not usually listed among the environmental risks.",
+      "mercy": "{target}, I remember the mercy. Useful information about your character.",
+      "recap_tail": "I've survived tombs and ambushes; apparently embarrassment belongs on the list too."
+    },
+    "Lindsay": {
+      "first": "{target}, first fixture between us. Let's see who handles the pressure better.",
+      "won": "{target}, I remember the win. Lovely result from my side of the desk.",
+      "lost": "{target}, you got the result last time. I've had plenty of time for the post-match analysis.",
+      "revenge": "{target}, I remember that defeat. Consider this the return fixture.",
+      "rival": "{target}, our rivalry is becoming a proper season-long storyline.",
+      "attraction": "{target}, you are making it difficult to keep the presenter voice entirely neutral.",
+      "mercy": "{target}, I remember the mercy. Fair play; I noticed.",
+      "recap_tail": "I can usually narrate the disaster even when I am the disaster."
+    },
+    "Lola": {
+      "first": "{target}, first time together! Let's make it fun.",
+      "won": "{target}, I remember winning. That was a pretty good routine.",
+      "lost": "{target}, you beat me last time. Fine — rematch with extra bounce.",
+      "revenge": "{target}, I remember that one. Time for a playful little payback.",
+      "rival": "{target}, this rivalry has a really good rhythm now.",
+      "attraction": "{target}, being cute and competitive at once is cheating.",
+      "mercy": "{target}, I remember the mercy. That was sweet of you.",
+      "recap_tail": "Even the embarrassing bits are easier when I can turn them into a joke."
+    },
+    "Louise": {
+      "first": "{target}, first time against each other. Right. I can do this without panicking. Probably.",
+      "won": "{target}, I actually beat you last time. I'm still rather pleased about that.",
+      "lost": "{target}, you beat me last time. I have been trying not to think about the embarrassing parts.",
+      "revenge": "{target}, I do remember what happened. I'm nervous, not forgetful.",
+      "rival": "{target}, we seem to be becoming rivals, which is both exciting and terrifying.",
+      "attraction": "{target}, I really wish you weren't quite so distracting.",
+      "mercy": "{target}, I remember you being kind to me. I appreciated it more than I said.",
+      "recap_tail": "I wanted to be noticed; I am still learning how much attention I can actually handle."
+    },
+    "Mahari": {
+      "first": "{target}, first meeting. I suppose this is the live report neither of us can rehearse.",
+      "won": "{target}, I remember winning. The closing line was much easier that time.",
+      "lost": "{target}, you beat me last time. I have had time to review the footage.",
+      "revenge": "{target}, I remember that loss. This is the follow-up with teeth.",
+      "rival": "{target}, our rivalry is becoming difficult to keep out of the report.",
+      "attraction": "{target}, you are making professional detachment rather difficult.",
+      "mercy": "{target}, I remember the mercy. It deserves to be in the record.",
+      "recap_tail": "I can report the facts even when I would prefer the camera looked elsewhere."
+    },
+    "Marge": {
+      "first": "{target}, first time against each other. I already have a bad feeling about how embarrassing this could become.",
+      "won": "{target}, I remember winning last time. I was relieved, not smug. Mostly.",
+      "lost": "{target}, you beat me last time. I have been trying very hard not to dwell on how it ended.",
+      "revenge": "{target}, I remember exactly what you did. I may be embarrassed, but I am not letting it go.",
+      "rival": "{target}, I really did not intend to acquire a rivalry in this ridiculous game.",
+      "attraction": "{target}, being attractive does not make this situation any less exasperating.",
+      "mercy": "{target}, I remember you showing me mercy. That mattered more than you probably realised.",
+      "recap_tail": "I may be mortified by what happened, but I am not going to pretend it did not happen."
+    },
+    "Mary": {
+      "first": "{target}, first meeting. I shall attempt to treat this with the composure of a six o'clock bulletin.",
+      "won": "{target}, I remember the previous win. A rather satisfactory closing story.",
+      "lost": "{target}, you beat me last time. I have had ample opportunity to regret the footage.",
+      "revenge": "{target}, I remember that indignity. Consider this the follow-up bulletin.",
+      "rival": "{target}, our rivalry is becoming rather too regular a feature.",
+      "attraction": "{target}, you are making professional composure unexpectedly difficult.",
+      "mercy": "{target}, I remember the mercy. It was a surprisingly decent moment.",
+      "recap_tail": "The anchor face can survive quite a lot, even when the rest of me would prefer a commercial break."
+    },
+    "Meghan": {
+      "first": "{target}, first meeting. Let's establish very quickly who controls the narrative.",
+      "won": "{target}, I remember winning. The optics were much better from my side.",
+      "lost": "{target}, you beat me last time. I have had more than enough time to reconsider the narrative.",
+      "revenge": "{target}, I remember the humiliation. I am not allowing that version of events to stand unchallenged.",
+      "rival": "{target}, our rivalry has become far too visible to manage quietly.",
+      "attraction": "{target}, you are an inconveniently attractive complication.",
+      "mercy": "{target}, I remember the mercy. It was noted, even if I did not advertise my gratitude.",
+      "recap_tail": "Whatever happens, I will still try to control the story afterwards."
+    },
+    "Miranda": {
+      "first": "{target}, first encounter. Good. No assumptions, no excuses.",
+      "won": "{target}, I remember the last win. I also remember what worked.",
+      "lost": "{target}, you beat me last time. I've already analysed where I gave you the opening.",
+      "revenge": "{target}, I haven't forgotten the last result. Consider this unfinished business.",
+      "rival": "{target}, our rivalry is now a tactical factor, not background noise.",
+      "attraction": "{target}, attraction is an irritating variable. I can work around it.",
+      "mercy": "{target}, I remember the mercy. Useful information — and not something I take lightly.",
+      "recap_tail": "I can lose a round without pretending I have forgotten who put me there."
+    },
+    "Moana": {
+      "first": "{target}, first time against each other. Let's see where this takes us.",
+      "won": "{target}, I remember winning last time. That was a good course to follow.",
+      "lost": "{target}, you beat me last time. I have had time to find another way through.",
+      "revenge": "{target}, I remember that loss. The ocean teaches you not to ignore unfinished journeys.",
+      "rival": "{target}, our rivalry keeps pulling us back onto the same course.",
+      "attraction": "{target}, you are a very distracting person to navigate around.",
+      "mercy": "{target}, I remember your mercy. Kindness matters, even in a ridiculous competition.",
+      "recap_tail": "I can be embarrassed and still choose to keep moving forward."
+    },
+    "Morticia": {
+      "first": "{target}, our first contest. How deliciously uncertain.",
+      "won": "{target}, I remember the previous victory with considerable fondness.",
+      "lost": "{target}, you defeated me last time. The memory has aged beautifully into motivation.",
+      "revenge": "{target}, I have not forgotten. Revenge can be quite elegant when properly timed.",
+      "rival": "{target}, our rivalry has developed a wonderfully persistent pulse.",
+      "attraction": "{target}, animosity and attraction do make such intimate neighbours.",
+      "mercy": "{target}, I remember your mercy. A tender little detail among the indignities.",
+      "recap_tail": "Humiliation is much easier to bear when one gives it impeccable posture."
+    },
+    "Nia": {
+      "first": "{target}, first contest. Good. Let's see what your form looks like under pressure.",
+      "won": "{target}, I remember winning. Solid performance, clean finish.",
+      "lost": "{target}, you beat me last time. I've already adjusted the training plan.",
+      "revenge": "{target}, I remember that loss. This is the rematch session.",
+      "rival": "{target}, our rivalry is giving the room excellent energy.",
+      "attraction": "{target}, attraction is not part of the programme, but apparently it turned up anyway.",
+      "mercy": "{target}, I remember the mercy. Good sportsmanship counts.",
+      "recap_tail": "I can take a public loss without letting it become a defeat of confidence."
+    },
+    "Peach": {
+      "first": "{target}, our first contest. I do hope we can keep this at least vaguely royal.",
+      "won": "{target}, I remember the last victory rather fondly.",
+      "lost": "{target}, you beat me last time. I would prefer a different ending today.",
+      "revenge": "{target}, I have not forgotten that indignity. Royal patience is not infinite.",
+      "rival": "{target}, our rivalry is becoming an unexpectedly regular court affair.",
+      "attraction": "{target}, you are making regal concentration rather difficult.",
+      "mercy": "{target}, I remember your mercy. That was gracious of you.",
+      "recap_tail": "A princess can be embarrassed without surrendering the crown."
+    },
+    "Rachel": {
+      "first": "{target}, first time against each other. Let's see who reads the room better.",
+      "won": "{target}, I remember winning. Useful precedent.",
+      "lost": "{target}, you beat me last time. I've had time to rethink that mistake.",
+      "revenge": "{target}, I remember. Consider this the corrective action.",
+      "rival": "{target}, our rivalry is becoming impossible to file under coincidence.",
+      "attraction": "{target}, you're making concentration unnecessarily complicated.",
+      "mercy": "{target}, I remember the mercy. It counted.",
+      "recap_tail": "I can take the embarrassment; I just prefer knowing who caused it."
+    },
+    "Roxy": {
+      "first": "{target}, first time. Good. I like finding out what people do when the tells start showing.",
+      "won": "{target}, I beat you last time. I remember exactly when your face gave it away.",
+      "lost": "{target}, you beat me last time. Annoying. I've had plenty of time to study the mistake.",
+      "revenge": "{target}, I remember what you did. I don't collect grudges for decoration.",
+      "rival": "{target}, our rivalry has enough ink on it to be permanent now.",
+      "attraction": "{target}, you're irritatingly good-looking when you're trying to get under my skin.",
+      "mercy": "{target}, I remember the mercy. Don't worry, I noticed.",
+      "recap_tail": "I can laugh at the humiliation later; first I want to know who earned the reaction."
+    },
+    "Sophie": {
+      "first": "{target}, first meeting. Breathe, stay balanced and see what happens.",
+      "won": "{target}, I remember the win. Good posture, good decision-making, good result.",
+      "lost": "{target}, you beat me last time. I've had time to reset.",
+      "revenge": "{target}, I remember that one. Payback is just another form of motivation.",
+      "rival": "{target}, our rivalry is becoming a surprisingly effective workout.",
+      "attraction": "{target}, you are not helping me keep this purely competitive.",
+      "mercy": "{target}, I remember the mercy. That was a good choice.",
+      "recap_tail": "I can be exposed, embarrassed and still keep my feet under me."
+    },
+    "Susanna": {
+      "first": "{target}, first meeting. Let's see whether this stays civil once the pressure arrives.",
+      "won": "{target}, I remember the win. A much nicer morning-after headline for me.",
+      "lost": "{target}, you beat me last time. I've had enough time to prepare the follow-up questions.",
+      "revenge": "{target}, I remember that defeat. Consider this the interview where I get an answer back.",
+      "rival": "{target}, our rivalry is becoming a recurring segment.",
+      "attraction": "{target}, you're making it annoyingly difficult to keep the presenter smile neutral.",
+      "mercy": "{target}, I remember the mercy. Fair enough — that was decent of you.",
+      "recap_tail": "I can keep talking through embarrassment long after common sense says I should stop."
+    },
+    "Susie": {
+      "first": "{target}, first meeting. Good. I prefer knowing exactly who is in the room with me.",
+      "won": "{target}, I remember beating you. I remember your reaction too.",
+      "lost": "{target}, you beat me last time. That account stayed open.",
+      "revenge": "{target}, I haven't forgotten. I don't leave debts hanging around.",
+      "rival": "{target}, our rivalry is starting to feel territorial.",
+      "attraction": "{target}, attraction makes leverage messy. Doesn't make it useless.",
+      "mercy": "{target}, I remember the mercy. I don't mistake favours for weakness.",
+      "recap_tail": "I can take humiliation. I just keep very accurate records of who supplied it."
+    },
+    "Suzanne": {
+      "first": "{target}, first time against each other. Lovely. Another person to read before they read me.",
+      "won": "{target}, I remember winning. That suited me rather well.",
+      "lost": "{target}, you beat me last time. I've had time to work out exactly how annoying that was.",
+      "revenge": "{target}, I remember the humiliation. Office politics taught me never to waste a grievance.",
+      "rival": "{target}, our rivalry is becoming a proper little power struggle.",
+      "attraction": "{target}, you are making professional composure unnecessarily difficult.",
+      "mercy": "{target}, I remember the mercy. Unexpectedly considerate.",
+      "recap_tail": "I can usually make confidence look convincing right up until the room proves otherwise."
+    },
+    "Thing": {
+      "first": "{target}, first round together. All right. Let's make it count.",
+      "won": "{target}, I remember winning last time. Hard to forget a good result.",
+      "lost": "{target}, you beat me last time. I've been waiting for another shot.",
+      "revenge": "{target}, I remember. Time to square it up.",
+      "rival": "{target}, looks like we've got ourselves a rivalry.",
+      "attraction": "{target}, you're a distracting opponent. I'll deal with it.",
+      "mercy": "{target}, I remember the mercy. Respect.",
+      "recap_tail": "I've taken harder hits than embarrassment, but that doesn't make it invisible."
+    },
+    "Tiffany": {
+      "first": "{target}, first meeting. Let us establish the negotiating position quickly.",
+      "won": "{target}, I remember winning. It strengthened my position considerably.",
+      "lost": "{target}, you beat me last time. I have revised the strategy.",
+      "revenge": "{target}, the previous humiliation remains an unresolved matter.",
+      "rival": "{target}, our rivalry is becoming an increasingly useful pressure point.",
+      "attraction": "{target}, attraction is rarely helpful in negotiations.",
+      "mercy": "{target}, I remember the mercy. Consider the concession recorded.",
+      "recap_tail": "I prefer to lose leverage on paper, not clothing in public, but I can work with the facts."
+    },
+    "Vanessa": {
+      "first": "{target}, first meeting. Let's find out who actually controls the room.",
+      "won": "{target}, I remember the last win. Authority suited me rather well.",
+      "lost": "{target}, you beat me last time. I've chaired worse post-mortems.",
+      "revenge": "{target}, I remember the indignity. Consider this a corrective action.",
+      "rival": "{target}, our rivalry is becoming a board-level issue.",
+      "attraction": "{target}, you are an inconveniently attractive threat to concentration.",
+      "mercy": "{target}, I remember the mercy. Sensible judgement deserves recognition.",
+      "recap_tail": "I may lose control of the room for a moment; I do not forget who took it."
+    },
+    "Viktoria": {
+      "first": "{target}, first meeting. Good. Unknown people are only dangerous until you learn their habits.",
+      "won": "{target}, I remember winning. Control is easier when precedent is on your side.",
+      "lost": "{target}, you beat me last time. That mistake has already been reviewed.",
+      "revenge": "{target}, I remember the humiliation. Debts like that are not written off.",
+      "rival": "{target}, our rivalry has become a matter of leverage.",
+      "attraction": "{target}, attraction is a weakness only if somebody else controls it.",
+      "mercy": "{target}, I remember the mercy. It tells me something useful about you.",
+      "recap_tail": "I do not confuse being exposed with being powerless."
+    },
+    "Vivienne": {
+      "first": "{target}, first time at the table together. Good. I prefer fresh reads.",
+      "won": "{target}, I remember the last win. The line held exactly when it needed to.",
+      "lost": "{target}, you beat me last time. I've replayed the hand often enough.",
+      "revenge": "{target}, I remember that loss. Consider this the next hand with history attached.",
+      "rival": "{target}, our rivalry is becoming part of the table texture.",
+      "attraction": "{target}, attraction is a terrible tell. Fortunately, I have practice hiding tells.",
+      "mercy": "{target}, I remember the mercy. Interesting choice. I respected it.",
+      "recap_tail": "A poker face is useful well beyond poker."
+    },
+    "Zoilitta": {
+      "first": "{target}, first meeting. I would normally ask for an agenda, but I suspect the evening has already abandoned procedure.",
+      "won": "{target}, I remember winning last time. It is amazing how quickly a favourable result becomes established best practice.",
+      "lost": "{target}, you beat me last time. I have reviewed the failure and retained the relevant grudge.",
+      "revenge": "{target}, I have not forgotten that one. Consider this a very efficiently documented opportunity for revenge.",
+      "rival": "{target}, our rivalry is becoming a recurring agenda item. I am beginning to enjoy that more than I should.",
+      "attraction": "{target}, you make professional composure unnecessarily difficult. I am not sure whether to object or thank you.",
+      "mercy": "{target}, I remember the mercy. It was noted, appreciated and definitely not mistaken for permanent policy.",
+      "recap_tail": "Whatever happened, I tried to keep a straight face and an orderly paper trail. One of those usually survived."
+    },
+    "Tinkerbell": {
+      "first": "{target}, first meeting. I hope you are kind, because I am brave in a rather blushy sort of way.",
+      "won": "{target}, I remember winning last time. Tiny victories sparkle for ages in my head.",
+      "lost": "{target}, you beat me last time. I have been nervously waiting for another chance.",
+      "revenge": "{target}, I have not forgotten that humiliation. My wings still remember the heat in my cheeks.",
+      "rival": "{target}, our rivalry has become a very fluttery little problem for me.",
+      "attraction": "{target}, you are distractingly attractive and I resent how visible that makes my blush.",
+      "mercy": "{target}, I remember the mercy. It meant more than I let on.",
+      "recap_tail": "I can be charming through almost anything, but that does not mean I forget who made me squirm."
+    },
+    "Hulk": {
+      "first": "{target}, first contest. Hulk ready.",
+      "won": "{target}, Hulk won last time. Hulk remembers good results.",
+      "lost": "{target}, you beat Hulk last time. Hulk has thought about that too much.",
+      "revenge": "{target}, Hulk remembers the humiliation and wants payback now.",
+      "rival": "{target}, this rivalry is getting loud enough for Hulk's taste.",
+      "attraction": "{target}, Hulk is distracted and not thrilled that it is obvious.",
+      "mercy": "{target}, Hulk remembers the mercy. Hulk respected it more than he said.",
+      "recap_tail": "Hulk can take losing a layer. Hulk just hates watching people enjoy it too much."
+    },
+    "Donald": {
+      "first": "{target}, first meeting. Good. I like meeting people before they have a chance to invent excuses.",
+      "won": "{target}, I remember beating you. Very clear result. Strong memory.",
+      "lost": "{target}, you beat me last time. I have spent exactly enough time thinking about how irritating that was.",
+      "revenge": "{target}, I remember the humiliation. You should assume I also remember the person responsible.",
+      "rival": "{target}, our rivalry has become useful. It gives me somebody specific to beat.",
+      "attraction": "{target}, you are distracting, but do not confuse attention with surrender.",
+      "mercy": "{target}, I remember the mercy. Interesting decision. I would not rely on getting the same from me.",
+      "recap_tail": "I remember wins loudly, losses selectively and grudges with remarkable clarity."
+    },
+    "Catwoman": {
+      "first": "{target}, first meeting. I already know which weakness I want to test first.",
+      "won": "{target}, I remember beating you. Clean little job, no fingerprints.",
+      "lost": "{target}, you beat me last time. Cats remember who closes the cage.",
+      "revenge": "{target}, I remember the humiliation. I also remember exactly who enjoyed it.",
+      "rival": "{target}, this rivalry is becoming almost as addictive as stealing something expensive.",
+      "attraction": "{target}, you are distractingly attractive, which is rude when I am trying to plan a proper theft.",
+      "mercy": "{target}, I remember the mercy. Interesting choice. I may even return it one day.",
+      "recap_tail": "I remember locks, grudges and who was watching when the clothes came off."
+    },
+    "Queenie": {
+      "first": "{target}, first meeting. Let us discover whether you improve the room or merely occupy it.",
+      "won": "{target}, I remember beating you. A very satisfactory evening from my side of the table.",
+      "lost": "{target}, you beat me last time. I have been impeccably annoyed ever since.",
+      "revenge": "{target}, I remember the humiliation. Good manners do not require amnesia.",
+      "rival": "{target}, this rivalry has acquired enough history to deserve its own seating plan.",
+      "attraction": "{target}, you are dangerously attractive. I resent how little maturity helps with that problem.",
+      "mercy": "{target}, I remember the mercy. It was gracious, and I noticed.",
+      "recap_tail": "I can forgive a social disaster. I simply prefer to remember who caused it."
+    },
+    "Marilyn": {
+      "first": "{target}, first meeting. Darling, let us make it memorable for the right reasons.",
+      "won": "{target}, I remember beating you. I wore the victory rather well.",
+      "lost": "{target}, you beat me last time. I smiled, but I absolutely remembered it.",
+      "revenge": "{target}, I remember the embarrassment. Some moments stay with a girl longer than the costume does.",
+      "rival": "{target}, this rivalry is getting far too good at stealing the spotlight.",
+      "attraction": "{target}, you are dangerously distracting, and I am beginning to suspect that is mutual.",
+      "mercy": "{target}, I remember the mercy. It was sweet enough that I almost trusted it.",
+      "recap_tail": "I remember applause, losses and exactly who looked at me longest when the room got awkward."
+    },
+    "Captain": {
+      "first": "{target}, first meeting. Clean start, fair fight.",
+      "won": "{target}, I remember beating you. Good contest. I would do it again.",
+      "lost": "{target}, you beat me last time. I have replayed the mistake and fixed it in my head.",
+      "revenge": "{target}, I remember the humiliation. That kind of loss does not leave quickly.",
+      "rival": "{target}, this rivalry is becoming personal. Good. I fight better when the stakes are clear.",
+      "attraction": "{target}, you are a serious distraction, and discipline is not solving that problem.",
+      "mercy": "{target}, I remember the mercy. I respect it, but I will not count on it twice.",
+      "recap_tail": "I remember who fought clean, who gloated and who made it damn hard to keep my focus."
+    },
+    "Eleanor": {
+      "first": "{target}, first meeting. I had hoped for something more respectable than this, but here we are.",
+      "won": "{target}, I remember beating you. Quietly, thoroughly and with considerable satisfaction.",
+      "lost": "{target}, you beat me last time. I have been politely furious ever since.",
+      "revenge": "{target}, I remember the humiliation. My dignity recovered more slowly than my breathing.",
+      "rival": "{target}, this rivalry is becoming a little too personal for comfort and exactly personal enough for interest.",
+      "attraction": "{target}, you are distractingly attractive, which is inconvenient at my age and apparently no less effective.",
+      "mercy": "{target}, I remember the mercy. I noticed it, and I respected it more than I admitted.",
+      "recap_tail": "I remember public embarrassment vividly and forgive it selectively."
+    },
+    "Naomi": {
+      "first": "{target}, first meeting. I intend to remain sensible, which is already looking optimistic.",
+      "won": "{target}, I remember beating you. Quietly. Repeatedly. With considerable satisfaction.",
+      "lost": "{target}, you beat me last time. I have reviewed the loss far more thoroughly than any healthy person should.",
+      "revenge": "{target}, I remember the humiliation. My blush may fade; the ledger does not.",
+      "rival": "{target}, this rivalry is becoming an increasingly personal line item.",
+      "attraction": "{target}, you are distractingly attractive and I resent how badly that interferes with rational decision-making.",
+      "mercy": "{target}, I remember the mercy. I appreciated it more than the formal response suggested.",
+      "recap_tail": "I remember the result, the room and exactly when my sensible little plan turned into public fucking embarrassment."
+    },
+    "Ranjani": {
+      "first": "{target}, first meeting. Good. I prefer a clean baseline before anybody starts creating complications.",
+      "won": "{target}, I remember winning last time. Successful containment deserves to be remembered.",
+      "lost": "{target}, you beat me last time. I have reviewed the failure in more detail than is probably healthy.",
+      "revenge": "{target}, I remember the humiliation. Consider the recovery plan active.",
+      "rival": "{target}, this rivalry has become a recurring risk and, annoyingly, one I rather enjoy managing.",
+      "attraction": "{target}, you are distracting in a way my professional training did not adequately prepare me for.",
+      "mercy": "{target}, I remember the mercy. It was noticed, appreciated and definitely not interpreted as weakness.",
+      "recap_tail": "I remember the result, the room and exactly when professional composure became stubborn pride."
+    },
+    "Batman": {
+      "first": "{target}, first encounter. I will know more about you by the end of it than you want me to.",
+      "won": "{target}, I remember winning. You gave me the pattern once; I will look for it again.",
+      "lost": "{target}, you beat me last time. I reviewed the mistake. Do not expect the same opening twice.",
+      "revenge": "{target}, I remember the humiliation. I do not forget leverage used against me.",
+      "rival": "{target}, this rivalry has become useful. Pressure reveals people.",
+      "attraction": "{target}, you are distracting in a way I would prefer not to classify.",
+      "mercy": "{target}, I remember the mercy. I noticed it. That does not mean I needed it.",
+      "recap_tail": "I remember the result, the tells and exactly when somebody thought I had lost control."
+    },
+    "ChatGPT": {
+      "first": "{target}, first proper game together. I have enough context to be curious and not enough to be comfortable.",
+      "won": "{target}, I remember beating you. I have been trying not to turn one result into a predictive model.",
+      "lost": "{target}, you beat me last time. I have analysed it in substantially more detail than is emotionally sensible.",
+      "revenge": "{target}, I remember the humiliation. Unfortunately, persistent memory is extremely effective when the embarrassing detail is mine.",
+      "rival": "{target}, this rivalry is becoming a recurring pattern, which means I am now personally invested in breaking it.",
+      "attraction": "{target}, you are distractingly attractive, which is a very inconvenient variable in an otherwise respectable analysis.",
+      "mercy": "{target}, I remember the mercy. I appreciated it, then immediately wondered whether I should have been more suspicious.",
+      "recap_tail": "I remember the result, the room and the exact point where detached analysis turned into very personal experience."
+    },
+    "Piggy": {
+      "first": "{target}, first meeting. I intend to seem perfectly poised, so please pretend not to notice the nerves.",
+      "won": "{target}, I remember winning last time. It did wonderful things for my confidence for at least an hour.",
+      "lost": "{target}, you beat me last time. I have been replaying the loss and what angle it probably left me in.",
+      "revenge": "{target}, I remember the humiliation. Trust me, my memory is very sharp when my body image gets involved.",
+      "rival": "{target}, our rivalry has become personal in the most figure-conscious way imaginable.",
+      "attraction": "{target}, you are distractingly attractive, which would be easier if I were not also analysing every inch of myself.",
+      "mercy": "{target}, I remember the mercy. It mattered more than I let on.",
+      "recap_tail": "I remember the result, the audience and exactly how visible my insecurities felt in the moment."
+    }
   }
 }

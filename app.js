@@ -1,4 +1,5 @@
-import * as E from './engine.js?v=memory131';
+import * as E from './engine.js?v=audit133';
+import {captureDialogueContext,directDialogue} from './dialogue-director.js?v=audit133';
 const $=id=>document.getElementById(id), esc=x=>String(x??'').replace(/[&<>"']/g,y=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[y]));
 const display=n=>roster.find(c=>c.asset_name===n)?.full_name||n;
 const KEY='sgc-browser-v1-save',DIRDB='sgc_browser_feasibility',HANDKEY='assets-directory';
@@ -9,7 +10,7 @@ const saveAll=()=>{try{localStorage.setItem(KEY,JSON.stringify({games:saves,sele
 let saves={};
 let historyExpanded=false;
 let soloSelected=null,soloGender='male',uiDrawer='',dialogueBrief=true;
-let memoryGender='male',memoryAvatar='',memoryOpponents=[];
+let memoryGender='male',memoryAvatar='',memoryOpponents=[],memorySelectionInitialised=false;
 
 // Preferences live outside the existing saves: upgrading cannot reset a game.
 const PREFKEY='sgc-browser-v11-preferences';
@@ -90,7 +91,7 @@ function scheduleAuto(){
  if(aiSpeed==='off'||view!=='game'||!game||document.hidden||document.getElementById('sceneViewer'))return;
  const action=autoAction(game);if(!action)return;
  const fingerprint=game;const token=autoToken;
- const delay={slow:1400,normal:760,fast:340}[aiSpeed]||760;
+ const delay={slow:3200,normal:1900,fast:610}[aiSpeed]||1900;
  const afterSpin=game.mode==='wheel'&&game.wheelIndex>=0&&game.phase!=='ready'?Math.max(0,2850-(Date.now()-lastWheelSpinTime)):0;
  // Slow enough to see newly revealed poker cards, even at Fast speed.
  const revealPause=game.mode==='memory'&&game.phase==='card_revealed'?{slow:4200,normal:3000,fast:2100}[aiSpeed]:0;
@@ -103,7 +104,7 @@ function scheduleAuto(){
  },wait);
 }
 
-function loadSaved(){try{const o=JSON.parse(localStorage.getItem(KEY)||'{}');saves=o.games||{};selected=o.selected||selected;if(Object.hasOwn(o,'soloSelected'))soloSelected=o.soloSelected;if(['male','female','neutral'].includes(o.soloGender))soloGender=o.soloGender;human=o.human||human;playerName=o.playerName||playerName;gender=o.gender||gender;confidence=o.confidence||confidence;background=o.background||background;spectator=!!o.spectator;mode=o.mode||mode;memoryGender=['male','female'].includes(o.memoryGender)?o.memoryGender:(['male','female'].includes(gender)?gender:'male');memoryAvatar=o.memoryAvatar||'';memoryOpponents=Array.isArray(o.memoryOpponents)?o.memoryOpponents:[];}catch(e){console.warn(e);}}
+function loadSaved(){try{const o=JSON.parse(localStorage.getItem(KEY)||'{}');saves=o.games||{};selected=o.selected||selected;if(Object.hasOwn(o,'soloSelected'))soloSelected=o.soloSelected;if(['male','female','neutral'].includes(o.soloGender))soloGender=o.soloGender;human=o.human||human;playerName=o.playerName||playerName;gender=o.gender||gender;confidence=o.confidence||confidence;background=o.background||background;spectator=!!o.spectator;mode=o.mode||mode;memoryGender=['male','female'].includes(o.memoryGender)?o.memoryGender:(['male','female'].includes(gender)?gender:'male');memoryAvatar=o.memoryAvatar||'';memoryOpponents=Array.isArray(o.memoryOpponents)?o.memoryOpponents:[];memorySelectionInitialised=Array.isArray(o.memoryOpponents);}catch(e){console.warn(e);}}
 function toast(message){const t=$('toast');if(!t)return;t.textContent=message;t.hidden=false;clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.hidden=true,4500);}
 function openDb(){return new Promise((resolve,reject)=>{const req=indexedDB.open(DIRDB,1);req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains('settings'))req.result.createObjectStore('settings')};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});}
 async function dbHandle(action,h){const db=await openDb();try{return await new Promise((resolve,reject)=>{const tx=db.transaction('settings',action==='save'?'readwrite':'readonly');const r=action==='save'?tx.objectStore('settings').put(h,HANDKEY):tx.objectStore('settings').get(HANDKEY);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});}finally{db.close()}}
@@ -125,51 +126,70 @@ const has=n=>assets.has(n.toLowerCase());
 async function urlFor(filename){let key=filename.toLowerCase();if(objects.has(key))return objects.get(key);const h=assets.get(key);if(!h)return null;const f=await h.getFile(),url=URL.createObjectURL(f);objects.set(key,url);return url;}
 async function imgFor(filename){const key=filename.toLowerCase();if(loadedImgs.has(key))return loadedImgs.get(key);const url=await urlFor(filename);if(!url)return null;let image=new Image();image.src=url;try{await image.decode();loadedImgs.set(key,image);return image;}catch(_e){return null;}}
 function filename(asset,state='TJBP'){return `${asset}_${state}.png`}
-function header(){return `<header class="top"><div class="brand" data-nav="menu"><img class="compendium-header-logo" src="./header_logo.png" alt="Strip Games Compendium logo"><div class="brand-subtitle">THE PRIVATE CLUB <small>Browser Edition</small></div></div><div class="top-actions"><span class="pill">v1.3.1</span><button class="small-btn" data-action="folder">${folder?'📁 '+assets.size:'📁 Assets'}</button></div></header>`;}
+function header(){return `<header class="top"><div class="brand" data-nav="menu"><img class="compendium-header-logo" src="./header_logo.png" alt="Strip Games Compendium logo"><div class="brand-subtitle">THE PRIVATE CLUB <small>Browser Edition</small></div></div><div class="top-actions"><span class="pill">v1.3.3</span><button class="small-btn" data-action="folder">${folder?'📁 '+assets.size:'📁 Assets'}</button></div></header>`;}
 function frame(content){$('app').innerHTML=`${header()}<main class="main">${content}</main>`;}
 function menu(){const tiles=menuModes.map(([id,ico,title,descr])=>`<button class="menu-tile" data-open="${id}"><span class="menu-icon">${ico}</span><span class="menu-title">${esc(title)}</span><span class="menu-description">${esc(descr)}</span><span class="menu-resume">${saves[id]?'RESUME OR NEW GAME':'CHOOSE PLAYERS'}</span></button>`).join('');
  frame(`<section class="menu"><div class="menu-heading"><span class="eyebrow">OFFLINE • EIGHT GAMES • ${roster.length} CHARACTERS</span><h1>Choose your game</h1><p>Entirely on your phone. All artwork stays in your own separate Assets folder.</p></div><div class="menu-tiles">${tiles}</div><div class="menu-bottom"><span>${folder?'✓ '+esc(folderInfo):'⚠ Connect your separate Assets folder to display portraits'}</span><button class="small-btn" data-nav="settings">Assets &amp; saves</button></div></section>`);}
 function settingsView(){frame(`<div class="settings panel"><h1>Assets &amp; saved games</h1><p>Artwork is loaded only from one selected folder on this device. The website never uploads it.</p><div class="button-row"><button data-action="folder" class="primary">Select Assets folder</button><button data-action="reconnect">Reconnect saved folder</button></div><p class="muted">${folder?esc(folderInfo):'No folder currently connected'}</p><div class="button-row"><button data-action="export">Export saved games</button><label class="file-btn">Import saved games<input id="import" type="file" accept="application/json,.json" hidden></label></div><p class="muted">Saves belong to this browser's local storage. Export a backup before clearing Chrome data or moving phones.</p><div class="settings-subhead">Mobile play preferences</div><label>Automatic opponent turns<select id="aiSpeed">${SPEEDS.map(s=>`<option value="${s}" ${aiSpeed===s?'selected':''}>${s==='off'?'Manual':s[0].toUpperCase()+s.slice(1)}</option>`).join('')}</select></label><p class="muted">Automatic turns stop at decisions you must make. Tap the AI button during a game to switch speed or pause. Your unfinished games are saved as before.</p><div class="settings-subhead">Home screen installation</div><p class="muted">In Chrome, open the ⋮ menu and choose Install app or Add to Home screen. Launching from its icon normally removes Chrome's address bar. The game also has its existing double-tap full-screen mode.</p><button data-nav="menu">← Back to games</button></div>`);}
 const bgSelect=()=>Object.keys(backgroundFiles).map(n=>`<option ${background===n?'selected':''}>${esc(n)}</option>`).join('');
 
-function randomAvatar(exclude=''){
- const pool=roster.filter(c=>c.gender===memoryGender&&c.asset_name!==exclude);
+function randomAvatar(exclude='', avoid=memoryOpponents){
+ // Never replace a hand-picked opponent while assigning the user's avatar.
+ const matching=roster.filter(c=>c.gender===memoryGender&&c.asset_name!==exclude);
+ const preferred=matching.filter(c=>!avoid.includes(c.asset_name));
+ const pool=preferred.length?preferred:matching;
  if(!pool.length)throw Error('No characters match the selected player gender.');
  return pool[Math.floor(Math.random()*pool.length)].asset_name;
 }
 function randomMemoryOpponents(){
+ // Deliberately random ONLY when the button is pressed or on first setup.
  const choices=roster.map(c=>c.asset_name).filter(n=>n!==memoryAvatar);
  for(let i=choices.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[choices[i],choices[j]]=[choices[j],choices[i]];}
  memoryOpponents=choices.slice(0,4);
+ memorySelectionInitialised=true;
 }
 function ensureMemoryLineup(){
+ // This function is called whenever setup redraws, including tab changes.
+ // It must NEVER replace a manually unselected opponent with a random one.
+ memoryOpponents=[...new Set(memoryOpponents)].filter(n=>roster.some(c=>c.asset_name===n)).slice(0,4);
  const c=roster.find(c=>c.asset_name===memoryAvatar);
- if(!c||c.gender!==memoryGender)memoryAvatar=randomAvatar();
- memoryOpponents=[...new Set(memoryOpponents)].filter(n=>n!==memoryAvatar&&roster.some(c=>c.asset_name===n)).slice(0,4);
- if(memoryOpponents.length!==4)randomMemoryOpponents();
+ if(!c||c.gender!==memoryGender||memoryOpponents.includes(memoryAvatar))memoryAvatar=randomAvatar(memoryAvatar);
+ memoryOpponents=memoryOpponents.filter(n=>n!==memoryAvatar);
+ if(!memorySelectionInitialised){
+  if(memoryOpponents.length===0)randomMemoryOpponents();
+  memorySelectionInitialised=true;
+  saveAll();
+ }
+}
+function refreshMemorySelection(){
+ // Update only the elements whose state changed: no grid replacement, no
+ // lost scroll position, no layout jump, no re-running setup/auto-selection.
+ const count=$('memoryOpponentCount');if(count)count.textContent=memoryOpponents.length+'/4';
+ const names=$('memoryOpponentNames');if(names)names.textContent=memoryOpponents.length?memoryOpponents.map(display).join(' · '):'None chosen';
+ const footer=$('memoryOpponentFooter');if(footer)footer.textContent=`You: ${display(memoryAvatar)} · ${memoryOpponents.length} / 4 AI opponents`;
+ const start=$('memoryStart');if(start)start.disabled=memoryOpponents.length!==4;
+ document.querySelectorAll('.portrait[data-pick]').forEach(tile=>{
+  const name=tile.dataset.pick, picked=memoryOpponents.includes(name);
+  tile.classList.toggle('picked',picked);
+  tile.disabled=name===memoryAvatar;
+  tile.setAttribute('aria-pressed',picked?'true':'false');
+  const existing=tile.querySelector('.tick');
+  if(picked&&!existing){const mark=document.createElement('span');mark.className='tick';mark.textContent='✓';tile.appendChild(mark);}
+  else if(!picked&&existing)existing.remove();
+ });
 }
 function memorySetupView(){
  ensureMemoryLineup();
  frame(`<div class="setup memory-setup"><div class="setup-top"><button class="small-btn" data-nav="menu">← Menu</button><div><span class="eyebrow">STRIP MEMORY · FIVE PLAYERS</span><h1>Your character and four AI opponents</h1></div>${saves.memory?'<button class="small-btn" data-action="resume">Resume</button>':''}</div>
- <section class="setup-options panel memory-setup-options"><div class="memory-identity"><label>Your gender <select id="memoryGender"><option value="male" ${memoryGender==='male'?'selected':''}>Male</option><option value="female" ${memoryGender==='female'?'selected':''}>Female</option></select></label><div class="memory-avatar-preview"><span class="memory-avatar-pic">${has(filename(memoryAvatar))?`<img data-asset="${esc(filename(memoryAvatar))}" alt="Your randomly assigned character">`:''}</span><span><strong>You play as ${esc(display(memoryAvatar))}</strong><small>Randomly selected ${memoryGender} character, using their actual artwork and clothing states</small></span></div><button class="small-btn" data-action="randomMemoryAvatar">↻ New avatar</button></div><div class="memory-ai-setup"><span>Four AI opponents: ${memoryOpponents.map(display).map(esc).join(' · ')}</span><button class="small-btn" data-action="randomMemoryOpponents">↻ Randomise opponents</button></div><label class="memory-background-label">Scene <select id="background">${bgSelect()}</select></label></section>
- <section class="roster-panel panel"><div class="roster-heading"><div class="section-title">CHOOSE FOUR AI OPPONENTS <span>${memoryOpponents.length}/4</span></div><input id="search" placeholder="Search roster…" value="${esc(search)}" aria-label="Search characters"></div><div id="rosterHere">${rosterGrid()}</div></section><div class="setup-bottom"><span>You: ${esc(display(memoryAvatar))} · Four AI opponents</span><button class="primary" data-action="start" ${memoryOpponents.length!==4?'disabled':''}>Start five-player Memory</button></div></div>`);
+ <section class="setup-options panel memory-setup-options"><div class="memory-identity"><label>Your gender <select id="memoryGender"><option value="male" ${memoryGender==='male'?'selected':''}>Male</option><option value="female" ${memoryGender==='female'?'selected':''}>Female</option></select></label><div class="memory-avatar-preview"><span class="memory-avatar-pic">${has(filename(memoryAvatar))?`<img data-asset="${esc(filename(memoryAvatar))}" alt="Your randomly assigned character">`:''}</span><span><strong>You play as ${esc(display(memoryAvatar))}</strong><small>Randomly selected ${memoryGender} character, using their actual artwork and clothing states</small></span></div><button class="small-btn" data-action="randomMemoryAvatar">↻ New avatar</button></div><div class="memory-ai-setup"><span>AI opponents: <span id="memoryOpponentNames">${memoryOpponents.length?memoryOpponents.map(display).map(esc).join(' · '):'None chosen'}</span></span><button class="small-btn" data-action="randomMemoryOpponents">↻ Randomise opponents</button></div><label class="memory-background-label">Scene <select id="background">${bgSelect()}</select></label></section>
+ <section class="roster-panel panel"><div class="roster-heading"><div class="section-title">CHOOSE FOUR AI OPPONENTS <span id="memoryOpponentCount">${memoryOpponents.length}/4</span></div><input id="search" placeholder="Search roster…" value="${esc(search)}" aria-label="Search characters"></div><p class="muted memory-roster-help">Tap a selected character to remove them, then tap a replacement. Your four choices stay fixed until you change them.</p><div id="rosterHere">${rosterGrid()}</div></section><div class="setup-bottom"><span id="memoryOpponentFooter">You: ${esc(display(memoryAvatar))} · ${memoryOpponents.length} / 4 AI opponents</span><button id="memoryStart" class="primary" data-action="start" ${memoryOpponents.length!==4?'disabled':''}>Start five-player Memory</button></div></div>`);
  fillAssets();
 }
 
-function rosterGrid(){const sorted=[...roster].sort((a,b)=>(a.full_name||a.asset_name).localeCompare((b.full_name||b.asset_name),'en',{sensitivity:'base'}));const visible=search?sorted.filter(x=>`${x.full_name} ${x.asset_name} ${x.occupation}`.toLowerCase().includes(search.toLowerCase())):sorted.slice(rosterTab*25,rosterTab*25+25);const max=mode==='one'?1:mode==='memory'?4:spectator?5:4;const picked=mode==='one'?(soloSelected?[soloSelected]:[]):mode==='memory'?memoryOpponents:selected;return `<div class="tabs">${[0,1,2].map(i=>`<button class="tab ${rosterTab===i&&!search?'active':''}" data-tab="${i}">${i*25+1}–${Math.min((i+1)*25,roster.length)}</button>`).join('')}</div><div class="roster-viewport"><div class="portrait-grid">${visible.map(c=>`<button class="portrait ${picked.includes(c.asset_name)?'picked':''}" data-pick="${esc(c.asset_name)}" ${mode==='memory'&&c.asset_name===memoryAvatar?'disabled':mode!=='one'&&!picked.includes(c.asset_name)&&picked.length>=max?'disabled':''}><span class="pic"><span class="initial">${esc(c.asset_name.slice(0,2))}</span>${has(filename(c.asset_name))?`<img data-asset="${esc(filename(c.asset_name))}" loading="lazy" alt="">`:''}</span><span class="portrait-name">${esc(c.full_name||c.asset_name)}</span>${picked.includes(c.asset_name)?'<span class="tick">✓</span>':''}</button>`).join('')}</div></div>`;}
+function rosterGrid(){const sorted=[...roster].sort((a,b)=>(a.full_name||a.asset_name).localeCompare((b.full_name||b.asset_name),'en',{sensitivity:'base'}));const visible=search?sorted.filter(x=>`${x.full_name} ${x.asset_name} ${x.occupation}`.toLowerCase().includes(search.toLowerCase())):sorted.slice(rosterTab*25,rosterTab*25+25);const max=mode==='one'?1:mode==='memory'?4:spectator?5:4;const picked=mode==='one'?(soloSelected?[soloSelected]:[]):mode==='memory'?memoryOpponents:selected;return `<div class="tabs">${[0,1,2].map(i=>`<button class="tab ${rosterTab===i&&!search?'active':''}" data-tab="${i}">${i*25+1}–${Math.min((i+1)*25,roster.length)}</button>`).join('')}</div><div class="roster-viewport"><div class="portrait-grid">${visible.map(c=>`<button class="portrait ${picked.includes(c.asset_name)?'picked':''}" data-pick="${esc(c.asset_name)}" ${mode==='memory'?(c.asset_name===memoryAvatar?'disabled':''):mode!=='one'&&!picked.includes(c.asset_name)&&picked.length>=max?'disabled':''}><span class="pic"><span class="initial">${esc(c.asset_name.slice(0,2))}</span>${has(filename(c.asset_name))?`<img data-asset="${esc(filename(c.asset_name))}" loading="lazy" alt="">`:''}</span><span class="portrait-name">${esc(c.full_name||c.asset_name)}</span>${picked.includes(c.asset_name)?'<span class="tick">✓</span>':''}</button>`).join('')}</div></div>`;}
 function setupView(){if(mode==='memory'){memorySetupView();return;}if(mode==='one'){frame(`<div class="setup solo-setup"><div class="setup-top"><button class="small-btn" data-nav="menu">← Menu</button><div><span class="eyebrow">ONE-ON-ONE · PRIVATE BOOTH</span><h1>Choose one character</h1></div>${saves.one?'<button class="small-btn" data-action="resume">Resume</button>':''}</div><section class="roster-panel panel"><div class="roster-heading"><div class="section-title">${roster.length} CHARACTERS · TAP TO SELECT OR CHANGE</div><input id="search" placeholder="Search roster…" value="${esc(search)}" aria-label="Search characters"></div><div id="rosterHere">${rosterGrid()}</div></section><div class="setup-bottom"><label class="solo-visitor-gender">Your gender <select id="soloGender" aria-label="Your gender for private-booth dialogue"><option value="male" ${soloGender==='male'?'selected':''}>Male</option><option value="female" ${soloGender==='female'?'selected':''}>Female</option><option value="neutral" ${soloGender==='neutral'?'selected':''}>Other / neutral</option></select></label><span>Private booth · ${soloSelected?esc(display(soloSelected)):'No character selected'} · <strong>${has('booth.png')?'Booth ready':'booth.png needed'}</strong></span><button class="primary" data-action="start" ${!soloSelected?'disabled':''}>Enter private booth</button></div></div>`);fillAssets();return;}const isMemory=mode==='memory';const max=spectator?5:4;
  frame(`<div class="setup"><div class="setup-top"><button class="small-btn" data-nav="menu">← Menu</button><div><span class="eyebrow">${esc(E.MODES[mode])} • New game</span><h1>Choose your opponents</h1></div>${saves[mode]?`<button class="small-btn" data-action="resume">Resume saved game</button>`:''}</div><section class="setup-options panel"><div class="two-cols">${isMemory?`<label>You're playing as<select id="human">${selected.map(n=>`<option value="${esc(n)}" ${n===human?'selected':''}>${esc(display(n))}</option>`).join('')}</select></label>`:`<label>Mode<select id="spectator"><option value="false" ${!spectator?'selected':''}>Play</option><option value="true" ${spectator?'selected':''}>Spectator</option></select></label>`}<label>Scene<select id="background">${bgSelect()}</select></label></div>${!isMemory&&!spectator?`<div class="three-cols"><label>Your name<input id="playerName" maxlength="35" value="${esc(playerName)}"></label><label>Avatar gender<select id="gender"><option value="male" ${gender==='male'?'selected':''}>Male</option><option value="female" ${gender==='female'?'selected':''}>Female</option><option value="neutral" ${gender==='neutral'?'selected':''}>Neutral</option></select></label><label>Confidence<select id="confidence">${[1,2,3,4,5].map(i=>`<option value="${i}" ${i===confidence?'selected':''}>${i} / 5</option>`).join('')}</select></label></div>`:''}</section><section class="roster-panel panel"><div class="roster-heading"><div class="section-title">SELECT CHARACTERS <span>${selected.length} / ${max}</span></div><input id="search" placeholder="Search roster…" value="${esc(search)}" aria-label="Search characters"></div><div id="rosterHere">${rosterGrid()}</div></section><div class="setup-bottom"><span>${selected.map(display).join(' • ')||'Select characters'}</span><button class="primary" data-action="start" ${selected.length<2?'disabled':''}>Start ${esc(E.MODES[mode])}</button></div></div>`);fillAssets();}
 function actorName(id){return game?.people.find(p=>p.id===id)?.name||id||'';}
-function dialogueText(event,actor=game?.highlight,vars={}){let p=game?.people.find(x=>x.id===actor);if(!p||p.id==='__user__')return '';
- let bank=packs[game.mode],list=null;
- if(game.mode==='memory'){const family=bank?.styleFamilies?.[bank.characterStyles?.[p.asset]||'wry']||'wry';list=bank?.families?.[family]?.[event]||bank?.families?.[family]?.turn;}
- else if(game.mode==='rps'){const entry=bank?.rps_dialogue?.characters?.[p.asset]||bank?.rps_dialogue?.global;list=entry?.[event]||bank?.rps_dialogue?.global?.[event];}
- else if(game.mode==='mayhem'){const entry=bank?.characters?.find(x=>x.asset_name===p.asset);list=entry?.dialogue?.[event]||bank?.player_voices?.[event];}
- else if(game.mode==='draw'){let profile=bank?.characters?.find(x=>x.asset_name===p.asset);list=profile?.dialogue?.[event];}
- else{list=bank?.characters?.[p.asset]?.events?.[event]||bank?.global_pools?.[event];}
- let line=Array.isArray(list)?list[Math.floor(Math.random()*list.length)]:list;if(typeof line!=='string')return '';
- const pairs={name:p.name,loser:actorName(game?.pending?.loser),target:actorName(game?.pending?.loser),winner:actorName(game?.pending?.chooser),garment:game?.pending?.item||'',total:game?.rolls?.find(r=>r.id===p.id)?.total||'',...vars};return line.replace(/\{([a-z_]+)\}/gi,(full,k)=>pairs[k]===undefined?'':String(pairs[k]));}
-
 // Personality-led banter; stage-specific responses always come from each of
 // the current character profiles. The other lines vary by confidence,
 // role, conversation type, and recent utterances to avoid mechanical repeats.
@@ -237,6 +257,43 @@ function oneRemovalLine(g,item,after){
  return line;
 }
 
+// One-on-One voices: character-specific lines take priority. Other profiles
+// use several distinct tones, not one generic bank repeated by 60 opponents.
+// No profile is given an identical scripted reply on every visit.
+const oneToneSets={
+  reserved:{
+    tease:["You are an absolute menace. I was planning to keep some dignity tonight.","I can hear the bloody mischief in that question. Do try to behave.","That look on your face says trouble. I ought to know better than to encourage you.","If that was an attempt to make me blush, damn you, it nearly worked."],
+    compliment:["A kind word at precisely the wrong moment. You do know how to disarm me.","Thank you. I rather needed that after the last cheeky remark.","Oh, don't suddenly turn charming. I haven't recovered from the teasing."],
+    challenge:["I am not made of glass. Go on, then; I dare you.","You are testing my composure. Very well. I can be stubborn too.","Damn it, I suppose I have to prove you wrong now."]},
+  bold:{
+    tease:["Oh, you cheeky sod. I was hoping you had more nerve than manners.","That is a filthy little grin you've got. Don't imagine I've missed it.","You think you're in charge? That's bloody adorable.","Come on, then. Give me a line worthy of that smug face."],
+    compliment:["Flattery? Sensible. I was getting ready to make you regret that last remark.","Now there's a compliment worth keeping. Don't ruin it by being a prat.","I like a guest who knows when to stop joking and pay attention."],
+    challenge:["Bloody hell, finally a challenge worth answering.","Don't threaten me with a good contest, darling. I'll win it.","You can try to rattle me. I'm rather good at rattling back."]},
+  playful:{
+    tease:["You absolute rascal! That was cheeky enough to deserve a rematch.","Heehee, stop looking so pleased with yourself. You're making me blush.","Oh, you've got a wicked little sense of humour. I might keep you.","Damn, I almost laughed at the worst possible moment."],
+    compliment:["Aw, that was lovely. I wasn't prepared for you to be sweet.","Careful now. One more compliment and I might stop pretending to be annoyed.","That was sweet. Don't tell anyone how easily you made me smile."],
+    challenge:["Ooh, are we competing now? I like this side of you.","All right, cheeky. Let me show you I've got some backbone.","I might be a little nervous, but I am absolutely not giving up."]},
+  deadpan:{
+    tease:["A remarkable display of subtlety. By which I mean absolutely none.","You appear to be enjoying my predicament. How terribly surprising.","Oh, bloody marvellous. A comedian. Just what this evening needed.","I had planned a quiet evening. Then you started talking."],
+    compliment:["A compliment. Unexpected, but not unwelcome.","Thank you. That was considerably more civilised than your last attempt.","I appreciate the sentiment, even if your timing is suspicious."],
+    challenge:["You want a contest? Fine. At least it's more interesting than small talk.","My patience has limits. My competitive streak doesn't.","All right. But don't look shocked if you lose."]},
+  theatrical:{
+    tease:["Oh, you outrageous little villain! At least make the scandal entertaining.","Darling, that remark deserves its own bloody spotlight.","My dignity has apparently left the building. Your manners may follow.","What a performance! Sadly the leading troublemaker seems to be you."],
+    compliment:["A compliment for the star of this particular disaster? How lovely.","You do know how to make an entrance, darling. Even with words.","Oh, I shall treasure that one. It is almost worth the embarrassment."],
+    challenge:["A challenge? Cue dramatic music. I was born for this.","Very well! Let the most shamelessly determined performer win.","You want a spectacle? Then give me a worthy adversary."]},
+  grounded:{
+    tease:["You're a cheeky bugger, aren't you? Can't say you didn't warn me.","Bloody hell, I saw that grin a mile off.","One moment you seem sensible, the next you're trying to wind me up.","You are having far too much fun at my expense. Fair play, I suppose."],
+    compliment:["Thanks. That's a genuinely decent thing to say.","Well, you've surprised me. I wasn't expecting that much charm.","Kind words go a long way when the game's getting difficult."],
+    challenge:["Right. Let's settle it properly, then.","You can try me. Just don't underestimate me.","A little pressure won't finish me off. Not yet."]}
+};
+function oneTone(asset,confidence){
+ if(['Elsa','Eleanor','Catherine','Peach','Naomi','Mary','Suzi','Silvie'].includes(asset))return 'reserved';
+ if(['Viktoria','Harley','Susie','Alcina','Catwoman','Queenie','Hulk','Roxy','Miranda'].includes(asset))return 'bold';
+ if(['Smurfette','Tinkerbell','Anna','Moana','Daphne','Jasmine','Lola','Betty','Jessica','Amanda'].includes(asset))return 'playful';
+ if(['Batman','Morticia','Ahsoka','Zoilitta','Rachel','Vivienne','Thing','Jack'].includes(asset))return 'deadpan';
+ if(['Piggy','Marilyn','Elaine','Donald','Bananaman','Homer','Jack'].includes(asset))return 'theatrical';
+ return confidence>=4?'bold':'grounded';
+}
 function oneBanter(style){
  const g=game,p=g.people[0],c=roster.find(x=>x.asset_name===p.asset)||{};
  const name=c.full_name||p.name,job=c.occupation||'your particular line of work';
@@ -248,20 +305,16 @@ function oneBanter(style){
   Jack:{tease:['A mischievous guest! You have come to the right haunt.','Boo! I was saving that line for a more dramatic entrance.'],compliment:['Flattery? My lantern is glowing brighter already.','Careful, or I might make you my official Halloween publicist.'],challenge:['You dare challenge the pumpkin king? Delightful!','Oh, now this is turning into a proper ghost story.']},
   Susie:{tease:['You are enjoying yourself far too much. I can tell.','You are skating on thin ice. Fortunately, I like a challenge.'],compliment:['Flattery is cheaper than good Scotch, but I will allow it.','That was surprisingly well judged. Keep going.'],challenge:['I have negotiated tougher deals than this.','You can make your case. Whether I agree is another matter.']}
  };
- const pool=direct[p.asset]?.[style]||{
-  tease:confident?[`You have a bold sense of humour. I will give you that.`,`I can see where this conversation is going. Very cheeky.`,`You are enjoying this a little too much, aren't you?`,`If that was meant to unsettle me, you will need better material.`,`Very amusing. I was hoping you would be a little more original.`]:[`Oh! I wasn't expecting you to put it like that.`,`You are going to make me blush if you carry on.`,`That is rather cheeky. I cannot decide whether to laugh.`,`I thought this was going to be a quiet conversation!`,`Please tell me you have a better line than that.`],
-  compliment:confident?[`Now that is a compliment delivered with confidence.`,`I appreciate a guest with good taste.`,`You have a way with words. I shall remember that.`,`Thank you. I do enjoy someone who notices the details.`]:[`That is kind of you to say.`,`Oh, thank you. I did not quite expect that.`,`Now you've caught me off guard, in a good way.`,`You are making this sound rather flattering.`],
-  challenge:confident?[`You want to test my nerve? Very well.`,`I never back down from a good challenge.`,`I can see a competitive streak in you. I respect that.`,`I hope your confidence is justified.`]:[`That sounds like a challenge. I suppose I should accept.`,`I am nervous, but not quite ready to surrender.`,`All right. Let us see how this goes.`,`You certainly know how to raise the stakes.`]
- }[style];
+ const pool=direct[p.asset]?.[style]||oneToneSets[oneTone(p.asset,+c.confidence_level||3)][style];
  const history=g.one?.lastLines||[];
  let options=pool.filter(line=>!history.includes(line));if(!options.length)options=pool;
  let line=options[Math.floor(Math.random()*options.length)];
  // Alternate personality-led lines with gender-appropriate address.
  // Keep specially scripted characters recognizable rather than rewriting their voice.
- if((g.one.talks+1)%2===0)line=oneGenderLine(g,style);
+ if((g.one.talks+1)%4===0)line+=` ${oneGenderLine(g,style)}`;
  // Profile hooks add individual character context without replacing their voice.
- if((g.one.talks+1)%4===0&&c.favourite_drink)line+=` I could do with ${c.favourite_drink.toLowerCase()} right about now.`;
- else if((g.one.talks+1)%5===0&&job)line+=` Being ${job.toLowerCase()} did not prepare me for quite this conversation.`;
+ if((g.one.talks+1)%7===0&&c.favourite_drink)line+=` I could do with ${c.favourite_drink.toLowerCase()} after that.`;
+ const outfit=E.stateOf(p);if((g.one.talks+1)%6===0&&outfit!=='TJBP'&&c.stage_dialogue?.[outfit])line+=` ${c.stage_dialogue[outfit]}`;
  g.one.lastLines=[...history.slice(-3),line];return line;
 }
 function oneActions(){const g=game,p=g.people[0],profile=roster.find(c=>c.asset_name===p.asset),st=E.stateOf(p);
@@ -483,7 +536,7 @@ function drawerHtml(){if(!uiDrawer||!game)return '';
  const g=game,words=g.dialogue||'',t={players:'Players',dialogue:'Dialogue',history:'Recent turns',settings:'Game options'}[uiDrawer]||'Details';
  let content='';
  if(uiDrawer==='players')content=`<div class="drawer-players">${g.people.map(p=>`<div><strong>${esc(p.name)}</strong><span>${esc(E.stateOf(p))}${p.eliminated?' · OUT':''}</span></div>`).join('')}</div>`;
- if(uiDrawer==='dialogue')content=`<p class="drawer-quote">${words?esc(words):'No dialogue yet. Continue playing to hear from your opponents.'}</p>`;
+ if(uiDrawer==='dialogue')content=`<div class="dialogue-transcript">${[...(g.dialogueHistory||[])].slice(-20).reverse().map(x=>`<p class="drawer-quote"><b>${esc(x.speaker||'Opponent')}</b> ${esc(x.text)}</p>`).join('')||(words?`<p class="drawer-quote">${esc(words)}</p>`:'No dialogue yet. Continue playing to hear from your opponents.')}</div>`;
  if(uiDrawer==='history')content=`<ol class="drawer-history">${[...(g.history||[])].reverse().map(x=>`<li>${esc(x)}</li>`).join('')||'<li>No turns yet</li>'}</ol>`;
  if(uiDrawer==='settings')content=`<div class="drawer-settings"><button data-action="aiSpeedCycle">⚡ ${esc(aiCaption())}</button><button data-action="sceneView">⛶ View / Save image</button><button data-action="new">New game</button><button data-action="folder">Select Assets folder</button><button data-action="export">Export saves</button></div>`;
  return `<div class="drawer-shade" data-action="closeDrawer"></div><div class="game-drawer panel" role="dialog" aria-label="${t}"><div class="drawer-head"><strong>${t}</strong><button data-action="closeDrawer" aria-label="Close details">✕</button></div>${content}</div>`;
@@ -500,7 +553,7 @@ function gameView(){if(!game){view='setup';setupView();return;}
  const primary=actionWrap.querySelector('button.primary');
  let primaryDock='';if(primary){primaryDock=primary.outerHTML;primary.remove();}
  const actionMarkup=actionWrap.innerHTML;
- $('app').classList.toggle('immersive',immersive);$('app').innerHTML=`<main class="main game-only"><div class="game-screen unified-game ${solo?'solo-game':''}"><div class="game-top"><button class="small-btn" data-nav="menu" aria-label="Return to menu">‹ Menu</button><span class="game-name">${esc(E.MODES[g.mode])}</span><button class="small-btn" data-action="openDrawer" data-value="settings" aria-label="Game options">⋯</button></div><div class="game-main"><div class="scene-wrap" title="Double-tap to hide game bars"><canvas id="scene" width="${solo?(matchMedia('(orientation:landscape)').matches?1180:900):1180}" height="${solo?(matchMedia('(orientation:landscape)').matches?760:1200):590}" role="img" aria-label="Current character scene"></canvas><button class="scene-expand" data-action="sceneView" aria-label="View, zoom and save current image">⛶</button></div><section class="game-controls panel"><div class="turn-info"><div class="turn-meta"><span class="eyebrow">${round} · ${esc(g.phase.replaceAll('_',' '))}</span>${solo?'':`<button class="ai-switch" data-action="aiSpeedCycle">⚡ ${esc(aiCaption())}</button>`}</div><p class="notice">${esc(shortNotice)}</p></div>${!solo&&words?`<div class="speech compact-speech"><b>${esc(actor.name)}</b> ${esc(words)}</div>`:''}<div class="actions-scroll">${solo&&words?`<div class="speech solo-full-speech"><b>${esc(actor.name)}</b> ${esc(words)}</div>`:''}${actionMarkup}</div>${primaryDock?`<div class="primary-dock">${primaryDock}</div>`:""}</section></div><nav class="game-toolbar" aria-label="Game details"><button data-action="openDrawer" data-value="players">♧ Players</button><button data-action="openDrawer" data-value="dialogue">☷ Dialogue</button><button data-action="openDrawer" data-value="history">↺ History</button><button data-action="openDrawer" data-value="settings">⚙ Options</button></nav><div id="gameDrawer">${drawerHtml()}</div>${memoryRevealOverlay()}</div></main>`;
+ $('app').classList.toggle('immersive',immersive);$('app').innerHTML=`<main class="main game-only"><div class="game-screen unified-game ${solo?'solo-game':''}"><div class="game-top"><button class="small-btn" data-nav="menu" aria-label="Return to menu">‹ Menu</button><span class="game-name">${esc(E.MODES[g.mode])}</span><button class="small-btn" data-action="openDrawer" data-value="settings" aria-label="Game options">⋯</button></div><div class="game-main"><div class="scene-wrap" title="Double-tap to hide game bars"><canvas id="scene" width="${solo?(matchMedia('(orientation:landscape)').matches?1180:900):1180}" height="${solo?(matchMedia('(orientation:landscape)').matches?760:1200):590}" role="img" aria-label="Current character scene"></canvas><button class="scene-expand" data-action="sceneView" aria-label="View, zoom and save current image">⛶</button></div><section class="game-controls panel"><div class="turn-info"><div class="turn-meta"><span class="eyebrow">${round} · ${esc(g.phase.replaceAll('_',' '))}</span>${solo?'':`<button class="ai-switch" data-action="aiSpeedCycle">⚡ ${esc(aiCaption())}</button>`}</div><p class="notice">${esc(shortNotice)}</p></div>${!solo&&words?`<div class="speech compact-speech"><b>${esc(g.speaker||actor.name)}</b> ${esc(words)}</div>`:''}<div class="actions-scroll">${solo&&words?`<div class="speech solo-full-speech"><b>${esc(g.speaker||actor.name)}</b> ${esc(words)}</div>`:''}${actionMarkup}</div>${primaryDock?`<div class="primary-dock">${primaryDock}</div>`:""}</section></div><nav class="game-toolbar" aria-label="Game details"><button data-action="openDrawer" data-value="players">♧ Players</button><button data-action="openDrawer" data-value="dialogue">☷ Dialogue</button><button data-action="openDrawer" data-value="history">↺ History</button><button data-action="openDrawer" data-value="settings">⚙ Options</button></nav><div id="gameDrawer">${drawerHtml()}</div>${memoryRevealOverlay()}</div></main>`;
  drawScene().catch(console.warn);fillAssets();if(g.mode==='wheel')animateWheel();scheduleAuto();
 }
 function animateWheel(){const el=$('wheelDisc');if(!el)return;const angle=game.spinAngle||0;if(game.wheelIndex>=0&&lastSpin!==angle){el.style.transform='rotate(0deg)';requestAnimationFrame(()=>requestAnimationFrame(()=>{if(el.isConnected)el.style.transform=`rotate(${angle}deg)`;}));lastSpin=angle;}else el.style.transform=`rotate(${angle%360}deg)`;}
@@ -595,25 +648,31 @@ function uiAction(fn){try{
  const previousGame=game,previousNotice=game?.notice;
  fn();
  if(game){
-  if(game!==previousGame)game.history=[];
+  if(game!==previousGame){game.history=[];game.dialogueHistory=[];}
   if(game.notice&&(game!==previousGame||game.notice!==previousNotice)){
    if(!Array.isArray(game.history))game.history=[];
    if(game.history.at(-1)!==game.notice)game.history.push(game.notice);
    if(game.history.length>40)game.history=game.history.slice(-40);
   }
+  // Dialogue is valuable game history, not a disposable notification.
+  if(game.dialogue&&typeof game.dialogue==='string'){
+   game.dialogueHistory??=[];
+   const previous=game.dialogueHistory.at(-1);
+   if(!previous||previous.text!==game.dialogue||previous.speaker!==(game.speaker||'')){
+    game.dialogueHistory.push({speaker:game.speaker||'',text:game.dialogue,round:game.round||1});
+    if(game.dialogueHistory.length>55)game.dialogueHistory=game.dialogueHistory.slice(-55);
+   }
+  }
  }
- if(game&&game.mode!=='one'){let p=game.people.find(p=>p.id===game.highlight);if(p&&(!['diceApply','memoryApply','wheelApply','pokerApply','rpsApply','mayhemApply'].includes(window.__sgcAction)||!game.dialogue)){let event=game.phase==='game_over'?'winner':game.mode==='rps'?(game.rpsMatch?.tie?'tie':game.pending?.chooser===p.id?'win':'lose'):game.mode==='mayhem'?(game.phase==='mayhem_preview'?'pre_layer':'post_layer'):game.mode==='wheel'?(game.segment||'spin'):game.mode==='dice'?'low_single':game.mode==='memory'?'reveal':game.mode==='holdem'?'showdown_lose':'showdown_lose';if(game.mode==='memory'&&['memoryApply','memoryNext'].includes(window.__sgcAction||''))event='after';const line=dialogueText(event,p.id);if(line)game.dialogue=line;}}
- saveGame();render();}catch(err){console.error(err);toast(err.message||String(err));}}
+ saveGame();render();
+ }catch(err){console.error(err);toast(err.message||String(err));}}
 const selectedFile=(ev)=>{const i=+ev;discard.has(i)?discard.delete(i):discard.add(i);render();};
-function gameAction(action,value,automated=false){uiAction(()=>{const g=game;if(!g)throw Error('No active game.');if(automated&&autoAction(g)!==action)throw Error('Automatic action is no longer available.');window.__sgcAction=action;if(action==='spin')lastWheelSpinTime=Date.now();switch(action){case'diceRoll':E.diceRoll(g);break;case'diceLoser':E.diceLoser(g,value);break;case'pick':E.penaltyPick(g,value);break;case'diceApply':E.penaltyApply(g);break;case'flip':E.memoryFlip(g,+value);break;case'memoryShowChoices':E.memoryRevealContinue(g);break;case'aiChoose':E.penaltyPick(g,E.allowed(g.people.find(p=>p.id===g.pending.loser)).slice().reverse()[0]);break;case'memoryApply':E.memoryApply(g);break;case'memoryNext':E.memoryNext(g);break;case'spin':E.wheelSpin(g);break;case'wheelNext':E.wheelNext(g);break;case'vote':E.wheelVote(g,value);break;case'target':E.wheelTarget(g,value);break;case'layer':E.wheelLayer(g,value);break;case'recover':E.wheelRecover(g,value);break;case'wheelApply':E.wheelApply(g);break;case'holdemNext':E.holdemNext(g);break;case'exchange':E.drawExchange(g,[...discard]);discard.clear();break;case'showdownPenalty':E.showdownPenalty(g);break;case'pokerApply':E.pokerApply(g);break;case'nextHand':E.nextHand(g);break;case'ai':E.stepAi(g);break;case'oneTalk':E.oneInteract(g,value,oneBanter(value));break;case'oneRemove':{const p=g.people[0],item=value;if(!E.allowed(p).includes(item))throw Error('That clothing choice is no longer legal.');const clone={...p,items:[...p.items]};if(item)E.remove(clone,item);const c=roster.find(x=>x.asset_name===p.asset);const line=oneRemovalLine(g,item,E.stateOf(clone));E.oneAdvance(g,item,line);break;}case'rpsBegin':E.rpsBegin(g);break;case'rpsTarget':E.rpsTarget(g,value);break;case'rpsMove':E.rpsMove(g,value);break;case'rpsAi':E.rpsAi(g);break;case'rpsReplay':E.rpsReplay(g);break;case'rpsAiPenalty':E.rpsAiPenalty(g);break;case'rpsChoose':E.rpsChoose(g,value);break;case'rpsApply':E.rpsApply(g);break;case'rpsContinue':E.rpsContinue(g);break;case'mayhemBegin':E.mayhemBegin(g);break;case'mayhemTarget':E.mayhemTarget(g,value);break;case'mayhemPenalty':E.mayhemPenalty(g,value);break;case'mayhemAi':E.mayhemAi(g);break;case'mayhemApply':E.mayhemApply(g);break;case'mayhemContinue':E.mayhemContinue(g);break; default:throw Error('Unknown game action')}
- // Supplemental bawdy reaction on high-stakes removal, without replacing
- // character-specific authored dialogue or reusing one identical line everywhere.
- if(['rpsApply','mayhemApply'].includes(action)){
-   const subject=g.people.find(p=>p.id===g.highlight),profile=subject&&roster.find(c=>c.asset_name===subject.asset);
-   const stage=subject&&E.stateOf(subject);
-   if(profile?.stage_dialogue?.[stage])g.dialogue=profile.stage_dialogue[stage];
- }
- if(['diceApply','memoryApply','wheelApply','pokerApply'].includes(action)){const p=g.people.find(x=>x.id===g.highlight),profile=p&&roster.find(c=>c.asset_name===p.asset);if(profile?.stage_dialogue?.[E.stateOf(p)])g.dialogue=profile.stage_dialogue[E.stateOf(p)];}
+function gameAction(action,value,automated=false){uiAction(()=>{const g=game;if(!g)throw Error('No active game.');if(automated&&autoAction(g)!==action)throw Error('Automatic action is no longer available.');const dialogueBefore=captureDialogueContext(g,action,value,E);if(action==='spin')lastWheelSpinTime=Date.now();switch(action){case'diceRoll':E.diceRoll(g);break;case'diceLoser':E.diceLoser(g,value);break;case'pick':E.penaltyPick(g,value);break;case'diceApply':E.penaltyApply(g);break;case'flip':E.memoryFlip(g,+value);break;case'memoryShowChoices':E.memoryRevealContinue(g);break;case'aiChoose':E.penaltyPick(g,E.allowed(g.people.find(p=>p.id===g.pending.loser)).slice().reverse()[0]);break;case'memoryApply':E.memoryApply(g);break;case'memoryNext':E.memoryNext(g);break;case'spin':E.wheelSpin(g);break;case'wheelNext':E.wheelNext(g);break;case'vote':E.wheelVote(g,value);break;case'target':E.wheelTarget(g,value);break;case'layer':E.wheelLayer(g,value);break;case'recover':E.wheelRecover(g,value);break;case'wheelApply':E.wheelApply(g);break;case'holdemNext':E.holdemNext(g);break;case'exchange':E.drawExchange(g,[...discard]);discard.clear();break;case'showdownPenalty':E.showdownPenalty(g);break;case'pokerApply':E.pokerApply(g);break;case'nextHand':E.nextHand(g);break;case'ai':E.stepAi(g);break;case'oneTalk':E.oneInteract(g,value,oneBanter(value));break;case'oneRemove':{const p=g.people[0],item=value;if(!E.allowed(p).includes(item))throw Error('That clothing choice is no longer legal.');const clone={...p,items:[...p.items]};if(item)E.remove(clone,item);const c=roster.find(x=>x.asset_name===p.asset);const line=oneRemovalLine(g,item,E.stateOf(clone));E.oneAdvance(g,item,line);break;}case'rpsBegin':E.rpsBegin(g);break;case'rpsTarget':E.rpsTarget(g,value);break;case'rpsMove':E.rpsMove(g,value);break;case'rpsAi':E.rpsAi(g);break;case'rpsReplay':E.rpsReplay(g);break;case'rpsAiPenalty':E.rpsAiPenalty(g);break;case'rpsChoose':E.rpsChoose(g,value);break;case'rpsApply':E.rpsApply(g);break;case'rpsContinue':E.rpsContinue(g);break;case'mayhemBegin':E.mayhemBegin(g);break;case'mayhemTarget':E.mayhemTarget(g,value);break;case'mayhemPenalty':E.mayhemPenalty(g,value);break;case'mayhemAi':E.mayhemAi(g);break;case'mayhemApply':E.mayhemApply(g);break;case'mayhemContinue':E.mayhemContinue(g);break; default:throw Error('Unknown game action')}
+ // Use the game-specific, character-specific dialogue bank for the actual
+ // event. Don't replace every Dice line with 'low_single', or every Hold'em
+ // line with 'showdown_lose' regardless of what happened on screen.
+ const spoken=directDialogue(g,dialogueBefore,packs,roster,E);
+ if(spoken){g.dialogue=spoken.text;g.speaker=spoken.speaker;}
  });}
 function doStart(){uiAction(()=>{if(!folder)toast('Select your Assets folder to display character images.');let settings={selected:[...selected],human:human||selected[0],playerName,gender,confidence,background,spectator};if(mode==='memory'){ensureMemoryLineup();settings.selected=[memoryAvatar,...memoryOpponents];settings.human=memoryAvatar;settings.memoryGender=memoryGender;}if(mode==='one'){if(!soloSelected)throw Error('Select one character before entering the private booth.');settings.selected=[soloSelected];settings.visitorGender=soloGender;}game=E.start(mode,roster,settings);uiDrawer='';view='game';saveGame();discard.clear();lastSpin=-1;});}
 async function exportSaves(){const blob=new Blob([JSON.stringify({format:'compendium-browser-saves-v1',games:saves,options:{selected,human,background}},null,2)],{type:'application/json'});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download=`compendium-backup-${new Date().toISOString().slice(0,10)}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(u),2500);}
@@ -621,14 +680,14 @@ async function importSaves(file){try{const data=JSON.parse(await file.text());if
 document.addEventListener('click',async event=>{const v=event.target.closest('[data-view-action]');if(v){await sceneViewAction(v.dataset.viewAction);return;}const b=event.target.closest('button,[data-nav],.file-btn');if(!b)return;let nav=b.dataset.nav,act=b.dataset.action,go=b.dataset.go;if(nav){uiDrawer='';cancelAuto();view=nav;if(nav!=='game'){immersive=false;$('app').classList.remove('immersive');if(document.fullscreenElement===document.documentElement)document.exitFullscreen().catch(()=>{});}render();return;}
  if(b.dataset.open){uiDrawer='';mode=b.dataset.open;game=saves[mode]||null;view='setup';search='';rosterTab=0;if(mode==='memory')ensureMemoryLineup();render();return;}
  if(b.dataset.tab!==undefined){rosterTab=+b.dataset.tab;search='';render();return;}
- if(b.dataset.pick){const name=b.dataset.pick;if(mode==='memory'){if(name===memoryAvatar)return;memoryOpponents=memoryOpponents.includes(name)?memoryOpponents.filter(n=>n!==name):memoryOpponents.length<4?[...memoryOpponents,name]:memoryOpponents;saveAll();const x=document.querySelector('.roster-viewport');const old=x?.scrollTop||0;setupView();document.querySelector('.roster-viewport')?.scrollTo(0,old);return;}if(mode==='one'){soloSelected=soloSelected===name?null:name;saveAll();const x=document.querySelector('.roster-viewport');const old=x?.scrollTop||0;setupView();document.querySelector('.roster-viewport')?.scrollTo(0,old);return;}selected=selected.includes(name)?selected.filter(x=>x!==name):selected.length<(spectator?5:4)?[...selected,name]:selected;if(!selected.includes(human))human=selected[0];saveAll();const x=document.querySelector('.roster-viewport');const old=x?.scrollTop||0;setupView();document.querySelector('.roster-viewport')?.scrollTo(0,old);return;}
+ if(b.dataset.pick){const name=b.dataset.pick;if(mode==='memory'){if(name===memoryAvatar)return;if(memoryOpponents.includes(name))memoryOpponents=memoryOpponents.filter(n=>n!==name);else if(memoryOpponents.length<4)memoryOpponents.push(name);else {toast('Four opponents selected. Tap one of your chosen characters to remove them first.');return;}memorySelectionInitialised=true;saveAll();refreshMemorySelection();return;}if(mode==='one'){soloSelected=soloSelected===name?null:name;saveAll();const x=document.querySelector('.roster-viewport');const old=x?.scrollTop||0;setupView();document.querySelector('.roster-viewport')?.scrollTo(0,old);return;}selected=selected.includes(name)?selected.filter(x=>x!==name):selected.length<(spectator?5:4)?[...selected,name]:selected;if(!selected.includes(human))human=selected[0];saveAll();const x=document.querySelector('.roster-viewport');const old=x?.scrollTop||0;setupView();document.querySelector('.roster-viewport')?.scrollTo(0,old);return;}
  if(b.dataset.discard!==undefined){selectedFile(b.dataset.discard);return;}
  if(go){gameAction(go,b.dataset.value);return;}
- if(act==='randomMemoryAvatar'){memoryAvatar=randomAvatar(memoryAvatar);memoryOpponents=memoryOpponents.filter(n=>n!==memoryAvatar);if(memoryOpponents.length!==4)randomMemoryOpponents();saveAll();setupView();return;}if(act==='randomMemoryOpponents'){randomMemoryOpponents();saveAll();setupView();return;}if(act==='openDrawer'){uiDrawer=uiDrawer===b.dataset.value?'':b.dataset.value;updateDrawer();return;}if(act==='closeDrawer'){uiDrawer='';updateDrawer();return;}if(act==='aiSpeedCycle')return cycleAiSpeed();if(act==='sceneView')return openSceneViewer();if(act==='folder')return selectFolder();if(act==='reconnect')return reconnect();if(act==='start')return doStart();if(act==='resume'){game=saves[mode];view='game';render();return;}if(act==='new'){if(!confirm('Start a new game? Your current game is saved and can be resumed from setup until you replace it.'))return;view='setup';render();return;}
+ if(act==='randomMemoryAvatar'){memoryAvatar=randomAvatar(memoryAvatar);memoryOpponents=memoryOpponents.filter(n=>n!==memoryAvatar);memorySelectionInitialised=true;saveAll();setupView();return;}if(act==='randomMemoryOpponents'){randomMemoryOpponents();saveAll();setupView();return;}if(act==='openDrawer'){uiDrawer=uiDrawer===b.dataset.value?'':b.dataset.value;updateDrawer();return;}if(act==='closeDrawer'){uiDrawer='';updateDrawer();return;}if(act==='aiSpeedCycle')return cycleAiSpeed();if(act==='sceneView')return openSceneViewer();if(act==='folder')return selectFolder();if(act==='reconnect')return reconnect();if(act==='start')return doStart();if(act==='resume'){game=saves[mode];view='game';render();return;}if(act==='new'){if(!confirm('Start a new game? Your current game is saved and can be resumed from setup until you replace it.'))return;view='setup';render();return;}
  if(act==='export')exportSaves();});
 document.addEventListener('toggle',ev=>{if(ev.target.matches?.('details.recent-log'))historyExpanded=ev.target.open;},true);
 document.addEventListener('input',ev=>{if(ev.target.id==='search'){search=ev.target.value;rosterTab=0;const dest=$('rosterHere');if(dest){dest.innerHTML=rosterGrid();fillAssets();}}if(ev.target.id==='playerName')playerName=ev.target.value;});
-document.addEventListener('change',ev=>{const el=ev.target;switch(el.id){case'memoryGender':if(['male','female'].includes(el.value)){memoryGender=el.value;memoryAvatar=randomAvatar();memoryOpponents=memoryOpponents.filter(n=>n!==memoryAvatar);if(memoryOpponents.length!==4)randomMemoryOpponents();saveAll();setupView();return;}break;case'human':human=el.value;break;case'spectator':spectator=el.value==='true';if(selected.length>(spectator?5:4))selected=selected.slice(0,4);render();break;case'gender':gender=el.value;break;case'soloGender':if(['male','female','neutral'].includes(el.value))soloGender=el.value;break;case'confidence':confidence=+el.value;break;case'background':background=el.value;break;case'aiSpeed':setAiSpeed(el.value);return;case'import':if(el.files?.[0])importSaves(el.files[0]);break;}saveAll();});
+document.addEventListener('change',ev=>{const el=ev.target;switch(el.id){case'memoryGender':if(['male','female'].includes(el.value)){memoryGender=el.value;memoryAvatar=randomAvatar();memoryOpponents=memoryOpponents.filter(n=>n!==memoryAvatar);memorySelectionInitialised=true;saveAll();setupView();return;}break;case'human':human=el.value;break;case'spectator':spectator=el.value==='true';if(selected.length>(spectator?5:4))selected=selected.slice(0,4);render();break;case'gender':gender=el.value;break;case'soloGender':if(['male','female','neutral'].includes(el.value))soloGender=el.value;break;case'confidence':confidence=+el.value;break;case'background':background=el.value;break;case'aiSpeed':setAiSpeed(el.value);return;case'import':if(el.files?.[0])importSaves(el.files[0]);break;}saveAll();});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAuto();else scheduleAuto();});
 window.addEventListener('pagehide',cancelAuto);
 window.addEventListener('pageshow',()=>{if(view==='game')scheduleAuto();});
