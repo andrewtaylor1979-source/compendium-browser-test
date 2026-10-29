@@ -305,3 +305,55 @@
 .rps-result b{font-size:35px;}
 .mayhem-preview{padding:14px;border:1px solid #b49463;border-radius:10px;color:#eddfc6;background:#332025;font-size:clamp(14px,2vw,18px);line-height:1.5;}
 @media(max-width:540px){.rps-choices button{padding:10px 3px;}.rps-icon{max-height:54px;}.rps-result b{font-size:27px;}}
+
+/* v1.3.1 — Memory: five-player setup, readable reveals and distinct AI turns. */
+#app .memory-setup .memory-setup-options{display:grid;gap:8px;overflow:auto;flex:0 0 auto;max-height:33dvh;padding:8px 11px;}
+#app .memory-setup .memory-identity{display:flex;align-items:center;gap:10px;min-width:0;}
+#app .memory-setup .memory-identity>label{display:flex;flex-direction:column;min-width:92px;gap:2px;flex:0 0 105px;font-size:11px;}
+#app .memory-setup .memory-identity select{min-height:31px;background:#302329;color:#fff;border:1px solid #82605c;border-radius:7px;}
+#app .memory-setup .memory-avatar-preview{display:flex;align-items:center;gap:7px;flex:1;min-width:0;}
+#app .memory-setup .memory-avatar-preview>span:last-child{min-width:0;display:grid;gap:3px;}
+#app .memory-setup .memory-avatar-preview strong{color:var(--gold);font-size:12px;}
+#app .memory-setup .memory-avatar-preview small{font-size:10px;line-height:1.24;}
+#app .memory-setup .memory-avatar-pic{width:55px;height:70px;flex:0 0 55px;display:grid;place-items:center;background:#1c1319;border:1px solid #745052;border-radius:6px;overflow:hidden;}
+#app .memory-setup .memory-avatar-pic img{width:100%;height:100%;object-fit:contain;}
+#app .memory-setup .memory-ai-setup{display:flex;align-items:center;justify-content:space-between;gap:9px;color:#dccbbd;font-size:11px;}
+#app .memory-setup .memory-ai-setup span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+#app .memory-setup .memory-background-label{display:flex;align-items:center;gap:10px;color:#dfc8b5;font-size:11px;}
+#app .memory-setup .memory-background-label select{min-width:0;max-width:230px;flex:1;}
+#app .memory-setup .portrait:disabled{opacity:.35;}
+#app .unified-game{position:relative;}
+#app .unified-game .memory-turn-title{color:#ecd29c;font-weight:700;}
+#app .unified-game .memory-deck .memory-card{flex:0 1 clamp(56px,12vw,100px);min-width:0;}
+#app .memory-reveal-overlay{position:absolute;inset:0;z-index:25;background:rgba(13,8,11,.97);display:flex;align-items:center;justify-content:center;border:1px solid #977458;border-radius:12px;overflow:hidden;padding:clamp(8px,1.5vw,16px);}
+#app .memory-reveal-stage.large-reveal{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;gap:7px;min-height:0;}
+#app .memory-reveal-heading{display:grid;justify-items:center;gap:3px;text-align:center;flex:0 0 auto;}
+#app .memory-reveal-heading strong{font:700 clamp(15px,2.6vw,23px) Georgia,serif;color:#f7e1bc;}
+#app .memory-reveal-heading small{font-size:clamp(10px,1.4vw,13px);color:#cbbdb1;}
+#app .memory-reveal-art{flex:1;min-height:0;min-width:0;display:flex;justify-content:center;align-items:center;width:100%;}
+#app .memory-reveal-art img{height:100%;max-height:100%;max-width:100%;object-fit:contain;filter:drop-shadow(0 5px 15px #000c);}
+#app .memory-reveal-continue{display:flex;justify-content:center;width:min(100%,440px);flex:0 0 auto;}
+#app .memory-reveal-continue button{width:100%;min-height:44px;font-weight:750;font-size:clamp(12px,2vw,16px);}
+#app .memory-choice-heading{display:grid;gap:3px;color:#f2e2c7;}
+#app .memory-choice-heading small{font-size:11px;color:var(--gold);}
+#app .memory-choice-thumb{display:grid;place-items:center;min-height:70px;max-height:clamp(86px,18vh,150px);}
+#app .memory-choice-thumb img{max-width:100%;max-height:clamp(85px,17vh,146px);object-fit:contain;}
+#app .memory-penalties{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;}
+#app .memory-penalties .primary{grid-column:1/-1;}
+#app .missing-memory-face{display:grid;gap:8px;place-items:center;max-width:90%;min-height:90px;padding:16px;border:1px solid #a48757;border-radius:12px;color:#f5d7ad;text-align:center;}
+#app .missing-memory-face small{color:#d9b89f;overflow-wrap:anywhere;}
+@media(orientation:portrait) and (max-width:650px){
+ #app .memory-setup .memory-setup-options{max-height:31dvh;padding:6px;}
+ #app .memory-setup .memory-identity{flex-wrap:wrap;gap:6px;}
+ #app .memory-setup .memory-identity>label{flex-basis:80px;}
+ #app .memory-setup .memory-identity>button{padding:6px;flex:0 0 auto;}
+ #app .memory-setup .memory-avatar-pic{width:44px;height:55px;flex-basis:44px;}
+ #app .memory-setup .memory-avatar-preview small{font-size:9px;}
+ #app .memory-reveal-overlay{inset:0;padding:9px;}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #app .memory-reveal-overlay{padding:5px 12px;}
+ #app .memory-reveal-heading{gap:1px;}
+ #app .memory-reveal-continue button{min-height:32px;padding:4px;}
+ #app .memory-setup .memory-setup-options{max-height:26dvh;}
+}
