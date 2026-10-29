@@ -1,1 +1,646 @@
-{"families":{"authority":{"turn":["Shuffle them. I only need one card.","Very well. Chance may choose the target; I will handle the consequence.","Another shuffle. Let us see who has the misfortune of landing in my hand.","Put the cards down. I am ready to make somebody's evening more complicated.","No information, no leverage, just one choice. Irritating, but manageable."],"self":["My own card. That is an unacceptable little twist.","Of course I found myself. Fine. I will make my own decision.","That is me. Chance is becoming insolent.","My face. Very well; I refuse to look rattled by cardboard."],"reveal":["{target}. Good. Now the useful part begins.","I have {target}. Chance has handed me control for the next decision.","{target}. An interesting result; I intend to use it.","There is {target}. The shuffle has made its choice and so will I."],"target":["My card. Choose, then. I would rather know the damage than watch you enjoy the delay.","That is me. Do not mistake being selected for being intimidated.","Fine. My card is up. Make your choice and live with it.","Apparently I am the target. I suggest you enjoy the advantage while it lasts."],"repeat":["Again? The deck is developing a very tiresome obsession with me.","My card again. Somebody shuffle with greater competence.","Another hit. I am beginning to regard the deck as a personal enemy.","Again. Fine. Repetition does not make me easier to embarrass."],"after":["{My_garment} {garment_go}. {state}. I remain in control of everything that actually matters.","Off {garment_pronoun} {garment_come}. {state}. Do not confuse less clothing with less authority.","There {garment_go} my {garment}. {state}. Enjoy the view; the advantage is temporary.","{garment_demonstrative_cap} {garment} {garment_go}. {state}. I have had worse meetings."],"eliminated":["That is the final pose and I am out. I dislike the result, not my performance.","Eliminated. Fine. Somebody else can discover how unpleasant the deck is.","My run ends there. Remember that luck did the removing, not weakness."],"winner":["Last one standing. Chance finally learned some respect.","I win. An untidy route to a perfectly satisfactory result.","The deck failed to remove me. I will accept that as a victory without qualification."]},"broadcast":{"turn":["Fresh shuffle. Let us see whose name becomes the next headline.","Cards reset, cameras metaphorically rolling. Here goes.","Another turn, another completely unreliable forecast from the deck.","Right, one card. I would normally prefer a little more information before going live.","The cards are mixed again. Stand by for an outcome nobody can responsibly predict."],"self":["And the headline is me. Wonderful.","My own face. I really could have done without that breaking news.","That is me. Back to the studio for an extremely awkward decision.","I have managed to draw myself. So much for impartial coverage."],"reveal":["It is {target}. That is tonight's unfortunate headline.","{target} comes up. The random part is over; the editorial decision is mine.","We have {target}. I suspect the next update will involve fewer clothes.","{target}. There is our developing story."],"target":["Oh no. My card. I was happier reporting other people's bad luck.","That is me. I can already hear the imaginary producer saying, 'stay composed.'","My face is up. Fine. I shall try to deliver the reaction professionally.","Apparently I am the story now. That is considerably less comfortable."],"repeat":["Me again? This has stopped being a story and become a series.","Another appearance from my card. The deck clearly likes a recurring guest.","Again. I would quite like to hand back to somebody else now.","My card, again. We are well past coincidence and into editorial obsession."],"after":["{My_garment} {garment_go}. {state}. I am smiling because that is what professionals do under pressure.","Off {garment_pronoun} {garment_come}. {state}. That is today's rather personal update.","There {garment_go} my {garment}. {state}. I would like to end this bulletin now.","{garment_demonstrative_cap} {garment} {garment_go}. {state}. Back to anybody else, please."],"eliminated":["Final pose. That is the end of my broadcast, and what an ending it is.","I am out. Please imagine the credits rolling before anyone comments.","Eliminated. I shall be declining all post-game interviews."],"winner":["I survived. That is one result I am very happy to report.","Winner. A surprisingly cheerful end to a thoroughly unstable forecast.","Last one standing. That is the headline I wanted all along."]},"poised":{"turn":["Another shuffle. I shall try to meet blind chance with something resembling composure.","Very well. One card, no clues, and apparently no dignified way to hesitate.","Here we go. I would prefer certainty, but poise will have to do.","Fresh cards. I shall choose before my imagination makes the decision worse.","One face-down card. It is remarkable how much tension such a small choice can create."],"self":["Oh. My own card. I was hoping for almost literally anyone else.","That is me. Very well; breathe, choose, do not make a scene.","My face. How exquisitely inconvenient.","I drew myself. I shall pretend this is merely another test of composure."],"reveal":["It is {target}. I suspect neither of us needed that little surge of anticipation.","{target}. All right. I shall make the choice without gloating.","The card belongs to {target}. That is rather awkward for one of us and interesting for the other.","{target}. Chance has made the introduction; I suppose I supply the consequence."],"target":["My card. I had hoped to remain an observer for at least one more turn.","That is me. Please choose before I have time to imagine every possibility.","My face is showing. Fine. I shall endeavour not to make the blush too obvious.","Apparently I am selected. I would like everyone to be terribly mature about this."],"repeat":["Again? I am beginning to feel personally singled out by probability.","My card again. Composure is becoming an increasingly expensive habit.","Another reveal. I should like the deck to discover someone else's face.","Again. This is doing dreadful things to my ability to look unconcerned."],"after":["{My_garment} {garment_go}. {state}. I shall try to behave as though this was entirely manageable.","Off {garment_pronoun} {garment_come}. {state}. There is no elegant way to pretend I am not aware of the room.","There {garment_go} my {garment}. {state}. I can feel myself becoming far too conscious of every pair of eyes.","{garment_demonstrative_cap} {garment} {garment_go}. {state}. Dignity is doing a remarkable amount of work tonight."],"eliminated":["Final pose. I am out. I shall recover my dignity somewhere considerably more private.","Eliminated. I was hoping for a more graceful ending, but apparently not.","That finishes me. I survived the embarrassment; I simply did not survive the deck."],"winner":["I won. I am relieved enough to forget how little skill was involved.","Last one standing. I shall take the victory and quietly ignore the method.","Winner. Against blind chance, survival feels surprisingly elegant."]},"wry":{"turn":["Fresh shuffle. Excellent. Planning has once again been declared irrelevant.","One card and no useful information. My favourite sort of decision-making environment.","Right. Let us see who probability has decided to annoy this time.","Another shuffle. Statistically fair, emotionally suspicious.","Here goes. If this ends badly, I intend to blame mathematics."],"self":["Oh, marvellous. I have selected myself.","My own card. A remarkably efficient piece of self-sabotage.","That is me. Apparently I needed less help ruining my position than expected.","I drew myself. Well done, hand. Excellent work."],"reveal":["{target}. There we are. Probability has found its next volunteer.","I have {target}. I almost feel bad about the next decision.","{target}. Unfortunate for you; administratively straightforward for me.","It is {target}. I shall try to misuse this tiny amount of power responsibly."],"target":["Oh, splendid. My card.","That is me. I would complain, but apparently the shuffle has no appeals process.","My face. Fine. Let us get the humiliation scheduled and move on.","Apparently I am today's randomly selected cautionary tale."],"repeat":["Again? At this point my card deserves its own loyalty scheme.","Me again. The deck has confused randomness with harassment.","Another reveal. I am beginning to think my face has magnets in it.","Again. Probability and I will be having words after this."],"after":["{My_garment} {garment_go}. {state}. That seems entirely proportionate to touching a card.","Off {garment_pronoun} {garment_come}. {state}. An excellent evening for questionable decisions.","There {garment_go} my {garment}. {state}. I remain unconvinced this counts as character building.","{garment_demonstrative_cap} {garment} {garment_go}. {state}. I hope chance is enjoying itself."],"eliminated":["Final pose. I am out. That escalated with impressive administrative efficiency.","Eliminated. At least my card can finally stop trying to undress me.","That is me finished. I shall send probability a strongly worded letter."],"winner":["I won by not being randomly selected often enough. A triumph for strategy everywhere.","Last one standing. Apparently my greatest skill is being difficult to draw.","Winner. I shall absolutely pretend there was a plan."]},"playful":{"turn":["Shuffle them! Somebody is about to get a very personal surprise.","My turn. Come on, little card, give me something fun.","Fresh shuffle. This is the point where luck decides who squeals next.","All right, cards. Entertain me.","One pick. No peeking. I love how terrible an idea this feels."],"self":["Ha! I picked myself. That is almost impressive.","My own face! Oh, that is cruel and very funny.","It's me. Fine, I can play both sides of this disaster.","I drew myself. Apparently the joke has excellent timing."],"reveal":["{target}! Oh, this could be fun.","I got {target}. Sorry — that grin is probably not reassuring.","{target}. Come on, you knew one of us was going to get unlucky.","There is {target}. Suddenly this turn has possibilities."],"target":["Oh! My card. Everybody stop looking quite so pleased.","That's me. Fine, but I reserve the right to complain theatrically.","My face! Right, who invited luck to be this cheeky?","I got picked. Great. Try not to enjoy this more than I do."],"repeat":["Again? My card is clearly addicted to attention.","Me again! This deck has a crush and I do not approve.","Another hit? Honestly, give somebody else a turn at being the entertainment.","Again. At least buy my card dinner first."],"after":["{My_garment} {garment_go}. {state}. There — happy now? Do not answer that.","Off {garment_pronoun} {garment_come}. {state}. This game is getting cheekier by the minute.","There {garment_go} my {garment}. {state}. Somebody is enjoying this far too much.","{garment_demonstrative_cap} {garment} {garment_go}. {state}. I am still smiling, so nobody gets to claim victory yet."],"eliminated":["Final pose! And that is me out. Rude, ridiculous and annoyingly memorable.","I'm eliminated. Fine — somebody else can be the entertainment now.","That's my game done. I expect the surviving cards to behave even worse without me."],"winner":["I won! Pure luck has never looked so deserved.","Last one standing. I knew being difficult to catch would pay off eventually.","Winner! Somebody tell the deck I forgive it."]},"tough":{"turn":["Shuffle done. Pick fast and deal with what comes.","My turn. No point overthinking a blind card.","One card. Whoever comes up can handle it — or learn to.","Fresh shuffle. Good. Let chance throw the next punch.","Cards down. I am choosing and moving on."],"self":["Me. Fine. I can take my own hit.","My card. No excuses — I picked it.","I drew myself. Annoying, not fatal.","That is me. Good. Let us get it over with."],"reveal":["{target}. Your turn to take the hit.","I have {target}. Nothing personal until I make the choice.","{target}. Bad draw. Stand your ground.","The card says {target}. All right — consequence time."],"target":["My card. Fine. Make the choice.","That is me. I can handle it.","Picked. Good. No whining from me.","My face came up. Do what you are going to do."],"repeat":["Again? Fine. Keep testing me.","My card again. The deck wants a fight.","Another hit. I am still here.","Again. Somebody tell chance I do not scare easily."],"after":["{My_garment} {garment_go}. {state}. Still standing.","Off {garment_pronoun} {garment_come}. {state}. I can take worse than that.","There {garment_go} my {garment}. {state}. Next problem.","{garment_demonstrative_cap} {garment} {garment_go}. {state}. Do not expect me to fold because of it."],"eliminated":["Final pose. I'm out. I lasted until the deck finished the job.","Eliminated. Fine. I took every hit it had.","That's my run done. No excuses; chance won this one."],"winner":["Last one standing. That works for me.","I win. Luck picked its fights badly.","Winner. I stayed in until everyone else ran out of room."]},"warm":{"turn":["All right, another shuffle. I hope whoever comes up can laugh about it later.","My turn. I am already nervous for whoever is under this card.","Here goes. Chance, please be kind — or at least spread the embarrassment around.","Fresh shuffle. I feel guilty before I have even picked one.","One card. Deep breath. Let us see who gets the awkward moment."],"self":["Oh no, that's me. I really walked straight into that one.","My own card. Well, at least nobody else has to feel guilty this turn.","It's me. Right. I can do this. Probably.","I picked myself. That is so unlucky I almost have to laugh."],"reveal":["It's {target}. Sorry — I promise I did not aim for you.","{target}. Oh dear. I have to choose now, don't I?","I found {target}. I feel a little guilty already.","{target}. Bad luck. I will try not to make it worse than necessary."],"target":["Oh, it's me. All right. Be gentle if you can.","My card. I knew my luck was going to run out eventually.","That's me. Fine. I am trying not to look as nervous as I feel.","I got picked. Right. Smile, breathe, survive the next bit."],"repeat":["Again? Oh, come on, give somebody else a chance to be unlucky.","My card again. I am starting to feel personally haunted by it.","Another hit? I really would like a quiet turn now.","Again. I am laughing, but only because the alternative is complaining."],"after":["{My_garment} {garment_go}. {state}. Okay. I can handle the blush if everyone else can behave.","Off {garment_pronoun} {garment_come}. {state}. Deep breath — that felt more exposing than I expected.","There {garment_go} my {garment}. {state}. I am trying very hard not to hide.","{garment_demonstrative_cap} {garment} {garment_go}. {state}. I am still here, even if my face is glowing."],"eliminated":["Final pose. I'm out. I am equal parts relieved and mortified.","That's me eliminated. I think I have had enough random attention for one evening.","My game is over. Please let the next person have dramatically better luck than I did."],"winner":["I won? Oh! I genuinely did not expect that.","Last one standing. I am relieved enough to laugh now.","Winner. Apparently being overlooked by random cards is a genuine talent."]},"sultry":{"turn":["Fresh shuffle. I do enjoy a little suspense before somebody loses a layer.","My turn. Let us see whose card wants attention.","One blind pick. Deliciously unfair.","Shuffle complete. Chance can choose the body; I will choose what happens next.","Here we go. I rather like not knowing who is about to be in trouble."],"self":["My own card. Mm. That changes the flavour of the turn.","I drew myself. How intimate of the deck.","That is me. Fine — I can be both chooser and consequence.","My face. I suppose curiosity has turned inward."],"reveal":["{target}. Now that is an interesting draw.","I found {target}. I may take a moment to enjoy the possibilities.","{target}. Chance has very good taste today.","There is {target}. I already know this decision will be fun."],"target":["My card. I wondered when somebody would find me.","That is me. Go on, then. Make it interesting.","My face came up. I can think of worse ways to become the centre of attention.","Picked at last. I was beginning to feel neglected."],"repeat":["Again? The deck is becoming possessive.","My card again. Somebody clearly wants another look.","Another hit. At this point I may as well assume the attention is intentional.","Again. I hope everyone is appreciating the consistency."],"after":["{My_garment} {garment_go}. {state}. If everyone is going to stare, they might as well do it properly.","Off {garment_pronoun} {garment_come}. {state}. There — a little more honest now.","There {garment_go} my {garment}. {state}. The room just became more interesting.","{garment_demonstrative_cap} {garment} {garment_go}. {state}. I can feel the attention sharpening."],"eliminated":["Final pose. I am out. At least I gave the room something worth remembering.","Eliminated. What a very public way to finish.","That's the end for me. I suspect the image will linger longer than the score."],"winner":["Last one standing. I do like an audience when I have the winning position.","I win. Chance has excellent taste after all.","Winner. I kept just enough mystery to survive."]},"gothic":{"turn":["Shuffle the little portraits again. Fate should never become predictable.","My turn. Let us invite chance to choose its next offering.","One hidden face. How charmingly ominous.","The cards are mixed. I wonder whose dignity fate intends to bruise next.","Another draw from the dark. How pleasant."],"self":["My own portrait. Fate has a wonderfully morbid sense of humour.","I found myself. How intimate and inconvenient.","That is me. Even fate occasionally bites the hand that chooses.","My card. Delightful. I shall be both victim and executioner for a moment."],"reveal":["{target}. Fate has placed you very neatly in my hand.","I have {target}. What a lovely little omen.","{target}. The card has chosen its sacrifice.","There is {target}. Let us make the consequence memorable."],"target":["My card. How deliciously inevitable.","That is me. Very well; let the room enjoy its little ritual.","My portrait has surfaced. Fate rarely knocks politely.","Selected. I shall try to make humiliation look ceremonial."],"repeat":["Again? Fate is becoming almost affectionate.","My card returns. Persistence is such an attractive vice.","Another reveal. The deck seems reluctant to let me fade into the shadows.","Again. I begin to suspect destiny enjoys the view."],"after":["{My_garment} {garment_go}. {state}. Exposure is merely another kind of honesty.","Off {garment_pronoun} {garment_come}. {state}. How beautifully the room grows quieter.","There {garment_go} my {garment}. {state}. Modesty is such a temporary costume.","{garment_demonstrative_cap} {garment} {garment_go}. {state}. The ritual deepens."],"eliminated":["Final pose. I am out. A suitably dramatic little death for my game.","Eliminated. How lovely that fate insisted on a memorable ending.","My card leaves the deck at last. Every haunting must end eventually."],"winner":["Last one standing. Fate has been unexpectedly courteous.","I win. The deck spared me its final indignity.","Winner. A dark little miracle, but I shall take it."]},"chaotic":{"turn":["Shuffle, shuffle, shuffle! Let's see whose evening explodes next.","My turn! No plans, no clues, excellent.","One card. Maximum consequences. I love efficient chaos.","Fresh shuffle! Come on, deck, do something stupid.","Okay, random cardboard oracle, impress me."],"self":["HA! I picked myself. That's genuinely funny.","My own card! Of course it is. Chaos has standards.","It's me! Brilliant. I have weaponised bad luck against myself.","My face. This game understands me far too well."],"reveal":["{target}! Jackpot — for me, obviously.","I got {target}. This is going to be terrible. Excellent.","{target}! The deck has chosen violence.","There is {target}. Time to make the random bit feel personal."],"target":["My card! Oh, this is about to get stupid.","That's me. Fine. Surprise me, you monsters.","I got picked! Everybody look innocent immediately.","My face is up. I knew the deck appreciated chaos."],"repeat":["Again?! This card is stalking me and I respect the commitment.","Me again! Probability has gone completely feral.","Another hit. The deck has decided I am tonight's recurring gag.","Again! Fine, let's see how ridiculous this can get."],"after":["{My_garment} {garment_go}! {state}. This game is completely unhinged.","Off {garment_pronoun} {garment_come}! {state}. That escalated beautifully.","There {garment_go} my {garment}. {state}. Somebody give the deck a medal.","{garment_demonstrative_cap} {garment} {garment_go}. {state}. Chaos remains undefeated."],"eliminated":["Final pose! I'm out! Honestly, spectacular ending.","Eliminated. The deck finally blew me up properly.","That's me done. Ten out of ten for chaos, zero out of ten for survival."],"winner":["I WON! The universe has made a terrible decision.","Last one standing! Chaos has rewarded its favourite student.","Winner! I would like to thank absolutely nobody, especially probability."]},"laconic":{"turn":["Shuffle's done. I'll pick.","My turn. One card.","No clues. Fine.","Cards are mixed. Here goes.","Pick first. Worry later."],"self":["Me. Figures.","My card. Fine.","Picked myself. That's annoying.","That's me. Could be worse."],"reveal":["{target}. Your luck's out.","Got {target}. Right.","{target}. Bad draw.","It's {target}. I'll choose."],"target":["Me. Go on.","My card. Pick something.","That's me. Get it done.","Selected. Fine."],"repeat":["Again? Typical.","Me again. Bad run.","Another one. Great.","Again. Deck hates me."],"after":["{My_garment} {garment_go}. {state}.","Off {garment_pronoun} {garment_come}. {state}.","There {garment_go} my {garment}. {state}.","{garment_demonstrative_cap} {garment} {garment_go}. {state}. Still here."],"eliminated":["Final pose. I'm out.","Done. Card finally got me.","Eliminated. That's that."],"winner":["Won. I'll take it.","Last one. Good.","Winner. Lucky enough."]}},"styleFamilies":{"imperious":"authority","dominant":"authority","executive":"authority","crime_boss":"authority","broadcast":"broadcast","broadcast_nervous":"broadcast","poised":"poised","elegant":"poised","poker_face":"poised","formal_nervous":"poised","reserved_regal":"poised","warm_regal":"poised","wry":"wry","dry_professional":"wry","office_wit":"wry","awkward_dry":"wry","playful":"playful","performer":"playful","showwoman":"playful","young_bravado":"playful","comic_bravado":"playful","aggressive":"tough","blunt":"tough","coach":"tough","predatory":"tough","adventurous":"tough","warm":"warm","chatty_nervous":"warm","sultry_composed":"sultry","gothic":"gothic","chaotic":"chaotic","laconic":"laconic"},"characterStyles":{"Alcina":"imperious","Amanda":"broadcast","Anna":"warm_regal","April":"broadcast","Astrid":"poised","Bananaman":"comic_bravado","Becky":"broadcast","Catherine":"formal_nervous","Cheetara":"predatory","Daphne":"wry","Donkey":"comic_bravado","Elaine":"showwoman","Ellie":"young_bravado","Elsa":"reserved_regal","Evelyn":"elegant","Harley":"chaotic","Homer":"comic_bravado","Hank":"blunt","Jane":"sultry_composed","Jason":"laconic","Jessica":"performer","Kristoff":"awkward_dry","Marge":"chatty_nervous","Miranda":"executive","Thing":"blunt","Betty":"performer","Zoilitta":"dry_professional","Lara":"adventurous","Lindsay":"broadcast","Lola":"playful","Louise":"chatty_nervous","Mahari":"broadcast","Mary":"broadcast_nervous","Meghan":"executive","Moana":"warm","Morticia":"gothic","Nia":"coach","Peach":"formal_nervous","Rachel":"dry_professional","Roxy":"wry","Sophie":"coach","Susanna":"broadcast","Susie":"crime_boss","Suzanne":"office_wit","Tiffany":"performer","Vanessa":"executive","Viktoria":"dominant","Vivienne":"poker_face","Tinkerbell":"playful","Donald":"dominant","Ranjani":"dry_professional","Naomi":"formal_nervous","Eleanor":"wry","Marilyn":"performer","Captain":"coach","Catwoman":"wry","Queenie":"dominant","Batman":"poker_face","ChatGPT":"dry_professional","Hulk":"aggressive","Piggy":"performer","Silvie":"playful","Suzi":"poker_face","Ahsoka":"wry","Jack":"gothic","user":"neutral"}}
+{
+  "families": {
+    "authority": {
+      "turn": [
+        "Shuffle them. I only need one card.",
+        "Very well. Chance may choose the target; I will handle the consequence.",
+        "Another shuffle. Let us see who has the misfortune of landing in my hand.",
+        "Put the cards down. I am ready to make somebody's evening more complicated.",
+        "No information, no leverage, just one choice. Irritating, but manageable."
+      ],
+      "self": [
+        "My own card. That is an unacceptable little twist.",
+        "Of course I found myself. Fine. I will make my own decision.",
+        "That is me. Chance is becoming insolent.",
+        "My face. Very well; I refuse to look rattled by cardboard."
+      ],
+      "reveal": [
+        "{target}. Good. Now the useful part begins.",
+        "I have {target}. Chance has handed me control for the next decision.",
+        "{target}. An interesting result; I intend to use it.",
+        "There is {target}. The shuffle has made its choice and so will I."
+      ],
+      "target": [
+        "My card. Choose, then. I would rather know the damage than watch you enjoy the delay.",
+        "That is me. Do not mistake being selected for being intimidated.",
+        "Fine. My card is up. Make your choice and live with it.",
+        "Apparently I am the target. I suggest you enjoy the advantage while it lasts."
+      ],
+      "repeat": [
+        "Again? The deck is developing a very tiresome obsession with me.",
+        "My card again. Somebody shuffle with greater competence.",
+        "Another hit. I am beginning to regard the deck as a personal enemy.",
+        "Again. Fine. Repetition does not make me easier to embarrass."
+      ],
+      "after": [
+        "{My_garment} {garment_go}. {state}. I remain in control of everything that actually matters.",
+        "Off {garment_pronoun} {garment_come}. {state}. Do not confuse less clothing with less authority.",
+        "There {garment_go} my {garment}. {state}. Enjoy the view; the advantage is temporary.",
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I have had worse meetings."
+      ],
+      "eliminated": [
+        "That is the final pose and I am out. I dislike the result, not my performance.",
+        "Eliminated. Fine. Somebody else can discover how unpleasant the deck is.",
+        "My run ends there. Remember that luck did the removing, not weakness."
+      ],
+      "winner": [
+        "Last one standing. Chance finally learned some respect.",
+        "I win. An untidy route to a perfectly satisfactory result.",
+        "The deck failed to remove me. I will accept that as a victory without qualification."
+      ]
+    },
+    "broadcast": {
+      "turn": [
+        "Fresh shuffle. Let us see whose name becomes the next headline.",
+        "Cards reset, cameras metaphorically rolling. Here goes.",
+        "Another turn, another completely unreliable forecast from the deck.",
+        "Right, one card. I would normally prefer a little more information before going live.",
+        "The cards are mixed again. Stand by for an outcome nobody can responsibly predict."
+      ],
+      "self": [
+        "And the headline is me. Wonderful.",
+        "My own face. I really could have done without that breaking news.",
+        "That is me. Back to the studio for an extremely awkward decision.",
+        "I have managed to draw myself. So much for impartial coverage."
+      ],
+      "reveal": [
+        "It is {target}. That is tonight's unfortunate headline.",
+        "{target} comes up. The random part is over; the editorial decision is mine.",
+        "We have {target}. I suspect the next update will involve fewer clothes.",
+        "{target}. There is our developing story."
+      ],
+      "target": [
+        "Oh no. My card. I was happier reporting other people's bad luck.",
+        "That is me. I can already hear the imaginary producer saying, 'stay composed.'",
+        "My face is up. Fine. I shall try to deliver the reaction professionally.",
+        "Apparently I am the story now. That is considerably less comfortable."
+      ],
+      "repeat": [
+        "Me again? This has stopped being a story and become a series.",
+        "Another appearance from my card. The deck clearly likes a recurring guest.",
+        "Again. I would quite like to hand back to somebody else now.",
+        "My card, again. We are well past coincidence and into editorial obsession."
+      ],
+      "after": [
+        "{My_garment} {garment_go}. {state}. I am smiling because that is what professionals do under pressure.",
+        "Off {garment_pronoun} {garment_come}. {state}. That is today's rather personal update.",
+        "There {garment_go} my {garment}. {state}. I would like to end this bulletin now.",
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Back to anybody else, please."
+      ],
+      "eliminated": [
+        "Final pose. That is the end of my broadcast, and what an ending it is.",
+        "I am out. Please imagine the credits rolling before anyone comments.",
+        "Eliminated. I shall be declining all post-game interviews."
+      ],
+      "winner": [
+        "I survived. That is one result I am very happy to report.",
+        "Winner. A surprisingly cheerful end to a thoroughly unstable forecast.",
+        "Last one standing. That is the headline I wanted all along."
+      ]
+    },
+    "poised": {
+      "turn": [
+        "Another shuffle. I shall try to meet blind chance with something resembling composure.",
+        "Very well. One card, no clues, and apparently no dignified way to hesitate.",
+        "Here we go. I would prefer certainty, but poise will have to do.",
+        "Fresh cards. I shall choose before my imagination makes the decision worse.",
+        "One face-down card. It is remarkable how much tension such a small choice can create."
+      ],
+      "self": [
+        "Oh. My own card. I was hoping for almost literally anyone else.",
+        "That is me. Very well; breathe, choose, do not make a scene.",
+        "My face. How exquisitely inconvenient.",
+        "I drew myself. I shall pretend this is merely another test of composure."
+      ],
+      "reveal": [
+        "It is {target}. I suspect neither of us needed that little surge of anticipation.",
+        "{target}. All right. I shall make the choice without gloating.",
+        "The card belongs to {target}. That is rather awkward for one of us and interesting for the other.",
+        "{target}. Chance has made the introduction; I suppose I supply the consequence."
+      ],
+      "target": [
+        "My card. I had hoped to remain an observer for at least one more turn.",
+        "That is me. Please choose before I have time to imagine every possibility.",
+        "My face is showing. Fine. I shall endeavour not to make the blush too obvious.",
+        "Apparently I am selected. I would like everyone to be terribly mature about this."
+      ],
+      "repeat": [
+        "Again? I am beginning to feel personally singled out by probability.",
+        "My card again. Composure is becoming an increasingly expensive habit.",
+        "Another reveal. I should like the deck to discover someone else's face.",
+        "Again. This is doing dreadful things to my ability to look unconcerned."
+      ],
+      "after": [
+        "{My_garment} {garment_go}. {state}. I shall try to behave as though this was entirely manageable.",
+        "Off {garment_pronoun} {garment_come}. {state}. There is no elegant way to pretend I am not aware of the room.",
+        "There {garment_go} my {garment}. {state}. I can feel myself becoming far too conscious of every pair of eyes.",
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Dignity is doing a remarkable amount of work tonight."
+      ],
+      "eliminated": [
+        "Final pose. I am out. I shall recover my dignity somewhere considerably more private.",
+        "Eliminated. I was hoping for a more graceful ending, but apparently not.",
+        "That finishes me. I survived the embarrassment; I simply did not survive the deck."
+      ],
+      "winner": [
+        "I won. I am relieved enough to forget how little skill was involved.",
+        "Last one standing. I shall take the victory and quietly ignore the method.",
+        "Winner. Against blind chance, survival feels surprisingly elegant."
+      ]
+    },
+    "wry": {
+      "turn": [
+        "Fresh shuffle. Excellent. Planning has once again been declared irrelevant.",
+        "One card and no useful information. My favourite sort of decision-making environment.",
+        "Right. Let us see who probability has decided to annoy this time.",
+        "Another shuffle. Statistically fair, emotionally suspicious.",
+        "Here goes. If this ends badly, I intend to blame mathematics."
+      ],
+      "self": [
+        "Oh, marvellous. I have selected myself.",
+        "My own card. A remarkably efficient piece of self-sabotage.",
+        "That is me. Apparently I needed less help ruining my position than expected.",
+        "I drew myself. Well done, hand. Excellent work."
+      ],
+      "reveal": [
+        "{target}. There we are. Probability has found its next volunteer.",
+        "I have {target}. I almost feel bad about the next decision.",
+        "{target}. Unfortunate for you; administratively straightforward for me.",
+        "It is {target}. I shall try to misuse this tiny amount of power responsibly."
+      ],
+      "target": [
+        "Oh, splendid. My card.",
+        "That is me. I would complain, but apparently the shuffle has no appeals process.",
+        "My face. Fine. Let us get the humiliation scheduled and move on.",
+        "Apparently I am today's randomly selected cautionary tale."
+      ],
+      "repeat": [
+        "Again? At this point my card deserves its own loyalty scheme.",
+        "Me again. The deck has confused randomness with harassment.",
+        "Another reveal. I am beginning to think my face has magnets in it.",
+        "Again. Probability and I will be having words after this."
+      ],
+      "after": [
+        "{My_garment} {garment_go}. {state}. That seems entirely proportionate to touching a card.",
+        "Off {garment_pronoun} {garment_come}. {state}. An excellent evening for questionable decisions.",
+        "There {garment_go} my {garment}. {state}. I remain unconvinced this counts as character building.",
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I hope chance is enjoying itself."
+      ],
+      "eliminated": [
+        "Final pose. I am out. That escalated with impressive administrative efficiency.",
+        "Eliminated. At least my card can finally stop trying to undress me.",
+        "That is me finished. I shall send probability a strongly worded letter."
+      ],
+      "winner": [
+        "I won by not being randomly selected often enough. A triumph for strategy everywhere.",
+        "Last one standing. Apparently my greatest skill is being difficult to draw.",
+        "Winner. I shall absolutely pretend there was a plan."
+      ]
+    },
+    "playful": {
+      "turn": [
+        "Shuffle them! Somebody is about to get a very personal surprise.",
+        "My turn. Come on, little card, give me something fun.",
+        "Fresh shuffle. This is the point where luck decides who squeals next.",
+        "All right, cards. Entertain me.",
+        "One pick. No peeking. I love how terrible an idea this feels."
+      ],
+      "self": [
+        "Ha! I picked myself. That is almost impressive.",
+        "My own face! Oh, that is cruel and very funny.",
+        "It's me. Fine, I can play both sides of this disaster.",
+        "I drew myself. Apparently the joke has excellent timing."
+      ],
+      "reveal": [
+        "{target}! Oh, this could be fun.",
+        "I got {target}. Sorry — that grin is probably not reassuring.",
+        "{target}. Come on, you knew one of us was going to get unlucky.",
+        "There is {target}. Suddenly this turn has possibilities."
+      ],
+      "target": [
+        "Oh! My card. Everybody stop looking quite so pleased.",
+        "That's me. Fine, but I reserve the right to complain theatrically.",
+        "My face! Right, who invited luck to be this cheeky?",
+        "I got picked. Great. Try not to enjoy this more than I do."
+      ],
+      "repeat": [
+        "Again? My card is clearly addicted to attention.",
+        "Me again! This deck has a crush and I do not approve.",
+        "Another hit? Honestly, give somebody else a turn at being the entertainment.",
+        "Again. At least buy my card dinner first."
+      ],
+      "after": [
+        "{My_garment} {garment_go}. {state}. There — happy now? Do not answer that.",
+        "Off {garment_pronoun} {garment_come}. {state}. This game is getting cheekier by the minute.",
+        "There {garment_go} my {garment}. {state}. Somebody is enjoying this far too much.",
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I am still smiling, so nobody gets to claim victory yet."
+      ],
+      "eliminated": [
+        "Final pose! And that is me out. Rude, ridiculous and annoyingly memorable.",
+        "I'm eliminated. Fine — somebody else can be the entertainment now.",
+        "That's my game done. I expect the surviving cards to behave even worse without me."
+      ],
+      "winner": [
+        "I won! Pure luck has never looked so deserved.",
+        "Last one standing. I knew being difficult to catch would pay off eventually.",
+        "Winner! Somebody tell the deck I forgive it."
+      ]
+    },
+    "tough": {
+      "turn": [
+        "Shuffle done. Pick fast and deal with what comes.",
+        "My turn. No point overthinking a blind card.",
+        "One card. Whoever comes up can handle it — or learn to.",
+        "Fresh shuffle. Good. Let chance throw the next punch.",
+        "Cards down. I am choosing and moving on."
+      ],
+      "self": [
+        "Me. Fine. I can take my own hit.",
+        "My card. No excuses — I picked it.",
+        "I drew myself. Annoying, not fatal.",
+        "That is me. Good. Let us get it over with."
+      ],
+      "reveal": [
+        "{target}. Your turn to take the hit.",
+        "I have {target}. Nothing personal until I make the choice.",
+        "{target}. Bad draw. Stand your ground.",
+        "The card says {target}. All right — consequence time."
+      ],
+      "target": [
+        "My card. Fine. Make the choice.",
+        "That is me. I can handle it.",
+        "Picked. Good. No whining from me.",
+        "My face came up. Do what you are going to do."
+      ],
+      "repeat": [
+        "Again? Fine. Keep testing me.",
+        "My card again. The deck wants a fight.",
+        "Another hit. I am still here.",
+        "Again. Somebody tell chance I do not scare easily."
+      ],
+      "after": [
+        "{My_garment} {garment_go}. {state}. Still standing.",
+        "Off {garment_pronoun} {garment_come}. {state}. I can take worse than that.",
+        "There {garment_go} my {garment}. {state}. Next problem.",
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Do not expect me to fold because of it."
+      ],
+      "eliminated": [
+        "Final pose. I'm out. I lasted until the deck finished the job.",
+        "Eliminated. Fine. I took every hit it had.",
+        "That's my run done. No excuses; chance won this one."
+      ],
+      "winner": [
+        "Last one standing. That works for me.",
+        "I win. Luck picked its fights badly.",
+        "Winner. I stayed in until everyone else ran out of room."
+      ]
+    },
+    "warm": {
+      "turn": [
+        "All right, another shuffle. I hope whoever comes up can laugh about it later.",
+        "My turn. I am already nervous for whoever is under this card.",
+        "Here goes. Chance, please be kind — or at least spread the embarrassment around.",
+        "Fresh shuffle. I feel guilty before I have even picked one.",
+        "One card. Deep breath. Let us see who gets the awkward moment."
+      ],
+      "self": [
+        "Oh no, that's me. I really walked straight into that one.",
+        "My own card. Well, at least nobody else has to feel guilty this turn.",
+        "It's me. Right. I can do this. Probably.",
+        "I picked myself. That is so unlucky I almost have to laugh."
+      ],
+      "reveal": [
+        "It's {target}. Sorry — I promise I did not aim for you.",
+        "{target}. Oh dear. I have to choose now, don't I?",
+        "I found {target}. I feel a little guilty already.",
+        "{target}. Bad luck. I will try not to make it worse than necessary."
+      ],
+      "target": [
+        "Oh, it's me. All right. Be gentle if you can.",
+        "My card. I knew my luck was going to run out eventually.",
+        "That's me. Fine. I am trying not to look as nervous as I feel.",
+        "I got picked. Right. Smile, breathe, survive the next bit."
+      ],
+      "repeat": [
+        "Again? Oh, come on, give somebody else a chance to be unlucky.",
+        "My card again. I am starting to feel personally haunted by it.",
+        "Another hit? I really would like a quiet turn now.",
+        "Again. I am laughing, but only because the alternative is complaining."
+      ],
+      "after": [
+        "{My_garment} {garment_go}. {state}. Okay. I can handle the blush if everyone else can behave.",
+        "Off {garment_pronoun} {garment_come}. {state}. Deep breath — that felt more exposing than I expected.",
+        "There {garment_go} my {garment}. {state}. I am trying very hard not to hide.",
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I am still here, even if my face is glowing."
+      ],
+      "eliminated": [
+        "Final pose. I'm out. I am equal parts relieved and mortified.",
+        "That's me eliminated. I think I have had enough random attention for one evening.",
+        "My game is over. Please let the next person have dramatically better luck than I did."
+      ],
+      "winner": [
+        "I won? Oh! I genuinely did not expect that.",
+        "Last one standing. I am relieved enough to laugh now.",
+        "Winner. Apparently being overlooked by random cards is a genuine talent."
+      ]
+    },
+    "sultry": {
+      "turn": [
+        "Fresh shuffle. I do enjoy a little suspense before somebody loses a layer.",
+        "My turn. Let us see whose card wants attention.",
+        "One blind pick. Deliciously unfair.",
+        "Shuffle complete. Chance can choose the body; I will choose what happens next.",
+        "Here we go. I rather like not knowing who is about to be in trouble."
+      ],
+      "self": [
+        "My own card. Mm. That changes the flavour of the turn.",
+        "I drew myself. How intimate of the deck.",
+        "That is me. Fine — I can be both chooser and consequence.",
+        "My face. I suppose curiosity has turned inward."
+      ],
+      "reveal": [
+        "{target}. Now that is an interesting draw.",
+        "I found {target}. I may take a moment to enjoy the possibilities.",
+        "{target}. Chance has very good taste today.",
+        "There is {target}. I already know this decision will be fun."
+      ],
+      "target": [
+        "My card. I wondered when somebody would find me.",
+        "That is me. Go on, then. Make it interesting.",
+        "My face came up. I can think of worse ways to become the centre of attention.",
+        "Picked at last. I was beginning to feel neglected."
+      ],
+      "repeat": [
+        "Again? The deck is becoming possessive.",
+        "My card again. Somebody clearly wants another look.",
+        "Another hit. At this point I may as well assume the attention is intentional.",
+        "Again. I hope everyone is appreciating the consistency."
+      ],
+      "after": [
+        "{My_garment} {garment_go}. {state}. If everyone is going to stare, they might as well do it properly.",
+        "Off {garment_pronoun} {garment_come}. {state}. There — a little more honest now.",
+        "There {garment_go} my {garment}. {state}. The room just became more interesting.",
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I can feel the attention sharpening."
+      ],
+      "eliminated": [
+        "Final pose. I am out. At least I gave the room something worth remembering.",
+        "Eliminated. What a very public way to finish.",
+        "That's the end for me. I suspect the image will linger longer than the score."
+      ],
+      "winner": [
+        "Last one standing. I do like an audience when I have the winning position.",
+        "I win. Chance has excellent taste after all.",
+        "Winner. I kept just enough mystery to survive."
+      ]
+    },
+    "gothic": {
+      "turn": [
+        "Shuffle the little portraits again. Fate should never become predictable.",
+        "My turn. Let us invite chance to choose its next offering.",
+        "One hidden face. How charmingly ominous.",
+        "The cards are mixed. I wonder whose dignity fate intends to bruise next.",
+        "Another draw from the dark. How pleasant."
+      ],
+      "self": [
+        "My own portrait. Fate has a wonderfully morbid sense of humour.",
+        "I found myself. How intimate and inconvenient.",
+        "That is me. Even fate occasionally bites the hand that chooses.",
+        "My card. Delightful. I shall be both victim and executioner for a moment."
+      ],
+      "reveal": [
+        "{target}. Fate has placed you very neatly in my hand.",
+        "I have {target}. What a lovely little omen.",
+        "{target}. The card has chosen its sacrifice.",
+        "There is {target}. Let us make the consequence memorable."
+      ],
+      "target": [
+        "My card. How deliciously inevitable.",
+        "That is me. Very well; let the room enjoy its little ritual.",
+        "My portrait has surfaced. Fate rarely knocks politely.",
+        "Selected. I shall try to make humiliation look ceremonial."
+      ],
+      "repeat": [
+        "Again? Fate is becoming almost affectionate.",
+        "My card returns. Persistence is such an attractive vice.",
+        "Another reveal. The deck seems reluctant to let me fade into the shadows.",
+        "Again. I begin to suspect destiny enjoys the view."
+      ],
+      "after": [
+        "{My_garment} {garment_go}. {state}. Exposure is merely another kind of honesty.",
+        "Off {garment_pronoun} {garment_come}. {state}. How beautifully the room grows quieter.",
+        "There {garment_go} my {garment}. {state}. Modesty is such a temporary costume.",
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. The ritual deepens."
+      ],
+      "eliminated": [
+        "Final pose. I am out. A suitably dramatic little death for my game.",
+        "Eliminated. How lovely that fate insisted on a memorable ending.",
+        "My card leaves the deck at last. Every haunting must end eventually."
+      ],
+      "winner": [
+        "Last one standing. Fate has been unexpectedly courteous.",
+        "I win. The deck spared me its final indignity.",
+        "Winner. A dark little miracle, but I shall take it."
+      ]
+    },
+    "chaotic": {
+      "turn": [
+        "Shuffle, shuffle, shuffle! Let's see whose evening explodes next.",
+        "My turn! No plans, no clues, excellent.",
+        "One card. Maximum consequences. I love efficient chaos.",
+        "Fresh shuffle! Come on, deck, do something stupid.",
+        "Okay, random cardboard oracle, impress me."
+      ],
+      "self": [
+        "HA! I picked myself. That's genuinely funny.",
+        "My own card! Of course it is. Chaos has standards.",
+        "It's me! Brilliant. I have weaponised bad luck against myself.",
+        "My face. This game understands me far too well."
+      ],
+      "reveal": [
+        "{target}! Jackpot — for me, obviously.",
+        "I got {target}. This is going to be terrible. Excellent.",
+        "{target}! The deck has chosen violence.",
+        "There is {target}. Time to make the random bit feel personal."
+      ],
+      "target": [
+        "My card! Oh, this is about to get stupid.",
+        "That's me. Fine. Surprise me, you monsters.",
+        "I got picked! Everybody look innocent immediately.",
+        "My face is up. I knew the deck appreciated chaos."
+      ],
+      "repeat": [
+        "Again?! This card is stalking me and I respect the commitment.",
+        "Me again! Probability has gone completely feral.",
+        "Another hit. The deck has decided I am tonight's recurring gag.",
+        "Again! Fine, let's see how ridiculous this can get."
+      ],
+      "after": [
+        "{My_garment} {garment_go}! {state}. This game is completely unhinged.",
+        "Off {garment_pronoun} {garment_come}! {state}. That escalated beautifully.",
+        "There {garment_go} my {garment}. {state}. Somebody give the deck a medal.",
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Chaos remains undefeated."
+      ],
+      "eliminated": [
+        "Final pose! I'm out! Honestly, spectacular ending.",
+        "Eliminated. The deck finally blew me up properly.",
+        "That's me done. Ten out of ten for chaos, zero out of ten for survival."
+      ],
+      "winner": [
+        "I WON! The universe has made a terrible decision.",
+        "Last one standing! Chaos has rewarded its favourite student.",
+        "Winner! I would like to thank absolutely nobody, especially probability."
+      ]
+    },
+    "laconic": {
+      "turn": [
+        "Shuffle's done. I'll pick.",
+        "My turn. One card.",
+        "No clues. Fine.",
+        "Cards are mixed. Here goes.",
+        "Pick first. Worry later."
+      ],
+      "self": [
+        "Me. Figures.",
+        "My card. Fine.",
+        "Picked myself. That's annoying.",
+        "That's me. Could be worse."
+      ],
+      "reveal": [
+        "{target}. Your luck's out.",
+        "Got {target}. Right.",
+        "{target}. Bad draw.",
+        "It's {target}. I'll choose."
+      ],
+      "target": [
+        "Me. Go on.",
+        "My card. Pick something.",
+        "That's me. Get it done.",
+        "Selected. Fine."
+      ],
+      "repeat": [
+        "Again? Typical.",
+        "Me again. Bad run.",
+        "Another one. Great.",
+        "Again. Deck hates me."
+      ],
+      "after": [
+        "{My_garment} {garment_go}. {state}.",
+        "Off {garment_pronoun} {garment_come}. {state}.",
+        "There {garment_go} my {garment}. {state}.",
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Still here."
+      ],
+      "eliminated": [
+        "Final pose. I'm out.",
+        "Done. Card finally got me.",
+        "Eliminated. That's that."
+      ],
+      "winner": [
+        "Won. I'll take it.",
+        "Last one. Good.",
+        "Winner. Lucky enough."
+      ]
+    }
+  },
+  "styleFamilies": {
+    "imperious": "authority",
+    "dominant": "authority",
+    "executive": "authority",
+    "crime_boss": "authority",
+    "broadcast": "broadcast",
+    "broadcast_nervous": "broadcast",
+    "poised": "poised",
+    "elegant": "poised",
+    "poker_face": "poised",
+    "formal_nervous": "poised",
+    "reserved_regal": "poised",
+    "warm_regal": "poised",
+    "wry": "wry",
+    "dry_professional": "wry",
+    "office_wit": "wry",
+    "awkward_dry": "wry",
+    "playful": "playful",
+    "performer": "playful",
+    "showwoman": "playful",
+    "young_bravado": "playful",
+    "comic_bravado": "playful",
+    "aggressive": "tough",
+    "blunt": "tough",
+    "coach": "tough",
+    "predatory": "tough",
+    "adventurous": "tough",
+    "warm": "warm",
+    "chatty_nervous": "warm",
+    "sultry_composed": "sultry",
+    "gothic": "gothic",
+    "chaotic": "chaotic",
+    "laconic": "laconic"
+  },
+  "characterStyles": {
+    "Alcina": "imperious",
+    "Amanda": "broadcast",
+    "Anna": "warm_regal",
+    "April": "broadcast",
+    "Astrid": "poised",
+    "Bananaman": "comic_bravado",
+    "Becky": "broadcast",
+    "Catherine": "formal_nervous",
+    "Cheetara": "predatory",
+    "Daphne": "wry",
+    "Donkey": "comic_bravado",
+    "Elaine": "showwoman",
+    "Ellie": "young_bravado",
+    "Elsa": "reserved_regal",
+    "Evelyn": "elegant",
+    "Harley": "chaotic",
+    "Homer": "comic_bravado",
+    "Hank": "blunt",
+    "Jane": "sultry_composed",
+    "Jason": "laconic",
+    "Jessica": "performer",
+    "Kristoff": "awkward_dry",
+    "Marge": "chatty_nervous",
+    "Miranda": "executive",
+    "Thing": "blunt",
+    "Betty": "performer",
+    "Zoilitta": "dry_professional",
+    "Lara": "adventurous",
+    "Lindsay": "broadcast",
+    "Lola": "playful",
+    "Louise": "chatty_nervous",
+    "Mahari": "broadcast",
+    "Mary": "broadcast_nervous",
+    "Meghan": "executive",
+    "Moana": "warm",
+    "Morticia": "gothic",
+    "Nia": "coach",
+    "Peach": "formal_nervous",
+    "Rachel": "dry_professional",
+    "Roxy": "wry",
+    "Sophie": "coach",
+    "Susanna": "broadcast",
+    "Susie": "crime_boss",
+    "Suzanne": "office_wit",
+    "Tiffany": "performer",
+    "Vanessa": "executive",
+    "Viktoria": "dominant",
+    "Vivienne": "poker_face",
+    "Tinkerbell": "playful",
+    "Donald": "dominant",
+    "Ranjani": "dry_professional",
+    "Naomi": "formal_nervous",
+    "Eleanor": "wry",
+    "Marilyn": "performer",
+    "Captain": "coach",
+    "Catwoman": "wry",
+    "Queenie": "dominant",
+    "Batman": "poker_face",
+    "ChatGPT": "dry_professional",
+    "Hulk": "aggressive",
+    "Piggy": "performer",
+    "Silvie": "playful",
+    "Suzi": "poker_face",
+    "Ahsoka": "wry",
+    "Jack": "gothic",
+    "user": "neutral",
+    "Jasmine": "warm_regal"
+  }
+}
