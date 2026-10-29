@@ -18,7 +18,9 @@
         "{target}. Good. Now the useful part begins.",
         "I have {target}. Chance has handed me control for the next decision.",
         "{target}. An interesting result; I intend to use it.",
-        "There is {target}. The shuffle has made its choice and so will I."
+        "There is {target}. The shuffle has made its choice and so will I.",
+        "A splendidly inconvenient card. Let's see who keeps their nerve when the next garment goes.",
+        "I expect the chosen player to be a good sport. I reserve the right to be a complete bastard about it."
       ],
       "target": [
         "My card. Choose, then. I would rather know the damage than watch you enjoy the delay.",
@@ -36,7 +38,8 @@
         "{My_garment} {garment_go}. {state}. I remain in control of everything that actually matters.",
         "Off {garment_pronoun} {garment_come}. {state}. Do not confuse less clothing with less authority.",
         "There {garment_go} my {garment}. {state}. Enjoy the view; the advantage is temporary.",
-        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I have had worse meetings."
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I have had worse meetings.",
+        "The choice has been made. I can practically hear the room enjoying the scandal."
       ],
       "eliminated": [
         "That is the final pose and I am out. I dislike the result, not my performance.",
@@ -67,7 +70,9 @@
         "It is {target}. That is tonight's unfortunate headline.",
         "{target} comes up. The random part is over; the editorial decision is mine.",
         "We have {target}. I suspect the next update will involve fewer clothes.",
-        "{target}. There is our developing story."
+        "{target}. There is our developing story.",
+        "Breaking news: somebody's about to be much less dressed than they expected.",
+        "Oh, bloody hell. That's a reveal worth keeping the cameras on."
       ],
       "target": [
         "Oh no. My card. I was happier reporting other people's bad luck.",
@@ -85,7 +90,8 @@
         "{My_garment} {garment_go}. {state}. I am smiling because that is what professionals do under pressure.",
         "Off {garment_pronoun} {garment_come}. {state}. That is today's rather personal update.",
         "There {garment_go} my {garment}. {state}. I would like to end this bulletin now.",
-        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Back to anybody else, please."
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Back to anybody else, please.",
+        "I don't think that wardrobe decision will be forgotten in a hurry."
       ],
       "eliminated": [
         "Final pose. That is the end of my broadcast, and what an ending it is.",
@@ -116,7 +122,9 @@
         "It is {target}. I suspect neither of us needed that little surge of anticipation.",
         "{target}. All right. I shall make the choice without gloating.",
         "The card belongs to {target}. That is rather awkward for one of us and interesting for the other.",
-        "{target}. Chance has made the introduction; I suppose I supply the consequence."
+        "{target}. Chance has made the introduction; I suppose I supply the consequence.",
+        "Well. That card leads somewhere rather indecent, doesn't it?",
+        "I had hoped for a civilised result. This game appears to have other ideas."
       ],
       "target": [
         "My card. I had hoped to remain an observer for at least one more turn.",
@@ -134,7 +142,8 @@
         "{My_garment} {garment_go}. {state}. I shall try to behave as though this was entirely manageable.",
         "Off {garment_pronoun} {garment_come}. {state}. There is no elegant way to pretend I am not aware of the room.",
         "There {garment_go} my {garment}. {state}. I can feel myself becoming far too conscious of every pair of eyes.",
-        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Dignity is doing a remarkable amount of work tonight."
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Dignity is doing a remarkable amount of work tonight.",
+        "That was disgracefully cheeky. I shall pretend not to have enjoyed the drama."
       ],
       "eliminated": [
         "Final pose. I am out. I shall recover my dignity somewhere considerably more private.",
@@ -165,7 +174,9 @@
         "{target}. There we are. Probability has found its next volunteer.",
         "I have {target}. I almost feel bad about the next decision.",
         "{target}. Unfortunate for you; administratively straightforward for me.",
-        "It is {target}. I shall try to misuse this tiny amount of power responsibly."
+        "It is {target}. I shall try to misuse this tiny amount of power responsibly.",
+        "Oh, lovely. A completely innocent card game, if we ignore what's happening to everyone's clothes.",
+        "That is a wicked choice. You barely even tried to hide the grin."
       ],
       "target": [
         "Oh, splendid. My card.",
@@ -183,7 +194,8 @@
         "{My_garment} {garment_go}. {state}. That seems entirely proportionate to touching a card.",
         "Off {garment_pronoun} {garment_come}. {state}. An excellent evening for questionable decisions.",
         "There {garment_go} my {garment}. {state}. I remain unconvinced this counts as character building.",
-        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I hope chance is enjoying itself."
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I hope chance is enjoying itself.",
+        "There goes another layer. What a terribly respectable evening this is becoming."
       ],
       "eliminated": [
         "Final pose. I am out. That escalated with impressive administrative efficiency.",
@@ -214,7 +226,9 @@
         "{target}! Oh, this could be fun.",
         "I got {target}. Sorry — that grin is probably not reassuring.",
         "{target}. Come on, you knew one of us was going to get unlucky.",
-        "There is {target}. Suddenly this turn has possibilities."
+        "There is {target}. Suddenly this turn has possibilities.",
+        "Ooh! Now that's a very naughty card. Who's blushing first?",
+        "Well, shit! That could make someone wish they'd worn a few extra layers."
       ],
       "target": [
         "Oh! My card. Everybody stop looking quite so pleased.",
@@ -232,7 +246,8 @@
         "{My_garment} {garment_go}. {state}. There — happy now? Do not answer that.",
         "Off {garment_pronoun} {garment_come}. {state}. This game is getting cheekier by the minute.",
         "There {garment_go} my {garment}. {state}. Somebody is enjoying this far too much.",
-        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I am still smiling, so nobody gets to claim victory yet."
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I am still smiling, so nobody gets to claim victory yet.",
+        "Heehee. Someone's looking awfully cheeky about that result."
       ],
       "eliminated": [
         "Final pose! And that is me out. Rude, ridiculous and annoyingly memorable.",
@@ -263,7 +278,9 @@
         "{target}. Your turn to take the hit.",
         "I have {target}. Nothing personal until I make the choice.",
         "{target}. Bad draw. Stand your ground.",
-        "The card says {target}. All right — consequence time."
+        "The card says {target}. All right — consequence time.",
+        "Right, who's losing some bloody clothing this time?",
+        "Don't act surprised. You knew this game was going to get outrageous."
       ],
       "target": [
         "My card. Fine. Make the choice.",
@@ -281,7 +298,8 @@
         "{My_garment} {garment_go}. {state}. Still standing.",
         "Off {garment_pronoun} {garment_come}. {state}. I can take worse than that.",
         "There {garment_go} my {garment}. {state}. Next problem.",
-        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Do not expect me to fold because of it."
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Do not expect me to fold because of it.",
+        "Take the loss, keep your nerve, and give us a proper comeback."
       ],
       "eliminated": [
         "Final pose. I'm out. I lasted until the deck finished the job.",
@@ -312,7 +330,9 @@
         "It's {target}. Sorry — I promise I did not aim for you.",
         "{target}. Oh dear. I have to choose now, don't I?",
         "I found {target}. I feel a little guilty already.",
-        "{target}. Bad luck. I will try not to make it worse than necessary."
+        "{target}. Bad luck. I will try not to make it worse than necessary.",
+        "Oh, that's a cheeky surprise! I hope we can all keep a straight face.",
+        "This seemed like a harmless little game before the clothes started disappearing."
       ],
       "target": [
         "Oh, it's me. All right. Be gentle if you can.",
@@ -330,7 +350,8 @@
         "{My_garment} {garment_go}. {state}. Okay. I can handle the blush if everyone else can behave.",
         "Off {garment_pronoun} {garment_come}. {state}. Deep breath — that felt more exposing than I expected.",
         "There {garment_go} my {garment}. {state}. I am trying very hard not to hide.",
-        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I am still here, even if my face is glowing."
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I am still here, even if my face is glowing.",
+        "Well, I'm blushing and I wasn't even the target."
       ],
       "eliminated": [
         "Final pose. I'm out. I am equal parts relieved and mortified.",
@@ -361,7 +382,9 @@
         "{target}. Now that is an interesting draw.",
         "I found {target}. I may take a moment to enjoy the possibilities.",
         "{target}. Chance has very good taste today.",
-        "There is {target}. I already know this decision will be fun."
+        "There is {target}. I already know this decision will be fun.",
+        "What an interesting card. That smile tells me you're thinking rather wicked thoughts.",
+        "You picked that card with a dangerously confident little grin."
       ],
       "target": [
         "My card. I wondered when somebody would find me.",
@@ -379,7 +402,8 @@
         "{My_garment} {garment_go}. {state}. If everyone is going to stare, they might as well do it properly.",
         "Off {garment_pronoun} {garment_come}. {state}. There — a little more honest now.",
         "There {garment_go} my {garment}. {state}. The room just became more interesting.",
-        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I can feel the attention sharpening."
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. I can feel the attention sharpening.",
+        "Now that's a reveal worth remembering."
       ],
       "eliminated": [
         "Final pose. I am out. At least I gave the room something worth remembering.",
@@ -410,7 +434,9 @@
         "{target}. Fate has placed you very neatly in my hand.",
         "I have {target}. What a lovely little omen.",
         "{target}. The card has chosen its sacrifice.",
-        "There is {target}. Let us make the consequence memorable."
+        "There is {target}. Let us make the consequence memorable.",
+        "An exquisitely scandalous draw. The shadows are enjoying this.",
+        "Bollocks, the card has spoken. Our dignity is doomed."
       ],
       "target": [
         "My card. How deliciously inevitable.",
@@ -428,7 +454,8 @@
         "{My_garment} {garment_go}. {state}. Exposure is merely another kind of honesty.",
         "Off {garment_pronoun} {garment_come}. {state}. How beautifully the room grows quieter.",
         "There {garment_go} my {garment}. {state}. Modesty is such a temporary costume.",
-        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. The ritual deepens."
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. The ritual deepens.",
+        "There goes another scrap of composure into the darkness."
       ],
       "eliminated": [
         "Final pose. I am out. A suitably dramatic little death for my game.",
@@ -459,7 +486,9 @@
         "{target}! Jackpot — for me, obviously.",
         "I got {target}. This is going to be terrible. Excellent.",
         "{target}! The deck has chosen violence.",
-        "There is {target}. Time to make the random bit feel personal."
+        "There is {target}. Time to make the random bit feel personal.",
+        "Well, fuck me, this deck is a menace! Who's next?",
+        "Oh, I love it when a card brings this much trouble."
       ],
       "target": [
         "My card! Oh, this is about to get stupid.",
@@ -477,7 +506,8 @@
         "{My_garment} {garment_go}! {state}. This game is completely unhinged.",
         "Off {garment_pronoun} {garment_come}! {state}. That escalated beautifully.",
         "There {garment_go} my {garment}. {state}. Somebody give the deck a medal.",
-        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Chaos remains undefeated."
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Chaos remains undefeated.",
+        "What an absolute bloody shambles. Brilliant."
       ],
       "eliminated": [
         "Final pose! I'm out! Honestly, spectacular ending.",
@@ -508,7 +538,9 @@
         "{target}. Your luck's out.",
         "Got {target}. Right.",
         "{target}. Bad draw.",
-        "It's {target}. I'll choose."
+        "It's {target}. I'll choose.",
+        "That's a naughty little draw.",
+        "Well, bollocks. Someone loses a layer."
       ],
       "target": [
         "Me. Go on.",
@@ -526,7 +558,8 @@
         "{My_garment} {garment_go}. {state}.",
         "Off {garment_pronoun} {garment_come}. {state}.",
         "There {garment_go} my {garment}. {state}.",
-        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Still here."
+        "{garment_demonstrative_cap} {garment} {garment_go}. {state}. Still here.",
+        "That was a proper cheeky move."
       ],
       "eliminated": [
         "Final pose. I'm out.",

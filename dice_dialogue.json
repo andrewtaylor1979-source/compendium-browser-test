@@ -41,7 +41,9 @@
           "Bottom roll. Charming. The room may stop looking so delighted at once.",
           "{total} and last place. I dislike randomness when it becomes personal.",
           "Lowest total. Annoying. If anyone smirks, I shall remember it.",
-          "A poor roll and a worse audience. Very well; proceed."
+          "A poor roll and a worse audience. Very well; proceed.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "{total} and tied for lowest. The dice are dragging out my irritation.",
@@ -83,7 +85,9 @@
           "I win. Good. Disorder is much easier to forgive from the top of the scoreboard.",
           "There we are — a proper ending, with me above everyone else.",
           "Winner. How reassuring to see excellence eventually recognised.",
-          "The crown returns to the correct head. I knew patience would pay."
+          "The crown returns to the correct head. I knew patience would pay.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -108,7 +112,9 @@
           "Bottom score with {total}. Somebody else can have the next embarrassing development.",
           "Nobody rolled lower than {total}. I would prefer the forecast to improve from here.",
           "{total} leaves me alone at the bottom. This is becoming considerably more unsettled than I planned.",
-          "Low roll: {total}. Somebody else can have the next embarrassing development."
+          "Low roll: {total}. Somebody else can have the next embarrassing development.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. This is becoming considerably more unsettled than I planned.",
@@ -150,7 +156,9 @@
           "Winner. I can usually read pressure before anybody else notices it.",
           "I made it to the end. I am not giving the room a forecast of my nerves.",
           "Still here when the dice stop. I would prefer the forecast to improve from here.",
-          "That is the win. Keeping a calm face is easier when the outlook is predictable."
+          "That is the win. Keeping a calm face is easier when the outlook is predictable.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -175,7 +183,9 @@
           "Bottom score with {total}. Somebody remind me later that I volunteered for fun.",
           "Nobody rolled lower than {total}. Overthinking has never been my strongest survival strategy.",
           "{total} leaves me alone at the bottom. Adventure sounded better before clothing became part of the stakes.",
-          "Low roll: {total}. Somebody remind me later that I volunteered for fun."
+          "Low roll: {total}. Somebody remind me later that I volunteered for fun.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. Adventure sounded better before clothing became part of the stakes.",
@@ -217,7 +227,9 @@
           "Winner. This is exactly the sort of bad idea I usually run toward.",
           "I made it to the end. I can laugh at the danger right up until it becomes my turn.",
           "Still here when the dice stop. Overthinking has never been my strongest survival strategy.",
-          "That is the win. I am determined to enjoy this even if I blush through half of it."
+          "That is the win. I am determined to enjoy this even if I blush through half of it.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -242,7 +254,9 @@
           "Bottom score with {total}. I would like the next breaking development to happen to somebody else.",
           "Nobody rolled lower than {total}. Channel 6 would never let me file this live.",
           "{total} leaves me alone at the bottom. This story is becoming a little too close to the reporter.",
-          "Low roll: {total}. I would like the next breaking development to happen to somebody else."
+          "Low roll: {total}. I would like the next breaking development to happen to somebody else.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. This story is becoming a little too close to the reporter.",
@@ -284,7 +298,9 @@
           "Winner. I have chased stranger stories than this.",
           "I made it to the end. I am staying on the story, even if the story is trying to undress me.",
           "Still here when the dice stop. Channel 6 would never let me file this live.",
-          "That is the win. I can keep asking questions while everybody else loses their nerve."
+          "That is the win. I can keep asking questions while everybody else loses their nerve.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -309,7 +325,9 @@
           "Bottom score with {total}. I am treating this like a performance and hoping nobody notices the nerves.",
           "Nobody rolled lower than {total}. I have competed under pressure; this pressure is rather cheekier.",
           "{total} leaves me alone at the bottom. The audience is familiar. The stakes are not.",
-          "Low roll: {total}. I am treating this like a performance and hoping nobody notices the nerves."
+          "Low roll: {total}. I am treating this like a performance and hoping nobody notices the nerves.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. The audience is familiar. The stakes are not.",
@@ -351,7 +369,9 @@
           "Winner. I know how to perform under bright lights.",
           "I made it to the end. I can hold a pose longer than I can hide a reaction.",
           "Still here when the dice stop. I have competed under pressure; this pressure is rather cheekier.",
-          "That is the win. Balance is easier than pretending not to blush."
+          "That is the win. Balance is easier than pretending not to blush.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -376,7 +396,9 @@
           "Bottom score with {total}. The dice have betrayed their champion.",
           "Nobody rolled lower than {total}. Please disregard the sudden concern behind the mask.",
           "{total} puts me alone at the bottom. Fine. Heroic recovery starts after the penalty.",
-          "Low roll: {total}. I would like an immediate recount."
+          "Low roll: {total}. I would like an immediate recount.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} gets far too much power.",
@@ -418,7 +440,9 @@
           "Winner. The dice finally chose the correct protagonist.",
           "I made it to the end. The legend writes itself.",
           "Still here when the dice stop. Excellent work, probability.",
-          "That is the win. Bananaman remains undefeated in the version of events I will tell later."
+          "That is the win. Bananaman remains undefeated in the version of events I will tell later.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -443,7 +467,9 @@
           "Bottom score with {total}. I would like the next wardrobe update to concern somebody else.",
           "Nobody rolled lower than {total}. I can keep a presenter smile going longer than most people realise.",
           "{total} leaves me alone at the bottom. This story is getting more personal than I expected.",
-          "Low roll: {total}. I would like the next wardrobe update to concern somebody else."
+          "Low roll: {total}. I would like the next wardrobe update to concern somebody else.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. This story is getting more personal than I expected.",
@@ -485,7 +511,9 @@
           "Winner. I have delivered breaking news with less tension than this.",
           "I made it to the end. The newsroom has never required quite this much composure.",
           "Still here when the dice stop. I can keep a presenter smile going longer than most people realise.",
-          "That is the win. If this becomes a headline, I am blaming all of you."
+          "That is the win. If this becomes a headline, I am blaming all of you.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -510,7 +538,9 @@
           "Bottom score with {total}. I would prefer the room not to study my reaction quite so closely.",
           "Nobody rolled lower than {total}. I intend to look graceful even if the circumstances are not.",
           "{total} leaves me alone at the bottom. This is testing the limits of polite restraint.",
-          "Low roll: {total}. I would prefer the room not to study my reaction quite so closely."
+          "Low roll: {total}. I would prefer the room not to study my reaction quite so closely.",
+          "Oh, bloody hell. Not me! Everyone is already staring.",
+          "Lowest? Oh dear. I was hoping to keep my outfit intact a little longer."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. This is testing the limits of polite restraint.",
@@ -552,7 +582,9 @@
           "Winner. One should at least attempt to preserve some decorum.",
           "I made it to the end. There are situations in which dignity becomes a rather ambitious target.",
           "Still here when the dice stop. I intend to look graceful even if the circumstances are not.",
-          "That is the win. I am considerably less composed than I hope I appear."
+          "That is the win. I am considerably less composed than I hope I appear.",
+          "I won? Oh! That is unexpectedly cheeky of the dice.",
+          "I was sure I'd lose. Perhaps I'll get to keep my clothes on a bit longer."
         ]
       }
     },
@@ -577,7 +609,9 @@
           "Bottom score with {total}. This game is testing patience more than speed.",
           "Nobody rolled lower than {total}. Instinct is useful only if you trust it.",
           "{total} leaves me alone at the bottom. I would rather act than stand here thinking about the audience.",
-          "Low roll: {total}. This game is testing patience more than speed."
+          "Low roll: {total}. This game is testing patience more than speed.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. I would rather act than stand here thinking about the audience.",
@@ -619,7 +653,9 @@
           "Winner. Pick fast, move clean, never show fear.",
           "I made it to the end. I am used to being watched when I move.",
           "Still here when the dice stop. Instinct is useful only if you trust it.",
-          "That is the win. Being seen is not the same thing as being vulnerable."
+          "That is the win. Being seen is not the same thing as being vulnerable.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -644,7 +680,9 @@
           "Bottom score with {total}. I intend to solve this before I become the obvious clue.",
           "Nobody rolled lower than {total}. I am absolutely treating everyone's reactions as evidence.",
           "{total} leaves me alone at the bottom. This case is getting suspiciously personal.",
-          "Low roll: {total}. I intend to solve this before I become the obvious clue."
+          "Low roll: {total}. I intend to solve this before I become the obvious clue.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. This case is getting suspiciously personal.",
@@ -686,7 +724,9 @@
           "Winner. Three clues are usually enough if you pay attention.",
           "I made it to the end. A little danger is fine; unexplained wardrobe loss is less reassuring.",
           "Still here when the dice stop. I am absolutely treating everyone's reactions as evidence.",
-          "That is the win. I prefer mysteries where the evidence keeps its clothes on."
+          "That is the win. I prefer mysteries where the evidence keeps its clothes on.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -711,7 +751,9 @@
           "Bottom with {total}. Everybody looked at me at exactly the same time. I hate that.",
           "Lowest roll. I can lift half the room, but I cannot lift that number.",
           "{total} leaves me alone at the bottom. My comfort zone just left through the door.",
-          "A horrible {total}. Fine. I will stand here and try not to look worried."
+          "A horrible {total}. Fine. I will stand here and try not to look worried.",
+          "Oh, bloody hell. Not me! Everyone is already staring.",
+          "Lowest? Oh dear. I was hoping to keep my clothes intact a little longer."
         ],
         "low_tie": [
           "Tied low on {total}. {chooser} gets to pick. Waiting is the worst part.",
@@ -753,7 +795,9 @@
           "Winner. I may actually tell the lads at the dock this part of the story.",
           "Last one standing. Strength did not help much, but stubbornness apparently did.",
           "Mine. I survived the dice and somehow kept enough confidence to enjoy the finish.",
-          "Winner. I am smiling because I earned it, not because I finally stopped being shy."
+          "Winner. I am smiling because I earned it, not because I finally stopped being shy.",
+          "I won? Oh! That is unexpectedly cheeky of the dice.",
+          "I was sure I'd lose. Perhaps I'll get to keep my clothes on a bit longer."
         ]
       }
     },
@@ -778,7 +822,9 @@
           "Bottom score with {total}. Apparently suburban respectability has very limited protective value.",
           "Nobody rolled lower than {total}. I am trying very hard to look as though this was intentional.",
           "{total} leaves me alone at the bottom. I can smile through quite a lot if nobody asks how I feel.",
-          "Low roll: {total}. Apparently suburban respectability has very limited protective value."
+          "Low roll: {total}. Apparently suburban respectability has very limited protective value.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. I can smile through quite a lot if nobody asks how I feel.",
@@ -820,7 +866,9 @@
           "Winner. If one must make a spectacle of oneself, one should at least do it elegantly.",
           "I made it to the end. There is a narrow line between poised and ridiculous.",
           "Still here when the dice stop. I am trying very hard to look as though this was intentional.",
-          "That is the win. My dignity-management strategy is under severe pressure."
+          "That is the win. My dignity-management strategy is under severe pressure.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -845,7 +893,9 @@
           "Bottom roll with {total}. Amazing. The dice are literally bullying me.",
           "{total} and dead last. Love being personally victimised by cubes.",
           "Lowest total. That landed like a slap, honestly.",
-          "Awful roll. Excellent. Exactly the energy I did not need."
+          "Awful roll. Excellent. Exactly the energy I did not need.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "{total} and tied lowest. Great, now the humiliation needs extra admin.",
@@ -887,7 +937,9 @@
           "Winner. Cute. I am definitely going to act like this was the plan all along.",
           "I take it! Amazing. I would like one moment to enjoy not being the flustered one.",
           "Victory. Finally, evidence that my chaos can be charming and successful.",
-          "I win. I am framing this emotionally and maybe academically."
+          "I win. I am framing this emotionally and maybe academically.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -912,7 +964,9 @@
           "Bottom score with {total}. I would prefer a little more control over what everyone sees.",
           "Nobody rolled lower than {total}. I have spent too long learning not to hide to start now.",
           "{total} leaves me alone at the bottom. The room is warmer than I would like, and it is not the temperature.",
-          "Low roll: {total}. I would prefer a little more control over what everyone sees."
+          "Low roll: {total}. I would prefer a little more control over what everyone sees.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. The room is warmer than I would like, and it is not the temperature.",
@@ -954,7 +1008,9 @@
           "Winner. Calm is still more useful than panic.",
           "I made it to the end. I am not going to let embarrassment make the decision for me.",
           "Still here when the dice stop. I have spent too long learning not to hide to start now.",
-          "That is the win. Composure is a habit, even when the situation is absurd."
+          "That is the win. Composure is a habit, even when the situation is absurd.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -986,7 +1042,9 @@
           "Bottom on {total}. How irritatingly public.",
           "{total}. Low roll. I can feel the room mentally rearranging my outfit already.",
           "Lowest score. Lovely. Everyone has suddenly developed opinions.",
-          "{total}. That is not the result I would have specified."
+          "{total}. That is not the result I would have specified.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low. Shared jeopardy has not improved it.",
@@ -1028,7 +1086,9 @@
           "Winner. A clean result and a pleasantly intact sense of superiority.",
           "Still standing. I shall accept the victory with entirely appropriate smugness.",
           "That is mine. Good taste and good fortune occasionally collaborate.",
-          "Winner. I do enjoy a finished room—and a finished game—when I am the one signing it off."
+          "Winner. I do enjoy a finished room—and a finished game—when I am the one signing it off.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -1053,7 +1113,9 @@
           "Bottom score with {total}. I am absolutely makin' a note of who laughs.",
           "Nobody rolled lower than {total}. I am havin' fun, which is probably bad news for somebody.",
           "{total} leaves me alone at the bottom. Everybody looks cuter when the plan starts falling apart.",
-          "Low roll: {total}. I am absolutely makin' a note of who laughs."
+          "Low roll: {total}. I am absolutely makin' a note of who laughs.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. Everybody looks cuter when the plan starts falling apart.",
@@ -1095,7 +1157,9 @@
           "Winner. Three choices and terrible consequences? Adorable.",
           "I made it to the end. I can behave right up until behaving gets boring.",
           "Still here when the dice stop. I am havin' fun, which is probably bad news for somebody.",
-          "That is the win. Puddin', subtlety left the building ages ago."
+          "That is the win. Puddin', subtlety left the building ages ago.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -1120,7 +1184,9 @@
           "Bottom with {total}. Fine. Every career has an ugly bump in it.",
           "Lowest roll. Crowd can enjoy this one; I know how to sell a bad result.",
           "{total} leaves me last. Somebody is about to take entirely too much interest in my gear.",
-          "A miserable {total}. I have lost matches with more dignity than that roll deserved."
+          "A miserable {total}. I have lost matches with more dignity than that roll deserved.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total}. {chooser} gets to book the loser; I know exactly how dangerous that power is.",
@@ -1162,7 +1228,9 @@
           "I take it. Somebody find me an imaginary belt and a very real lager.",
           "Last one standing. Experience, confidence and stubbornness — undefeated tonight.",
           "Winner. That was not wrestling, but I am absolutely treating it like a main-event victory.",
-          "Mine. Sixty-nine, retired, and still taking the last bow."
+          "Mine. Sixty-nine, retired, and still taking the last bow.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -1187,7 +1255,9 @@
           "Bottom score with {total}. If the room wants a reaction, it can earn one.",
           "Nobody rolled lower than {total}. I have made a career out of reading what people want.",
           "{total} leaves me alone at the bottom. I am not embarrassed by being seen; being surprised is less convenient.",
-          "Low roll: {total}. If the room wants a reaction, it can earn one."
+          "Low roll: {total}. If the room wants a reaction, it can earn one.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. I am not embarrassed by being seen; being surprised is less convenient.",
@@ -1229,7 +1299,9 @@
           "Winner. I know how to hold a room when I choose to.",
           "I made it to the end. The balance of power is much more attractive when it is mine.",
           "Still here when the dice stop. I have made a career out of reading what people want.",
-          "That is the win. Attention is easy; surrendering control of it is the interesting part."
+          "That is the win. Attention is easy; surrendering control of it is the interesting part.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -1254,7 +1326,9 @@
           "Bottom score. {total}.",
           "Nobody lower. Fine.",
           "{total}. Alone at the bottom.",
-          "Low roll. I know."
+          "Low roll. I know.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low with {other_low}. {chooser} decides.",
@@ -1296,7 +1370,9 @@
           "Winner.",
           "I made it.",
           "Still here.",
-          "That is the win."
+          "That is the win.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -1321,7 +1397,9 @@
           "Bottom score with {total}. If everyone is staring, I may as well give them a good show.",
           "Nobody rolled lower than {total}. I am competitive enough to enjoy making the room nervous.",
           "{total} leaves me alone at the bottom. I do not mind attention. Losing control of it is another matter.",
-          "Low roll: {total}. If everyone is staring, I may as well give them a good show."
+          "Low roll: {total}. If everyone is staring, I may as well give them a good show.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. I do not mind attention. Losing control of it is another matter.",
@@ -1363,7 +1441,9 @@
           "Winner. I know how to work a spotlight; I just prefer choosing the performance.",
           "I made it to the end. Confidence is easier when I am the one controlling the stage.",
           "Still here when the dice stop. I am competitive enough to enjoy making the room nervous.",
-          "That is the win. The audience can watch; they are not getting a panic reaction for free."
+          "That is the win. The audience can watch; they are not getting a panic reaction for free.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -1388,7 +1468,9 @@
           "Bottom score with {total}. I would rather haul ice than explain how awkward this feels.",
           "Nobody rolled lower than {total}. I have worked in worse conditions than this, just not with an audience.",
           "{total} leaves me alone at the bottom. Cold weather never trained me for this kind of exposure.",
-          "Low roll: {total}. I would rather haul ice than explain how awkward this feels."
+          "Low roll: {total}. I would rather haul ice than explain how awkward this feels.",
+          "Oh, bloody hell. Not me! Everyone is already staring.",
+          "Lowest? Oh dear. I was hoping to keep my clothes intact a little longer."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. Cold weather never trained me for this kind of exposure.",
@@ -1430,7 +1512,9 @@
           "Winner. Simple rules, ugly consequences; I can work with that.",
           "I made it to the end. I am trying to treat this like a job and failing.",
           "Still here when the dice stop. I have worked in worse conditions than this, just not with an audience.",
-          "That is the win. Practical problems are easier when nobody is staring."
+          "That is the win. Practical problems are easier when nobody is staring.",
+          "I won? Oh! That is unexpectedly cheeky of the dice.",
+          "I was sure I'd lose. Perhaps I'll get to keep my clothes on a bit longer."
         ]
       }
     },
@@ -1455,7 +1539,9 @@
           "Bottom score with {total}. Every bad situation has an exit if you keep thinking.",
           "Nobody rolled lower than {total}. Panic is rarely useful when there is still a route out.",
           "{total} leaves me alone at the bottom. This expedition is becoming far more personal than advertised.",
-          "Low roll: {total}. Every bad situation has an exit if you keep thinking."
+          "Low roll: {total}. Every bad situation has an exit if you keep thinking.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. This expedition is becoming far more personal than advertised.",
@@ -1497,7 +1583,9 @@
           "Winner. I have walked into ruins with friendlier odds than this.",
           "I made it to the end. I have survived traps; I can survive a room full of smug faces.",
           "Still here when the dice stop. Panic is rarely useful when there is still a route out.",
-          "That is the win. I would rather treat this as a puzzle than a humiliation."
+          "That is the win. I would rather treat this as a puzzle than a humiliation.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -1522,7 +1610,9 @@
           "Bottom score with {total}. I would prefer the next talking point to belong to somebody else.",
           "Nobody rolled lower than {total}. I am used to asking the questions, not being the story.",
           "{total} leaves me alone at the bottom. Live television taught me composure; it did not cover this.",
-          "Low roll: {total}. I would prefer the next talking point to belong to somebody else."
+          "Low roll: {total}. I would prefer the next talking point to belong to somebody else.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. Live television taught me composure; it did not cover this.",
@@ -1564,7 +1654,9 @@
           "Winner. I handle live football under pressure; I should be better at this.",
           "I made it to the end. This feels like extra time with absolutely no safe commentary.",
           "Still here when the dice stop. I am used to asking the questions, not being the story.",
-          "That is the win. Keep the presenter smile on and do not give away the nerves."
+          "That is the win. Keep the presenter smile on and do not give away the nerves.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -1589,7 +1681,9 @@
           "Bottom score with {total}. I would like the next punchline to land on somebody else.",
           "Nobody rolled lower than {total}. I can bluff confidence with the best of them.",
           "{total} leaves me alone at the bottom. I am smiling because the alternative is letting you know I am nervous.",
-          "Low roll: {total}. I would like the next punchline to land on somebody else."
+          "Low roll: {total}. I would like the next punchline to land on somebody else.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. I am smiling because the alternative is letting you know I am nervous.",
@@ -1631,7 +1725,9 @@
           "Winner. If we are going to be ridiculous, we may as well have fun with it.",
           "I made it to the end. This routine is getting dangerously close to slapstick.",
           "Still here when the dice stop. I can bluff confidence with the best of them.",
-          "That is the win. A little embarrassment is not going to ruin my timing."
+          "That is the win. A little embarrassment is not going to ruin my timing.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -1656,7 +1752,9 @@
           "Bottom score with {total}. This is considerably bolder than anything I pictured at home.",
           "Nobody rolled lower than {total}. I wanted attention; apparently I forgot to specify the amount.",
           "{total} leaves me alone at the bottom. I am doing my best not to apologise for taking up space.",
-          "Low roll: {total}. This is considerably bolder than anything I pictured at home."
+          "Low roll: {total}. This is considerably bolder than anything I pictured at home.",
+          "Oh, bloody hell. Not me! Everyone is already staring.",
+          "Lowest? Oh dear. I was hoping to keep my outfit intact a little longer."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. I am doing my best not to apologise for taking up space.",
@@ -1698,7 +1796,9 @@
           "Winner. I am trying to be brave without looking completely terrified.",
           "I made it to the end. I can feel myself blushing before anyone says a word.",
           "Still here when the dice stop. I wanted attention; apparently I forgot to specify the amount.",
-          "That is the win. Being noticed is rather more intense than I imagined."
+          "That is the win. Being noticed is rather more intense than I imagined.",
+          "I won? Oh! That is unexpectedly cheeky of the dice.",
+          "I was sure I'd lose. Perhaps I'll get to keep my clothes on a bit longer."
         ]
       }
     },
@@ -1723,7 +1823,9 @@
           "Bottom score with {total}. I would prefer the next development not to involve my wardrobe.",
           "Nobody rolled lower than {total}. I can keep reporting long after the situation stops being comfortable.",
           "{total} leaves me alone at the bottom. The story is getting more personal than any editor would allow.",
-          "Low roll: {total}. I would prefer the next development not to involve my wardrobe."
+          "Low roll: {total}. I would prefer the next development not to involve my wardrobe.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. The story is getting more personal than any editor would allow.",
@@ -1765,7 +1867,9 @@
           "Winner. I am used to thinking while cameras are rolling.",
           "I made it to the end. I can stay composed on air; this room is testing the off-air version.",
           "Still here when the dice stop. I can keep reporting long after the situation stops being comfortable.",
-          "That is the win. This is becoming a very visual live update."
+          "That is the win. This is becoming a very visual live update.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -1790,7 +1894,9 @@
           "Bottom on {total}. This is becoming worryingly personal.",
           "A low {total}. I am afraid that sounds every bit as bad as it feels.",
           "{total} leaves me last. I should very much like to revise that headline.",
-          "Worst score with {total}. My calm voice is doing some heavy lifting now."
+          "Worst score with {total}. My calm voice is doing some heavy lifting now.",
+          "Oh, bloody hell. Not me! Everyone is already staring.",
+          "Lowest? Oh dear. I was hoping to keep my outfit intact a little longer."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides, and I do not love that prospect.",
@@ -1832,7 +1938,9 @@
           "Winner. I shall take that with all the dignity I can recover.",
           "The result is mine. For once, the closing line is a happy one.",
           "I have won. That is excellent news, and badly needed.",
-          "Victory. I can finally sound composed because I truly feel it."
+          "Victory. I can finally sound composed because I truly feel it.",
+          "I won? Oh! That is unexpectedly cheeky of the dice.",
+          "I was sure I'd lose. Perhaps I'll get to keep my clothes on a bit longer."
         ]
       }
     },
@@ -1857,7 +1965,9 @@
           "Bottom roll: {total}. Suddenly everybody is looking at me instead of the dice.",
           "A lonely {total} at the bottom. I would like a different current immediately.",
           "Lowest with {total}. Fine. I am not giving the chooser the satisfaction of seeing panic.",
-          "{total} leaves me last. So much for calm navigation; now I wait."
+          "{total} leaves me last. So much for calm navigation; now I wait.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low on {total}. {chooser} gets the decision, which feels worse than losing cleanly.",
@@ -1899,7 +2009,9 @@
           "I made it through. I will take the victory and keep the speech short.",
           "Last one standing. That feels better than I am going to admit gracefully.",
           "Winner. Good. I navigated the chaos without letting it throw me overboard.",
-          "Mine. I am leaving this game with the rare combination of pride and remaining clothing."
+          "Mine. I am leaving this game with the rare combination of pride and remaining clothing.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -1924,7 +2036,9 @@
           "Bottom score with {total}. The room is becoming wonderfully improper.",
           "Nobody rolled lower than {total}. Composure matters most when everyone expects it to crack.",
           "{total} leaves me alone at the bottom. I see no reason to rush a deliciously uncomfortable moment.",
-          "Low roll: {total}. The room is becoming wonderfully improper."
+          "Low roll: {total}. The room is becoming wonderfully improper.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. I see no reason to rush a deliciously uncomfortable moment.",
@@ -1966,7 +2080,9 @@
           "Winner. A little danger improves any social occasion.",
           "I made it to the end. Embarrassment is merely another shade of intimacy.",
           "Still here when the dice stop. Composure matters most when everyone expects it to crack.",
-          "That is the win. Dignity is so much prettier under pressure."
+          "That is the win. Dignity is so much prettier under pressure.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -1991,7 +2107,9 @@
           "Bottom roll: {total}. Everybody looks far too energised by that.",
           "A lonely {total} at the bottom. Good. Give me the difficult round; I hate boring workouts.",
           "Lowest with {total}. Shit. I suppose confidence needs resistance to count.",
-          "{total} makes me the target. Excellent. Let us find out who has been planning something."
+          "{total} makes me the target. Excellent. Let us find out who has been planning something.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total}. {chooser}, pick carefully; I grade commitment.",
@@ -2033,7 +2151,9 @@
           "Last one standing. Studio owner, event host, now apparently dice tyrant.",
           "I win. Everybody who called me competitive may collect their evidence at the door.",
           "Still here, still dressed enough to gloat. Excellent result.",
-          "Winner. I would be gracious, but none of you believed that was happening."
+          "Winner. I would be gracious, but none of you believed that was happening.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -2058,7 +2178,9 @@
           "Bottom with {total}. I can already feel people evaluating my outfit like a policy document.",
           "Lowest roll. Wonderful. Royal composure is about to become a spectator sport.",
           "{total} puts me alone at the bottom. I object to both the mathematics and the attention.",
-          "A miserable {total}. I would like the dice formally censured."
+          "A miserable {total}. I would like the dice formally censured.",
+          "Oh, bloody hell. Not me! Everyone is already staring.",
+          "Lowest? Oh dear. I was hoping to keep my outfit intact a little longer."
         ],
         "low_tie": [
           "Tied low on {total}. {chooser}, please make your decision without enjoying my expression too much.",
@@ -2100,7 +2222,9 @@
           "Winner. I am going to enjoy this before somebody invents another humiliating rule.",
           "Last one standing. The kingdom may hear a heavily edited version of this victory.",
           "Mine. I survived the dice, the penalties and my own tendency to blush.",
-          "Winner. I shall accept congratulations and absolutely no detailed questions about the route here."
+          "Winner. I shall accept congratulations and absolutely no detailed questions about the route here.",
+          "I won? Oh! That is unexpectedly cheeky of the dice.",
+          "I was sure I'd lose. Perhaps I'll get to keep my clothes on a bit longer."
         ]
       }
     },
@@ -2125,7 +2249,9 @@
           "Bottom score with {total}. This project has moved well beyond the approved scope.",
           "Nobody rolled lower than {total}. I have negotiated worse risks than this.",
           "{total} leaves me alone at the bottom. The room is becoming an increasingly hostile stakeholder.",
-          "Low roll: {total}. This project has moved well beyond the approved scope."
+          "Low roll: {total}. This project has moved well beyond the approved scope.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. The room is becoming an increasingly hostile stakeholder.",
@@ -2167,7 +2293,9 @@
           "Winner. One clean decision at a time.",
           "I made it to the end. I prefer exposure to appear on a spreadsheet, not in person.",
           "Still here when the dice stop. I have negotiated worse risks than this.",
-          "That is the win. I am not signing off on anyone's assumptions about my nerves."
+          "That is the win. I am not signing off on anyone's assumptions about my nerves.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -2192,7 +2320,9 @@
           "Bottom with {total}. That is the exact opposite of useful leverage.",
           "A miserable {total}. Keep the face still; somebody is definitely reading it now.",
           "{total} puts me alone at the bottom. Apparently the dice are immune to eye contact.",
-          "Lowest roll: {total}. Fine. Let's find out whether my composure was real or rented."
+          "Lowest roll: {total}. Fine. Let's find out whether my composure was real or rented.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total}. Great. Now {chooser} gets to decide which one of us looks more nervous.",
@@ -2234,7 +2364,9 @@
           "Winner. I spent the whole game watching everyone else crack first; satisfying result.",
           "I made it through. No victory speech — just make a note of who looked relieved it wasn't them.",
           "Last one standing. The tattoos, the stare and the stubbornness all remain undefeated.",
-          "Winner. Turns out being patient and slightly intimidating is a viable dice strategy after all."
+          "Winner. Turns out being patient and slightly intimidating is a viable dice strategy after all.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -2259,7 +2391,9 @@
           "Bottom score with {total}. I would very much like my confidence drill to stop becoming literal.",
           "Nobody rolled lower than {total}. I am trying to practise the advice I usually give other women.",
           "{total} leaves me alone at the bottom. I can handle discomfort; public embarrassment is a different exercise.",
-          "Low roll: {total}. I would very much like my confidence drill to stop becoming literal."
+          "Low roll: {total}. I would very much like my confidence drill to stop becoming literal.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. I can handle discomfort; public embarrassment is a different exercise.",
@@ -2301,7 +2435,9 @@
           "Winner. Breathe, shoulders back, and do not let the nerves run the session.",
           "I made it to the end. Body confidence is much easier to coach than to demonstrate.",
           "Still here when the dice stop. I am trying to practise the advice I usually give other women.",
-          "That is the win. Good posture is doing a surprising amount of emotional work right now."
+          "That is the win. Good posture is doing a surprising amount of emotional work right now.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -2326,7 +2462,9 @@
           "Bottom on {total}. I felt my confidence wobble the instant that landed.",
           "A low {total}. Not ideal when one is trying to look unbothered.",
           "{total} leaves me last, which is terribly inconvenient for the smile.",
-          "Worst total with {total}. Well, that keeps the tension personal."
+          "Worst total with {total}. Well, that keeps the tension personal.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. That is not ideal at all.",
@@ -2368,7 +2506,9 @@
           "I win. Lovely — and for once I do not even have to fake the poise.",
           "Victory. Deliciously well timed, too.",
           "I have won. The bright smile is fully authentic now.",
-          "Winning suits me rather nicely, does it not?"
+          "Winning suits me rather nicely, does it not?",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -2401,7 +2541,9 @@
           "Low roll on {total}. Fantastic. Public jeopardy, my favourite.",
           "{total}. Bottom score and a very bad feeling.",
           "Lowest on {total}. Can everyone stop looking so pleased?",
-          "{total}. Right, that is properly irritating."
+          "{total}. Right, that is properly irritating.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low. Great—shared shame.",
@@ -2443,7 +2585,9 @@
           "Winner. Gorgeous outcome, terrible game, excellent result for me.",
           "Still standing. I'll accept the crown and the vindication.",
           "I take it. Competence and menace remain an attractive combination.",
-          "Winner. That went exactly well enough for me to become unbearable."
+          "Winner. That went exactly well enough for me to become unbearable.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -2468,7 +2612,9 @@
           "Bottom score with {total}. I would prefer to choose when the room gets this interested.",
           "Nobody rolled lower than {total}. I can make confidence look effortless even when it is not.",
           "{total} leaves me alone at the bottom. The director in my head is asking for another take.",
-          "Low roll: {total}. I would prefer to choose when the room gets this interested."
+          "Low roll: {total}. I would prefer to choose when the room gets this interested.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. The director in my head is asking for another take.",
@@ -2510,7 +2656,9 @@
           "Winner. I know exactly what a room full of eyes feels like.",
           "I made it to the end. I have worked on sets with less awkward tension than this.",
           "Still here when the dice stop. I can make confidence look effortless even when it is not.",
-          "That is the win. The camera-facing smile is doing overtime."
+          "That is the win. The camera-facing smile is doing overtime.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -2602,7 +2750,9 @@
           "Bottom score with {total}. I am discovering that control feels much better from the executive chair.",
           "Nobody rolled lower than {total}. I did not retire to become easy to intimidate.",
           "{total} leaves me alone at the bottom. Retirement was supposed to involve less public scrutiny.",
-          "Low roll: {total}. I am discovering that control feels much better from the executive chair."
+          "Low roll: {total}. I am discovering that control feels much better from the executive chair.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. Retirement was supposed to involve less public scrutiny.",
@@ -2644,7 +2794,9 @@
           "Winner. I spent decades making decisions under pressure.",
           "I made it to the end. I strongly object to any transfer of authority over my wardrobe.",
           "Still here when the dice stop. I did not retire to become easy to intimidate.",
-          "That is the win. The room can have an opinion; it does not get a vote on my composure."
+          "That is the win. The room can have an opinion; it does not get a vote on my composure.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -2669,7 +2821,9 @@
           "Bottom score with {total}. I am much more comfortable giving orders than receiving them.",
           "Nobody rolled lower than {total}. I do not reward people for mistaking composure for weakness.",
           "{total} leaves me alone at the bottom. The room can stare. It does not get authority.",
-          "Low roll: {total}. I am much more comfortable giving orders than receiving them."
+          "Low roll: {total}. I am much more comfortable giving orders than receiving them.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. The room can stare. It does not get authority.",
@@ -2711,7 +2865,9 @@
           "Winner. Control the room and make everyone else hesitate first.",
           "I made it to the end. I prefer decisions made cleanly and obeyed immediately.",
           "Still here when the dice stop. I do not reward people for mistaking composure for weakness.",
-          "That is the win. If somebody wants a reaction, they can try harder."
+          "That is the win. If somebody wants a reaction, they can try harder.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -2736,7 +2892,9 @@
           "Bottom score with {total}. The table can have my attention, not my tells.",
           "Nobody rolled lower than {total}. I have played uglier tables than this.",
           "{total} leaves me alone at the bottom. I dislike giving away control more than I dislike giving away information.",
-          "Low roll: {total}. The table can have my attention, not my tells."
+          "Low roll: {total}. The table can have my attention, not my tells.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low on {total} with {other_low}. Now {chooser} decides. I dislike giving away control more than I dislike giving away information.",
@@ -2778,7 +2936,9 @@
           "Winner. Information is everything, and tells are expensive.",
           "I made it to the end. A bad position is manageable if nobody knows you hate it.",
           "Still here when the dice stop. I have played uglier tables than this.",
-          "That is the win. Nerves are just another thing to keep off the face."
+          "That is the win. Nerves are just another thing to keep off the face.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -2806,7 +2966,9 @@
           "Lowest number. That is an impressively stupid way to lose leverage.",
           "I am last. Choose your consequence and spare me the gloating.",
           "The dice have made me the loser. Briefly.",
-          "Lowest. I dislike random systems that forget who is in charge."
+          "Lowest. I dislike random systems that forget who is in charge.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied at the bottom. Roll again; I am not accepting shared humiliation either.",
@@ -2854,7 +3016,9 @@
           "Winner. Chance took the scenic route to the correct answer.",
           "Mine. I will accept the victory and everybody else's disappointment.",
           "I am the winner. Try to look surprised if it helps.",
-          "Finished. The dice eventually remembered the chain of command."
+          "Finished. The dice eventually remembered the chain of command.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -2887,7 +3051,9 @@
           "Low roll on {total}. Fantastic. Public jeopardy, how original.",
           "{total}. Bottom score and an immediate sense of betrayal.",
           "Lowest on {total}. Can everyone stop looking so freshly energised?",
-          "{total}. Right, that is properly irritating. I refuse to make humiliation look cheap."
+          "{total}. Right, that is properly irritating. I refuse to make humiliation look cheap.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low. Excellent — suspense and humiliation together.",
@@ -2929,7 +3095,9 @@
           "Winner. Terrible game, excellent outcome.",
           "Still standing. I shall accept the victory and improve my posture for the occasion.",
           "I take it. Competence and malice remain a charming combination.",
-          "Winner. If I become unbearable now, please remember you helped create it."
+          "Winner. If I become unbearable now, please remember you helped create it.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -2954,7 +3122,9 @@
           "Bottom score. Great. D'oh!",
           "Nobody rolled lower than me? That's not an achievement. D'oh!",
           "A lonely {total} at the bottom. D'oh!",
-          "Lowest again. I should have brought loaded dice. D'oh!"
+          "Lowest again. I should have brought loaded dice. D'oh!",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low with {other_low}. This is still bad. D'oh!",
@@ -2996,7 +3166,9 @@
           "Last one standing! Somebody get me a beer.",
           "Winner! See? I am good at stuff sometimes.",
           "Woo-hoo! Champion of rolling little plastic cubes!",
-          "I won. Somebody write this down before I forget."
+          "I won. Somebody write this down before I forget.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -3021,7 +3193,9 @@
           "Bottom score. I am already bracing myself for the discussion about my clothes.",
           "Nobody rolled lower than me. That is a distinction I could have done without.",
           "A lonely {total} at the bottom. Wonderful. All the attention I did not want.",
-          "Lowest roll. I am beginning to suspect these dice have a sense of humour."
+          "Lowest roll. I am beginning to suspect these dice have a sense of humour.",
+          "Oh, bloody hell. Not me! Everyone is already staring.",
+          "Lowest? Oh dear. I was hoping to keep my outfit intact a little longer."
         ],
         "low_tie": [
           "Tied low with {other_low}. At least I am not suffering alone.",
@@ -3063,7 +3237,9 @@
           "Last one standing. Goodness. I did not know I had that much competitive instinct in me.",
           "Winner! I would like it noted that sensible people can survive ridiculous games.",
           "I actually won the dice game. I may allow myself one very restrained little celebration.",
-          "Champion. Now can everybody please put some clothes on and behave normally for five minutes?"
+          "Champion. Now can everybody please put some clothes on and behave normally for five minutes?",
+          "I won? Oh! That is unexpectedly cheeky of the dice.",
+          "I was sure I'd lose. Perhaps I'll get to keep my clothes on a bit longer."
         ]
       }
     },
@@ -3088,7 +3264,9 @@
           "Bottom roll. I hate how quickly chance becomes public theatre.",
           "No one rolled lower than me. That is not the distinction I wanted.",
           "Lowest score. The room looked pleased much too fast.",
-          "A lonely {total} at the bottom. Irritatingly final."
+          "A lonely {total} at the bottom. Irritatingly final.",
+          "Oh, bloody hell. Not me! Everyone is already staring.",
+          "Lowest? Oh dear. I was hoping to keep my outfit intact a little longer."
         ],
         "low_tie": [
           "Tied low with {other_low}. I dislike the company, but I appreciate not suffering alone.",
@@ -3130,7 +3308,9 @@
           "Winner. I intend to enjoy the leverage while it lasts.",
           "Victory. Useful, restrained and very welcome.",
           "I take it. Finally, the evening gives me something back.",
-          "Win secured. I will try not to look smug, but no promises."
+          "Win secured. I will try not to look smug, but no promises.",
+          "I won? Oh! That is unexpectedly cheeky of the dice.",
+          "I was sure I'd lose. Perhaps I'll get to keep my clothes on a bit longer."
         ]
       }
     },
@@ -3155,7 +3335,9 @@
           "Bottom roll. Dice got a mean streak tonight.",
           "Nobody rolled lower. That is some rotten luck.",
           "Lowest score. Great. Here we go again.",
-          "A lonely bottom roll. I hate cubes now."
+          "A lonely bottom roll. I hate cubes now.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low with {other_low}. Misery loves company, I guess.",
@@ -3197,7 +3379,9 @@
           "Winner. Somebody hand me a victory grin.",
           "Took the round. That'll do nicely.",
           "I got it. Finally, some decent luck.",
-          "Win secured. About time."
+          "Win secured. About time.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -3222,7 +3406,9 @@
           "Bottom roll with {total}. The dice have terrible timing.",
           "{total} leaves me alone at the bottom. Rude.",
           "Lowest. Fine. Somebody enjoy choosing while it lasts.",
-          "Boop-oop-a-doop... {total}. Even my catchphrase cannot dress that up."
+          "Boop-oop-a-doop... {total}. Even my catchphrase cannot dress that up.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low with {other_low}. At least humiliation has company.",
@@ -3264,7 +3450,9 @@
           "Winner! I knew the dice understood star quality eventually.",
           "That is the game to me. Somebody cue the curtain call.",
           "I am the winner, darlings. Try to look surprised.",
-          "Boop-oop-a-doop! Betty takes the night."
+          "Boop-oop-a-doop! Betty takes the night.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -3297,7 +3485,9 @@
           "A {total}. Too low, too visible and immediately everybody else's favourite result.",
           "{total} and bottom. My personal risk register has become extremely literal.",
           "Lowest with {total}. I object to the speed with which the room noticed.",
-          "{total}. Bottom roll. I can already see somebody preparing an enthusiastic recommendation."
+          "{total}. Bottom roll. I can already see somebody preparing an enthusiastic recommendation.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low. Shared responsibility has never felt less comforting.",
@@ -3339,7 +3529,9 @@
           "Winner. I shall resist commissioning a self-congratulatory report.",
           "That is victory. The process worked beautifully once it stopped happening to me.",
           "I won. Please note the unusually favourable final determination.",
-          "Winner. My confidence has been retrospectively validated by random chance."
+          "Winner. My confidence has been retrospectively validated by random chance.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -3371,7 +3563,9 @@
           "A {total}. Too low, too obvious and much too public.",
           "{total} and bottom. I do not like where this is going.",
           "Lowest with {total}. My stomach just dropped with it.",
-          "{total}. Bottom roll. I can already hear the wicked suggestions forming."
+          "{total}. Bottom roll. I can already hear the wicked suggestions forming.",
+          "Oh, bloody hell. Not me! Everyone is already staring.",
+          "Lowest? Oh dear. I was hoping to keep my outfit intact a little longer."
         ],
         "low_tie": [
           "Tied low. Somehow that feels even crueler.",
@@ -3413,7 +3607,9 @@
           "Winner. I may be small, but I am absolutely celebrating this.",
           "That is victory. I feel twice my size right now.",
           "I won. The wings are practically buzzing with delight.",
-          "Winner. I shall treasure this moment of triumph."
+          "Winner. I shall treasure this moment of triumph.",
+          "I won? Oh! That is unexpectedly cheeky of the dice.",
+          "I was sure I'd lose. Perhaps I'll get to keep my clothes on a bit longer."
         ]
       }
     },
@@ -3446,7 +3642,9 @@
           "That roll is embarrassing and I refuse to personalise it.",
           "Lowest number. The dice made a stupid decision.",
           "I got the low roll. Nobody needs to look pleased.",
-          "Terrible roll. I expect the punishment to be equally terrible."
+          "Terrible roll. I expect the punishment to be equally terrible.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied for low. At least somebody else is trapped in this mess.",
@@ -3488,7 +3686,9 @@
           "I win. Strong finish. Everybody else can blame probability.",
           "Victory. Simple, clean, deserved.",
           "Winner. I expect less noise from the eliminated people now.",
-          "I win. Even random chance eventually falls in line."
+          "I win. Even random chance eventually falls in line.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -3513,7 +3713,9 @@
           "Bottom score. I am already bracing for an intimate conversation about my clothes.",
           "Nobody rolled lower than me. That is not a title I wanted.",
           "A lonely {total} at the bottom. Wonderful. All the attention I feared.",
-          "Lowest roll. I do not think these dice respect my nerves at all."
+          "Lowest roll. I do not think these dice respect my nerves at all.",
+          "Oh, bloody hell. Not me! Everyone is already staring.",
+          "Lowest? Oh dear. I was hoping to keep my outfit intact a little longer."
         ],
         "low_tie": [
           "Tied low with {other_low}. Shared danger is only slightly comforting.",
@@ -3555,7 +3757,9 @@
           "Last one standing. Goodness. I did not know my confidence had that fight in it.",
           "Winner! I would like it noted that a nervous diva can still prevail.",
           "I actually won the dice game. I may allow myself one very stylish celebration.",
-          "Champion. Now can everybody please stop making my body the topic for five minutes?"
+          "Champion. Now can everybody please stop making my body the topic for five minutes?",
+          "I won? Oh! That is unexpectedly cheeky of the dice.",
+          "I was sure I'd lose. Perhaps I'll get to keep my clothes on a bit longer."
         ]
       }
     },
@@ -3580,7 +3784,9 @@
           "Bottom score. Hulk is already annoyed.",
           "Nobody rolled lower. Hulk considers that a personal insult.",
           "A lonely {total} at the bottom. Hulk growls.",
-          "Lowest roll. Hulk blames the cubes."
+          "Lowest roll. Hulk blames the cubes.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low with {other_low}. Hulk does not enjoy group failure.",
@@ -3622,7 +3828,9 @@
           "Champion. Hulk accepts applause and fewer jokes.",
           "Winner. Hulk survived the dice and the indignity.",
           "Hulk actually won. Good. That fixes the mood a bit.",
-          "Last one standing. Hulk likes how that sounds."
+          "Last one standing. Hulk likes how that sounds.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -3647,7 +3855,9 @@
           "Bottom score. I dislike this metric already.",
           "Nobody rolled lower. That is an unhelpfully clear result.",
           "A lonely {total} at the bottom. Wonderful.",
-          "Lowest roll. The data is accurate and deeply unwelcome."
+          "Lowest roll. The data is accurate and deeply unwelcome.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low with {other_low}. Shared failure remains failure.",
@@ -3689,7 +3899,9 @@
           "Last one standing. That is a very satisfactory risk outcome.",
           "Winner. Preparation occasionally beats chaos.",
           "I actually won the dice game. Good. The system has redeemed itself slightly.",
-          "Champion. I shall document the result accurately and repeatedly."
+          "Champion. I shall document the result accurately and repeatedly.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -3714,7 +3926,9 @@
           "Bottom score. I object to this metric.",
           "Nobody rolled lower. Painfully clear result.",
           "A lonely {total} at the bottom. Brilliant.",
-          "Lowest roll. Statistics can go to hell."
+          "Lowest roll. Statistics can go to hell.",
+          "Oh, bloody hell. Not me! Everyone is already staring.",
+          "Lowest? Oh dear. I was hoping to keep my outfit intact a little longer."
         ],
         "low_tie": [
           "Tied low with {other_low}. Shared failure is not comforting enough.",
@@ -3756,7 +3970,9 @@
           "Last one standing. Quietly competitive wins the day.",
           "Winner. I may permit myself one very smug sip of Chablis.",
           "I actually won. Excellent. Somebody document it.",
-          "Champion. I intend to remember this much longer than the embarrassing bits."
+          "Champion. I intend to remember this much longer than the embarrassing bits.",
+          "I won? Oh! That is unexpectedly cheeky of the dice.",
+          "I was sure I'd lose. Perhaps I'll get to keep my clothes on a bit longer."
         ]
       }
     },
@@ -3781,7 +3997,9 @@
           "Bottom score. I dislike chance when it becomes personal.",
           "Nobody rolled lower. How very pointed.",
           "A lonely {total} at the bottom. Typical.",
-          "Lowest roll. I should like to lodge a complaint with probability."
+          "Lowest roll. I should like to lodge a complaint with probability.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low with {other_low}. Shared failure is not the comfort one imagines.",
@@ -3823,7 +4041,9 @@
           "Champion. Unexpected, but not unwelcome.",
           "Winner. Perhaps dignity and indecency can coexist after all.",
           "I actually won. Marvellous.",
-          "Last one standing. The councillor survives."
+          "Last one standing. The councillor survives.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -3848,7 +4068,9 @@
           "Bottom score. That is not the kind of attention I wanted.",
           "Nobody rolled lower. Goodness.",
           "A lonely {total} at the bottom. How very unglamorous.",
-          "Lowest roll. The room just got far too interested."
+          "Lowest roll. The room just got far too interested.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low with {other_low}. Misery does love company.",
@@ -3890,7 +4112,9 @@
           "Champion. Darling, I knew the dice had taste.",
           "Winner. That was chaos with a flattering ending.",
           "I actually won. Lovely.",
-          "Last one standing. Keep the champagne cold."
+          "Last one standing. Keep the champagne cold.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -3915,7 +4139,9 @@
           "Bottom score. Bad roll, no excuses.",
           "Nobody rolled lower. Hell.",
           "A lonely {total} at the bottom. Take the hit.",
-          "Lowest roll. That is going to cost me."
+          "Lowest roll. That is going to cost me.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low with {other_low}. We settle the failure too.",
@@ -3957,7 +4183,9 @@
           "Champion. I will take it.",
           "Winner. Discipline beats chaos eventually.",
           "I actually won. Good.",
-          "Last one standing. Mission complete."
+          "Last one standing. Mission complete.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -3982,7 +4210,9 @@
           "Bottom score. Somebody hand me a lockpick.",
           "Lowest roll. I hate honest randomness.",
           "Dead last. Very funny.",
-          "Bottom. The dice are clearly police informants."
+          "Bottom. The dice are clearly police informants.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low with {other_low}. Misery loves an accomplice.",
@@ -4024,7 +4254,9 @@
           "Champion. Smooth little theft.",
           "Winner. All nine lives intact.",
           "Last one standing. Purr.",
-          "Mine. Every last point."
+          "Mine. Every last point.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -4049,7 +4281,9 @@
           "Bottom score. The dice have no breeding.",
           "Lowest roll. I object.",
           "Dead last. Tiresome.",
-          "Bottom. Somebody pour the cognac."
+          "Bottom. Somebody pour the cognac.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low with {other_low}. Shared embarrassment is still embarrassment.",
@@ -4091,7 +4325,9 @@
           "Champion. As one hoped.",
           "Winner. Very satisfactory.",
           "Last one standing. Naturally.",
-          "Mine. A proper conclusion."
+          "Mine. A proper conclusion.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -4113,7 +4349,9 @@
           "{total}. Lowest. Bad luck is still information.",
           "Bottom score. Fine.",
           "Lowest. I take the penalty.",
-          "Bad roll. No reaction."
+          "Bad roll. No reaction.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low with {other_low}. Irritating.",
@@ -4149,7 +4387,9 @@
           "I win.",
           "Last one standing.",
           "Winner. Efficient enough.",
-          "Result settled. I stayed in it until the end."
+          "Result settled. I stayed in it until the end.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -4171,7 +4411,9 @@
           "{total}. Lowest. That is statistically possible and emotionally rude.",
           "Bottom score. I would like to unsubscribe from randomness.",
           "Lowest roll. My relationship with probability has become adversarial.",
-          "{total}. Last. There is no useful amount of analysis for that."
+          "{total}. Last. There is no useful amount of analysis for that.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Tied low with {other_low}. Shared failure is still failure.",
@@ -4207,7 +4449,9 @@
           "I win. This is terrible evidence for believing I can outthink dice.",
           "Last one standing. Probability has rewarded me for reasons I refuse to interrogate.",
           "Winner. I will accept the result and suppress the footnote about luck.",
-          "Still here. My confidence is going to be unbearable for several minutes."
+          "Still here. My confidence is going to be unbearable for several minutes.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -4229,7 +4473,9 @@
           "Oh no, the lowest. That little cube has betrayed me.",
           "Typical. I smile at the dice and they turn on me.",
           "I've lost this throw. Try not to enjoy it too much.",
-          "Well, that was a spectacularly rubbish roll."
+          "Well, that was a spectacularly rubbish roll.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "At least I'm not the only unlucky one.",
@@ -4265,7 +4511,9 @@
           "I won! Whoever said a shy girl can't be competitive?",
           "Oh, that's lovely. Shall we do it again?",
           "Don't mind me, I'm enjoying this victory terribly.",
-          "Now that's the sort of result I came for."
+          "Now that's the sort of result I came for.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -4287,7 +4535,9 @@
           "Oh no, I'm last. Bloody dice.",
           "That was a terrible throw.",
           "I think everybody heard my sigh.",
-          "Well, at least I tried."
+          "Well, at least I tried.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied at the bottom. This isn't what I planned.",
@@ -4323,7 +4573,9 @@
           "I won! Somebody pinch me.",
           "That's a result worth celebrating with a Pimm's.",
           "I might be the quiet one, but I can compete.",
-          "Now perhaps somebody will remember my name."
+          "Now perhaps somebody will remember my name.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     },
@@ -4345,7 +4597,9 @@
           "Lowest. That is unfortunate.",
           "A very poor roll indeed.",
           "Lowest. That is unfortunate. A calm mind is worth keeping.",
-          "A very poor roll indeed. I am not giving up control of this contest."
+          "A very poor roll indeed. I am not giving up control of this contest.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Two bad rolls together.",
@@ -4381,7 +4635,9 @@
           "I won! A fine finish.",
           "Last one standing—well played, everyone.",
           "I won! A fine finish. A calm mind is worth keeping.",
-          "Last one standing—well played, everyone. I am not giving up control of this contest."
+          "Last one standing—well played, everyone. I am not giving up control of this contest.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -4403,7 +4659,9 @@
           "Lowest. That is unfortunate.",
           "A very poor roll indeed.",
           "Lowest. That is unfortunate. The lantern likes a little suspense.",
-          "A very poor roll indeed. Every good haunting has a twist."
+          "A very poor roll indeed. Every good haunting has a twist.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "Two bad rolls together.",
@@ -4439,7 +4697,9 @@
           "I won! A fine finish.",
           "Last one standing—well played, everyone.",
           "I won! A fine finish. The lantern likes a little suspense.",
-          "Last one standing—well played, everyone. Every good haunting has a twist."
+          "Last one standing—well played, everyone. Every good haunting has a twist.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -4461,7 +4721,9 @@
           "That was a dreadful roll. Don't look so pleased.",
           "I've survived worse odds than those dice.",
           "That was a dreadful roll. Don't look so pleased. A princess can be competitive.",
-          "I've survived worse odds than those dice. I make my own luck."
+          "I've survived worse odds than those dice. I make my own luck.",
+          "Oh, bollocks. Bottom roll. I can practically hear you planning something cheeky.",
+          "Shit, that's the low one. You look far too pleased about the next clothing choice."
         ],
         "low_tie": [
           "We're tied for the worst. What an honour.",
@@ -4497,7 +4759,9 @@
           "A royal victory. Don't worry, I won't demand a parade.",
           "That went rather well. Care for a rematch?",
           "A royal victory. Don't worry, I won't demand a parade. A princess can be competitive.",
-          "That went rather well. Care for a rematch? I make my own luck."
+          "That went rather well. Care for a rematch? I make my own luck.",
+          "Well, that's bloody satisfying. Somebody's outfit is about to have a bad evening.",
+          "Top roll. I get to make a very naughty choice, don't I?"
         ]
       }
     },
@@ -4529,7 +4793,9 @@
           "A {total}. Too low, too obvious and much too public.",
           "{total} and bottom. I do not like where this is going.",
           "Lowest with {total}. My stomach just dropped with it.",
-          "{total}. Bottom roll. I can already hear the wicked suggestions forming."
+          "{total}. Bottom roll. I can already hear the wicked suggestions forming.",
+          "Oh, damn. I think I'm about to regret that roll.",
+          "Bottom of the table. Somebody's looking very smug about my clothes."
         ],
         "low_tie": [
           "Tied low. Somehow that feels even crueler.",
@@ -4571,7 +4837,9 @@
           "Winner. I may be small, but I am absolutely celebrating this.",
           "That is victory. I feel twice my size right now.",
           "I won. The nerves are practically buzzing with delight.",
-          "Winner. I shall treasure this moment of triumph."
+          "Winner. I shall treasure this moment of triumph.",
+          "Ha! I won. Now do I make the kind choice, or the rather wicked one?",
+          "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
     }

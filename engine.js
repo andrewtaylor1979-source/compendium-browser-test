@@ -5,7 +5,7 @@ export const NAKED=['Naked','Naked2','Naked3','Naked4','Naked5'];
 export const OUTFITS=['TJBP','JBP','TBP','JP','TB','BP','B','P'];
 export const WHEEL_SEGMENTS=['self_remove','target_remove','safe','self_remove','recover','target_remove','self_remove_two','safe','target_remove','self_remove','safe','recover','self_remove_two','target_remove','self_remove','safe'];
 export const WHEEL_LABEL={self_remove:'REMOVE 1',target_remove:'CHOOSE 1',safe:'SAFE',recover:'RECOVER 1',self_remove_two:'REMOVE 2'};
-export const MODES={dice:'Dice',memory:'Strip Memory',wheel:'Wheel of Misfortune',holdem:"Strip Hold’em",draw:'Five-Card Draw',one:'One-on-One'};
+export const MODES={dice:'Dice',memory:'Strip Memory',wheel:'Wheel of Misfortune',holdem:"Strip Hold’em",draw:'Five-Card Draw',one:'One-on-One',rps:'Rock–Paper–Scissors',mayhem:'Mayhem'};
 const OPP=['T','J','B','P'];
 const DEPS={B:'T',P:'J','T-Shirt':'Hoodie','Boxer Shorts':'Jeans',Knickers:'Jeans',Underwear:'Jeans'};
 const USER_MAP={Hoodie:'T',Jeans:'J','T-Shirt':'B','Boxer Shorts':'P',Knickers:'P',Underwear:'P'};
@@ -35,6 +35,8 @@ export const start=(mode,profiles,settings={})=>{
  const g={version:1,mode,people,human:mode==='memory'?(settings.human||names[0]):settings.spectator?'':'__user__',settings,round:0,phase:'ready',notice:'New game ready.',dialogue:'',speaker:'',winner:'',highlight:'',pending:null,rolls:[],showdown:[],board:[],revealed:0,handNum:0,drawRound:1,disc:[],deck:[],actorIndex:0,turnOrder:shuffle(people.map(p=>p.id)),turnIndex:0,wheelIndex:-1,spinAngle:0,votes:{},voteOrder:[],voteIndex:0,removeLeft:0,stats:{}};
  if(mode==='memory'){g.phase='choose_card';g.turnOrder=shuffle(people.map(p=>p.id));g.deck=shuffle(people.map(p=>p.id));g.round=1;}
  if(mode==='wheel'){g.phase='ready';g.turnOrder=people.map(p=>p.id);}
+ if(mode==='rps'){g.phase='rps_ready';g.turnOrder=people.map(p=>p.id);g.rpsTargets={};}
+ if(mode==='mayhem'){g.phase='mayhem_turn';g.turnOrder=shuffle(people.map(p=>p.id));g.mayhemTargets={};}
  if(mode==='holdem'||mode==='draw')deal(g);
  return g;
 };
@@ -192,4 +194,135 @@ export function oneAdvance(g, item, line) {
  g.speaker=p.name;g.highlight=p.id;
  if(p.eliminated){g.phase='game_over';g.winner=p.name;}
  return {item,state,finished:p.eliminated};
+}
+
+// Strip Showdown / Rock-Paper-Scissors — challenge-driven adaptation of
+// ShowdownEngine (user moves are never chosen by the automatic AI scheduler).
+export const RPS_MOVES=['Rock','Paper','Scissors'];
+const rpsBeats={Rock:'Scissors',Paper:'Rock',Scissors:'Paper'};
+const rpsActor=g=>byId(g,g.turnOrder[g.turnIndex]);
+export function rpsCurrent(g){return rpsActor(g);}
+function rpsNextTurn(g){
+ if(win(g))return;
+ let index=g.turnIndex;
+ for(let i=0;i<g.turnOrder.length;i++){
+  index=(index+1)%g.turnOrder.length;
+  if(!byId(g,g.turnOrder[index]).eliminated)break;
+ }
+ g.turnIndex=index;g.pending=null;g.rpsMatch=null;g.rpsTarget=null;g.phase='rps_ready';
+ note(g,`${rpsActor(g).name} will choose an opponent to challenge.`);
+}
+export function rpsBegin(g){
+ if(g.phase!=='rps_ready')throw Error('Resolve the current challenge first.');
+ const actor=rpsActor(g);g.round++;
+ if(actor.id===g.human){g.phase='rps_target';note(g,'Choose an opponent to challenge.',actor.id);}
+ else{
+  const choices=active(g).filter(p=>p.id!==actor.id);
+  if(!choices.length){win(g);return;}
+  // Fairness: prefer opponents who were challenged least often.
+  g.rpsTargets??={};const least=Math.min(...choices.map(p=>g.rpsTargets[p.id]||0));
+  const eligible=choices.filter(p=>(g.rpsTargets[p.id]||0)===least);
+  const target=choice(eligible);g.rpsTargets[target.id]=(g.rpsTargets[target.id]||0)+1;
+  g.rpsTarget=target.id;g.phase=target.id===g.human?'rps_move':'rps_ai_match';
+  note(g,`${actor.name} challenges ${target.name} to Rock–Paper–Scissors.`,target.id);
+ }
+}
+export function rpsTarget(g,id){
+ if(g.phase!=='rps_target'||!active(g).some(p=>p.id===id&&p.id!==rpsActor(g).id))throw Error('Choose an active opponent.');
+ g.rpsTarget=id;g.phase='rps_move';note(g,`You challenged ${byId(g,id).name}. Choose your hand.`,id);
+}
+function rpsResolve(g,cMove,tMove){
+ const actor=rpsActor(g),target=byId(g,g.rpsTarget);
+ if(!RPS_MOVES.includes(cMove)||!RPS_MOVES.includes(tMove))throw Error('Choose Rock, Paper or Scissors.');
+ g.rpsMatch={challenger:actor.id,target:target.id,cMove,tMove,tie:cMove===tMove};
+ if(cMove===tMove){g.phase='rps_tie';note(g,`${actor.name}: ${cMove}; ${target.name}: ${tMove}. It's a tie — play again!`,target.id);return;}
+ const challengerWins=rpsBeats[cMove]===tMove;
+ const winner=challengerWins?actor:target, loser=challengerWins?target:actor;
+ g.rpsMatch.winner=winner.id;g.rpsMatch.loser=loser.id;
+ g.pending={chooser:winner.id,loser:loser.id,item:null};
+ g.phase=winner.id===g.human?'rps_penalty':'rps_ai_penalty';
+ note(g,`${winner.name} wins with ${challengerWins?cMove:tMove} against ${challengerWins?tMove:cMove}. ${loser.name} owes a clothing penalty.`,loser.id);
+}
+export function rpsMove(g,move){
+ if(g.phase!=='rps_move')throw Error('No player move expected.');
+ if(!RPS_MOVES.includes(move))throw Error('Invalid move.');
+ const actor=rpsActor(g),target=byId(g,g.rpsTarget);
+ const opp=choice(RPS_MOVES);
+ if(actor.id===g.human)rpsResolve(g,move,opp);
+ else if(target.id===g.human)rpsResolve(g,opp,move);
+ else throw Error('Not your match.');
+}
+export function rpsAi(g){
+ if(g.phase!=='rps_ai_match')throw Error('AI match not ready.');
+ rpsResolve(g,choice(RPS_MOVES),choice(RPS_MOVES));
+}
+export function rpsReplay(g){
+ if(g.phase!=='rps_tie')throw Error('There is no tie to replay.');
+ const actor=rpsActor(g);const target=byId(g,g.rpsTarget);
+ g.phase=actor.id===g.human||target.id===g.human?'rps_move':'rps_ai_match';
+ note(g,'Tie replay. Pick another hand.',target.id);
+}
+export function rpsAiPenalty(g){
+ if(g.phase!=='rps_ai_penalty')throw Error('AI penalty not ready.');
+ const p=byId(g,g.pending.loser);g.pending.item=choice(allowed(p));g.phase='rps_apply';
+ note(g,`${byId(g,g.pending.chooser).name} chooses a penalty for ${p.name}.`,p.id);
+}
+export function rpsChoose(g,k){
+ if(g.phase!=='rps_penalty')throw Error('No penalty choice pending.');
+ const p=byId(g,g.pending.loser);if(!allowed(p).includes(k))throw Error('This clothing choice is not legal.');
+ g.pending.item=k;g.phase='rps_apply';note(g,`You choose ${k} for ${p.name}.`,p.id);
+}
+export function rpsApply(g){
+ if(g.phase!=='rps_apply'||!g.pending?.item)throw Error('No pending penalty.');
+ const p=byId(g,g.pending.loser);const k=g.pending.item;
+ remove(p,k);note(g,`${p.name} loses ${k==='Naked'?'one pose stage':k} → ${stateOf(p)}.`,p.id);
+ if(!win(g))g.phase='rps_between';
+}
+export function rpsContinue(g){if(g.phase!=='rps_between')throw Error('Resolve the penalty first.');rpsNextTurn(g);}
+
+// Mayhem — direct choice / preview / apply adaptation of MayhemEngine.
+// Unlike RPS, no random mini-game determines the actor's power.
+export function mayhemCurrent(g){return byId(g,g.turnOrder[g.turnIndex]);}
+export function mayhemBegin(g){
+ if(g.phase!=='mayhem_turn')throw Error('Finish the current Mayhem choice first.');
+ const actor=mayhemCurrent(g);g.round++;
+ g.phase=actor.id===g.human?'mayhem_target':'mayhem_ai_target';
+ note(g,`${actor.name} chooses who loses a clothing layer.`,actor.id);
+}
+export function mayhemTarget(g,id){
+ if(g.phase!=='mayhem_target'||!active(g).some(p=>p.id===id&&id!==mayhemCurrent(g).id))throw Error('Choose another active player.');
+ g.pending={chooser:mayhemCurrent(g).id,loser:id,item:null};g.phase='mayhem_penalty';
+ note(g,`Choose a legal penalty for ${byId(g,id).name}.`,id);
+}
+export function mayhemPenalty(g,k){
+ if(g.phase!=='mayhem_penalty'||!g.pending)throw Error('Choose a target first.');
+ const p=byId(g,g.pending.loser);if(!allowed(p).includes(k))throw Error('Invalid clothing removal.');
+ g.pending.item=k;g.phase='mayhem_preview';
+ note(g,`${mayhemCurrent(g).name} chooses ${k==='Naked'?'the next pose':k} for ${p.name}. Apply the penalty?`,p.id);
+}
+export function mayhemAi(g){
+ const actor=mayhemCurrent(g);if(actor.id===g.human)throw Error('The current decision belongs to you.');
+ if(g.phase==='mayhem_ai_target'){
+  const targets=active(g).filter(p=>p.id!==actor.id),counts=g.mayhemTargets??={};
+  const least=Math.min(...targets.map(p=>counts[p.id]||0));
+  const target=choice(targets.filter(p=>(counts[p.id]||0)===least));
+  counts[target.id]=(counts[target.id]||0)+1;
+  g.pending={chooser:actor.id,loser:target.id,item:null};g.phase='mayhem_ai_penalty';
+  note(g,`${actor.name} targets ${target.name}.`,target.id);
+ }else if(g.phase==='mayhem_ai_penalty'){
+  const target=byId(g,g.pending.loser);g.pending.item=choice(allowed(target));g.phase='mayhem_preview';
+  note(g,`${actor.name} chooses ${g.pending.item} for ${target.name}. Apply the penalty?`,target.id);
+ }else throw Error('AI action not available.');
+}
+export function mayhemApply(g){
+ if(g.phase!=='mayhem_preview'||!g.pending?.item)throw Error('No penalty waiting to apply.');
+ const p=byId(g,g.pending.loser),k=g.pending.item;
+ remove(p,k);note(g,`${p.name} loses ${k==='Naked'?'one pose stage':k} → ${stateOf(p)}.`,p.id);
+ if(win(g))return;
+ g.phase='mayhem_between';
+}
+export function mayhemContinue(g){
+ if(g.phase!=='mayhem_between')throw Error('Resolve the penalty first.');
+ let i=g.turnIndex;for(let j=0;j<g.turnOrder.length;j++){i=(i+1)%g.turnOrder.length;if(!byId(g,g.turnOrder[i]).eliminated)break;}
+ g.turnIndex=i;g.phase='mayhem_turn';g.pending=null;note(g,`${mayhemCurrent(g).name} takes the next Mayhem turn.`);
 }

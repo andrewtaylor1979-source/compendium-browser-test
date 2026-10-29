@@ -288,3 +288,20 @@
 @media (orientation:landscape) and (min-width:600px){
  #app .unified-game.solo-game .actions-scroll .solo-full-speech{font-size:clamp(11px,1.4vw,14px);padding:6px 9px;line-height:1.35}
 }
+
+/* v1.3: Compendium card assets and two new mobile modes */
+#app .unified-game .memory-card{background:#25171e;border-color:#bd9963;min-width:clamp(60px,12vw,104px);min-height:clamp(89px,19vw,146px);overflow:hidden;padding:3px;}
+#app .unified-game .memory-card img{width:100%;height:clamp(75px,17vw,130px);max-width:100%;object-fit:contain;opacity:1;}
+#app .unified-game .card.back{background:#23161c;border-color:#d6b477;color:#e8cfaa;overflow:hidden;}
+#app .unified-game .card.back img{object-fit:cover;width:100%;height:100%;opacity:1;}
+#app .unified-game .memory-revealed img{max-height:clamp(170px,39vh,310px);max-width:min(78%,250px);object-fit:contain;}
+.missing-card-art{font-size:9px;line-height:1.2;color:#e7c590;max-width:80px;word-break:break-word;text-align:center;display:inline-block;}
+.rps-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;padding:5px 0 10px;}
+.rps-choices button{display:grid;justify-items:center;gap:5px;padding:12px 5px;font-size:clamp(14px,2.2vw,19px);}
+.rps-icon{max-width:75px;max-height:72px;object-fit:contain;}
+.rps-result{display:flex;justify-content:space-around;align-items:center;gap:8px;padding:8px 0;}
+.rps-result>span{display:grid;justify-items:center;gap:4px;min-width:0;text-align:center;flex:1;font-size:12px;}
+.rps-result>span small{color:var(--gold);font-size:12px;}
+.rps-result b{font-size:35px;}
+.mayhem-preview{padding:14px;border:1px solid #b49463;border-radius:10px;color:#eddfc6;background:#332025;font-size:clamp(14px,2vw,18px);line-height:1.5;}
+@media(max-width:540px){.rps-choices button{padding:10px 3px;}.rps-icon{max-height:54px;}.rps-result b{font-size:27px;}}

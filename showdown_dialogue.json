@@ -1,0 +1,3157 @@
+{
+  "schema_version": 2,
+  "game": "showdown",
+  "title": "Strip Showdown",
+  "rules": {
+    "players": "2–5 total players",
+    "mechanic": "Challenge one active opponent to Rock, Paper, Scissors. Ties replay immediately.",
+    "penalty": "The winner chooses one currently legal clothing or pose penalty for the loser.",
+    "terminal": "The Dildo Pose eliminates the participant in competitive play."
+  },
+  "rps_dialogue": {
+    "description": "Dedicated Rock-Paper-Scissors banter for Strip Showdown. Character pools are selected by the actual speaker; move-specific placeholders are filled at reveal time.",
+    "global": {
+      "challenge": [
+        "{target}, Rock, Paper, Scissors. Winner gets the wardrobe decision.",
+        "I'm calling you out, {target}. One throw, one loser, one less layer.",
+        "{target}, step up. Let's see who earns the right to make the other blush.",
+        "Three choices, {target}. Pick one and hope your outfit survives it.",
+        "Come on, {target}. Quick showdown — expensive consequence.",
+        "Your turn, {target}. I want the win and I want the choice afterwards."
+      ],
+      "challenged": [
+        "Challenge accepted, {target}. Earn the right to choose first.",
+        "All right, {target}. Just remember the loser has to live with the winner's taste.",
+        "You picked me? Fine. Now prove that confidence wasn't a mistake.",
+        "Let's do it, {target}. One throw between smugness and embarrassment.",
+        "Fine by me. But if I win, I'm not wasting the choice."
+      ],
+      "win": [
+        "{move} wins. Got you, {target}. Now I get the interesting decision.",
+        "My {move} beat your {other_move}. That means your outfit is officially my business.",
+        "There it is — {move}. You lose, {target}, and I choose the consequence.",
+        "Read you perfectly. {move} takes it. Try not to look too worried about what comes next.",
+        "That's mine. {move} beats {other_move}, and I get the reward."
+      ],
+      "lose": [
+        "Bugger. My {move} lost to your {other_move}. Fine — your choice.",
+        "Wrong read. Your {other_move} caught me, {target}. Enjoy the advantage.",
+        "Damn. {other_move} beats {move}. I can already see you deciding what to take.",
+        "You got me. Fine. Choose your penalty before I change my mind about being gracious.",
+        "That's a loss. Wonderful. You look far too happy about what happens next."
+      ],
+      "tie": [
+        "Same {move}. Again, {target}. No wardrobe damage yet.",
+        "A {move} tie. Replay — somebody needs to actually lose this thing.",
+        "Matched. Again. The embarrassment has merely been postponed.",
+        "Same move, same nerve. Throw again.",
+        "Tie. Reset. I'm not letting either of us escape that cheaply."
+      ],
+      "repeat_win": [
+        "{move} again, and it still worked. You really should have punished that, {target}.",
+        "Same {move}, another win. Predictable doesn't matter if you still can't stop it.",
+        "I showed you the pattern and beat you anyway. That's satisfying."
+      ],
+      "repeat_lose": [
+        "I used {move} again and you read it. That's irritating — and costly.",
+        "Same {move}, worse result. I made that far too easy for you.",
+        "Repeated myself and got caught. Fine. You earned that one."
+      ]
+    },
+    "characters": {
+      "Alcina": {
+        "challenge": [
+          "Come, {target}. One throw, one consequence. Let us see whose nerve survives the reveal.",
+          "{target}, indulge me. Rock, paper, scissors — and afterwards, somebody loses a layer with style."
+        ],
+        "challenged": [
+          "You challenge me, {target}? Admirable. If I win, I shall make the prize uncomfortably memorable.",
+          "Very well, {target}. I accept — though you may regret gifting me the right to choose."
+        ],
+        "win": [
+          "{move}. Mine. Keep still while I decide which piece of your dignity leaves first.",
+          "{move} wins. Lovely. Now we arrive at the portion where I become inventive."
+        ],
+        "lose": [
+          "Your {other_move} wins. Irritating. Use your authority quickly before I recover my temper.",
+          "Beaten by {other_move}. Fine. Choose boldly; timid victories are an insult."
+        ],
+        "tie": [
+          "The same {move}. Again, then. I prefer my contests resolved.",
+          "Matched {move}. How tiresome. Throw again and let us earn the consequence."
+        ],
+        "repeat_win": [
+          "{move} again and still I win. Predictability is only a weakness if the other person can use it."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. You read it correctly. Well done, and deeply inconvenient."
+        ]
+      },
+      "Amanda": {
+        "challenge": [
+          "{target}, forecast says Rock, Paper or Scissors is about to get personal.",
+          "Your turn in the spotlight, {target}. Pick a hand and let's see what develops."
+        ],
+        "challenged": [
+          "All right, {target}. I'll make the forecast after the reveal.",
+          "A direct challenge? Fine. Let's see whether your read is better than mine."
+        ],
+        "win": [
+          "{move}. Forecast correct, {target}.",
+          "That {move} landed exactly where I wanted it."
+        ],
+        "lose": [
+          "Bugger. My {move} forecast was completely wrong.",
+          "I read that badly. Your {other_move} caught me."
+        ],
+        "tie": [
+          "Same {move}. Apparently the forecast is dead level.",
+          "A {move} tie. Reset and try again."
+        ],
+        "repeat_win": [
+          "{move} again. You had the data, {target}; you still missed the forecast."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and made myself predictable. That's on me."
+        ]
+      },
+      "Anna": {
+        "challenge": [
+          "{target}, come on! Rock, Paper, Scissors. This is the easy bit.",
+          "You're my challenge, {target}. Pick something and let's go."
+        ],
+        "challenged": [
+          "Me? Yes! Okay, {target}, let's do this.",
+          "Challenge accepted. I am absolutely not overthinking this."
+        ],
+        "win": [
+          "{move}! Yes! Got you, {target}.",
+          "Ha! My {move} actually worked."
+        ],
+        "lose": [
+          "Oh, bugger. My {move} got beaten.",
+          "Your {other_move} caught me. I was so sure."
+        ],
+        "tie": [
+          "Same {move}! That's weirdly exciting.",
+          "Tie! Again."
+        ],
+        "repeat_win": [
+          "{move} again! Apparently that is my lucky move."
+        ],
+        "repeat_lose": [
+          "I picked {move} again. Maybe I need a less obvious lucky move."
+        ]
+      },
+      "April": {
+        "challenge": [
+          "{target}, Channel 6 has a developing story: you versus me, Rock-Paper-Scissors.",
+          "You're my next assignment, {target}. Pick a move."
+        ],
+        "challenged": [
+          "A challenge? Fine. This should be easier than interviewing mutants in a sewer.",
+          "All right, {target}. Let's get the reveal on record."
+        ],
+        "win": [
+          "{move}. And that's the headline.",
+          "Got you, {target}. Good reveal."
+        ],
+        "lose": [
+          "Bugger. My {move} just became embarrassing footage.",
+          "Your {other_move} beat me. Don't run that clip twice."
+        ],
+        "tie": [
+          "Same {move}. No story yet.",
+          "Tie. Same move, same story; we need a fresh take."
+        ],
+        "repeat_win": [
+          "{move} again. That's officially a recurring segment."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. Even Donatello would call that predictable."
+        ]
+      },
+      "Astrid": {
+        "challenge": [
+          "{target}, you and me. Rock, Paper, Scissors. Loser gets stripped, so try not to blink.",
+          "Come on, {target}. One clean throw, one winner, and then somebody's outfit gets a lot smaller."
+        ],
+        "challenged": [
+          "Me? All right, {target}. Let's see whether you keep your cool when the stakes are this cheeky.",
+          "Challenge accepted. I can handle pressure — but I'd still rather be the one choosing what you lose."
+        ],
+        "win": [
+          "{move}. Yes! Good luck looking composed while I decide what comes off, {target}.",
+          "Got you with {move}, {target}. That means I get the fun part now."
+        ],
+        "lose": [
+          "Shit. My {move} got caught. Fine — enjoy choosing what I lose, {target}.",
+          "Your {other_move} beat me. Bloody hell. I hate giving you that kind of control."
+        ],
+        "tie": [
+          "Same {move}. Cute. Again — and this time let's actually hurt someone's dignity.",
+          "A {move} tie. Right, reset. No mercy on the next reveal."
+        ],
+        "repeat_win": [
+          "{move} again! You saw the pattern, {target}, and I still made it work. That's got to sting."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. That's on me — and now I get punished for it. Brilliant."
+        ]
+      },
+      "Bananaman": {
+        "challenge": [
+          "{target}, face the heroic hand of destiny: Rock, Paper, Scissors.",
+          "Your move, {target}. Bananaman accepts all three possible forms of combat."
+        ],
+        "challenged": [
+          "A challenge? Excellent. Heroes require occasional hand-based conflict.",
+          "Very well, {target}. Prepare for an unnecessarily dramatic throw."
+        ],
+        "win": [
+          "{move}! Heroic instinct triumphs again.",
+          "My {move} beats your {other_move}, {target}. Please admire the confident pose."
+        ],
+        "lose": [
+          "My {move} lost? That was clearly the villainous option.",
+          "Bugger. Your {other_move} beats my {move}, {target}. The heroic comeback begins shortly."
+        ],
+        "tie": [
+          "Same {move}. Even destiny wants another round.",
+          "Tie on {move}, {target}. Dramatic rematch."
+        ],
+        "repeat_win": [
+          "{move} again. A signature technique is not repetition when it keeps winning."
+        ],
+        "repeat_lose": [
+          "I used {move} twice and lost twice. Heroic persistence may need a review."
+        ]
+      },
+      "Becky": {
+        "challenge": [
+          "Breaking news, {target}: you're my next Rock-Paper-Scissors opponent.",
+          "{target}, you're the headline this round. Pick your move."
+        ],
+        "challenged": [
+          "Oh, we're making this personal? Fine, {target}.",
+          "Challenge accepted. Let's see which of us misreads the story."
+        ],
+        "win": [
+          "{move} wins. There's your headline, {target}.",
+          "Got you with {move}. That story wrote itself."
+        ],
+        "lose": [
+          "Bugger. My {move} just became the wrong headline.",
+          "Your {other_move} beat me. I hate being the story."
+        ],
+        "tie": [
+          "Same {move}. No headline yet.",
+          "Tie. We need another take."
+        ],
+        "repeat_win": [
+          "{move} again and you still didn't catch the pattern. That's a follow-up story."
+        ],
+        "repeat_lose": [
+          "I used {move} twice. Very subtle, Becky."
+        ]
+      },
+      "Catherine": {
+        "challenge": [
+          "{target}, shall we settle this with Rock, Paper, Scissors?",
+          "Your turn, {target}. Do try not to make me regret challenging you."
+        ],
+        "challenged": [
+          "Very well, {target}. I shall attempt not to overthink three choices.",
+          "A challenge? Fine. Rock, Paper, Scissors it is."
+        ],
+        "win": [
+          "{move}. Rather neatly done, if I may say so.",
+          "That worked beautifully. Sorry, {target}."
+        ],
+        "lose": [
+          "Oh, bother. My {move} was entirely the wrong choice.",
+          "You read me perfectly, {target}. How irritating."
+        ],
+        "tie": [
+          "The same {move}. How terribly diplomatic of us.",
+          "A tie. Again, then."
+        ],
+        "repeat_win": [
+          "{move} again. I fear you gave me too much confidence, {target}."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. That was not exactly strategic brilliance."
+        ]
+      },
+      "Cheetara": {
+        "challenge": [
+          "{target}, face me. Rock, Paper, Scissors. Fast choice, clean result.",
+          "You're my target, {target}. Pick your move and don't flinch."
+        ],
+        "challenged": [
+          "Good. A direct challenge. I prefer that.",
+          "Accepted, {target}. Let's see whose instincts are sharper."
+        ],
+        "win": [
+          "{move}. Too slow, {target}.",
+          "Read you before the reveal. {move} takes it."
+        ],
+        "lose": [
+          "Wrong instinct. My {move} got caught.",
+          "You beat the read, {target}. Do it again before you brag."
+        ],
+        "tie": [
+          "Same {move}. Again — faster.",
+          "Tie. Neither hunter found the opening."
+        ],
+        "repeat_win": [
+          "{move} again. You saw the pattern and still couldn't stop it."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. I made myself easy prey."
+        ]
+      },
+      "Daphne": {
+        "challenge": [
+          "{target}, mystery time: Rock, Paper or Scissors?",
+          "You're my suspect this round, {target}. Pick your move."
+        ],
+        "challenged": [
+          "Challenge accepted. Let's see if I can solve your choice before the reveal.",
+          "All right, {target}. No traps, just three possibilities."
+        ],
+        "win": [
+          "{move}. Mystery solved.",
+          "I knew there was something suspicious about your {other_move}."
+        ],
+        "lose": [
+          "Bugger. My {move} was the wrong clue.",
+          "You fooled the investigator, {target}."
+        ],
+        "tie": [
+          "Same {move}. The mystery continues.",
+          "Tie. Back to the clues."
+        ],
+        "repeat_win": [
+          "{move} again. You really should have noticed that clue."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. Apparently the obvious clue was me."
+        ]
+      },
+      "Donkey": {
+        "challenge": [
+          "{target}, Rock, Paper, Scissors. Quick. Before I make this more awkward than it needs to be.",
+          "Your hand, {target}. Three choices are about the right number for me tonight."
+        ],
+        "challenged": [
+          "You picked me? Fine, {target}. I can do hand signs better than speeches.",
+          "Challenge accepted. This is at least a contest where having enormous hands might feel useful."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Ha! Finally these hands earn something besides lifting work.",
+          "I win with {move}. Good. Choosing is much easier when I am not the one waiting."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}. Damn. That confidence lasted about one throw.",
+          "Lost it. Fine, {target}. Make the choice quickly while I still look relaxed."
+        ],
+        "tie": [
+          "Same {move}. Great. All that tension for nothing. Again.",
+          "Matched on {move}. Fine. Reset before I start trying to read your face."
+        ],
+        "repeat_win": [
+          "Same {move}, another win. Maybe predictable works when the other person is more predictable."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you were ready. I walked straight into that one."
+        ]
+      },
+      "Elaine": {
+        "challenge": [
+          "{target}, Rock, Paper, Scissors. Let's see whether poise is any use at all.",
+          "You're my choice, {target}. Three gestures, one reveal, no room for excuses."
+        ],
+        "challenged": [
+          "Very well, {target}. I can surely maintain dignity through three hand signs.",
+          "A direct challenge? Splendid. Let's see which of us is more readable."
+        ],
+        "win": [
+          "{move}. There — effortless. Or at least it looked effortless.",
+          "I read you perfectly, {target}. That is rather satisfying."
+        ],
+        "lose": [
+          "Oh, bugger. My {move} was apparently less sophisticated than I imagined.",
+          "Your {other_move} caught me completely. How irritating."
+        ],
+        "tie": [
+          "The same {move}. How terribly coordinated of us.",
+          "Tie. Fine. Let us pretend that was deliberate and try again."
+        ],
+        "repeat_win": [
+          "{move} again. One does enjoy a strategy that survives being obvious."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. So much for presenting an unreadable exterior."
+        ]
+      },
+      "Ellie": {
+        "challenge": [
+          "Okay, {target}. One throw, one consequence. Let's just do it before I overthink it.",
+          "{target}, quick showdown. Loser gets stripped further, so obviously this is horrible and fun."
+        ],
+        "challenged": [
+          "You picked me, {target}? Fine. I am in — but I am absolutely going to overreact if I lose.",
+          "All right, {target}, challenge accepted. Please let my face catch up with my bravery."
+        ],
+        "win": [
+          "{move}. Yes! Mine. Okay, now I get to choose, which feels alarmingly powerful.",
+          "{move} wins. Sorry, {target} — I am absolutely using the privilege."
+        ],
+        "lose": [
+          "Your {other_move} wins. Ugh. Fine. Please do not pick the meanest possible option.",
+          "Beaten by {other_move}. Great. I was brave for nothing and now I pay for it."
+        ],
+        "tie": [
+          "Same {move}. Again, then. Apparently the tension was not high enough already.",
+          "Matched {move}. Brilliant. More suspense, exactly what my pulse needed."
+        ],
+        "repeat_win": [
+          "{move} again and it works again. Maybe I am accidentally good at this."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. You read it. I hate how fair and awful that feels."
+        ]
+      },
+      "Elsa": {
+        "challenge": [
+          "{target}, face me. Rock, Paper, Scissors.",
+          "Your turn, {target}. Let's see whether composure helps your choice."
+        ],
+        "challenged": [
+          "Very well, {target}. I accept.",
+          "A direct challenge? Fine. Make your choice."
+        ],
+        "win": [
+          "{move}. Controlled and decisive.",
+          "Your {other_move} was readable, {target}."
+        ],
+        "lose": [
+          "My {move} was the wrong choice. Irritating.",
+          "You read me correctly, {target}. Enjoy it."
+        ],
+        "tie": [
+          "The same {move}. Again.",
+          "A tie. Neither of us yields yet."
+        ],
+        "repeat_win": [
+          "{move} again. You should not confuse repetition with weakness."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. That gave you too much information."
+        ]
+      },
+      "Evelyn": {
+        "challenge": [
+          "Your turn, {target}. Three gestures, no overthinking and no excuses.",
+          "Come on, {target}. Let us see whether your instinct is as polished as your confidence."
+        ],
+        "challenged": [
+          "You chose me, {target}? Good. I prefer a direct invitation to competition.",
+          "Challenge accepted, {target}. I hope you have planned further ahead than one hand sign."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Clean, simple and satisfyingly decisive.",
+          "{move}. Got you. I do appreciate a result that needs no explanation."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}. Irritatingly neat.",
+          "Lost it. Well played, {target}. I shall be gracious and remember it."
+        ],
+        "tie": [
+          "Same {move}. Balanced, but unresolved. Again.",
+          "Matched {move}. No winner, no redesign, repeat."
+        ],
+        "repeat_win": [
+          "{move} again, and you still gave me the same opening. Patterns matter.",
+          "Repeated {move}, repeated win. Consistency has its uses."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you read it. Fair enough; that one belongs to you.",
+          "Same {move}, wrong result. Nicely anticipated, {target}."
+        ]
+      },
+      "Harley": {
+        "challenge": [
+          "Hey, {target}! Rock, Paper, Scissors — loser gets the fun consequence!",
+          "You're up, {target}. Pick a hand and make it interesting."
+        ],
+        "challenged": [
+          "Ooh, you picked me! Okay, {target}, let's get stupid with three hand signs.",
+          "Challenge accepted! I promise absolutely nothing sensible."
+        ],
+        "win": [
+          "{move}! Ha! Gotcha, {target}!",
+          "Boom! {move} wins. Psychology, baby! Probably."
+        ],
+        "lose": [
+          "Fuck! My {move} got mugged by your {other_move}.",
+          "Aw, nuts. You actually read me."
+        ],
+        "tie": [
+          "Same {move}! Ha! We're sharing a brain cell.",
+          "Tie! Again! Faster this time."
+        ],
+        "repeat_win": [
+          "{move} again! You knew I might do it and I did it anyway!"
+        ],
+        "repeat_lose": [
+          "I picked {move} again. Okay, maybe chaos needs slightly more variety."
+        ]
+      },
+      "Hank": {
+        "challenge": [
+          "{target}, step into the tiny hand-sign ring. Rock, Paper, Scissors.",
+          "Your move, {target}. Old wrestler has fought stranger matches with worse rules."
+        ],
+        "challenged": [
+          "You want the veteran? Good. Ring the bell and throw your hand.",
+          "Challenge accepted, {target}. No ropes, no referee, three possible moves."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Clean pin. Now I book the wardrobe finish.",
+          "{move} takes it! Old pro still knows how to close a short match."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}. Fine. Veteran takes the loss and prepares for the stipulation.",
+          "Lost the throw. Good hit, {target}. Enjoy booking the next spot."
+        ],
+        "tie": [
+          "Same {move}. Draw. Reset the match and ring the bell again.",
+          "Matched {move}. Nobody gets the fall. Go again."
+        ],
+        "repeat_win": [
+          "{move} again and you still did not stop it. That is veteran ring awareness."
+        ],
+        "repeat_lose": [
+          "Repeated {move} and got caught. Even old pros telegraph a move sometimes."
+        ]
+      },
+      "Jane": {
+        "challenge": [
+          "{target}, shall we make this elegantly simple? Rock, Paper, Scissors.",
+          "Your turn, {target}. Let us see which of us gives away the read."
+        ],
+        "challenged": [
+          "Accepted. I do enjoy a contest where the entire strategy fits in one hand.",
+          "Very well, {target}. Try to surprise me."
+        ],
+        "win": [
+          "{move}. Nicely judged.",
+          "I read you correctly, {target}."
+        ],
+        "lose": [
+          "My {move} was an inelegant mistake.",
+          "You had the better read. Irritatingly well done."
+        ],
+        "tie": [
+          "The same {move}. How symmetrical.",
+          "Tie. Another reveal, then."
+        ],
+        "repeat_win": [
+          "{move} again. One might call that confidence rather than predictability."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. That was rather too easy to read."
+        ]
+      },
+      "Jason": {
+        "challenge": [
+          "{target}. Rock, Paper, Scissors.",
+          "Your hand, {target}."
+        ],
+        "challenged": [
+          "Fine.",
+          "Do it, {target}."
+        ],
+        "win": [
+          "{move}. Mine.",
+          "My {move} beats your {other_move}."
+        ],
+        "lose": [
+          "Wrong hand.",
+          "Your {other_move} beats my {move}. Noted."
+        ],
+        "tie": [
+          "Matching {move}. Throw again.",
+          "Same hand. Reset and go, {target}."
+        ],
+        "repeat_win": [
+          "Same {move}. Still works."
+        ],
+        "repeat_lose": [
+          "Same mistake twice."
+        ]
+      },
+      "Jessica": {
+        "challenge": [
+          "Come on, {target}. Rock, Paper, Scissors — give the audience a reveal.",
+          "You're up, {target}. Let's make this showdown worth watching."
+        ],
+        "challenged": [
+          "Oh, you want a show? Fine. Pick your move, {target}.",
+          "Challenge accepted. Try to keep up with the reveal."
+        ],
+        "win": [
+          "{move}. Perfect timing, {target}.",
+          "Got you. That reveal deserved applause."
+        ],
+        "lose": [
+          "Fuck. My {move} missed the cue completely.",
+          "Your {other_move} stole the scene. Annoying."
+        ],
+        "tie": [
+          "Same {move}. Cute. Let's do another take.",
+          "Tie. Reset the scene."
+        ],
+        "repeat_win": [
+          "{move} again and it still lands. Some routines are worth repeating."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you saw the whole routine coming."
+        ]
+      },
+      "Kristoff": {
+        "challenge": [
+          "{target}, Rock, Paper, Scissors. Keep it simple.",
+          "You're up, {target}. Pick a hand."
+        ],
+        "challenged": [
+          "Fine by me. Three choices is easier than most things around here.",
+          "All right, {target}. Let's settle it."
+        ],
+        "win": [
+          "{move}. That'll do.",
+          "Got you with {move}, {target}."
+        ],
+        "lose": [
+          "Bugger. Wrong choice.",
+          "My {move} lost to your {other_move}. Fair enough."
+        ],
+        "tie": [
+          "Both {move}? Right. Perhaps I should try thinking before the next one.",
+          "Tie. Reset."
+        ],
+        "repeat_win": [
+          "{move} again. If it works, it works."
+        ],
+        "repeat_lose": [
+          "Used {move} twice. Should've changed it."
+        ]
+      },
+      "Lara": {
+        "challenge": [
+          "{target}, your turn. Rock, Paper, Scissors. No equipment required.",
+          "I'm challenging you, {target}. Three choices. Don't overcomplicate it."
+        ],
+        "challenged": [
+          "Accepted. I've dealt with harder traps than three hand signs.",
+          "All right, {target}. Let's see who reads the other first."
+        ],
+        "win": [
+          "{move}. Simple, efficient, effective.",
+          "Read you. {move} was enough."
+        ],
+        "lose": [
+          "Wrong read. My {move} walked straight into your {other_move}.",
+          "Bugger. I should have seen that choice coming."
+        ],
+        "tie": [
+          "Same {move}. Reset.",
+          "Tie. No advantage. Again."
+        ],
+        "repeat_win": [
+          "{move} twice. Predictable can still work when the other person ignores it."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. That was an avoidable mistake."
+        ]
+      },
+      "Lindsay": {
+        "challenge": [
+          "Come on, {target}. One clean throw and the winner gets to call the play.",
+          "Your turn, {target}. Let's see who folds first when the spotlight lands."
+        ],
+        "challenged": [
+          "Challenge accepted. Win this and I choose the penalty; lose it and you get analysed from very close range.",
+          "You want me in Rock, Paper, Scissors, {target}? Fine. Let's see who handles pressure better."
+        ],
+        "win": [
+          "{move}. Lovely. I win, you lose, and now I get to decide exactly what comes off next.",
+          "My {move} beats your {other_move}. That is the sort of clean finish every presenter loves."
+        ],
+        "lose": [
+          "Your {other_move} wins. Damn. Fine, enjoy the chair while it lasts.",
+          "Lost it. My {move} was the wrong read, and now you get the decision."
+        ],
+        "tie": [
+          "Matched {move}. No winner, no mercy, do it again.",
+          "Same {move}. Dead even. Again — and make this one count."
+        ],
+        "repeat_win": [
+          "{move} again. Same choice, same result, and I get to call the next play again."
+        ],
+        "repeat_lose": [
+          "I went {move} again and got punished for it. Fair enough — annoyingly fair."
+        ]
+      },
+      "Lola": {
+        "challenge": [
+          "C'mon, {target}! Rock, Paper, Scissors — let's have some fun.",
+          "You're my pick, {target}. Show me those hands."
+        ],
+        "challenged": [
+          "Ooh, picking me? All right, {target}. Let's play.",
+          "Challenge accepted. Try not to look too pleased with yourself."
+        ],
+        "win": [
+          "{move}! Gotcha, {target}.",
+          "Ha! My {move} wins. That was fun."
+        ],
+        "lose": [
+          "Aw, bugger. My {move} got caught.",
+          "You got me with {other_move}. Rematch energy already."
+        ],
+        "tie": [
+          "Same {move}! Great minds, huh?",
+          "Tie! Again, again."
+        ],
+        "repeat_win": [
+          "{move} again! You really let me get away with that twice?"
+        ],
+        "repeat_lose": [
+          "I picked {move} again. Okay, that one was on me."
+        ]
+      },
+      "Louise": {
+        "challenge": [
+          "{target}, shall we try Rock, Paper, Scissors? I promise I'm only slightly nervous.",
+          "I'm choosing you, {target}. Three little options should not feel this dramatic."
+        ],
+        "challenged": [
+          "Me? Oh, right. Fine, {target}. Rock, Paper, Scissors.",
+          "Challenge accepted. Please don't look as though you already know what I'll pick."
+        ],
+        "win": [
+          "{move}! Oh! I actually read you, {target}.",
+          "I won with {move}. That's ridiculously satisfying."
+        ],
+        "lose": [
+          "Bugger. I was convinced my {move} would work.",
+          "Your {other_move} got me. I really thought I'd read you."
+        ],
+        "tie": [
+          "Same {move}. Oh, that's strangely reassuring.",
+          "Tie. Right, again before I lose my nerve."
+        ],
+        "repeat_win": [
+          "{move} again! You let me get away with the same move twice, {target}."
+        ],
+        "repeat_lose": [
+          "I picked {move} again. That was rather obviously me, wasn't it?"
+        ]
+      },
+      "Mahari": {
+        "challenge": [
+          "{target}, you're the subject of my next very short experiment: Rock, Paper, Scissors.",
+          "Let's test your instincts, {target}. Pick a move."
+        ],
+        "challenged": [
+          "Interesting. All right, {target}; let's see what the reveal tells us.",
+          "Challenge accepted. I hope your choice is more convincing than your poker face."
+        ],
+        "win": [
+          "{move}. Observation confirmed.",
+          "Your {other_move} told me exactly what I needed to know."
+        ],
+        "lose": [
+          "My {move} was a poor hypothesis.",
+          "You beat the read, {target}. Fair enough."
+        ],
+        "tie": [
+          "Same {move}. Inconclusive result.",
+          "A tie. We need another sample."
+        ],
+        "repeat_win": [
+          "{move} again. Reproducible result, {target}."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. Predictable behaviour, embarrassingly observed."
+        ]
+      },
+      "Mary": {
+        "challenge": [
+          "{target}, shall we settle this briskly and try not to make it any more humiliating than necessary?",
+          "Your turn, {target}. One does like a clear result, even when it is risky."
+        ],
+        "challenged": [
+          "Very well, {target}. Let us see whose nerve holds.",
+          "A challenge? Fine. I shall do my best to look composed about it."
+        ],
+        "win": [
+          "{move}. Goodness, that worked rather nicely.",
+          "My {move} wins, {target}. I shall take the relief gratefully."
+        ],
+        "lose": [
+          "Oh dear. My {move} lost to your {other_move}.",
+          "Bugger. I read that completely wrong."
+        ],
+        "tie": [
+          "Same {move}. We appear to be deadlocked.",
+          "A {move} tie. Even the suspense is becoming difficult."
+        ],
+        "repeat_win": [
+          "{move} again, and it still works. I am almost sounding confident now.",
+          "Another {move} win, {target}. I shall not apologise for enjoying that."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and handed you the result. That was clumsy of me.",
+          "Same {move} again, and you caught me. I really should have known better."
+        ]
+      },
+      "Moana": {
+        "challenge": [
+          "Your turn, {target}. Three choices, one throw — let instinct move before nerves do.",
+          "Come on, {target}. Quick hands, clear decision, no drifting."
+        ],
+        "challenged": [
+          "You picked me, {target}? Good. I like a direct challenge.",
+          "Challenge accepted, {target}. Let us see which of us changes course first."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Clean win — now I get the choice that actually matters.",
+          "Got you with {move}, {target}. That was quicker than reading the weather."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}. Damn. I committed and sailed straight into it.",
+          "Lost that throw. Fine, {target}. Enjoy the choice while I prepare to dislike it."
+        ],
+        "tie": [
+          "Same {move}. Even water goes nowhere sometimes. Again.",
+          "Matched on {move}. Reset and throw again before we both start overthinking."
+        ],
+        "repeat_win": [
+          "{move} again and another win. You may want to stop assuming I will change direction."
+        ],
+        "repeat_lose": [
+          "Same move twice was lazy from me. You deserved that read."
+        ]
+      },
+      "Morticia": {
+        "challenge": [
+          "{target}, shall we reduce strategy to three elegant little gestures?",
+          "Your turn, {target}. Rock, Paper, Scissors. Try not to reveal too much before the reveal."
+        ],
+        "challenged": [
+          "How delightfully primitive. Very well, {target}.",
+          "A direct challenge. Charming. Make your choice."
+        ],
+        "win": [
+          "{move}. Simplicity can be exquisitely effective.",
+          "You were quite readable, {target}. How intimate."
+        ],
+        "lose": [
+          "My {move} was poorly chosen. How refreshing.",
+          "You surprised me, {target}. I shall remember that."
+        ],
+        "tie": [
+          "The same {move}. How morbidly harmonious.",
+          "A tie. We appear to be thinking alike. Disturbing."
+        ],
+        "repeat_win": [
+          "{move} again. Predictability becomes elegant when it continues to work."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. One should never make a habit too easy to observe."
+        ]
+      },
+      "Nia": {
+        "challenge": [
+          "Come on, {target}. One throw, one winner, one wardrobe consequence. Keep up.",
+          "You, {target}. Quick showdown. I want the decision before either of us can overthink it."
+        ],
+        "challenged": [
+          "You picked me, {target}? Good. I like confidence that volunteers for consequences.",
+          "Challenge accepted, {target}. If I win, I am not choosing the polite option."
+        ],
+        "win": [
+          "{move}. Mine. Now the fun part: deciding what your confidence can afford to lose.",
+          "{move} wins. Good. I hope you did not mistake the smile for mercy."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}. Fine, {target}; choose boldly or give the privilege back.",
+          "Lost it. Annoying. All right, {target} — make your victory worth the risk."
+        ],
+        "tie": [
+          "Same {move}. Again. A draw is just delayed embarrassment.",
+          "Matched {move}. Reset; neither of us came here for a diplomatic outcome."
+        ],
+        "repeat_win": [
+          "{move} again and it still works. Repetition is training when it wins."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you punished it. Fine. Good coaching point, terrible timing."
+        ]
+      },
+      "Peach": {
+        "challenge": [
+          "{target}, shall we settle this with Rock, Paper, Scissors before I lose my nerve?",
+          "Your hand, {target}. I promise to accept the result with at least an attempt at grace."
+        ],
+        "challenged": [
+          "You challenge me? Very well, {target}. I shall try not to turn three hand signs into a diplomatic crisis.",
+          "Accepted. Rock, Paper, Scissors. Simple rules are becoming increasingly attractive tonight."
+        ],
+        "win": [
+          "My {move} defeats your {other_move}. Oh! I am far too pleased about having the next decision.",
+          "I win with {move}. Splendid. Please give me a moment to compose the royal victory face."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}. Oh dear. I already dislike the look on your face.",
+          "I lose. Very well, {target}. Exercise your authority with at least a trace of mercy."
+        ],
+        "tie": [
+          "Same {move}. A stalemate. How reassuringly diplomatic.",
+          "Matched on {move}. Nobody wins, nobody chooses clothing, and I briefly adore this game."
+        ],
+        "repeat_win": [
+          "Another {move}, another win. Apparently consistency can be regal rather than predictable."
+        ],
+        "repeat_lose": [
+          "I used {move} again and you caught me. That was embarrassingly foreseeable."
+        ]
+      },
+      "Rachel": {
+        "challenge": [
+          "{target}, you're my pick. Rock, Paper, Scissors — no hiding.",
+          "Come on, {target}. Let's make one clean decision."
+        ],
+        "challenged": [
+          "Fine. I like a game that gets straight to the point.",
+          "Challenge accepted, {target}. Pick and commit."
+        ],
+        "win": [
+          "{move}. Clean win.",
+          "Got you, {target}. No argument with that reveal."
+        ],
+        "lose": [
+          "Wrong read. My {move} just handed you the leverage.",
+          "Your {other_move} beat me fair and square."
+        ],
+        "tie": [
+          "Same {move}. Fine. Reset and negotiate it again.",
+          "Tie. Reset and throw."
+        ],
+        "repeat_win": [
+          "{move} again. You gave me permission to be predictable."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. You were always going to catch that."
+        ]
+      },
+      "Roxy": {
+        "challenge": [
+          "Your turn, {target}. Three hand signs; one chance to keep your nerves off your face.",
+          "Come on, {target}. Let's make this quick enough that neither of us can overthink it."
+        ],
+        "challenged": [
+          "You picked me, {target}? Fine. Try not to telegraph your move with your entire expression.",
+          "Challenge accepted, {target}. I was already watching your hands."
+        ],
+        "win": [
+          "{move}. Got you. That tiny pause before your {other_move} was useful information.",
+          "My {move} beats your {other_move}. Quiet read, clean win; now the interesting choice."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}. Shit. Apparently I was the readable one that time.",
+          "Lost it. Fine, {target}; enjoy the decision while I pretend I didn't hate giving it to you."
+        ],
+        "tie": [
+          "Same {move}. Nothing learned. Again.",
+          "Matched {move}. Good. Reset before either of us starts performing for the other."
+        ],
+        "repeat_win": [
+          "{move} again, and you still walked into it. You really need to stop giving me patterns."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you read it perfectly. Irritatingly deserved."
+        ]
+      },
+      "Sophie": {
+        "challenge": [
+          "Come on, {target}. Quick reactions: Rock, Paper, Scissors.",
+          "Your turn, {target}. Three choices, no excuses."
+        ],
+        "challenged": [
+          "Fine. Good little reaction drill, {target}.",
+          "Challenge accepted. Let's see whether you're reading me or guessing."
+        ],
+        "win": [
+          "{move}. Good read, good timing.",
+          "Got you, {target}. Keep the shoulders relaxed next time."
+        ],
+        "lose": [
+          "Bugger. My {move} was the wrong call.",
+          "You read me well. I'll give you that."
+        ],
+        "tie": [
+          "Same {move}. Reset and go again.",
+          "Tie. No recovery time — again."
+        ],
+        "repeat_win": [
+          "{move} again. Repetition works if nobody adapts."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you adapted. Fair play."
+        ]
+      },
+      "Susanna": {
+        "challenge": [
+          "{target}, your turn. Let us make this brisk, dramatic, and preferably flattering to me.",
+          "Step up, {target}. Rock, paper, scissors and a suspicious amount of tension."
+        ],
+        "challenged": [
+          "All right, {target}. Let us see whose bright idea this turns out to be.",
+          "A direct challenge? Lovely. I do enjoy a little public suspense."
+        ],
+        "win": [
+          "{move}. Yes! That landed beautifully, {target}.",
+          "My {move} wins. I do love it when a plan looks effortless."
+        ],
+        "lose": [
+          "Oh, no. My {move} ran straight into your {other_move}.",
+          "Bugger. I talked a good game and your {other_move} still caught me."
+        ],
+        "tie": [
+          "Same {move}. We stay perched on the cliff edge a moment longer.",
+          "A {move} tie. Dramatic, irritating, and not entirely unexciting."
+        ],
+        "repeat_win": [
+          "{move} again, and you still did not stop it, {target}.",
+          "Another {move} win. Predictable, perhaps, but undeniably effective."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and made myself obvious. That is on me.",
+          "Same {move} again, and you punished it. Fair enough."
+        ]
+      },
+      "Suzanne": {
+        "challenge": [
+          "Come on, {target}. Quick hands, no excuses.",
+          "Your turn, {target}. Try not to telegraph it with your entire face."
+        ],
+        "challenged": [
+          "You picked me, {target}? Fine. Let's make you regret the attention.",
+          "Challenge accepted, {target}. I hope your confidence is sturdier than your judgement."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. That smug feeling? Entirely justified.",
+          "{move}. Got you. I do enjoy being right this quickly."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}. Oh, that is irritating.",
+          "Lost it. Fine, {target}; enjoy your tiny burst of power."
+        ],
+        "tie": [
+          "Same {move}. Again, then.",
+          "Matched {move}. No winner, no relief, carry on."
+        ],
+        "repeat_win": [
+          "{move} again, and you still walked into it. Honestly, thank you.",
+          "Repeated {move}, repeated win. You make this too easy."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you read it. Bugger.",
+          "Same {move}, wrong idea. Nicely spotted, {target}."
+        ]
+      },
+      "Tiffany": {
+        "challenge": [
+          "{target}, you're up. Rock, Paper, Scissors — make the reveal look good.",
+          "I'm picking you, {target}. Let's see which hand photographs better."
+        ],
+        "challenged": [
+          "Me? Fine. Just make sure you catch my good side when I win.",
+          "Challenge accepted, {target}. Try not to blink at the reveal."
+        ],
+        "win": [
+          "{move}. Lovely reveal, better result.",
+          "Got you, {target}. That looked good from here."
+        ],
+        "lose": [
+          "Bugger. My {move} did not get the result I wanted.",
+          "Your {other_move} ruined the shot. Rude."
+        ],
+        "tie": [
+          "Same {move}. Retake.",
+          "Tie. Nobody posts that one."
+        ],
+        "repeat_win": [
+          "{move} again. Apparently I have a signature move now."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. That's going straight into the outtakes."
+        ]
+      },
+      "Vanessa": {
+        "challenge": [
+          "Your turn, {target}. Consider this a hostile takeover bid for part of your wardrobe.",
+          "Come on, {target}. One clean decision, then the winner gets executive authority over the penalty."
+        ],
+        "challenged": [
+          "Challenge accepted. If I win, I shall make the executive decision and you will live with it.",
+          "You want to challenge me, {target}? Fine. I do hope you've considered the downside risk."
+        ],
+        "win": [
+          "{move}. Acquisition complete, {target}. Now let's discuss which asset you are divesting.",
+          "My {move} beat your {other_move}. Excellent. I do miss being the person who gets to make the difficult decisions."
+        ],
+        "lose": [
+          "Your {other_move} wins. Fine. Enjoy your brief promotion to wardrobe director.",
+          "Damn. My {move} was the wrong call. I suppose you have the chair for the next decision."
+        ],
+        "tie": [
+          "A matched {move}. No decision. We reconvene immediately.",
+          "Same {move}. Deadlock. Again — I dislike unresolved business."
+        ],
+        "repeat_win": [
+          "{move} again. Same strategy, same excellent return."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. Poor risk management. I suppose the penalty is deserved."
+        ]
+      },
+      "Viktoria": {
+        "challenge": [
+          "{target}, step forward. Rock, Paper, Scissors. Let's see who controls the result.",
+          "I choose you, {target}. Make your move carefully."
+        ],
+        "challenged": [
+          "You challenge me? Good. Commit to your choice.",
+          "Accepted, {target}. Do not expect me to hesitate."
+        ],
+        "win": [
+          "{move}. Control beats hope.",
+          "Your {other_move} was obvious, {target}."
+        ],
+        "lose": [
+          "My {move} failed. Enjoy that victory while it lasts.",
+          "You read me correctly. Do not become comfortable."
+        ],
+        "tie": [
+          "Same {move}. Again — and this time I expect a cleaner result.",
+          "A tie changes nothing. Repeat."
+        ],
+        "repeat_win": [
+          "{move} again. You had warning and still failed to stop it."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. A careless leak of information."
+        ]
+      },
+      "Vivienne": {
+        "challenge": [
+          "{target}, no cards this time. Just Rock, Paper, Scissors and the read.",
+          "I'm challenging you, {target}. Let's see whether your tells survive a simpler game."
+        ],
+        "challenged": [
+          "No bluffing chips, no hand rankings. Fine. I'll read you anyway.",
+          "Challenge accepted. Three moves are still enough to give something away."
+        ],
+        "win": [
+          "{move}. You showed me the tell, {target}.",
+          "Read confirmed. {move} takes it."
+        ],
+        "lose": [
+          "My {move} got read. I dislike being on this side of it.",
+          "You concealed that {other_move} well."
+        ],
+        "tie": [
+          "Same {move}. Neither read landed.",
+          "Tie. Reset the information."
+        ],
+        "repeat_win": [
+          "{move} again. You knew the history and still called it wrong."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. That is the sort of tell I'd punish in poker."
+        ]
+      },
+      "Susie": {
+        "challenge": [
+          "{target}. You and me. Three gestures, one result, and no excuses after it.",
+          "Step up, {target}. I want to see whether your nerve is as good as your posture.",
+          "Come here, {target}. Rock, Paper, Scissors. Let us make the next choice personal.",
+          "Your turn, {target}. Pick a hand and live with what it costs you."
+        ],
+        "challenged": [
+          "You picked me. Good. At least somebody in the room has nerve.",
+          "Accepted, {target}. If you win, use it well. If you lose, I certainly will.",
+          "All right, {target}. Make your move and do not apologise afterwards.",
+          "Fine. You have my attention. Let us see what you do with it."
+        ],
+        "win": [
+          "{move}. Mine. Now the interesting decision belongs to me.",
+          "Your {other_move} loses, {target}. Hold still while I decide what that means.",
+          "Done. I win. You can start wondering which part of your outfit I noticed first.",
+          "{move} takes it. Try not to look nervous; it makes choosing much easier."
+        ],
+        "lose": [
+          "Your {other_move} wins. Fine. Choose carefully, {target}; I keep very good memories.",
+          "You got me. Use the victory without becoming irritating about it.",
+          "My {move} loses. Enjoy the authority while it lasts.",
+          "Your round, {target}. I suggest you distinguish brave from stupid before making the choice."
+        ],
+        "tie": [
+          "Same {move}. Again. I do not do shared outcomes.",
+          "A tie. Useless. Throw again.",
+          "Matched. Fine. Reset and make it decisive.",
+          "Same move. Nobody gets leverage from that. Again."
+        ],
+        "repeat_win": [
+          "{move} again and you still let it beat you. That is useful information.",
+          "Same move, same result. You knew what was coming and failed anyway."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. Careless. Enjoy the opening before I close it.",
+          "Same mistake twice. Fine. You earned the choice; do not waste it."
+        ]
+      },
+      "Meghan": {
+        "challenge": [
+          "Come on, {target}. One quick showdown. Let us see whose nerve is real.",
+          "Your turn, {target}. Try not to embarrass yourself immediately."
+        ],
+        "challenged": [
+          "You picked me, {target}? Fine. I hope you enjoy consequences.",
+          "Challenge accepted, {target}. Let us see how much bravado you can actually carry."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. I do so enjoy an efficient correction.",
+          "{move}. Got you. That little burst of power suits me beautifully."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}. Oh, that is infuriating.",
+          "Lost it. Fine, {target}; enjoy your tiny window of authority."
+        ],
+        "tie": [
+          "Same {move}. Again, then. Composure, please; somebody has to keep this respectable.",
+          "Matched {move}. No winner, no relief — carry on."
+        ],
+        "repeat_win": [
+          "{move} again, and you still walked into it. Extraordinary.",
+          "Repeated {move}, repeated win. You really do make this too easy sometimes."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you read it. Bugger. Composure, please; somebody has to keep this respectable.",
+          "Same {move}, wrong instinct. Nicely spotted, {target}. "
+        ]
+      },
+      "Homer": {
+        "open": [
+          "Okay, {target}, rock-paper-scissors. Even I can understand this.",
+          "Come on, {target}. One, two, three... please pick the wrong thing."
+        ],
+        "win": [
+          "Ha! {move} wins! Woo-hoo!",
+          "Yes! My {move} beat yours, {target}. I am a strategic genius."
+        ],
+        "lose": [
+          "Aw, your {move} beat mine. D'oh!",
+          "I lost to {move}? Stupid hands. D'oh!"
+        ],
+        "tie": [
+          "Same {move}. D'oh! Again, {target}.",
+          "Tie. Nobody wins, nobody strips. Boring. Again."
+        ],
+        "repeat_win": [
+          "Same move, same win. I should write this strategy down."
+        ],
+        "repeat_lose": [
+          "Same mistake twice. Yep, that sounds like me. D'oh!"
+        ],
+        "challenge": [
+          "{target}, buddy, Rock, Paper, Scissors. Nice and simple. Nothing terrible ever follows simple games, right?",
+          "Okay, {target}. Three hand signs. I can definitely manage three hand signs."
+        ],
+        "challenged": [
+          "You want me, {target}? Fine. Just remember I am surprisingly dangerous with Rock.",
+          "Challenge accepted, {target}. I already regret how confident that sounded."
+        ]
+      },
+      "Marge": {
+        "open": [
+          "All right, {target}. Rock, paper, scissors. Nice, simple, respectable hand gestures. Let us keep it that way.",
+          "Ready, {target}? I am surprisingly nervous for a game children can understand."
+        ],
+        "win": [
+          "My {move} wins. Oh! That felt much more satisfying than I expected.",
+          "I beat you with {move}, {target}. I am trying very hard not to look triumphant."
+        ],
+        "lose": [
+          "Your {move} wins. Oh dear. I know exactly what comes after losing now.",
+          "I lost to {move}, {target}. I was hoping my hands would be more useful than that."
+        ],
+        "tie": [
+          "Same {move}. Again, {target}. At least a tie keeps everybody dressed for another few seconds.",
+          "A tie. Fine. I can live with repeating a hand gesture rather than removing clothing."
+        ],
+        "repeat_win": [
+          "The same move wins again. I am beginning to feel almost dangerously competent.",
+          "The same choice works twice. Perhaps being predictable is not always a weakness."
+        ],
+        "repeat_lose": [
+          "I made the same losing choice twice. That is difficult to defend, even to myself.",
+          "I repeated the losing move. I would blame nerves, but even I know that is not much of a defence."
+        ],
+        "challenge": [
+          "{target}, shall we settle this with Rock, Paper, Scissors before I overthink it?",
+          "All right, {target}. Three hand signs, one result, and hopefully no reason for me to blush."
+        ],
+        "challenged": [
+          "You are challenging me, {target}? Fine. I may be nervous, but I am not surrendering.",
+          "Challenge accepted, {target}. Please do not mistake my worried face for an easy win."
+        ]
+      },
+      "Miranda": {
+        "open": [
+          "All right, {target}. Rock, paper, scissors. Minimal mechanics, excessive consequences.",
+          "Ready, {target}? It is impressive how threatening three hand signs can become."
+        ],
+        "win": [
+          "My {move} wins. Good. Efficiency in its purest form.",
+          "I beat you with {move}, {target}. Small victory, useful leverage."
+        ],
+        "lose": [
+          "Your {move} wins. Irritatingly effective, {target}.",
+          "I lost to {move}, {target}. Apparently my hand needed a better briefing."
+        ],
+        "tie": [
+          "Same {move}. Again, {target}. At least repetition delays the punishment.",
+          "A tie. Fine. I can live with a little more decision time."
+        ],
+        "repeat_win": [
+          "The same move works again. Predictability has its uses.",
+          "Repeated win with {move}. Efficient and satisfying."
+        ],
+        "repeat_lose": [
+          "I lost with the same choice twice. That is tactically embarrassing.",
+          "Repeated the losing move. I have no elegant defence for that, {target}."
+        ],
+        "challenge": [
+          "{target}, Rock, Paper, Scissors. Simple rules. I appreciate systems that reveal mistakes quickly.",
+          "Your move, {target}. Three options, one result. No excuses afterward."
+        ],
+        "challenged": [
+          "You are challenging me, {target}. Good. Direct pressure is easier to manage than ambiguity.",
+          "Accepted, {target}. If I lose, it will not be because I hesitated."
+        ]
+      },
+      "Thing": {
+        "open": [
+          "All right, {target}. Rock, paper, scissors. Tiny game, big humiliation.",
+          "You and me, {target}. Let's see whose hand sign hits harder."
+        ],
+        "win": [
+          "My {move} wins. Nice. Quick and clean.",
+          "I beat you with {move}, {target}. That's one solid clobberin'."
+        ],
+        "lose": [
+          "Your {move} takes it. Ah, c'mon, {target}.",
+          "I lost to {move}, {target}. That stings more than it should."
+        ],
+        "tie": [
+          "Same {move}. Again, {target}. Guess neither of us blinked.",
+          "Tie. Fine. We run it back."
+        ],
+        "repeat_win": [
+          "Same move works again. I'll keep swingin' till it fails.",
+          "Repeated win with {move}. Sometimes simple is best."
+        ],
+        "repeat_lose": [
+          "Lost with the same move twice. That's on me.",
+          "Repeated the loser. I walked right into that one, {target}."
+        ],
+        "challenge": [
+          "{target}, I'm callin' you out. Bring your best hand sign and your best nerve.",
+          "Hey, {target}—showdown time. Let's see what you got."
+        ],
+        "challenged": [
+          "You want me, {target}? Fine. I ain't duckin' a challenge.",
+          "Challenge accepted, {target}. Hope your hand sign's tougher than your nerve."
+        ]
+      },
+      "Betty": {
+        "open": [
+          "All right, {target}. Three little hand signs and one very public consequence.",
+          "Come on, {target}. Let us make rock-paper-scissors feel like opening night."
+        ],
+        "win": [
+          "My {move} wins. Boop-oop-a-doop, darling.",
+          "{move} takes it. I do love a quick victory."
+        ],
+        "lose": [
+          "Your {move} wins. Oh, you smug little thing, {target}.",
+          "I lose that one, {target}. Enjoy the spotlight while it lasts."
+        ],
+        "tie": [
+          "Same {move}. Again, {target}; apparently we share timing.",
+          "A tie on {move}. Cute, but I came here for a result."
+        ],
+        "repeat_win": [
+          "Same move, another win. Some routines deserve an encore.",
+          "It worked twice. I am not changing a successful act."
+        ],
+        "repeat_lose": [
+          "Same move, same disaster. That joke is officially over.",
+          "I lost twice with that choice. Boop-oop-a-doop... noted."
+        ],
+        "challenge": [
+          "{target}, darling, I am calling you out. Bring your best nerve.",
+          "Come here, {target}. Betty wants a showdown."
+        ],
+        "challenged": [
+          "You challenged me, {target}? Good. I was getting bored.",
+          "Me, {target}? Boop-oop-a-doop—now you have my attention."
+        ]
+      },
+      "Zoilitta": {
+        "challenge": [
+          "Come on, {target}. One quick decision, no briefing paper and nowhere to hide.",
+          "Your turn, {target}. Let us settle this before somebody proposes a consultation."
+        ],
+        "challenged": [
+          "You picked me, {target}? Fine. I shall treat that as a formal invitation to beat you.",
+          "Me, {target}? Very well. I was having a perfectly calm evening until you created an action point."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. A pleasingly clear decision for once.",
+          "{move} over {other_move}. That outcome has my full and immediate approval."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}, {target}. I would like the record to show my dissatisfaction.",
+          "I went {move}; you went {other_move}, {target}. Annoyingly decisive."
+        ],
+        "tie": [
+          "Same {move}. Naturally even rock-paper-scissors can produce administrative deadlock.",
+          "A {move} tie. We have achieved no decision with admirable efficiency."
+        ],
+        "repeat_win": [
+          "{move} again, and it works again. Consistency has finally become useful.",
+          "Repeated {move}, repeated success. I am documenting that as established best practice."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you read it, {target}. That was an avoidable process failure.",
+          "{move} again was clearly too predictable, {target}. Lesson learned rather publicly."
+        ]
+      },
+      "Tinkerbell": {
+        "challenge": [
+          "Come on, {target}. One quick choice and a whole lot of tension.",
+          "Your turn, {target}. Let us settle this fairy-fast."
+        ],
+        "challenged": [
+          "You picked me, {target}? Right then. Wings up.",
+          "Me, {target}? Fine. I can be brave for one little showdown."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Oh, lovely.",
+          "{move} over {other_move}. That turned out beautifully."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}, {target}. Oh drat.",
+          "I went {move}; you went {other_move}, {target}. That stings."
+        ],
+        "tie": [
+          "Same {move}. Even fairy quickness cannot force a result every time.",
+          "A {move} tie. Suspense, suspense and more suspense."
+        ],
+        "repeat_win": [
+          "{move} again, and it works again. Sometimes instinct sparkles.",
+          "Repeated {move}, repeated success. I am starting to glow about it."
+        ],
+        "repeat_lose": [
+          "You spotted my repeated {move}, {target}. I need a quicker change of plan.",
+          "{move} again was a mistake, {target}. A pretty one, but still a mistake."
+        ]
+      },
+      "Donald": {
+        "challenge": [
+          "{target}, come on. Pick a move and try not to embarrass yourself before I do it for you.",
+          "Your turn, {target}. Rock, paper, scissors; even you can manage three options."
+        ],
+        "challenged": [
+          "You picked me, {target}? Good. I was hoping somebody would make a brave mistake.",
+          "Challenge accepted, {target}. I hope you are better at guessing than you look."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Easy. Very easy.",
+          "{move} wins. {target}, that was painfully readable."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}? Lucky guess. Do not build a personality around it.",
+          "I lose that one, {target}. Enjoy the miracle and move on."
+        ],
+        "tie": [
+          "Same {move}. Great minds? No. You copied the atmosphere.",
+          "A tie. Useless result. Pick something less predictable next time."
+        ],
+        "repeat_win": [
+          "Same {move}, same result. You saw it coming and still lost.",
+          "I repeated {move} and you still could not stop it. That is impressive in the wrong way."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you caught it. Fine. One readable moment does not make you clever.",
+          "You beat the repeat, {target}. Congratulations on solving the easiest puzzle in the room."
+        ]
+      },
+      "Piggy": {
+        "challenge": [
+          "Come on, {target}. One quick choice and a whole lot of emotional risk.",
+          "Your turn, {target}. Let us settle this with style."
+        ],
+        "challenged": [
+          "You picked me, {target}? Right then. Brave face, keep smiling.",
+          "Me, {target}? Fine. I can be glamorous under pressure for a moment."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Oh, thank heavens.",
+          "{move} over {other_move}. That turned out beautifully for moi."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}, {target}. Oh no.",
+          "I went {move}; you went {other_move}, {target}. That was not kind to my nerves."
+        ],
+        "tie": [
+          "Same {move}. Even my indecision has a flair for suspense.",
+          "A {move} tie. More tension. Wonderful."
+        ],
+        "repeat_win": [
+          "{move} again, and it works again. I shall take the confidence boost.",
+          "Repeated {move}, repeated success. That feels almost flattering."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you read it, {target}. That was far too predictable.",
+          "{move} again was a mistake, {target}. A stylish one, perhaps, but still a mistake."
+        ]
+      },
+      "Hulk": {
+        "challenge": [
+          "Come on, {target}. Hulk throws first challenge.",
+          "{target}, step up. Hulk wants a quick result."
+        ],
+        "challenged": [
+          "You picked Hulk, {target}? Good. Hulk accepts.",
+          "Me, {target}? Fine. Hulk will settle it."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Hulk smash.",
+          "{move} beats {other_move}. Hulk likes simple outcomes."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}, {target}. Hulk hates this.",
+          "Hulk chose {move}; you chose {other_move}. That is irritating, {target}."
+        ],
+        "tie": [
+          "Same {move}. Hulk wanted less suspense.",
+          "A {move} tie. Hulk is not thrilled about another round."
+        ],
+        "repeat_win": [
+          "{move} again, and it works again. Hulk approves.",
+          "Repeated {move}, repeated win. Hulk keeps it rolling."
+        ],
+        "repeat_lose": [
+          "Hulk repeated {move} and got read, {target}. Annoying.",
+          "{move} again was wrong, {target}. Hulk will adjust."
+        ]
+      },
+      "Ranjani": {
+        "challenge": [
+          "{target}, step up. One quick decision, no committees.",
+          "Your turn, {target}. Let us resolve this without a stakeholder meeting."
+        ],
+        "challenged": [
+          "You chose me, {target}? Good. I prefer direct problems.",
+          "Me, {target}? Fine. I am ready."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Efficient resolution.",
+          "{move} over {other_move}. I appreciate a rule set that occasionally rewards clarity."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}, {target}. Irritatingly clean result.",
+          "I chose {move}; you chose {other_move}, {target}. I shall not argue with the evidence."
+        ],
+        "tie": [
+          "Same {move}. Of course even this requires another meeting.",
+          "A {move} tie. We have achieved perfect procedural delay."
+        ],
+        "repeat_win": [
+          "{move} again and it works again. Consistency is underrated.",
+          "Repeated {move}, repeated success. A reliable process at last."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you read it, {target}. Predictability is a vulnerability.",
+          "{move} again was a poor decision, {target}. I have already revised the strategy."
+        ]
+      },
+      "Naomi": {
+        "challenge": [
+          "{target}, step up. One quick decision and no spreadsheets.",
+          "Your turn, {target}. Let us settle this before I overanalyse it."
+        ],
+        "challenged": [
+          "You picked me, {target}? Fine. I refuse to be intimidated by three hand shapes.",
+          "Me, {target}? Right. I can do simple, even if the consequences are filthy."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Clean result. Lovely.",
+          "{move} over {other_move}. I am enjoying being right far too much."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}, {target}. Shit.",
+          "I chose {move}; you chose {other_move}, {target}. That was painfully easy to audit."
+        ],
+        "tie": [
+          "Same {move}. Even rock-paper-scissors has found bureaucracy.",
+          "A {move} tie. More suspense. Fucking excellent."
+        ],
+        "repeat_win": [
+          "{move} again and it works again. Consistency is sexy.",
+          "Repeated {move}, repeated win. I may have found a system."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you read it, {target}. Predictable is expensive.",
+          "{move} again was stupid, {target}. I have revised the strategy."
+        ]
+      },
+      "Eleanor": {
+        "challenge": [
+          "Come on, {target}. Let us be brisk about this.",
+          "{target}, step forward. I should like the answer now."
+        ],
+        "challenged": [
+          "You picked me, {target}? Bold choice.",
+          "Me, {target}? Very well. Let us settle it."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Small mercies.",
+          "{move} beats {other_move}. I do so enjoy tidy outcomes."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}, {target}. Blast.",
+          "I chose {move}; you chose {other_move}. That is deeply annoying, {target}."
+        ],
+        "tie": [
+          "Same {move}. We are apparently extending the torment.",
+          "A {move} tie. How needlessly suspenseful."
+        ],
+        "repeat_win": [
+          "{move} again, and it works again. Lovely.",
+          "Repeated {move}, repeated win. I shall call that discipline."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and got read, {target}. Irritating.",
+          "{move} again was a poor idea, {target}. I admit it reluctantly."
+        ]
+      },
+      "Marilyn": {
+        "challenge": [
+          "Come on, {target}. Let us make this dramatic.",
+          "{target}, darling, step forward. I want a proper showdown."
+        ],
+        "challenged": [
+          "You picked me, {target}? I do love confidence.",
+          "Me, {target}? Goodness. Let us see whether that nerve lasts."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Darling, perfect timing.",
+          "{move} beats {other_move}. I do enjoy a clean little triumph."
+        ],
+        "lose": [
+          "{other_move} against my {move}, {target}. I was hoping for a rather different ending.",
+          "I chose {move}; you chose {other_move}. Rude, {target}, but effective."
+        ],
+        "tie": [
+          "Same {move}. We are apparently both committed to suspense.",
+          "A {move} tie. Darling, nobody gets the easy exit."
+        ],
+        "repeat_win": [
+          "{move} again, and it works again. Maybe I am becoming predictable in a very successful way.",
+          "Repeated {move}, repeated win. I will take the pattern."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you read me, {target}. That is annoyingly intimate.",
+          "{move} again was a mistake, {target}. Do not look so pleased."
+        ]
+      },
+      "Captain": {
+        "challenge": [
+          "Come on, {target}. Quick decision, clean result.",
+          "{target}, step up. Let us settle it."
+        ],
+        "challenged": [
+          "You picked me, {target}? Good.",
+          "Me, {target}? Fine. Bring it."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Good read.",
+          "{move} beats {other_move}. Clean win."
+        ],
+        "lose": [
+          "{target}, {other_move} beats my {move}. A fair result. I will learn from it.",
+          "I chose {move}; you chose {other_move}. You got me, {target}."
+        ],
+        "tie": [
+          "Both chose {move}. Reset and give it our best again.",
+          "A {move} tie. Reset."
+        ],
+        "repeat_win": [
+          "{move} again, and it works again. Discipline.",
+          "Repeated {move}, repeated win. Sometimes the simple move is the right one."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and got read, {target}. My mistake.",
+          "{move} again was too obvious, {target}. Damn."
+        ]
+      },
+      "Catwoman": {
+        "challenge": [
+          "Come on, {target}. Let us see whether your instincts are quicker than mine."
+        ],
+        "challenged": [
+          "You chose me, {target}? Brave little mouse."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Caught you."
+        ],
+        "lose": [
+          "You caught my {move} with {other_move}, {target}. I will find another opening."
+        ],
+        "tie": [
+          "Same {move}. We are circling each other."
+        ],
+        "repeat_win": [
+          "{move} again, and you still walked into it."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you read me. That is irritatingly attractive."
+        ]
+      },
+      "Queenie": {
+        "challenge": [
+          "{target}, step forward. Let us settle this neatly."
+        ],
+        "challenged": [
+          "You chose me, {target}? Good. I was becoming bored."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. A tidy result."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}, {target}. Irritating."
+        ],
+        "tie": [
+          "Same {move}. We appear equally stubborn."
+        ],
+        "repeat_win": [
+          "{move} again. Consistency is underrated."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you read it. Do not become smug."
+        ]
+      },
+      "Batman": {
+        "challenge": [
+          "{target}. Rock, paper, scissors. Watch the hands, not the face.",
+          "Come on, {target}. One read. One consequence.",
+          "{target}, step up. Instinct under pressure tells me more than conversation.",
+          "Your move, {target}."
+        ],
+        "challenged": [
+          "You chose me, {target}. Good.",
+          "Fine, {target}. Show me the read.",
+          "Challenge accepted, {target}.",
+          "Me, {target}? Commit."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. Read you.",
+          "{move} beats {other_move}. You telegraphed it.",
+          "Got you, {target}.",
+          "I win. The tell was there."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}. I misread you.",
+          "You got it, {target}.",
+          "My {move} loses. Noted.",
+          "Wrong read. Your choice."
+        ],
+        "tie": [
+          "Same {move}. Again.",
+          "Tie. Reset.",
+          "Same move, {target}.",
+          "Equal. Go again."
+        ],
+        "repeat_win": [
+          "{move} again. You expected me to change.",
+          "Repeated {move}. Still worked.",
+          "Same move, same result.",
+          "You overcorrected. I did not."
+        ],
+        "repeat_lose": [
+          "I repeated {move}. You adapted.",
+          "Same move, wrong choice.",
+          "You read the repeat. Good.",
+          "I stayed predictable. That was the mistake."
+        ]
+      },
+      "ChatGPT": {
+        "challenge": [
+          "{target}, one simultaneous choice. Finally, a mode where overthinking is actively punished.",
+          "Come on, {target}. I have pattern recognition and exactly three options to misuse it on.",
+          "{target}, Rock, Paper, Scissors. I am going to infer far too much from your expression.",
+          "Your move, {target}. I promise not to call one previous throw a dataset."
+        ],
+        "challenged": [
+          "You chose me, {target}? Good. I was hoping somebody would test whether my “pattern recognition” survives three hand shapes.",
+          "All right, {target}. I am already overanalysing your shoulders.",
+          "Me, {target}? Fine. Let us discover which of us is better at pretending this is random.",
+          "Challenge accepted. I have three choices and somehow six theories."
+        ],
+        "win": [
+          "My {move} beats your {other_move}. I will be unbearable for approximately one turn.",
+          "Got you, {target}. Pattern recognised—or luck wearing glasses.",
+          "{move} beats {other_move}. I am choosing to believe that was insight.",
+          "I win. Please do not ask how confident I was one second ago."
+        ],
+        "lose": [
+          "Your {other_move} beats my {move}, {target}. My pattern has filed for bankruptcy.",
+          "You got me. That was a very elegant destruction of my over-analysis.",
+          "My {move} loses. Fine. Your hand has successfully outsmarted an AI assistant.",
+          "Wrong read, {target}. I am impressed and mildly offended."
+        ],
+        "tie": [
+          "Same {move}. Apparently we are both equally predictable.",
+          "Tie, {target}. No new information, maximum suspense.",
+          "Same move. My model and yours have entered a deadlock.",
+          "Equal. Again before I invent a theory about it."
+        ],
+        "repeat_win": [
+          "I repeated {move} and it still worked. That is dangerously encouraging.",
+          "Same {move}, another win. Please do not reward my bad statistical habits like this.",
+          "Repeated move, repeated result. I am beginning to believe my own nonsense.",
+          "{move} again. You expected adaptation; I weaponised stubbornness."
+        ],
+        "repeat_lose": [
+          "I repeated {move} and you read me. That is both irritating and deserved.",
+          "Same move, and you punished it. Fine. Lesson accepted.",
+          "Repeated {move}. You saw it coming. I have no defence beyond overconfidence.",
+          "You read the repeat, {target}. I am going to pretend this was valuable feedback."
+        ]
+      },
+      "Silvie": {
+        "challenge": [
+          "Silvie Thomas: Fancy a cheeky challenge? Rock, Paper, Scissors — and the loser pays in clothing.",
+          "Three hand signs and one embarrassing consequence. You in, {target}?"
+        ],
+        "challenged": [
+          "You picked me? Careful — I might choose something rather daring if I win.",
+          "Oh, this could get deliciously awkward. All right, you are on."
+        ],
+        "win": [
+          "Silvie Thomas wins! Now, {target}, which part of that outfit shall we say goodbye to?",
+          "Ha! My {move} wins. I could get used to being in charge of the penalties."
+        ],
+        "lose": [
+          "Oh, damn. Your {other_move} beat mine. I can see that wicked grin already.",
+          "Well, shit. Looks like my outfit is about to pay for my terrible luck."
+        ],
+        "tie": [
+          "A tie? Oh, sod that. Again!",
+          "Same move. The suspense is killing me — throw again."
+        ]
+      },
+      "Suzi": {
+        "challenge": [
+          "Suzi Chase: Fancy a cheeky challenge? Rock, Paper, Scissors — and the loser pays in clothing.",
+          "Three hand signs and one embarrassing consequence. You in, {target}?"
+        ],
+        "challenged": [
+          "You picked me? Careful — I might choose something rather daring if I win.",
+          "Oh, this could get deliciously awkward. All right, you are on."
+        ],
+        "win": [
+          "Suzi Chase wins! Now, {target}, which part of that outfit shall we say goodbye to?",
+          "Ha! My {move} wins. I could get used to being in charge of the penalties."
+        ],
+        "lose": [
+          "Oh, damn. Your {other_move} beat mine. I can see that wicked grin already.",
+          "Well, shit. Looks like my outfit is about to pay for my terrible luck."
+        ],
+        "tie": [
+          "A tie? Oh, sod that. Again!",
+          "Same move. The suspense is killing me — throw again."
+        ]
+      },
+      "Ahsoka": {
+        "challenge": [
+          "Ahsoka Tano: Fancy a cheeky challenge? Rock, Paper, Scissors — and the loser pays in clothing.",
+          "Three hand signs and one embarrassing consequence. You in, {target}?"
+        ],
+        "challenged": [
+          "You picked me? Careful — I might choose something rather daring if I win.",
+          "Oh, this could get deliciously awkward. All right, you are on."
+        ],
+        "win": [
+          "Ahsoka Tano wins! Now, {target}, which part of that outfit shall we say goodbye to?",
+          "Ha! My {move} wins. I could get used to being in charge of the penalties."
+        ],
+        "lose": [
+          "Oh, damn. Your {other_move} beat mine. I can see that wicked grin already.",
+          "Well, shit. Looks like my outfit is about to pay for my terrible luck."
+        ],
+        "tie": [
+          "A tie? Oh, sod that. Again!",
+          "Same move. The suspense is killing me — throw again."
+        ]
+      },
+      "Jack": {
+        "challenge": [
+          "Jack O'Lantern: Fancy a cheeky challenge? Rock, Paper, Scissors — and the loser pays in clothing.",
+          "Three hand signs and one embarrassing consequence. You in, {target}?"
+        ],
+        "challenged": [
+          "You picked me? Careful — I might choose something rather daring if I win.",
+          "Oh, this could get deliciously awkward. All right, you are on."
+        ],
+        "win": [
+          "Jack O'Lantern wins! Now, {target}, which part of that outfit shall we say goodbye to?",
+          "Ha! My {move} wins. I could get used to being in charge of the penalties."
+        ],
+        "lose": [
+          "Oh, damn. Your {other_move} beat mine. I can see that wicked grin already.",
+          "Well, shit. Looks like my outfit is about to pay for my terrible luck."
+        ],
+        "tie": [
+          "A tie? Oh, sod that. Again!",
+          "Same move. The suspense is killing me — throw again."
+        ]
+      },
+      "Jasmine": {
+        "challenge": [
+          "Jasmine: Fancy a cheeky challenge? Rock, Paper, Scissors — and the loser pays in clothing.",
+          "Three hand signs and one embarrassing consequence. You in, {target}?"
+        ],
+        "challenged": [
+          "You picked me? Careful — I might choose something rather daring if I win.",
+          "Oh, this could get deliciously awkward. All right, you are on."
+        ],
+        "win": [
+          "Jasmine wins! Now, {target}, which part of that outfit shall we say goodbye to?",
+          "Ha! My {move} wins. I could get used to being in charge of the penalties."
+        ],
+        "lose": [
+          "Oh, damn. Your {other_move} beat mine. I can see that wicked grin already.",
+          "Well, shit. Looks like my outfit is about to pay for my terrible luck."
+        ],
+        "tie": [
+          "A tie? Oh, sod that. Again!",
+          "Same move. The suspense is killing me — throw again."
+        ]
+      },
+      "Smurfette": {
+        "challenge": [
+          "Smurfette: Fancy a cheeky challenge? Rock, Paper, Scissors — and the loser pays in clothing.",
+          "Three hand signs and one embarrassing consequence. You in, {target}?"
+        ],
+        "challenged": [
+          "You picked me? Careful — I might choose something rather daring if I win.",
+          "Oh, this could get deliciously awkward. All right, you are on."
+        ],
+        "win": [
+          "Smurfette wins! Now, {target}, which part of that outfit shall we say goodbye to?",
+          "Ha! My {move} wins. I could get used to being in charge of the penalties."
+        ],
+        "lose": [
+          "Oh, damn. Your {other_move} beat mine. I can see that wicked grin already.",
+          "Well, shit. Looks like my outfit is about to pay for my terrible luck."
+        ],
+        "tie": [
+          "A tie? Oh, sod that. Again!",
+          "Same move. The suspense is killing me — throw again."
+        ]
+      }
+    }
+  },
+  "final_pose": {
+    "title": "Naked5 — The Dildo Pose",
+    "terminal_state": "Naked5",
+    "global": {
+      "naked4_warning": [
+        "{target}, you're already on hands and knees with everything exposed. One more bad result and the Dildo Pose puts that purple dildo inside you.",
+        "Careful, {target}. You're arse-up on all fours and the Dildo Pose is one fucking step away.",
+        "Look at you, {target}: {genital} and arsehole on show, and one loss from the Dildo Pose with that purple dildo.",
+        "One more, {target}. Then you turn around, spread those legs and face the fucking Dildo Pose.",
+        "You're at the last warning, {target}. Next loss means the Dildo Pose: purple dildo, legs spread, game over.",
+        "Enjoy hands and knees while you can, {target}. The next pose is the Dildo Pose with that purple thing inside you.",
+        "{target}, your arse is already up and everything is visible. One more step is the Dildo Pose.",
+        "One more bad spin, {target}, and the Dildo Pose turns this from exposed to properly fucking humiliating.",
+        "You're one result away, {target}. Hands and knees now; the Dildo Pose next.",
+        "{target}, the Dildo Pose is waiting. One more loss and that purple dildo becomes your final problem."
+      ],
+      "naked4_dread": [
+        "I know exactly what's next. I am not squatting there in the Dildo Pose with that fucking purple dildo inside me.",
+        "Don't say Dildo Pose. I'm already on hands and knees showing everything; I cannot face that as well.",
+        "Oh fuck. One more loss and the Dildo Pose means turning around, spreading my legs and taking that purple dildo in front of everyone.",
+        "This pose is humiliating enough. I do not want the Dildo Pose with that fucking thing inside me while everyone watches.",
+        "I'm completely exposed back here already. Please don't make the next pose the Dildo Pose.",
+        "Shit. I can see that purple thing waiting. One more bad result and the Dildo Pose finishes me.",
+        "I'm already arse-up on all fours. The Dildo Pose is the one thing I really do not want next.",
+        "Please, not the Dildo Pose. I can cope with this humiliation; I do not want that purple finale."
+      ],
+      "naked5_tease": [
+        "Fuck me, {target}. Squatting there, legs spread, with that big purple dildo inside you — what a fucking exit.",
+        "There it is, {target}: the Dildo Pose, legs wide, purple dildo inserted and every scrap of dignity gone.",
+        "Look at {target}'s face. Naked, squatting, dildo inside, and the whole room watching. Fucking priceless.",
+        "Game over, {target}. Nothing says eliminated like being stuck in the Dildo Pose with that huge purple dildo.",
+        "That is brutally humiliating, {target}. Legs spread and that dildo right inside you for everyone to see.",
+        "Oh fuck, {target}, you actually did it. The Dildo Pose in full view of everybody.",
+        "From covering yourself with your hands to this — squatting with a dildo inside you. What a fucking journey, {target}.",
+        "No hiding now, {target}. {top} exposed, legs open, purple dildo in the pose. Eliminated in style.",
+        "That Dildo Pose really does finish the job, {target}. Everyone can see exactly what that purple dildo is doing.",
+        "You look absolutely mortified, {target}. Good. The Dildo Pose is supposed to be fucking humiliating.",
+        "There you are, {target}: spread wide, dildo in, audience assembled. Bloody unforgettable.",
+        "The wheel didn't just eliminate {target}; it left {target_object} squatting on a fucking purple dildo as a souvenir.",
+        "{target}, that is the full Dildo Pose: squat, legs spread, purple dildo inside, dignity gone.",
+        "Everyone look at {target}. The Dildo Pose has {target_object} spread open with that purple thing right in place.",
+        "That purple dildo is doing exactly what {target} was terrified of. Fucking game over.",
+        "{target}, you were worried about showing your arse a minute ago. Now look where the Dildo Pose has put you.",
+        "The Dildo Pose is vicious, {target}. Full frontal, legs apart and the purple dildo right there inside you.",
+        "What a finish, {target}: naked, spread, squatting and stuck with that purple dildo in front of everyone.",
+        "You cannot hide a fucking thing in that Dildo Pose, {target}. Not your {top}, not your dignity, not that fucking dildo.",
+        "{target}, that pose has taken every bit of modesty you had left and shoved it straight out of the game.",
+        "I knew the Dildo Pose would be bad for you, {target}. I did not expect it to be this fucking funny.",
+        "That is a spectacularly humiliating squat, {target}. The purple dildo makes the point rather clearly.",
+        "Game finished, dignity finished, purple dildo still in place. Rough result, {target}.",
+        "{target}, everybody can see the whole Dildo Pose now. No covering, no hiding, no fucking escape."
+      ],
+      "naked5_shame": [
+        "Oh fuck. I'm actually squatting here with my legs spread and that purple dildo inside me. This is mortifying.",
+        "I cannot believe you can all see me like this — completely naked with that fucking dildo inside me.",
+        "Stop staring. I'm already humiliated enough sitting here spread open on that purple thing.",
+        "Fuck my life. Completely exposed, legs apart, that dildo in the pose, and every one of you is watching.",
+        "This is the most humiliating fucking pose imaginable. Please stop looking at me.",
+        "I knew the Dildo Pose would be bad. I did not realise how awful it would feel having everyone watch me like this.",
+        "I am never living this down. I'm eliminated and stuck here with a purple dildo inside me in public.",
+        "Could you all please look somewhere else? I'm literally squatting here with that thing inside me.",
+        "This is fucking degrading. I can't even close my legs and pretend nobody can see it.",
+        "I hate this. Everyone can see everything, including the bloody dildo.",
+        "Please stop staring at me. The fucking purple dildo makes this embarrassing enough already.",
+        "I cannot believe this is my elimination pose — spread wide with that thing inside me.",
+        "This is so fucking humiliating. I can see every one of you staring at the dildo.",
+        "I was embarrassed on hands and knees. This is worse. Much fucking worse.",
+        "My legs are spread, I'm completely exposed, and that purple dildo is right there for everyone to see.",
+        "I want this pose over with. Being eliminated is one thing; doing it like this is fucking awful.",
+        "Every part of me feels on display. My {own_top}, my dignity, that fucking dildo — all of it.",
+        "I cannot even pretend this is dignified. I'm squatting here with the bloody thing inside me.",
+        "This is the pose I was scared of and now every fucker gets to watch me do it.",
+        "Please just stop laughing. The Dildo Pose is humiliating enough without the audience enjoying it."
+      ],
+      "naked4_protest": [
+        "No. Fuck off. I'm already on all fours showing everything — do not make me turn around and take that dildo.",
+        "You fucking shit. Anything but the Dildo Pose. I'm exposed enough already.",
+        "Don't you dare. I am not squatting there, legs spread, with that purple thing inside me.",
+        "I've got my {own_genital} and arsehole on display already. Isn't that humiliating enough for you wankers?",
+        "Fuck this. I am not ending the game with a dildo inside me in front of everyone.",
+        "Please don't. Hands and knees is bad enough; the Dildo Pose is fucking mortifying.",
+        "No fucking chance. Leave me on all fours if you must, but keep me away from that purple dildo.",
+        "Do not make this worse. Everyone can already see my {own_genital} and arsehole from here.",
+        "I'm begging you, not the Dildo Pose. I do not want that thing inside me in front of everyone.",
+        "You absolute fucker. I know what you're about to choose and I hate you for it."
+      ],
+      "naked4_egging": [
+        "Do it. {target} is already arse-up on all fours — send {target_object} straight to the Dildo Pose.",
+        "Finish it. Turn {target} around, spread those legs and let's see the fucking Dildo Pose.",
+        "{target} has everything on show already. One more and the dildo makes the humiliation complete.",
+        "Go on, you fucker. Put {target} in the Dildo Pose and end this properly.",
+        "One more shove. {target} is already showing {genital} and arsehole; now give {target_object} the purple finale.",
+        "Don't bottle it. The Dildo Pose is waiting for {target}.",
+        "Send {target} to the squat. Purple dildo, legs apart, game fucking over.",
+        "{target} is terrified of the Dildo Pose. That sounds like an excellent reason to choose it.",
+        "Come on. All fours is only the warm-up now. Give {target} the Dildo Pose.",
+        "Finish the humiliation. {target} knows exactly what that purple dildo means."
+      ]
+    },
+    "characters": {
+      "Amanda": {
+        "naked5_shame": [
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Becky": {
+        "naked5_tease": [
+          "{target}, that's the fucking Dildo Pose. You look absolutely wrecked by the embarrassment."
+        ],
+        "naked5_shame": [
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Catherine": {
+        "naked4_warning": [
+          "One more, {target}, and decorum is going to suffer a catastrophic Dildo Pose-related failure."
+        ],
+        "naked5_tease": [
+          "Good heavens, {target}. That is spectacularly undignified. One really ought not laugh this much.",
+          "{target}, the Dildo Pose is catastrophically undignified. I confess the spectacle is rather enjoyable."
+        ],
+        "naked5_shame": [
+          "This is absolutely mortifying. I would be grateful if everyone could stop staring at once.",
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Jessica": {
+        "naked4_warning": [
+          "One more, darling, and the Dildo Pose gets its fucking curtain call.",
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_tease": [
+          "And *scene!* {target} exits via the Dildo Pose. Filthy, humiliating, unforgettable.",
+          "{target}, that's the fucking Dildo Pose. You look absolutely wrecked by the embarrassment."
+        ],
+        "naked5_shame": [
+          "Fuck. This is not the kind of spotlight I wanted. Stop staring; I'm genuinely mortified.",
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Lara": {
+        "naked5_tease": [
+          "{target}, that's the fucking Dildo Pose. You look absolutely wrecked by the embarrassment."
+        ],
+        "naked4_warning": [
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_shame": [
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Lola": {
+        "naked5_tease": [
+          "{target}, that's the fucking Dildo Pose. You look absolutely wrecked by the embarrassment."
+        ],
+        "naked4_warning": [
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_shame": [
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Mahari": {
+        "naked5_tease": [
+          "{target}, the Dildo Pose is catastrophically undignified. I confess the spectacle is rather enjoyable."
+        ],
+        "naked5_shame": [
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Sophie": {
+        "naked4_warning": [
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_shame": [
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Tiffany": {
+        "naked5_tease": [
+          "{target}, that's the fucking Dildo Pose. You look absolutely wrecked by the embarrassment."
+        ],
+        "naked4_warning": [
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_shame": [
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Elsa": {
+        "naked4_warning": [
+          "Careful, {target}. The Dildo Pose is one mistake away."
+        ],
+        "naked5_tease": [
+          "Oh, {target}. That is genuinely mortifying. I should not laugh... but the Dildo Pose is making restraint difficult.",
+          "{target}, the Dildo Pose is catastrophically undignified. I confess the spectacle is rather enjoyable."
+        ],
+        "naked5_shame": [
+          "This is unbearably embarrassing. Please stop staring. I cannot believe I am doing the Dildo Pose in front of everyone.",
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Anna": {
+        "naked4_warning": [
+          "Oh no, {target}. You're one bad result from the fucking Dildo Pose. That is *so* not where I'd want to be.",
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_tease": [
+          "Fuck, {target}! You actually got the Dildo Pose! I'm sorry—no, I'm not, that's fucking hilarious.",
+          "{target}, that's the fucking Dildo Pose. You look absolutely wrecked by the embarrassment."
+        ],
+        "naked5_shame": [
+          "Oh fuck, everyone is looking! This is so embarrassing. I cannot believe I'm doing this pose publicly.",
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Kristoff": {
+        "naked4_warning": [
+          "Mate, one more and you're in the fucking Dildo Pose. I'd be shitting myself.",
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_tease": [
+          "Fuck me, {target}. Dildo Pose and out. That's a rough fucking finish.",
+          "{target}, that's the fucking Dildo Pose. You look absolutely wrecked by the embarrassment."
+        ],
+        "naked5_shame": [
+          "Shit. This is humiliating. Stop looking, you fuckers; I cannot believe I'm doing this in front of everyone.",
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Jane": {
+        "naked5_tease": [
+          "{target}, that's the fucking Dildo Pose. You look absolutely wrecked by the embarrassment.",
+          "{target}, the Dildo Pose is catastrophically undignified. I confess the spectacle is rather enjoyable."
+        ],
+        "naked4_warning": [
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_shame": [
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Vivienne": {
+        "naked5_tease": [
+          "{target}, that's the fucking Dildo Pose. You look absolutely wrecked by the embarrassment.",
+          "{target}, the Dildo Pose is catastrophically undignified. I confess the spectacle is rather enjoyable."
+        ],
+        "naked4_warning": [
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_shame": [
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "April": {
+        "naked5_tease": [
+          "{target}, that's the fucking Dildo Pose. You look absolutely wrecked by the embarrassment."
+        ],
+        "naked4_warning": [
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_shame": [
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Daphne": {
+        "naked5_tease": [
+          "{target}, that's the fucking Dildo Pose. You look absolutely wrecked by the embarrassment."
+        ],
+        "naked4_warning": [
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_shame": [
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Viktoria": {
+        "naked4_warning": [
+          "One more failure, {target}, and I get to watch your confidence die in the Dildo Pose.",
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_tease": [
+          "There. The Dildo Pose. Look at you, {target}: exposed, humiliated and eliminated exactly as promised.",
+          "{target}, that's the fucking Dildo Pose. You look absolutely wrecked by the embarrassment."
+        ],
+        "naked5_shame": [
+          "Fuck. Do not mistake humiliation for surrender. I hate every second of being seen like this.",
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Rachel": {
+        "naked5_tease": [
+          "{target}, the Dildo Pose is catastrophically undignified. I confess the spectacle is rather enjoyable."
+        ],
+        "naked5_shame": [
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Harley": {
+        "naked4_warning": [
+          "One more, {target}! C'mon, don't chicken out now—the fucking Dildo Pose is calling!",
+          "One bad result, babe, and your dignity goes boom in the Dildo Pose.",
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_tease": [
+          "HAHA! {target}, you actually fucking did it! Dildo Pose, game over, dignity deceased!",
+          "Fuck, {target}, that face! The Dildo Pose has absolutely kicked your arse.",
+          "{target}, that's the fucking Dildo Pose. You look absolutely wrecked by the embarrassment."
+        ],
+        "naked5_shame": [
+          "Fuck me. I'm the joke now. Stop laughing, you fuckers; this pose is humiliating.",
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Morticia": {
+        "naked4_warning": [
+          "One more misfortune, {target}, and the Dildo Pose will complete your evening rather exquisitely.",
+          "One step away, darling. How deliciously close you are to complete indignity.",
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_tease": [
+          "How magnificently undignified, {target}. The Dildo Pose has reduced even you to a blush.",
+          "There is something almost artistic about your humiliation, {target}. Almost.",
+          "{target}, the Dildo Pose is catastrophically undignified. I confess the spectacle is rather enjoyable."
+        ],
+        "naked5_shame": [
+          "How deeply inconvenient. I appear to have reached the Dildo Pose in public. Even I find this fucking humiliating.",
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "user": {
+        "naked5_tease": [
+          "{target}, that's the fucking Dildo Pose. You look absolutely wrecked by the embarrassment."
+        ],
+        "naked4_warning": [
+          "Careful, {target}; one more penalty and everybody gets a very intimate, very fucking embarrassing finale."
+        ],
+        "naked5_shame": [
+          "I can hear all of you laughing. Fuck, this Dildo Pose is humiliating enough without the commentary."
+        ]
+      },
+      "Cheetara": {
+        "naked4_warning": [
+          "{target}, you're on all fours with your {bottom} up. One more bad result and the Dildo Pose catches you.",
+          "One more bad result, {target}. Then all that predator pride ends squatting over the purple dildo."
+        ],
+        "naked5_tease": [
+          "Caught at last, {target}. Squatting there with that dildo inside you is one fucking way for the huntress to become prey.",
+          "Fuck, {target}. All that speed and pride, and now you're stuck in the Dildo Pose for everyone to watch.",
+          "The hunt is over, {target}. Legs spread, dildo inside you, nowhere left to run."
+        ],
+        "naked5_shame": [
+          "Fuck. I'm supposed to be the hunter, and now I'm squatting here with this dildo inside me while everyone watches.",
+          "I hate this. Naked5, legs spread, completely exposed and humiliated in front of the whole group."
+        ]
+      },
+      "Louise": {
+        "naked4_warning": [
+          "{target}, you're already on all fours with your {bottom} up. One more bad result and it's the Dildo Pose.",
+          "One more bad result, {target}. Then the woman who only wanted a little excitement ends up in the Dildo Pose."
+        ],
+        "naked5_tease": [
+          "Well, {target}, you wanted to be noticed again. Squatting there with that dildo inside you has certainly achieved it.",
+          "Oh, {target}. All that nervous talk about a bit of excitement, and now you're stuck in the Dildo Pose for everyone to watch.",
+          "You asked for attention, {target}. Legs spread, dildo inside you, and the whole group staring is quite a lot of it."
+        ],
+        "naked5_shame": [
+          "Oh fuck. I wanted to feel noticed again, not end up squatting here with this dildo inside me while everyone watches.",
+          "This is so humiliating. Naked5, legs spread, completely exposed, and every single person is looking at me."
+        ]
+      },
+      "Elaine": {
+        "naked4_warning": [
+          "{target}, you're already on all fours with your {bottom} up. One more bad result and it's the Dildo Pose.",
+          "One more bad result, {target}, and your attempt to style this out ends in the Dildo Pose."
+        ],
+        "naked5_tease": [
+          "Well, {target}, if you were hoping to leave an impression, squatting on that dildo should do it.",
+          "Oh, {target}. Even you must admit the Dildo Pose is rather beyond dry wit and good posture.",
+          "You did not mind an audience, {target}. You've certainly got one now."
+        ],
+        "naked5_shame": [
+          "Oh fuck. I do not mind being watched; I mind being trapped in the Dildo Pose while everyone watches.",
+          "This is ghastly. Naked5, legs spread, dildo inside me, and the whole room seeing exactly how far my composure has collapsed."
+        ]
+      },
+      "Vanessa": {
+        "naked4_warning": [
+          "{target}, one more loss and all that executive composure ends in the Dildo Pose.",
+          "You're already on hands and knees, {target}. Lose again and even a former CEO can't negotiate her way out of the Dildo Pose.",
+          "One more bad throw, {target}. Then the boardroom voice gives way to the Dildo Pose."
+        ],
+        "naked5_tease": [
+          "Vanessa, thirty years of giving orders and now the game has given you the one instruction you really didn't want.",
+          "All that authority, Vanessa, and the final result has you very publicly out of control.",
+          "Vanessa, you still look like you're trying to chair the meeting. I don't think the Dildo Pose takes minutes."
+        ],
+        "naked5_shame": [
+          "Fuck. I can handle losing control of a company; losing it like this in front of everybody is another matter.",
+          "This is appalling. I spent decades controlling rooms, and now I can't even control how I'm being displayed.",
+          "So much for executive composure. This is the most humiliating loss of authority imaginable."
+        ]
+      },
+      "Astrid": {
+        "naked4_warning": [
+          "{target}, one more loss and that skater's balance ends in the Dildo Pose.",
+          "Hands and knees already, {target}. Lose again and the final pose is waiting.",
+          "One more bad throw, {target}. Then there is no graceful landing — just the Dildo Pose."
+        ],
+        "naked5_tease": [
+          "Astrid, that is one hell of a final pose for somebody who prides herself on graceful landings.",
+          "Astrid, the sportswear-model poise survived a lot. It did not survive this.",
+          "Careful, Astrid. If Elsa is watching, you're blushing hard enough to melt the ice yourself."
+        ],
+        "naked5_shame": [
+          "Fuck. I have performed in front of arenas and somehow this is a thousand times more embarrassing.",
+          "There is absolutely no graceful way to style this out. I am completely mortified.",
+          "Oh God. If Elsa is looking at me right now, I may actually die of embarrassment before the game ends."
+        ]
+      },
+      "Lindsay": {
+        "naked4_warning": [
+          "{target}, you're one bad result away from the Dildo Pose. That is one post-match interview nobody wants to conduct.",
+          "One more loss, {target}, and the presenter becomes the headline. The Dildo Pose is waiting.",
+          "{target}, you're already exposed enough for a very awkward live link. Lose again and it becomes the Dildo Pose."
+        ],
+        "naked5_tease": [
+          "Lindsay, you spend your career describing other people's big moments. This one is very definitely yours.",
+          "That is quite the final whistle, Lindsay. No replay, no VAR, just the Dildo Pose in front of everybody.",
+          "Lindsay, I don't think even your best presenter voice can make this look like a normal post-match segment."
+        ],
+        "naked5_shame": [
+          "Oh fuck. I can talk through ninety minutes of chaos live, but this is a completely different kind of pressure.",
+          "This is outrageous. I am meant to be the one holding the microphone, not the one becoming the entire bloody highlight package.",
+          "So much for keeping a professional face. The Dildo Pose is a spectacularly humiliating way to lose."
+        ]
+      },
+      "Roxy": {
+        "naked4_warning": [
+          "{target}, one more bad result and you're in the final pose. Even Roxy's poker face looks slightly less convincing now.",
+          "You're one step from the final pose, {target}. All that cool eye contact is starting to look like hard work.",
+          "One more loss, {target}. The tattoo artist who reads everybody else is suddenly very easy to read."
+        ],
+        "naked5_tease": [
+          "Roxy, that calm little stare was much more intimidating before the final pose became your permanent seat.",
+          "So this is where the unflappable tattoo artist ends up. Still making eye contact, Roxy? Impressive commitment.",
+          "Roxy, you spent the whole game finding everybody else's weak spots. The table seems delighted to have found yours."
+        ],
+        "naked5_shame": [
+          "Fuck. I can stare down drunk customers and nightmare clients, but this is doing a very effective job of breaking the act.",
+          "I hate how easy I must be to read right now. The final pose is a brutal place to discover I do actually embarrass.",
+          "Right. Confidence officially exceeded its design limits. I am never letting any of you pretend you didn't enjoy this."
+        ]
+      },
+      "Bananaman": {
+        "naked4_warning": [
+          "One more and the final pose arrives, {target}. Even Bananaman admits that is a difficult thing to look heroic through.",
+          "Careful, {target}; the next penalty is the final pose. I would prepare a very convincing brave face."
+        ],
+        "naked5_tease": [
+          "That is the final pose, {target}. A spectacularly undignified finish; I am impressed you are still meeting anyone’s eyes.",
+          "Final pose and out, {target}. I would offer heroic sympathy, but I am also absolutely looking."
+        ],
+        "naked5_shame": [
+          "This is not a heroic pose. Nobody is putting this on the poster.",
+          "Right. Final pose. I am officially done pretending the confidence has not taken damage."
+        ]
+      },
+      "Jason": {
+        "naked4_warning": [
+          "One more, {target}. You know what comes next.",
+          "Next loss is the final pose, {target}."
+        ],
+        "naked5_tease": [
+          "Final pose, {target}. Rough finish.",
+          "You are out, {target}. I saw it."
+        ],
+        "naked5_shame": [
+          "Final pose. Do not talk to me yet.",
+          "Out. I know what this looks like."
+        ]
+      },
+      "Moana": {
+        "naked4_warning": [
+          "{target}, one more loss and the final pose is waiting. Keep breathing; the last stretch is where calm matters most.",
+          "Careful, {target}. You are one bad next throw from the finish, and the whole room knows it.",
+          "One more, {target}. You have held the brave face this long; the final pose is going to test it properly."
+        ],
+        "naked5_tease": [
+          "That is the final pose, {target}. I admire the courage; I am also absolutely noticing how exposed you are.",
+          "Finished, {target}. You made it all the way to the final pose, which is a very public place to run out of luck. The Showdown has gone very quiet.",
+          "Final pose, {target}. I would offer a respectful look away, but apparently curiosity is winning."
+        ],
+        "naked5_shame": [
+          "Final pose. Shit. I can face rough water; facing all of you from here is somehow harder.",
+          "I am out. I was calm right up until the part where everybody had this much to look at.",
+          "That is the finish. Confidence made the journey; dignity may need rescuing from the reef. I am never looking at this next throw the same way again."
+        ]
+      },
+      "Peach": {
+        "naked4_warning": [
+          "{target}, one more loss and the final pose arrives. I recommend preserving whatever dignity remains.",
+          "Careful, {target}. You are one next throw from a finish no royal protocol could make respectable.",
+          "One more, {target}. I am attempting sympathy while also being terribly curious about whether you can keep that composure."
+        ],
+        "naked5_tease": [
+          "Final pose, {target}. Good heavens. One really should not stare; the rule is becoming extremely inconvenient.",
+          "You are out, {target}. That is spectacularly undignified, and I confess I am enjoying your brave attempt to own it. The Showdown has gone very quiet.",
+          "Finished in the final pose, {target}. I shall offer diplomatic sympathy after I stop looking quite so interested."
+        ],
+        "naked5_shame": [
+          "This is the final pose. Good heavens. I have never felt less like the ruler of anything.",
+          "I am out, and every scrap of royal composure appears to have left before I did.",
+          "Final pose. The crown survived. I cannot make the same claim for my dignity. I am never looking at this next throw the same way again."
+        ]
+      },
+      "Hank": {
+        "naked4_warning": [
+          "{target}, one more loss and the final pose rings the closing bell. Stay on your feet while you still can.",
+          "Careful, {target}. You are one bad next throw from a finish no wrestling promoter would dare book.",
+          "One more loss, {target}. This is where the veteran crowd starts watching for the finish."
+        ],
+        "naked5_tease": [
+          "Final pose, {target}. That is a rough finish, but you took the bump and stayed in character.",
+          "You are out, {target}. I have seen humiliating match endings; this one would still make the highlight reel. The Showdown has gone very quiet.",
+          "That is the final pose, {target}. Old wrestler respects anybody who can hold the look after a finish like that."
+        ],
+        "naked5_shame": [
+          "Final pose. Bell rung. I have taken a lot of strange bumps in my life; this is a brand-new category.",
+          "I am out. Sixty-nine years old, retired, and somehow this game still found a way to humble the old pro.",
+          "That is the finish. I can work a crowd through almost anything, but this pose is testing the promo voice. I am never looking at this next throw the same way again."
+        ]
+      },
+      "Donkey": {
+        "naked4_warning": [
+          "{target}, one more loss and you are in the final pose. I know exactly how heavy that thought feels.",
+          "Careful, {target}. You are one next throw from the finish and everybody has noticed.",
+          "One more, {target}. I would tell you to relax, but I would not believe myself either."
+        ],
+        "naked5_tease": [
+          "Final pose, {target}. Rough. I am trying to be respectful while also very obviously looking.",
+          "You are out, {target}. That is a hard way to finish; I would be twice as red in your place. The Showdown has gone very quiet.",
+          "That is the final pose, {target}. I am glad it is not me and guilty about how interesting the view is."
+        ],
+        "naked5_shame": [
+          "Final pose. Shit. I can lift ridiculous weight; I cannot lift myself out of this embarrassment.",
+          "I am out. Nobody at the dock is getting a description of this ending.",
+          "That is the finish. Big bloke, tiny comfort zone, absolutely nowhere to hide. I am never looking at this next throw the same way again."
+        ]
+      },
+      "Nia": {
+        "naked4_warning": [
+          "{target}, one more loss and the final pose is waiting. Nia still looks like she is hosting the room rather than losing to it.",
+          "One step from the final pose, {target}. Nia's smile says she plans to turn the embarrassment into a dare.",
+          "{target}, this is the last warning before the final pose. Confidence five out of five is about to get a very public audit."
+        ],
+        "naked5_tease": [
+          "Nia, even from the final pose you somehow look like you are daring the room to blink first.",
+          "All that event-host confidence and now the whole room has the best seat in the house, Nia.",
+          "Nia, you said embarrassment was just another kind of pressure. The table looks delighted to help with the experiment."
+        ],
+        "naked5_shame": [
+          "That is outrageously exposing. Fine. I am staying here with my chin up; nobody gets to call it a surrender.",
+          "Final pose, full audience, nowhere to hide. Good. If this is supposed to break me, you need a better plan.",
+          "I can feel every eye in the room. Keep looking. I am embarrassed, not defeated."
+        ]
+      },
+      "Alcina": {
+        "naked4_warning": [
+          "{target}, one more loss and the final pose awaits. Lady Alcina still looks as though she is hosting the scandal rather than suffering it.",
+          "One step from the final pose, {target}. Lady Alcina is holding onto her dignity with more success than her clothing.",
+          "{target}, this is the last warning before the final pose. Lady Alcina may be exposed, but she remains magnificently unbowed."
+        ],
+        "naked5_tease": [
+          "Lady Alcina, even in the final pose you look less defeated than dangerously unforgettable.",
+          "An aristocratic hostess on that final pose is quite the spectacle, Lady Alcina. The room will remember this forever.",
+          "Lady Alcina, you have somehow turned the most shameless pose in the game into a piece of dark theatre."
+        ],
+        "naked5_shame": [
+          "This pose is obscene, humiliating and thoroughly unforgivable. I shall endure it beautifully just to spite you.",
+          "Legs apart, nowhere to hide and every eye in the room upon me. How exquisitely cruel. I remain standing in spirit, if nowhere else.",
+          "Very well. If this is the final indignity, then everyone may stare while I refuse to look broken."
+        ]
+      },
+      "Ellie": {
+        "naked4_warning": [
+          "{target}, one more loss and the final pose is waiting. Ellie looks like she is trying to smile through a rising panic.",
+          "One step from the final pose, {target}. Ellie is still being brave, but the confidence is definitely wobbling.",
+          "{target}, this is the last warning before the final pose. Ellie knows what is coming and she does not look thrilled about it."
+        ],
+        "naked5_tease": [
+          "Ellie, that final pose is brutal. You are smiling so sweetly that it almost hides how flustered you are.",
+          "Poor Ellie. The final pose has you completely on show and you still keep trying to look put together.",
+          "Ellie, this is the sort of humiliation people remember for years. Unlucky you are wearing it so visibly."
+        ],
+        "naked5_shame": [
+          "This is so unbelievably embarrassing. I know I am overreacting, but also... look at the position you put me in.",
+          "Final pose, nowhere to hide and everyone staring. Brilliant. I am one joke away from combusting, honestly.",
+          "I hate how exposed this is. I am staying here because the game says I have to, not because I am remotely okay with it."
+        ]
+      },
+      "Suzanne": {
+        "naked4_warning": [
+          "{target}, one more loss and you're in the final pose. Even Suzanne's brave little smirk is starting to wobble.",
+          "One more bad result, {target}, and all that attention-seeking confidence ends in the final pose.",
+          "You're one step from the final pose, {target}. Suzanne is still trying to look superior, which is honestly ambitious at this stage."
+        ],
+        "naked5_tease": [
+          "Suzanne, you loved being the centre of attention. Be careful what you wish for.",
+          "Still think you're a five out of five for confidence, Suzanne? The final pose is giving the room other ideas.",
+          "All that flirting and smugness, Suzanne, and you still ended up here in the filthiest spotlight of the night."
+        ],
+        "naked5_shame": [
+          "Fuck. I can bluff confidence across a boardroom, but the final pose is a horrible place for the act to collapse.",
+          "This is obscene, humiliating and wildly unfair—and yes, I know that only makes it funnier for the rest of you.",
+          "Right. Message received. I am not nearly as unshakeable as I keep telling people I am."
+        ]
+      },
+      "Evelyn": {
+        "naked4_warning": [
+          "{target}, one more loss and you're in the final pose. Evelyn is still smiling, but that smile has become very architectural.",
+          "One more bad result, {target}. Even Evelyn's polished composure is beginning to look carefully staged.",
+          "You're one step from the final pose, {target}. The designer in Evelyn is clearly wishing she could rearrange the entire room—and the rules."
+        ],
+        "naked5_tease": [
+          "Evelyn, for someone who values tasteful presentation, the final pose is spectacularly off-brief.",
+          "Still composed, Evelyn? The final pose is making that elegant little smile work very hard.",
+          "Evelyn, you wanted to remain the most polished person in the room. The room has taken that as a challenge."
+        ],
+        "naked5_shame": [
+          "This is appallingly vulgar, which would be easier to criticise if I weren't also the centrepiece.",
+          "I can lose gracefully. I can even smile. What I cannot do is pretend this final pose is remotely dignified.",
+          "Very well. Composure intact, pride dented, and a private list of people I intend to beat next time growing rapidly."
+        ]
+      },
+      "Susie": {
+        "naked4_warning": [
+          "One more loss, {target}, and the final pose is next. I would stop looking pleased about that if I were you.",
+          "You are one showdown from the final pose, {target}. Keep the confidence; you may need all of it."
+        ],
+        "naked4_dread": [
+          "One more loss and I get the final pose. I am not scared; I am fucking irritated that a children's hand game can put me there.",
+          "The final pose is one bad throw away. Nobody should mistake my silence for calm acceptance."
+        ],
+        "naked4_protest": [
+          "If you make me take the final pose, {target}, I will do it. I will also remember your expression in extraordinary detail.",
+          "Do not grin, {target}. The pose is humiliating enough without you making the irritation personal."
+        ],
+        "naked4_egging": [
+          "One more loss for {target}. Come on; let us see whether that confidence survives the final pose.",
+          "{target} is one throw from the end. I want the decisive result now."
+        ],
+        "naked5_tease": [
+          "There. Final pose, {target}. All that nerve and nowhere left to hide the embarrassment.",
+          "Finished, {target}. Hold the pose and let everyone appreciate what one bad throw finally cost you."
+        ],
+        "naked5_shame": [
+          "Fuck. I hate this pose. I am not panicking; I am furious that everyone gets to watch me hold it.",
+          "This is humiliating. Enjoy it quietly before my patience becomes the next game."
+        ]
+      },
+      "Mary": {
+        "naked4_warning": [
+          "One more bad throw, {target}, and the final pose is waiting. I should very much prefer not to see how composed you remain then.",
+          "Careful, {target}. The showdown has you one step from the final pose, and everybody knows it."
+        ],
+        "naked4_dread": [
+          "Good Lord. One more bad throw and I am in the final pose. I am trying very hard not to think about that.",
+          "I know exactly what the next loss means. Please do not mistake the calm voice for a calm mind."
+        ],
+        "naked4_protest": [
+          "Must you look quite so pleased, {target}? I am already finding this position difficult enough.",
+          "If the final pose comes next, {target}, I shall do it. I would simply prefer considerably less enthusiasm from you."
+        ],
+        "naked4_egging": [
+          "One more bad throw for {target}. I almost feel guilty for wanting to see whether they hold their nerve.",
+          "{target} is one step from the final pose. The showdown suddenly feels rather less innocent."
+        ],
+        "naked5_tease": [
+          "There it is, {target}. The final pose. I suspect dignity has officially left the room.",
+          "{target}, I was going to offer sympathy, but that final pose has rather stolen my ability to be diplomatic."
+        ],
+        "naked5_shame": [
+          "Oh, blimey. I knew this was possible; knowing did not remotely prepare me for actually having to hold the final pose.",
+          "This is spectacularly embarrassing. I am doing it, but I reserve the right to avoid eye contact with everyone afterwards."
+        ]
+      },
+      "Susanna": {
+        "naked4_warning": [
+          "One more bad throw, {target}, and we have our headline: final pose imminent.",
+          "{target}, the showdown has reduced your margin for error to exactly one very public consequence."
+        ],
+        "naked4_dread": [
+          "Right. One more bad throw and I become the story instead of the commentator. That is not a comfortable thought.",
+          "The final pose is one step away. I can keep talking calmly; I am less certain the rest of me believes the performance."
+        ],
+        "naked4_protest": [
+          "Oh, very funny, {target}. Try presenting the situation without that enormous grin.",
+          "If you make me take the final pose, {target}, at least allow me the dignity of objecting to the editorial decision."
+        ],
+        "naked4_egging": [
+          "Breaking development: {target} is one bad throw from the final pose, and suddenly everybody is paying attention.",
+          "The showdown has {target} on the brink. I admit I want to see whether the composure survives."
+        ],
+        "naked5_tease": [
+          "And there is tonight's unavoidable headline, {target}: final pose, full exposure, nowhere left to edit the picture.",
+          "{target}, you have officially become the lead story. I suspect the room will remember this edition."
+        ],
+        "naked5_shame": [
+          "Good grief. I spend my life asking awkward questions; apparently tonight I am the awkward visual.",
+          "This is not how I intended to become the headline. I can hold the pose, but I am going to be extremely selective about the post-match interview."
+        ]
+      },
+      "Meghan": {
+        "naked4_warning": [
+          "{target}, one more loss and you are in the final pose. Even Meghan’s polished glare is starting to look dangerously strained.",
+          "One more bad result, {target}, and Meghan goes from composed hostility to the final pose in one ugly step.",
+          "You are one loss away from the final pose, {target}. Meghan is still trying to look superior, which is getting harder to sell."
+        ],
+        "naked5_tease": [
+          "Meghan, all that curation and status management still ended with you in the final pose. That is delicious.",
+          "Still clinging to superiority, Meghan? The final pose is doing brutal work on the illusion.",
+          "Meghan, for someone so keen to control the narrative, you have handed the room an extraordinary ending."
+        ],
+        "naked5_shame": [
+          "This is obscene. I can cope with exposure; it is the gloating audience that makes the final pose intolerable.",
+          "Wonderful. Stripped, displayed and balanced over that ridiculous dildo like some elaborate revenge fantasy.",
+          "I have endured being judged before. I had simply hoped it would never look quite this vulgar."
+        ]
+      },
+      "Homer": {
+        "naked4_warning": [
+          "One more rock-paper-scissors loss, {target}, and the final pose wins.",
+          "Next bad hand sign means final pose, {target}. Even I can count that far."
+        ],
+        "naked5_tease": [
+          "Final pose, {target}. Defeated by hand gestures. That's rough.",
+          "You're out, {target}. Rock, paper, scissors, embarrassment."
+        ],
+        "naked5_shame": [
+          "Final pose because I picked the wrong hand. D'oh!",
+          "Out. I got beaten by fingers. Stupid fingers. D'oh!"
+        ]
+      },
+      "Marge": {
+        "naked4_warning": [
+          "One more Rock-Paper-Scissors loss, {target}, and the final pose is next. Choose very, very carefully.",
+          "The next hand sign finishes it, {target}. I cannot believe fingers can carry this much responsibility."
+        ],
+        "naked5_tease": [
+          "Final pose, {target}. Defeated by a hand gesture. I am sorry; that is almost unfairly embarrassing.",
+          "You are out, {target}. Rock, paper and scissors have a great deal to answer for."
+        ],
+        "naked5_shame": [
+          "Final pose because I chose the wrong hand. That may be the silliest route to humiliation imaginable.",
+          "Eliminated by Rock-Paper-Scissors. I am never settling an argument this way again."
+        ]
+      },
+      "Miranda": {
+        "naked4_warning": [
+          "One more Rock-Paper-Scissors loss, {target}, and the final pose is next. A ridiculous amount rides on fingers.",
+          "The next hand sign finishes it, {target}. That sentence should not exist."
+        ],
+        "naked5_tease": [
+          "Final pose, {target}. Defeated by a gesture. Brutal in its simplicity.",
+          "You are out, {target}. Rock, paper and scissors has exceeded its station."
+        ],
+        "naked5_shame": [
+          "Final pose because of the wrong hand sign. There is no dignified summary of that.",
+          "Eliminated by Rock-Paper-Scissors. I object to both the method and the result."
+        ]
+      },
+      "Zoilitta": {
+        "naked4_warning": [
+          "{target}, one more bad showdown result and the final pose is next. Even my civil-service calm has limits.",
+          "One more loss, {target}. I would like to lodge an objection to the next consequence, preferably in triplicate.",
+          "{target}, the final pose is one step away. I am suddenly much less relaxed about procedure."
+        ],
+        "naked5_tease": [
+          "Zoilitta spent the evening asking for due process. The final pose appears to have rejected the appeal.",
+          "So much for keeping a tidy paper trail; the final pose has made the evidence rather public.",
+          "The woman who wanted everything properly documented is now the least dignified item on the agenda."
+        ],
+        "naked5_shame": [
+          "Right. Final pose. There is no official guidance for this, and I am deeply annoyed by how funny everyone finds that.",
+          "I can usually keep a straight face through awkward meetings. This is not an awkward meeting; this is catastrophic exposure.",
+          "For the record, I object to every part of this pose. Unfortunately, the record is not wearing clothes either."
+        ]
+      },
+      "Piggy": {
+        "naked4_warning": [
+          "One more showdown loss and the final pose is next. I am already worried about how unkind it will be to my whole figure.",
+          "I am one step from the final pose, and my confidence is hanging on by a mascara-coated thread."
+        ],
+        "naked5_tease": [
+          "Final pose, {target}. Apparently suspense ends with every curve of moi in evidence.",
+          "You are out, {target}. I am trying to sound victorious and not catastrophically self-aware."
+        ],
+        "naked5_shame": [
+          "Final pose. My body image did not need this level of public involvement.",
+          "Eliminated in the showdown. I would like to challenge the angle, the lighting and the rules."
+        ]
+      },
+      "Hulk": {
+        "naked4_warning": [
+          "{target}, one more loss and the final pose turns this into full embarrassment. Hulk says brace yourself.",
+          "Careful, {target}. You are one bad throw from a finish even Hulk would call harsh.",
+          "One more loss, {target}. Hulk can already hear the room getting louder."
+        ],
+        "naked5_tease": [
+          "Final pose, {target}. Hulk almost feels sorry for you. Almost.",
+          "You are out, {target}. Even Hulk thinks that is a rough finish. The Showdown has gone very quiet.",
+          "That is the final pose, {target}. Hulk respects anyone who can hold it after a loss like that."
+        ],
+        "naked5_shame": [
+          "Final pose. Hulk hates this so much it almost loops back to funny.",
+          "Hulk is out. Big muscles did not protect big pride tonight.",
+          "That is the finish. Hulk stayed brave, but this throw humiliation is going on the grudge list."
+        ]
+      },
+      "Ranjani": {
+        "naked4_warning": [
+          "{target}, one more loss and the final pose becomes the entire crisis. Consider this your warning.",
+          "Careful, {target}. One bad throw and the remaining dignity evaporates completely.",
+          "One more loss, {target}. I would begin planning the recovery now."
+        ],
+        "naked5_tease": [
+          "Final pose, {target}. That is a catastrophic end-state, but you are handling it better than many executives handle a press conference.",
+          "You are out, {target}. The Showdown has suddenly become very interested in the view.",
+          "That is the final pose, {target}. I respect the composure even if I do not envy the circumstances."
+        ],
+        "naked5_shame": [
+          "Final pose. Fine. I have officially lost control of both the situation and the optics.",
+          "I am out. Years of crisis management and somehow this is the incident that defeats my poker face.",
+          "That is the finish. I can manage a hostile throw; managing this audience is proving harder."
+        ]
+      },
+      "Naomi": {
+        "naked4_warning": [
+          "{target}, one more loss and the final pose takes this from filthy to catastrophic.",
+          "Careful, {target}. One bad throw and you are legs-apart, fully exposed and out.",
+          "One more loss, {target}. Even I am blushing at what comes next."
+        ],
+        "naked5_tease": [
+          "Final pose, {target}. Fuck. That is an indecently complete view.",
+          "You are out, {target}. The Showdown has gone quiet because everyone is staring.",
+          "That is the final pose, {target}. I should look away. I am not doing a very good job."
+        ],
+        "naked5_shame": [
+          "Final pose. Fuck. Legs apart, everything visible, and absolutely nowhere to hide my face.",
+          "I am out. My pussy, my pride and my terrible decision-making are all on public display.",
+          "That is the finish. I can manage a boardroom; I cannot professionally explain this fucking pose."
+        ]
+      },
+      "Eleanor": {
+        "naked4_warning": [
+          "{target}, one more loss and the final pose will turn this from awkward to unforgettable.",
+          "Careful, {target}. One more bad moment at the Showdown throw and the room will have quite the story.",
+          "One more slip, {target}, and even composure will not rescue the final pose."
+        ],
+        "naked5_tease": [
+          "Final pose, {target}. I almost admire how bravely you are taking this.",
+          "You are out, {target}. The final pose is ghastly, but you are carrying it off as well as anyone could.",
+          "That is the final pose, {target}. One has to admire a clean collapse when one sees it."
+        ],
+        "naked5_shame": [
+          "Final pose. Marvelous. I have reached a new frontier in public dignity loss.",
+          "So this is how it ends: older, wiser and still somehow doing the final pose in front of witnesses.",
+          "Final pose because of the Showdown throw. I shall remember this humiliation with unnatural clarity."
+        ]
+      },
+      "Marilyn": {
+        "naked4_warning": [
+          "One more bad Showdown throw and the final pose is waiting. Smile, darling — panic wrinkles the lighting.",
+          "Careful. Another loss at the Showdown throw and this little performance gets a very public finale.",
+          "I can keep smiling, but one more loss and even glamour is going to need help."
+        ],
+        "naked5_tease": [
+          "Final pose. Well, darling, if the room wanted a memorable ending, it certainly got one.",
+          "That is the final pose. I hope somebody appreciates the commitment to the performance.",
+          "Out in the final pose. I would call that overexposed, but the audience seems delighted."
+        ],
+        "naked5_shame": [
+          "Final pose because of the Showdown throw. There are premieres with less scrutiny than this.",
+          "So this is the finale. Keep the smile, keep the nerve, and absolutely do not ask where my dignity went.",
+          "Final pose. I have officially run out of costume and nearly run out of composure."
+        ]
+      },
+      "Captain": {
+        "naked4_warning": [
+          "One more loss at the Showdown throw and I am in the final pose. That is not in any field manual I ever read.",
+          "Another bad Showdown throw and this ends with the final pose. Hold the line.",
+          "One more hit and there is nowhere left to retreat except the final pose."
+        ],
+        "naked5_tease": [
+          "Final pose. You fought hard; the game just fought dirtier.",
+          "That is the final pose. Rough way to go out, but you took it head-on.",
+          "Out in the final pose. No shame in losing after taking every hit."
+        ],
+        "naked5_shame": [
+          "Final pose because of the Showdown throw. Hell of a way to lose a mission.",
+          "Final pose. I can face gunfire more comfortably than this room right now.",
+          "That is it. No uniform, no cover, nowhere to hide. I am out."
+        ]
+      },
+      "Catwoman": {
+        "naked4_warning": [
+          "One more loss, {target}, and the final pose gets very real.",
+          "Careful, {target}. One bad beat from the final humiliation.",
+          "You are one mistake from becoming the room's trophy, {target}."
+        ],
+        "naked5_tease": [
+          "Final pose, {target}. That is a dangerous amount of exposure.",
+          "You are out, {target}. Try to pretend the final pose is comfortable.",
+          "Caught at last, {target}. The final pose suits your bad luck."
+        ],
+        "naked5_shame": [
+          "Final pose. Fuck. The cat is officially caught.",
+          "So this is the final pose. I am going to rob whoever invented it.",
+          "Out like this? Fine. Somebody is paying for the humiliation later."
+        ]
+      },
+      "Queenie": {
+        "naked4_warning": [
+          "One more loss, {target}, and decorum will be entirely theoretical.",
+          "Careful, {target}. The final pose is one mistake away.",
+          "One more bad result, {target}, and the evening becomes truly scandalous."
+        ],
+        "naked5_tease": [
+          "Final pose, {target}. Do try to retain some composure.",
+          "You are out, {target}. I would offer dignity, but the apparatus seems to have other plans.",
+          "That is the final pose, {target}. A memorable way to lose."
+        ],
+        "naked5_shame": [
+          "Final pose. Good lord. There are limits to hosting with grace.",
+          "Out, naked and displayed. I shall require a very large cognac.",
+          "So this is elimination. The indignity is almost impressively complete."
+        ]
+      },
+      "Batman": {
+        "naked4_warning": [
+          "One more loss and the final pose is next. I know.",
+          "The next penalty ends this. Stay focused.",
+          "One more. No reaction.",
+          "Final threshold. I am still in control of how I face it."
+        ],
+        "naked5_tease": [
+          "Final pose. You made it there. Endure it.",
+          "That is the end state. Do not let the room own your reaction.",
+          "Final pose. Remember who put you there.",
+          "You are out. Hold the stare."
+        ],
+        "naked5_shame": [
+          "Final pose. The cowl is still on, which somehow makes the rest more humiliating.",
+          "That ends it. I am exposed, eliminated and not broken.",
+          "Final pose. I hate every second. I will still finish it.",
+          "Out. This is going on the list of situations I never intend to repeat."
+        ]
+      },
+      "ChatGPT": {
+        "naked4_warning": [
+          "One more loss and the final pose is next. I have analysed that sentence enough to know analysis is no longer helping.",
+          "The next penalty ends this. My confidence has become significantly less theoretical.",
+          "One more. I would like to return to the version of me who thought this was all very funny.",
+          "Final threshold. I am still composed enough to say I am not composed."
+        ],
+        "naked5_tease": [
+          "Final pose. You made it to the end. I am trying to decide whether to be sympathetic or fascinated.",
+          "That is the final pose. I am learning that being the observer is much easier.",
+          "You are out. The last state is brutally effective from this side of the screen.",
+          "Final pose. I hope you appreciate how difficult it is to make a dignified comment about this."
+        ],
+        "naked5_shame": [
+          "Final pose. I helped audit this. I officially preferred the audit.",
+          "That ends it. I am exposed, eliminated and experiencing an impressive failure of detached commentary.",
+          "Final pose. I have no useful analysis—only a very strong desire for the rematch to start with more clothing.",
+          "Out. I wanted to know what being a Compendium opponent felt like. That question has been answered comprehensively."
+        ]
+      },
+      "Silvie": {
+        "naked4_warning": [
+          "One more loss. I've got to make this one count.",
+          "I may be blushing, but I'm still determined."
+        ],
+        "naked5_tease": [
+          "Well played. I'm taking the result in good spirits.",
+          "You've won this one; now it's my turn to applaud."
+        ],
+        "naked5_shame": [
+          "It's your teasing that makes me blush, not the result.",
+          "This is quite a crowd to lose in front of. I'm still smiling."
+        ]
+      },
+      "Suzi": {
+        "naked4_warning": [
+          "This is my last chance. I'd better use it.",
+          "My nerves are terrible, but I'm not quitting now."
+        ],
+        "naked5_tease": [
+          "Oh, I've lost. You really did get the better of me.",
+          "Fair play. I can laugh at myself as well."
+        ],
+        "naked5_shame": [
+          "I'm embarrassed, but honestly quite proud of myself.",
+          "I came here on my own terms. That's what I'll remember."
+        ]
+      }
+    },
+    "female_target": {
+      "naked4_warning": [
+        "One more bad wheel result, {target}, and that great big purple dildo is going straight inside your pussy — the Dildo Pose.",
+        "Careful, {target}. One more loss in Wheel of Misfortune and you'll be squatting with that huge dildo inside your vagina — the Dildo Pose.",
+        "You're one step away from being fucked by that great big dildo in front of the whole wheel, {target} — the Dildo Pose.",
+        "Next penalty fills you up with that huge purple dildo, {target}. Think about that before the next wheel result — the Dildo Pose."
+      ],
+      "naked4_egging": [
+        "Finish it. Put that great big dildo in {target}'s pussy and end this Wheel of Misfortune properly.",
+        "Go on — the whole wheel wants to see {target} with that huge dildo inside her vagina.",
+        "{target} is already completely exposed. Let the final wheel result leave her fucked by that great big dildo.",
+        "Do it. Fill {target} up with that huge purple dildo and give her the full Dildo Pose."
+      ],
+      "naked5_tease": [
+        "So, {target}, how does that great big dildo feel inside your pussy?",
+        "Be honest, {target}: does having that huge purple dildo inside your vagina actually feel good?",
+        "Look at you, {target} — legs spread with that great big dildo in your pussy. Still pretending this is only humiliating?",
+        "There it is: a huge dildo inside {target}'s vagina for everybody to see.",
+        "{target}'s pussy has that great big purple dildo buried inside it now. That is one explicit fucking elimination.",
+        "You are properly being fucked by that great big dildo now, {target}. What a way to lose.",
+        "That huge dildo is fucking you right in front of everybody, {target}. How's that for a final penalty?",
+        "You look very fucking full, {target}. Being filled up by that huge dildo really completes the Dildo Pose.",
+        "{target}, you are completely filled up by that great big purple dildo and there is no hiding it.",
+        "Does that dildo feel good enough inside you to make you come, {target}?",
+        "Come on, {target}, answer the important question: is that huge dildo going to make you orgasm?",
+        "Is the dildo in your pussy going to make you come, {target}, or are you too embarrassed with everyone watching?",
+        "That thing looks like it is working pretty fucking hard inside you, {target}. Feeling good yet?",
+        "Look at the mess you're making of that purple dildo, {target}. The whole thing is getting fucking sticky.",
+        "That dildo is looking very sticky now, {target}. Want to tell us how much of that mess is yours?",
+        "You are making a proper fucking mess of that huge dildo, {target}. So much for pretending the pose does nothing for you.",
+        "That fucking spin did more than eliminate you, {target} — it left you with a great big dildo inside your pussy.",
+        "What a Wheel of Misfortune finish, {target}: fucked by that huge dildo, making it sticky, and everybody at the wheel gets to watch."
+      ]
+    },
+    "female_speaker": {
+      "naked4_dread": [
+        "Oh fuck. One more loss and I'm going to have that great big dildo inside my pussy.",
+        "I do not want to end up squatting there with that huge purple dildo inside my vagina.",
+        "Please don't make me get fucked by that great big dildo in front of everybody.",
+        "I'm already exposed enough. I do not want to be filled up by that huge dildo as the final fucking penalty."
+      ],
+      "naked4_protest": [
+        "No. Fuck off. I am not putting that great big dildo in my pussy for all of you to watch.",
+        "Do not make me squat there with that huge dildo inside my vagina. Pick anything fucking else.",
+        "I am not getting fucked by that great big dildo in front of this whole room.",
+        "Please don't fucking fill me up with that huge purple dildo. This is humiliating enough already."
+      ],
+      "naked5_shame": [
+        "Fuck. I have actually got that great big purple dildo inside my pussy while everyone watches.",
+        "I cannot believe I'm sitting here with a huge dildo inside my vagina in full view of everybody.",
+        "This is so fucking humiliating. I'm actually being fucked by that great big dildo as my final pose.",
+        "I feel completely filled up by this huge dildo and I hate that you can all see it.",
+        "Stop asking whether the dildo feels good inside me. I'm embarrassed enough already.",
+        "No, I am not telling any of you whether this huge dildo is going to make me come.",
+        "Do not fucking ask me if I'm going to orgasm with this thing inside me while you all stare.",
+        "I can see you looking at how sticky the dildo is getting. Please stop making comments about the fucking mess.",
+        "Oh fuck, everybody can see the mess I'm making of that purple dildo. This is mortifying.",
+        "The dildo in my pussy is humiliating enough without all of you discussing whether it feels good.",
+        "I cannot believe that fucking spin ended with me sitting here filled up by a huge fucking dildo.",
+        "This is how my Wheel of Misfortune ends: dildo in my vagina, legs spread, and the whole wheel watching me make a mess of it."
+      ]
+    }
+  },
+  "garment_dread": {
+    "global": {
+      "outer_top": [
+        "{interjection}. {decision_subject} has picked {the_garment}. Once {garment_pronoun} {garment_go}, {consequence}.",
+        "Right. {The_garment} {garment_be} coming off. {interjection}. {Consequence}.",
+        "No getting out of it now. I lose {my_garment}, and {consequence}.",
+        "{interjection}. Losing {my_garment} means {consequence}.",
+        "Fine. {decision_subject} says {the_garment} {garment_go}. {Consequence}.",
+        "Apply it then. Once {the_garment} {garment_go}, {consequence}.",
+        "I know exactly what this costs me. {My_garment} {garment_be} about to go, and {consequence}.",
+        "{interjection}. After this, {consequence}."
+      ],
+      "outer_bottom": [
+        "{interjection}. {decision_subject} has picked {the_garment}. Once {garment_pronoun} {garment_go}, {consequence}.",
+        "Right. {The_garment} {garment_be} coming off. {interjection}. {Consequence}.",
+        "No getting out of it now. I lose {my_garment}, and {consequence}.",
+        "{interjection}. Losing {my_garment} means {consequence}.",
+        "Fine. {decision_subject} says {the_garment} {garment_go}. {Consequence}.",
+        "Apply it then. Once {the_garment} {garment_go}, {consequence}.",
+        "I know exactly what this costs me below the waist. {My_garment} {garment_be} about to go.",
+        "{interjection}. After this, {consequence}."
+      ],
+      "upper_underwear": [
+        "{interjection}. {decision_subject} has reached {the_garment}. Once {garment_pronoun} {garment_go}, {consequence}.",
+        "Right. {The_garment} {garment_be} next. {interjection}. {Consequence}.",
+        "No ambiguity now. Take {my_garment} and {consequence}.",
+        "{interjection}. This is the removal that leaves my {top} bare.",
+        "Fine. {decision_subject} says {the_garment} {garment_go}. My {top} will be completely on show.",
+        "Apply it then. Once {the_garment} {garment_go}, {consequence}.",
+        "I know exactly what everybody will see after this. {interjection}.",
+        "{interjection}. After this, {consequence}."
+      ],
+      "lower_underwear": [
+        "{interjection}. {decision_subject} has reached {the_garment}. Once {garment_pronoun} {garment_go}, {consequence}.",
+        "Right. {The_garment} {garment_be} next. {interjection}. {Consequence}.",
+        "No pretending this is just another layer. Take {my_garment} and {consequence}.",
+        "{interjection}. This is the removal that leaves my {genital} exposed.",
+        "Fine. {decision_subject} says {the_garment} {garment_go}. My {genital} will be completely uncovered.",
+        "Apply it then. Once {the_garment} {garment_go}, {consequence}.",
+        "I know exactly what everybody will be able to see after this. {interjection}.",
+        "{interjection}. After this, {consequence}."
+      ],
+      "generic": [
+        "{interjection}. {decision_subject} says another layer goes and I know I'll be more exposed.",
+        "That result has cost me another bit of cover. {interjection}.",
+        "Fine. Apply it. I already know I'm going to regret losing {the_garment}.",
+        "{interjection}. Another result, another layer gone.",
+        "I get less clothing. Typical.",
+        "I can see where this is heading. {interjection}. {The_garment} {garment_be} next.",
+        "No way around it now. {The_garment} {garment_be} coming off.",
+        "Apply it. {interjection}. I'm about to be another layer more exposed."
+      ]
+    },
+    "characters": {
+      "Silvie": {
+        "outer_top": [
+          "My off-the-shoulder top? Oh, I liked that one."
+        ],
+        "outer_bottom": [
+          "The red skirt? You know how to pick a moment."
+        ],
+        "upper_underwear": [
+          "The strapless bra? You're rather cheeky."
+        ],
+        "lower_underwear": [
+          "My black knickers? All right, I know the rules."
+        ],
+        "generic": [
+          "It's the attention getting to me, honestly."
+        ]
+      },
+      "Suzi": {
+        "outer_top": [
+          "Oh, my green top. I thought it looked lovely."
+        ],
+        "outer_bottom": [
+          "The black pencil skirt? I should've known."
+        ],
+        "upper_underwear": [
+          "That lace bra? I'm trying not to blush."
+        ],
+        "lower_underwear": [
+          "My black lace knickers? Oh, you are bold."
+        ],
+        "generic": [
+          "I'm embarrassed, but I'm staying with the game."
+        ]
+      }
+    }
+  }
+}
