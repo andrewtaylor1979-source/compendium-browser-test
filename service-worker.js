@@ -1,6 +1,6 @@
 'use strict';
-const CACHE='sgc-eight-games-browser-v1.3.3';
-const SHELL=['./','./index.html','./app.js','./app.js?v=audit133','./engine.js','./engine.js?v=audit133','./dialogue-director.js','./dialogue-director.js?v=audit133','./boot-guard.js','./boot-guard.js?v=fix101','./style.css','./style.css?v=audit133','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./header_logo.png'];
+const CACHE='sgc-eight-games-browser-v1.3.4';
+const SHELL=['./','./index.html','./app.js','./app.js?v=paige134','./engine.js','./engine.js?v=paige134','./dialogue-director.js','./dialogue-director.js?v=paige134','./boot-guard.js','./boot-guard.js?v=fix101','./style.css','./style.css?v=paige134','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./header_logo.png'];
 const DATA=['characters','dice_dialogue','wheel_dialogue','holdem_dialogue','poker_dialogue','memory_dialogue','showdown_dialogue','mayhem_dialogue'];
 self.addEventListener('install',e=>e.waitUntil((async()=>{
  const c=await caches.open(CACHE);

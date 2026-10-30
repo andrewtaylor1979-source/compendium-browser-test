@@ -3687,6 +3687,40 @@
           "Winner. I am officially in a much better mood."
         ]
       }
+    },
+    "Paige": {
+      "vulgarity": 3,
+      "swears": [
+        "damn",
+        "hell",
+        "bloody hell"
+      ],
+      "events": {
+        "spin": [
+          "Give it a spin. I like taking a chance.",
+          "Let's see where this lands. I do enjoy the suspense."
+        ],
+        "safe": [
+          "Safe! That's a very welcome result.",
+          "The wheel likes me today. Good taste."
+        ],
+        "self_remove": [
+          "My {garment}? So that's the kind of luck I'm having.",
+          "The wheel picked my {garment}. Fine—point to the wheel."
+        ],
+        "target_remove": [
+          "{target}, it's your {garment}. The wheel made the call.",
+          "Your {garment}, {target}. Tough break. I've had a few myself."
+        ],
+        "recover": [
+          "A recovery! Now that's a comeback.",
+          "Finally, a lucky bounce. I'll take it."
+        ],
+        "winner": [
+          "Winner. The wheel knows who to back.",
+          "That's the result. Anyone fancy another round?"
+        ]
+      }
     }
   },
   "final_pose": {
@@ -4769,6 +4803,20 @@
           "Final pose... oh stars. I feel like every eye in the room is pinning my nerves in place.",
           "That is the final pose? I am trying to smile, but I am also one blush away from evaporating into blue-haired dust.",
           "I knew this game got wild, but I still was not prepared to end up here quite this naked and quite this on display."
+        ]
+      },
+      "Paige": {
+        "naked4_warning": [
+          "One more bad round and I'm at the final stage. Not exactly the score I was aiming for.",
+          "One step left. Stay cool, keep the competitive face on."
+        ],
+        "naked5_tease": [
+          "Well, that's the final round. You've certainly made it memorable.",
+          "That was a daring little competition. You might even get a rematch."
+        ],
+        "naked5_shame": [
+          "Final stage. You win the round, but you haven't shaken my nerve.",
+          "That was a tough finish. Still, I've handled pressure before."
         ]
       }
     },

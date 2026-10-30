@@ -4842,6 +4842,54 @@
           "Oh, that's nice. I'd better choose carefully or everyone will call me a cheeky sod."
         ]
       }
+    },
+    "Paige": {
+      "vulgarity": 3,
+      "swears": [
+        "damn",
+        "hell",
+        "bloody hell"
+      ],
+      "events": {
+        "high_unique": [
+          "{total}! Best roll on the table. A little confidence goes a long way.",
+          "Top roll with {total}. That's how you start a winning streak.",
+          "{total}. Finally, the dice are behaving like a proper driver."
+        ],
+        "high_tie": [
+          "Tied on {total}? Fine. We'll play it off.",
+          "{total}, but shared first place. Somebody likes making this difficult."
+        ],
+        "low_single": [
+          "{total}. Dead last. Damn, that was a bad shot.",
+          "Lowest on {total}. Not exactly a scorecard worth framing.",
+          "{total}. I'd like to request a mulligan."
+        ],
+        "low_tie": [
+          "Low tie? A shared disaster is still a disaster.",
+          "Tied at the bottom. Apparently everyone wanted the same terrible score."
+        ],
+        "choose_loser": [
+          "{target}, you're my pick. Nothing personal; I'm playing to win.",
+          "My choice is {target}. And yes, I'm perfectly comfortable making it."
+        ],
+        "choose_removal": [
+          "{target}, I choose {garment}. Let's see how you handle the pressure.",
+          "The {garment}, {target}. I promised a competitive game."
+        ],
+        "penalty_reaction": [
+          "{garment}? All right, {chooser}. You've earned that choice.",
+          "I heard you, {chooser}. The {garment} it is. But remember this round."
+        ],
+        "eliminated": [
+          "Out already? Bloody hell. I want a rematch.",
+          "Eliminated. That's one scorecard I won't be keeping."
+        ],
+        "winner": [
+          "Winner! Now that is a result I can celebrate.",
+          "I won. Remind me why anyone thought I would make this easy?"
+        ]
+      }
     }
   },
   "final_pose": {
@@ -5109,6 +5157,20 @@
           "Final pose... oh stars. I feel like every eye in the room is pinning my nerves in place.",
           "That is the final pose? I am trying to smile, but I am also one blush away from evaporating into blue-haired dust.",
           "I knew this game got wild, but I still was not prepared to end up here quite this naked and quite this on display."
+        ]
+      },
+      "Paige": {
+        "naked4_warning": [
+          "One more bad round and I'm at the final stage. Not exactly the score I was aiming for.",
+          "One step left. Stay cool, keep the competitive face on."
+        ],
+        "naked5_tease": [
+          "Well, that's the final round. You've certainly made it memorable.",
+          "That was a daring little competition. You might even get a rematch."
+        ],
+        "naked5_shame": [
+          "Final stage. You win the round, but you haven't shaken my nerve.",
+          "That was a tough finish. Still, I've handled pressure before."
         ]
       }
     }

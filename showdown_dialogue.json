@@ -1990,6 +1990,28 @@
           "A tie? Oh, sod that. Again!",
           "Same move. The suspense is killing me — throw again."
         ]
+      },
+      "Paige": {
+        "challenge": [
+          "{target}, fancy a quick Rock–Paper–Scissors match? I never turn down a challenge.",
+          "Three moves, one winner, {target}. Let's see what you've got."
+        ],
+        "challenged": [
+          "You want to challenge me? Excellent. I've been looking for a decent match.",
+          "All right, you're on. May the best player win."
+        ],
+        "win": [
+          "My {move} wins! That's a point for me, {target}.",
+          "A win. I'll take that, {target}."
+        ],
+        "lose": [
+          "Your {other_move} beat me? Damn. Well played.",
+          "That's my loss. Fine—you earned the next decision."
+        ],
+        "tie": [
+          "Same move. That's a draw, so go again.",
+          "A tie? We clearly think alike. Another round!"
+        ]
       }
     }
   },

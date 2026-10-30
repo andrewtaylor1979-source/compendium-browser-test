@@ -675,7 +675,8 @@
     "Jack": "gothic",
     "user": "neutral",
     "Jasmine": "warm_regal",
-    "Smurfette": "playful"
+    "Smurfette": "playful",
+    "Paige": "showwoman"
   },
   "individualVoices": {
     "Jasmine": {
@@ -1347,6 +1348,16 @@
       "attraction": "{target}, you are distractingly attractive, which would be easier if I were not also analysing every inch of myself.",
       "mercy": "{target}, I remember the mercy. It mattered more than I let on.",
       "recap_tail": "I remember the result, the audience and exactly how visible my insecurities felt in the moment."
+    },
+    "Paige": {
+      "first": "{target}, shall we make this a proper contest?",
+      "won": "{target}, last round went my way. Remember that?",
+      "lost": "{target}, you beat me last time. I have been practising my comeback.",
+      "revenge": "{target}, I remember that decision. My turn to raise the stakes.",
+      "rival": "{target}, a little rivalry makes every game more interesting.",
+      "attraction": "{target}, you make a very entertaining teammate.",
+      "mercy": "{target}, that was surprisingly sporting of you.",
+      "recap_tail": "I keep score, and I remember the good players."
     }
   }
 }

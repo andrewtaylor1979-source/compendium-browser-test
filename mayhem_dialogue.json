@@ -4185,6 +4185,64 @@
           "I survived this mayhem. And I still have some cheek left in me."
         ]
       }
+    },
+    {
+      "asset_name": "Paige",
+      "confidence": 5,
+      "dialogue": {
+        "intro": [
+          "Mayhem? All right, I'm game.",
+          "You wanted a competitive evening. You've certainly got one."
+        ],
+        "choose_target": [
+          "{target}, you're my target. Let's keep things interesting.",
+          "I pick {target}. Fair warning: I play hard."
+        ],
+        "revenge_target": [
+          "{target}, I remember the last round. Your turn.",
+          "Payback, {target}. That's how rivalries develop."
+        ],
+        "chosen_target": [
+          "Me, {chooser}? You clearly fancy a challenge.",
+          "You've picked me again, {chooser}. Brave decision."
+        ],
+        "choose_layer": [
+          "{target}, the {garment}. Let's see how you handle it.",
+          "I choose {garment} for {target}. No mulligans tonight."
+        ],
+        "choose_pose": [
+          "{target}, the next pose. Don't say I don't take this seriously.",
+          "Your next pose, {target}. That's the game."
+        ],
+        "pre_layer": [
+          "My {garment}? Fine, {chooser}. You've earned the point.",
+          "The {garment} it is. Enjoy the victory, {chooser}."
+        ],
+        "pre_pose": [
+          "Another pose? You're not making this easy.",
+          "That's quite a challenge. I can handle it."
+        ],
+        "post_layer": [
+          "Done. Now let's get on with the competition.",
+          "There. Next round. I'm still playing."
+        ],
+        "post_pose": [
+          "That stage is finished. Still confident.",
+          "Done. You want a rematch or what?"
+        ],
+        "bystander": [
+          "{target} is taking this pretty well. I'd be plotting a comeback.",
+          "I think {target} deserves a point for keeping composure."
+        ],
+        "eliminated": [
+          "Out? Damn. That's a bad scorecard.",
+          "Eliminated. I'll be back for another round."
+        ],
+        "winner": [
+          "Winner! That's the kind of game I like.",
+          "I win. That was a very satisfying finish."
+        ]
+      }
     }
   ],
   "special_pairs": {

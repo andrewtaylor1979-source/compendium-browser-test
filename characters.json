@@ -2144,5 +2144,37 @@
     },
     "roster_added_on": "2026-10-29",
     "roster_added_note": "Adult interpretation (age 19), provided by user with 13 separately stored images. Playful, bubbly and mischievous, but only moderately confident; sweet and teasing when comfortable, visibly more bashful when the stakes become personal. Favourite drink: sarsaparilla berry fizz. Loves attention, teasing banter, dancing and being admired; dislikes being underestimated, being rushed and losing control of the mood. Her white hat is part of her iconic look and is intentionally not treated as a removable TJBP clothing item."
+  },
+  {
+    "asset_name": "Paige",
+    "full_name": "Paige Spiranac",
+    "age": 33,
+    "occupation": "Former professional golfer, model and influencer",
+    "favourite_drink": "Champagne",
+    "confidence_level": 5,
+    "nudity_quote": "I've lost the outfit, not the competitive instinct. Anybody fancy a rematch?",
+    "clothing": {
+      "T": "White fitted ribbed cropped tank top",
+      "J": "Black fitted mini skirt with side slit",
+      "B": "Red lace underwired bra",
+      "P": "Matching red lace knickers"
+    },
+    "stage_dialogue": {
+      "JBP": "Top first? Bold opening shot. Don't assume you've won the match just yet.",
+      "TBP": "The black skirt first? Interesting strategy. You're clearly trying to put me off my game.",
+      "JP": "Straight from the top to the bra? You really don't believe in taking the safe route.",
+      "TB": "Skirt and underwear before the top? That's an unconventional game plan even by my standards.",
+      "BP": "So the golf-inspired outfit is gone. I'm still very much in the competition.",
+      "B": "Just one layer left. Now I know you're going for a dramatic finish.",
+      "P": "One last item and you're still looking smug. This round isn't over until I say so.",
+      "Naked": "Well, that's the last garment. You can celebrate the point; I'll plan the comeback.",
+      "Naked2": "Another pose? You have quite a flair for setting difficult challenges.",
+      "Naked3": "This is definitely a more unusual challenge than anything I faced on a golf course.",
+      "Naked4": "You're determined to make this a memorable round, aren't you? Fine. Let's finish it.",
+      "Naked5": "Final pose. You win this one—but I'd very much like another round.",
+      "Eliminated": "Eliminated? That's a bad scorecard. Time for a very competitive rematch."
+    },
+    "roster_added_on": "2026-10-30",
+    "roster_added_note": "Fictionalised game profile using user-supplied artwork. Adult age 33; a former professional golfer, model and influencer. Confidence 5/5, charismatic, competitive, playful, occasionally sharp-tongued; uses sparing golf jokes. The in-game relationships, opinions, dialogue and decisions are invented, not biographical facts. Artwork prefix Paige; all 13 images are managed separately by the user."
   }
 ]

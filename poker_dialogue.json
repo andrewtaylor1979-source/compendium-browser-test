@@ -2511,6 +2511,43 @@
         "Naked4": "Hands and knees. I can feel my blush reaching my nerves.",
         "Naked5": "The final pose, {winner}? I hope you appreciate just how much courage this takes."
       }
+    },
+    {
+      "asset_name": "Paige",
+      "dialogue": {
+        "deal": "Five cards. Let's see who can keep a straight face.",
+        "stand_pat": "I'm standing pat. That's a confident play, not a guess.",
+        "draw_one": "One card. A little adjustment can change the entire hand.",
+        "draw_two": "Two new cards. Let's improve that score.",
+        "draw_many": "Most of these can go. I'm rebuilding this hand from the ground up.",
+        "improved": "Now that's a much better hand.",
+        "no_improvement": "Not much better. Damn. Sometimes the gamble misses.",
+        "showdown_win": "Winning hand. Nicely played—by me.",
+        "showdown_safe": "Not last. I'll take the safe result.",
+        "showdown_lose": "Last place. That's going to annoy me for a while."
+      },
+      "winner_choice": {
+        "T": "{loser}, I choose the {garment}. Let us see how you handle this round.",
+        "J": "The {garment}, {loser}. I have made my decision.",
+        "B": "{loser}, the {garment}. The scorecard is getting interesting.",
+        "P": "The {garment}, {loser}. That is the call.",
+        "Naked": "Next stage, {loser}. You are doing better than I expected.",
+        "Naked2": "Another stage, {loser}. Ready to carry on?",
+        "Naked3": "{loser}, next challenge. I know it is a tough one.",
+        "Naked4": "Another stage, {loser}. Almost at the finish.",
+        "Naked5": "Final stage, {loser}. That concludes the round."
+      },
+      "loser_response": {
+        "T": "The {garment}? All right, {winner}. I can take a setback.",
+        "J": "My {garment}? You really chose the skirt, {winner}.",
+        "B": "The {garment}? Fair enough, {winner}. You earned the call.",
+        "P": "My {garment}? You are not taking the safe route, {winner}.",
+        "Naked": "Next stage. Fine. Let us keep this competitive.",
+        "Naked2": "Another stage, {winner}? Very demanding.",
+        "Naked3": "That is a tough challenge, {winner}. I am still playing.",
+        "Naked4": "Nearly finished, {winner}. No need to celebrate early.",
+        "Naked5": "Final stage. I will concede this round, {winner}. Not the whole match."
+      }
     }
   ],
   "final_pose": {
@@ -3604,6 +3641,20 @@
           "Final pose... oh stars. I feel like every eye in the room is pinning my nerves in place.",
           "That is the final pose? I am trying to smile, but I am also one blush away from evaporating into blue-haired dust.",
           "I knew this game got wild, but I still was not prepared to end up here quite this naked and quite this on display."
+        ]
+      },
+      "Paige": {
+        "naked4_warning": [
+          "One more bad round and I'm at the final stage. Not exactly the score I was aiming for.",
+          "One step left. Stay cool, keep the competitive face on."
+        ],
+        "naked5_tease": [
+          "Well, that's the final round. You've certainly made it memorable.",
+          "That was a daring little competition. You might even get a rematch."
+        ],
+        "naked5_shame": [
+          "Final stage. You win the round, but you haven't shaken my nerve.",
+          "That was a tough finish. Still, I've handled pressure before."
         ]
       }
     },

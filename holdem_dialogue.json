@@ -3971,6 +3971,44 @@
           "That is me at the bottom. I was afraid of that."
         ]
       }
+    },
+    "Paige": {
+      "vulgarity": 3,
+      "swears": [
+        "damn",
+        "hell",
+        "bloody hell"
+      ],
+      "events": {
+        "deal": [
+          "Two cards and a clean slate. Let's play.",
+          "All right, opening hand. I like the odds—or at least my poker face."
+        ],
+        "flop": [
+          "There's the flop. Now we can start reading the table.",
+          "Three cards down. Don't let that smile fool you."
+        ],
+        "turn": [
+          "Turn card. We're getting to the interesting part.",
+          "Fourth card. I'd better keep this expression under control."
+        ],
+        "river": [
+          "River. Time to stop guessing and play the hand.",
+          "Last card. Whatever happens, let's make it a good finish."
+        ],
+        "showdown_win": [
+          "Winning hand. That's what I call sinking the putt.",
+          "I take it. Great game, terrible news for somebody else."
+        ],
+        "showdown_safe": [
+          "Safe. Not spectacular, but I'll take it.",
+          "Not last. That's enough to keep me smiling."
+        ],
+        "showdown_lose": [
+          "I lost? Damn. You had better enjoy that while it lasts.",
+          "Bottom hand. Well played. I'll remember that one."
+        ]
+      }
     }
   },
   "final_pose": {
@@ -5061,6 +5099,20 @@
           "Final pose... oh stars. I feel like every eye in the room is pinning my nerves in place.",
           "That is the final pose? I am trying to smile, but I am also one blush away from evaporating into blue-haired dust.",
           "I knew this game got wild, but I still was not prepared to end up here quite this naked and quite this on display."
+        ]
+      },
+      "Paige": {
+        "naked4_warning": [
+          "One more bad round and I'm at the final stage. Not exactly the score I was aiming for.",
+          "One step left. Stay cool, keep the competitive face on."
+        ],
+        "naked5_tease": [
+          "Well, that's the final round. You've certainly made it memorable.",
+          "That was a daring little competition. You might even get a rematch."
+        ],
+        "naked5_shame": [
+          "Final stage. You win the round, but you haven't shaken my nerve.",
+          "That was a tough finish. Still, I've handled pressure before."
         ]
       }
     },
