@@ -375,3 +375,26 @@
  #app .memory-setup .memory-roster-help{font-size:9px;margin:1px 0 2px;}
  #app .memory-setup .portrait-name{font-size:9px;min-height:2.3em;}
 }
+/* v1.4 — Games Night: ten-game menu, five-team setup, live scoreboards. */
+.menu-tiles{grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:8px}
+.menu-tiles .menu-tile{gap:4px;padding:7px 5px}.menu-tiles .menu-icon{font-size:clamp(24px,2.3vw,34px)}
+.menu-tiles .menu-title{font-size:clamp(12px,1.3vw,17px)}.menu-tiles .menu-description{font-size:clamp(9px,.85vw,12px)}
+.gn-setup-summary{display:flex;gap:10px;justify-content:space-between;align-items:center;font-size:11px;color:#ddcab5;flex:0 0 auto}
+.gn-setup-summary button{flex:0 0 auto;padding:6px 9px}.gn-team-scroll{min-height:0;flex:1;overflow:auto;overscroll-behavior:contain;padding:8px}
+.gn-team-editor{border:1px solid #65454a;border-radius:11px;padding:9px;margin-bottom:9px;background:#2a1d22;display:grid;gap:7px}
+.gn-team-head{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px}.gn-team-head strong{font-size:12px;color:#eed19e}
+.gn-team-config{display:flex;align-items:center;gap:12px}.gn-team-config label{flex:1}.gn-team-config span{font-size:10px;max-width:50%}
+.gn-member-editor{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}.gn-team-editor label{font-size:11px}
+.gn-game .gn-standings{flex:0 0 auto;display:flex;gap:5px;overflow-x:auto;padding:5px 7px;overscroll-behavior-x:contain}
+.gn-game .gn-standing{min-width:125px;flex:1;background:#301f28;border-radius:7px;display:grid;gap:3px;padding:5px 7px;font-size:10px}
+.gn-game .gn-standing b{color:#e6c895;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.gn-game .gn-standing span{color:#d3bec0}
+.gn-game .game-main{min-height:0}.gn-game .game-controls{min-height:0}.gn-game .notice{font-size:12px}
+.gn-game .gn-round-summary{padding:8px;background:#31202a;border:1px solid #66484c;border-radius:8px;font-size:11px;line-height:1.4}.gn-round-summary strong{color:#e7c998}
+.gn-game .gn-round-reveal{text-align:center;display:grid;gap:8px;padding:7px}.gn-round-reveal p{color:#ddc49d;font:700 19px Georgia,serif}
+.gn-game .gn-choice-buttons,.gn-game .gn-penalty-buttons{display:flex;gap:7px;flex-wrap:wrap}.gn-choice-buttons button,.gn-penalty-buttons button{flex:1;min-width:95px;min-height:40px}
+.gn-poker-row{justify-content:flex-start;flex-wrap:nowrap}.gn-card-choice{padding:3px;display:flex;flex-direction:column;align-items:center;gap:3px;background:#392429;border:2px solid #63454b;min-width:0;flex:1}.gn-card-choice .card{width:clamp(39px,8vw,66px);height:clamp(54px,11vw,94px)}.gn-card-choice.gn-disc{border-color:#ffaf77;background:#69343b;transform:translateY(-2px)}.gn-card-choice small{color:#f4dfcc;font-size:10px}
+.gn-game .gn-memory-grid{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:3px}.gn-memory-grid button{display:grid;place-items:center;padding:4px 2px;border:1px solid #c7af8c;background:#232f53;border-radius:5px;min-height:36px}.gn-memory-grid button.selected{background:#8a494d;border:2px solid #ffdb89}.gn-memory-grid span{font-size:16px}.gn-memory-grid small{font-size:8px}
+@media(max-width:850px){.menu-tiles{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(5,minmax(0,1fr));gap:5px}.menu-tiles .menu-tile{gap:2px;padding:3px}.menu-tiles .menu-icon{font-size:18px}.menu-tiles .menu-title{font-size:12px}.menu-tiles .menu-description{display:none}.menu-tiles .menu-resume{font-size:8px}.gn-team-head{grid-template-columns:1fr 2fr auto;gap:4px}.gn-member-editor{grid-template-columns:repeat(2,minmax(0,1fr))}.gn-game .gn-standing{min-width:106px}.gn-game .gn-standings{padding:4px}.gn-game .gn-memory-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media (orientation:landscape) and (max-height:540px){.menu-tiles{grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}.menu-tiles .menu-icon{font-size:21px}.menu-tiles .menu-description{display:none}.gn-game .gn-standings{max-height:37px;overflow-y:hidden}.gn-game .gn-standing{display:flex;justify-content:space-between;align-items:center;min-width:125px;font-size:9px}.gn-game .gn-standing span{font-size:8px}.gn-game .game-main{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}}
+
+.gn-team-drawer{max-height:52dvh;overflow:auto}.gn-team-drawer section{margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #65454a}.gn-team-drawer h3{font-size:12px;color:var(--gold);margin:4px 0 8px}
