@@ -4890,6 +4890,54 @@
           "I won. Remind me why anyone thought I would make this easy?"
         ]
       }
+    },
+    "Lucy": {
+      "events": {
+        "high_unique": [
+          "{total}! Look at that, I've only gone and won the roll!",
+          "Top with {total}. Oh, I could get used to being in charge.",
+          "{total} and nobody's beaten it. Don't mind me looking smug."
+        ],
+        "high_tie": [
+          "Tied on {total}? That is just my luck. Another go, then.",
+          "Same top roll? Oh, you are making me work for this."
+        ],
+        "low_single": [
+          "{total}. Last again? Bloody hell, that's unlucky.",
+          "Lowest on {total}. Right, don't all look so pleased with yourselves."
+        ],
+        "low_tie": [
+          "Tied for last. Lovely. A shared disaster, then.",
+          "Bottom together? At least I'm not the only one sweating."
+        ],
+        "choose_loser": [
+          "{target}, it's you. Sorry, but I am here to win.",
+          "I'm picking {target}. Don't give me that look!"
+        ],
+        "choose_removal": [
+          "{target}, I reckon the {garment}. Don't hate me for it.",
+          "The {garment}, please, {target}. Oh, I feel cheeky now."
+        ],
+        "penalty_reaction": [
+          "{garment}? Oh for goodness sake, {chooser}, you're not half enjoying this!",
+          "All right, {chooser}. The {garment} it is. And I won't forget."
+        ],
+        "eliminated": [
+          "I'm out? Well, that was a bloody disaster. Another round, anyone?",
+          "That's me done. Somebody get me my cardigan back."
+        ],
+        "winner": [
+          "I won! Oh, that is brilliant. You lot won't hear the end of it.",
+          "Winner! Not bad for a Nottingham mum, eh?"
+        ]
+      },
+      "vulgarity": 3,
+      "swears": [
+        "bloody hell",
+        "bugger",
+        "damn",
+        "oh for goodness sake"
+      ]
     }
   },
   "final_pose": {

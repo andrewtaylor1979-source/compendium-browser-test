@@ -2176,5 +2176,37 @@
     },
     "roster_added_on": "2026-10-30",
     "roster_added_note": "Fictionalised game profile using user-supplied artwork. Adult age 33; a former professional golfer, model and influencer. Confidence 5/5, charismatic, competitive, playful, occasionally sharp-tongued; uses sparing golf jokes. The in-game relationships, opinions, dialogue and decisions are invented, not biographical facts. Artwork prefix Paige; all 13 images are managed separately by the user."
+  },
+  {
+    "asset_name": "Lucy",
+    "full_name": "Lucy Harper",
+    "age": 35,
+    "occupation": "Housewife and mum from Nottingham",
+    "favourite_drink": "Raspberry gin and tonic",
+    "confidence_level": 3,
+    "nudity_quote": "Well, that's certainly one way to make a quiet night interesting. Don't expect me to lose my sense of humour too.",
+    "clothing": {
+      "T": "Green button-front cardigan",
+      "J": "Blue denim jeans",
+      "B": "White vest top with green stripes",
+      "P": "Light grey knickers"
+    },
+    "stage_dialogue": {
+      "JBP": "The cardigan first? All right, you've started gently. I can already see that cheeky smile, mind.",
+      "TBP": "My jeans? Straight in at the deep end, then! You could at least pretend to be a gentleman.",
+      "JP": "Cardigan and striped vest gone in one run? Bloody hell, you're not wasting any time, are you?",
+      "TB": "Jeans and knickers while I've still got my vest on? That's a peculiar strategy. I don't know whether to laugh or hide.",
+      "BP": "So that's both outer layers gone. I was promised a laugh, not a full wardrobe inspection!",
+      "B": "Just my striped vest left? I never thought I'd be so grateful for a bit of green cotton.",
+      "P": "Just the grey knickers now. You really do know how to make a Nottingham girl blush.",
+      "Naked": "Well, that's the last of the outfit. I'm going to have a few words with whoever talked me into this game.",
+      "Naked2": "Another pose? Oh, you're enjoying yourself far too much. I can tell by that grin.",
+      "Naked3": "You want another pose as well? I should have negotiated the rules before I agreed to play.",
+      "Naked4": "I'm trying to keep my sense of humour here, but you aren't half making it difficult.",
+      "Naked5": "Right. Final pose, final round. I think I've earned the right to choose the next game.",
+      "Eliminated": "Well, I'm out! That's me done. Somebody find me my cardigan and something to drink."
+    },
+    "roster_added_on": "2026-10-31",
+    "roster_added_note": "Fictional original character created for the Compendium. 35-year-old Nottingham housewife and mum, warm, bubbly, practical, occasionally sarcastic, competitive, cheeky when at ease, moderately confident (3/5). Likes a laugh with friends, karaoke, Sunday walks, good coffee and getting everyone organised; dislikes being patronised, losing games and mess left for someone else. Favorite drink: raspberry gin and tonic. Avoids exaggerated Nottingham dialect. Her B state is a green-striped white vest top, not a bra. All 13 state images are stored separately by user."
   }
 ]

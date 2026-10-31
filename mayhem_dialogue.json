@@ -4243,6 +4243,64 @@
           "I win. That was a very satisfying finish."
         ]
       }
+    },
+    {
+      "asset_name": "Lucy",
+      "confidence": 3,
+      "dialogue": {
+        "intro": [
+          "Mayhem? Oh, this could get messy. Sounds like a laugh!",
+          "I've survived the school run. How hard can this be?"
+        ],
+        "choose_target": [
+          "{target}, you're my pick. No hard feelings, love.",
+          "It's you, {target}. Don't look so shocked!"
+        ],
+        "revenge_target": [
+          "You got me last time, {target}. My turn now.",
+          "{target}, I've not forgotten that little stunt."
+        ],
+        "chosen_target": [
+          "Me, {chooser}? Oh, you're cheeky!",
+          "Really, {chooser}? There are other people here, you know!"
+        ],
+        "choose_layer": [
+          "{target}, the {garment}. I cannot believe I am telling another adult to take clothes off.",
+          "Lose the {garment}, {target}. Sorry. I know, I said I would stop saying sorry."
+        ],
+        "choose_pose": [
+          "{target}, take {pose}. Oh, that sounds absolutely dreadful when I am the one choosing it.",
+          "I choose {pose}, {target}. Please do not look at me like I am enjoying this too much."
+        ],
+        "pre_layer": [
+          "The {garment}? Right. Okay. I can cope with one more piece going.",
+          "You want my {garment}. Fine, {chooser}. Just give me a second before everybody looks."
+        ],
+        "pre_pose": [
+          "{pose}? Oh no. Being naked was already quite enough attention, thank you.",
+          "You chose {pose}. Right. I am going to do it and hate every second of knowing where people are looking."
+        ],
+        "post_layer": [
+          "There. {state}. I feel incredibly visible.",
+          "Done. {state}. If everyone could pretend this is less interesting than it is, I would appreciate it."
+        ],
+        "post_pose": [
+          "There. {state}. I wanted attention; I did not mean quite this much of it.",
+          "Done. {state}. I am surviving, but please do not mistake that for being comfortable."
+        ],
+        "bystander": [
+          "Poor {target}. Everyone has that same look people had when it was me.",
+          "The room is staring at {target}. I feel awful for understanding exactly why."
+        ],
+        "eliminated": [
+          "I am out. Honestly, the relief of nobody being able to choose me again is almost worth it.",
+          "I am finished. I cannot believe how relieved I am that nobody gets another turn at me."
+        ],
+        "winner": [
+          "I won? I came in wanting to be noticed and somehow survived everybody trying. That feels strangely nice.",
+          "I won. Maybe being nervous and staying anyway counts as confidence after all."
+        ]
+      }
     }
   ],
   "special_pairs": {

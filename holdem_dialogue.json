@@ -4009,6 +4009,45 @@
           "Bottom hand. Well played. I'll remember that one."
         ]
       }
+    },
+    "Lucy": {
+      "vulgarity": 3,
+      "swears": [
+        "bloody hell",
+        "bugger",
+        "damn",
+        "oh for goodness sake"
+      ],
+      "events": {
+        "deal": [
+          "Two cards. Right then, let's see what we've got.",
+          "Cards in hand, poker face on. Or that's the plan."
+        ],
+        "flop": [
+          "The flop. Oh, that changes things.",
+          "Three cards out. Nobody give anything away, mind."
+        ],
+        "turn": [
+          "Turn card! My nerves are having a little moment.",
+          "One more card. I could do with a gin at this point."
+        ],
+        "river": [
+          "River. Right, time to find out who was bluffing.",
+          "Last card. Well, here goes nothing."
+        ],
+        "showdown_win": [
+          "Best hand! Oh, I love this game suddenly.",
+          "I've won! Don't mind me grinning."
+        ],
+        "showdown_safe": [
+          "Not last. I'll take that all day long.",
+          "Safe! Thank goodness for small mercies."
+        ],
+        "showdown_lose": [
+          "Oh, no. Last place. Just bloody perfect.",
+          "Worst hand? That's going to cost me, isn't it?"
+        ]
+      }
     }
   },
   "final_pose": {
@@ -5113,6 +5152,21 @@
         "naked5_shame": [
           "Final stage. You win the round, but you haven't shaken my nerve.",
           "That was a tough finish. Still, I've handled pressure before."
+        ]
+      },
+      "Lucy": {
+        "naked4_warning": [
+          "{target}, you're already on all fours with your {bottom} up. One more bad river and it's the Dildo Pose.",
+          "One more bad river, {target}. Then the woman who only wanted a little excitement ends up in the Dildo Pose."
+        ],
+        "naked5_tease": [
+          "Well, {target}, you wanted to be noticed again. Squatting there with that dildo inside you has certainly achieved it.",
+          "Oh, {target}. All that nervous talk about a bit of excitement, and now you're stuck in the Dildo Pose for everyone to watch.",
+          "You asked for attention, {target}. Legs spread, dildo inside you, and the whole group staring is quite a lot of it."
+        ],
+        "naked5_shame": [
+          "Oh fuck. I wanted to feel noticed again, not end up squatting here with this dildo inside me while everyone watches.",
+          "This is so humiliating. Naked5, legs spread, completely exposed, and every single person is looking at me."
         ]
       }
     },

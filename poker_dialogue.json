@@ -2548,6 +2548,43 @@
         "Naked4": "Nearly finished, {winner}. No need to celebrate early.",
         "Naked5": "Final stage. I will concede this round, {winner}. Not the whole match."
       }
+    },
+    {
+      "asset_name": "Lucy",
+      "dialogue": {
+        "deal": "Five cards. Let's see if I can keep my poker face.",
+        "stand_pat": "Keeping the lot. If this goes wrong, don't laugh.",
+        "draw_one": "One new card. Come on, just one bit of luck.",
+        "draw_two": "Two cards, please. Let's see if the gamble pays off.",
+        "draw_many": "Right, most of those can go. Bit of a disaster, that hand.",
+        "improved": "Oh, that's better! Suddenly I feel clever.",
+        "no_improvement": "Well that was a waste of bloody time.",
+        "showdown_win": "I've won! Ha! Not so much of a beginner now, am I?",
+        "showdown_safe": "Not last. Suits me just fine.",
+        "showdown_lose": "Last place. Oh dear. Here comes the trouble."
+      },
+      "winner_choice": {
+        "T": "Your {garment}, {loser}. Sorry... but I really do want to see what you're wearing underneath.",
+        "J": "The {garment}, {loser}. Oh God, I'm getting rather too comfortable making these choices.",
+        "B": "I choose your {garment}, {loser}. That means your {top_word} {top_is_are} going to be completely exposed, doesn't it?",
+        "P": "The {garment}, {loser}. Bloody hell, I can't believe I just chose to expose your {genital_word}.",
+        "Naked": "Naked, {loser}. You'll still have your hands to cover your {top_word} and {genital_word}... which suddenly doesn't sound like much.",
+        "Naked2": "Hands away, {loser}. Full frontal. I can't believe I'm actually telling someone else to do this.",
+        "Naked3": "Turn around and bend over, {loser}. Your {bottom_word} is going on display next. Sorry... sort of.",
+        "Naked4": "Hands and knees, {loser}. Your {bottom_word} up and everything exposed behind you. That's frighteningly close to the final pose.",
+        "Naked5": "Oh God, {loser}. The Dildo Pose. I almost feel guilty choosing it... almost."
+      },
+      "loser_response": {
+        "T": "My {garment}? Oh. Right. Once that goes, what's underneath is going to feel very exposed.",
+        "J": "My {garment}? Bloody hell. Everyone is going to get a much better look at my legs and what's underneath.",
+        "B": "My {garment}? Oh God. That means my boobs are going to be completely out, {winner}.",
+        "P": "My {garment}? Shit. That's going to leave my pussy completely exposed, {winner}.",
+        "Naked": "Completely naked and covering myself with my hands? Oh God. I wanted attention, but this is a lot of it.",
+        "Naked2": "Full frontal with nothing covered? Bloody hell, {winner}. Everyone is going to see absolutely everything.",
+        "Naked3": "You really want me turned around and bent over? Oh God. My bum is going to be right there for everyone to stare at.",
+        "Naked4": "Hands and knees? Fuck. My bum up, everything exposed behind me, and one step from the Dildo Pose.",
+        "Naked5": "The Dildo Pose? Oh fuck, {winner}. I really did not think my little adventure would end like this."
+      }
     }
   ],
   "final_pose": {
@@ -3655,6 +3692,21 @@
         "naked5_shame": [
           "Final stage. You win the round, but you haven't shaken my nerve.",
           "That was a tough finish. Still, I've handled pressure before."
+        ]
+      },
+      "Lucy": {
+        "naked4_warning": [
+          "{target}, you're already on all fours with your {bottom} up. One more bad hand and it's the Dildo Pose.",
+          "One more bad hand, {target}. Then the woman who only wanted a little excitement ends up in the Dildo Pose."
+        ],
+        "naked5_tease": [
+          "Well, {target}, you wanted to be noticed again. Squatting there with that dildo inside you has certainly achieved it.",
+          "Oh, {target}. All that nervous talk about a bit of excitement, and now you're stuck in the Dildo Pose for everyone to watch.",
+          "You asked for attention, {target}. Legs spread, dildo inside you, and the whole group staring is quite a lot of it."
+        ],
+        "naked5_shame": [
+          "Oh fuck. I wanted to feel noticed again, not end up squatting here with this dildo inside me while everyone watches.",
+          "This is so humiliating. Naked5, legs spread, completely exposed, and every single person is looking at me."
         ]
       }
     },

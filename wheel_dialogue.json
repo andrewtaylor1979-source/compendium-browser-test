@@ -3721,6 +3721,41 @@
           "That's the result. Anyone fancy another round?"
         ]
       }
+    },
+    "Lucy": {
+      "vulgarity": 3,
+      "swears": [
+        "bloody hell",
+        "bugger",
+        "damn",
+        "oh for goodness sake"
+      ],
+      "events": {
+        "spin": [
+          "Right, give it a spin. Come on, be nice to me!",
+          "This wheel had better have a sense of humour."
+        ],
+        "safe": [
+          "Safe! Oh, thank goodness. I can breathe again.",
+          "Nothing lost. That is my kind of wheel result."
+        ],
+        "self_remove": [
+          "My {garment}? Oh, bloody typical.",
+          "The {garment} has to go? You couldn't make it up."
+        ],
+        "target_remove": [
+          "{target}, it's the {garment}. Don't look at me, blame the wheel!",
+          "Right, {target}, your {garment}. Sorry... mostly."
+        ],
+        "recover": [
+          "Something goes right for once! I will take it.",
+          "Well, that was a nice surprise. I'm not complaining."
+        ],
+        "winner": [
+          "Winner! Well, that's made my evening.",
+          "I won the wheel. Who would've thought?"
+        ]
+      }
     }
   },
   "final_pose": {
@@ -4817,6 +4852,21 @@
         "naked5_shame": [
           "Final stage. You win the round, but you haven't shaken my nerve.",
           "That was a tough finish. Still, I've handled pressure before."
+        ]
+      },
+      "Lucy": {
+        "naked4_warning": [
+          "{target}, you're already on all fours with your {bottom} up. One more bad result and it's the Dildo Pose.",
+          "One more bad result, {target}. Then the woman who only wanted a little excitement ends up in the Dildo Pose."
+        ],
+        "naked5_tease": [
+          "Well, {target}, you wanted to be noticed again. Squatting there with that dildo inside you has certainly achieved it.",
+          "Oh, {target}. All that nervous talk about a bit of excitement, and now you're stuck in the Dildo Pose for everyone to watch.",
+          "You asked for attention, {target}. Legs spread, dildo inside you, and the whole group staring is quite a lot of it."
+        ],
+        "naked5_shame": [
+          "Oh fuck. I wanted to feel noticed again, not end up squatting here with this dildo inside me while everyone watches.",
+          "This is so humiliating. Naked5, legs spread, completely exposed, and every single person is looking at me."
         ]
       }
     },
