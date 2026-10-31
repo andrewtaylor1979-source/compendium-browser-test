@@ -1,6 +1,6 @@
 'use strict';
-const CACHE='sgc-ten-games-browser-v1.4.1';
-const SHELL=['./','./index.html','./app.js','./app.js?v=night141','./engine.js','./engine.js?v=night141','./dialogue-director.js','./dialogue-director.js?v=night141','./games-night.js','./games-night.js?v=night141','./boot-guard.js','./boot-guard.js?v=fix101','./style.css','./style.css?v=night141','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./header_logo.png'];
+const CACHE='sgc-ten-games-browser-v1.4.2';
+const SHELL=['./','./index.html','./app.js','./app.js?v=mini142','./engine.js','./engine.js?v=mini142','./dialogue-director.js','./dialogue-director.js?v=mini142','./games-night.js','./games-night.js?v=mini142','./boot-guard.js','./boot-guard.js?v=fix101','./style.css','./style.css?v=mini142','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./header_logo.png'];
 const DATA=['characters','dice_dialogue','wheel_dialogue','holdem_dialogue','poker_dialogue','memory_dialogue','showdown_dialogue','mayhem_dialogue'];
 self.addEventListener('install',e=>e.waitUntil((async()=>{
  const c=await caches.open(CACHE);
