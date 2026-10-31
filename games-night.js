@@ -2,7 +2,12 @@
 // Adapted from src/logic/games_night.py, mini_games_night.py and games_night_rounds.py.
 // All session objects are JSON serialisable for existing localStorage backup/resume.
 import * as E from './engine.js';
-export const TYPES=['poker','dice','blackjack','hilo','trivia','showdown','penalty_wheel','bogey','memory'];
+// Full has Bogey; Mini deliberately does not. Neither mode includes Blackjack or Trivia.
+export const FULL_TYPES=['poker','dice','hilo','showdown','penalty_wheel','bogey','memory'];
+export const MINI_TYPES=FULL_TYPES.filter(type=>type!=='bogey');
+// Compatibility alias for any older consumer of the round catalogue.
+export const TYPES=FULL_TYPES;
+export const roundTypes=mode=>mode==='gnmini'?MINI_TYPES:FULL_TYPES;
 export const LABEL={poker:'Five-Card Draw',dice:'Dice',blackjack:'Blackjack',hilo:'Hi-Lo',trivia:'Trivia',showdown:'Rock–Paper–Scissors League',penalty_wheel:'Penalty Wheel',bogey:'Bogey Round',memory:'Strip Memory'};
 export const COLOURS=['Crimson','Royal Blue','Emerald','Amber','Purple'];
 const MALES=new Set(['Kristoff','Bananaman','Jason','Hank','Hulk','Donkey','Homer','Thing','Donald','Captain','Batman','Jack']);
@@ -44,8 +49,29 @@ const getTeam=(g,id)=>g.teams.find(t=>t.members.some(p=>p.asset===id));
 function note(g,text,actor){g.notice=text;g.highlight=actor||'';g.history.push(text);g.history=g.history.slice(-250);}
 function dline(g,text,name){g.speaker=name;g.dialogue=text;g.dialogueHistory.push({speaker:name,text});g.dialogueHistory=g.dialogueHistory.slice(-120);}
 function nextRepresentative(t){let candidates=t.members.filter(active).map(p=>p.asset);t.rotation=t.rotation.filter(n=>candidates.includes(n));if(!t.rotation.length)t.rotation=mix(candidates);return t.rotation.shift();}
-export function restore(g){if(!isNight(g))return g;if(g.current?.reps){g.people=g.current.reps.map(id=>getMember(g,id)).filter(Boolean);g.human=g.mode==='gnfull'?g.current.reps[0]:g.teams[0].members[0].asset;}else{g.people=g.mode==='gnmini'?g.teams.map(t=>t.members[0]):g.teams.map(t=>t.members.find(active)||t.members[0]);g.human=g.mode==='gnfull'?(g.people[0]?.asset||''):g.teams[0].members[0].asset;}g.settings={background:g.mode==='gnfull'?g.teams[0].background:'Nightclub'};return g;}
-function drawType(g){if(!g.deck?.length)g.deck=mix(TYPES);return g.deck.pop();}
+export function restore(g){
+ if(!isNight(g))return g;
+ const legal=roundTypes(g.mode);
+ // Migrate persisted nine-game decks without affecting existing scores or members.
+ g.deck=(Array.isArray(g.deck)?g.deck:[]).filter(type=>legal.includes(type));
+ // Unplayed legacy Blackjack / Trivia / Mini Bogey rounds can be safely skipped.
+ // Already-scored or partially-applied rounds are left intact to preserve progress.
+ if(g.current&&!legal.includes(g.current.type)&&['round_reveal','round_choice'].includes(g.phase)){
+  if(g.mode==='gnfull'&&Array.isArray(g.current.reps)){
+   for(const id of g.current.reps){const team=g.teams.find(t=>t.members.some(p=>p.asset===id));
+    if(team){team.rotation=Array.isArray(team.rotation)?team.rotation:[];team.rotation.unshift(id);}}
+  }
+  g.current=null;g.pending=[];g.pendingIndex=0;g.round=Math.max(0,(g.round||0)-1);
+  g.phase='round_ready';g.notice='Previous unavailable challenge skipped. Draw a new round.';
+ }
+if(g.current?.reps){g.people=g.current.reps.map(id=>getMember(g,id)).filter(Boolean);g.human=g.mode==='gnfull'?g.current.reps[0]:g.teams[0].members[0].asset;}else{g.people=g.mode==='gnmini'?g.teams.map(t=>t.members[0]):g.teams.map(t=>t.members.find(active)||t.members[0]);g.human=g.mode==='gnfull'?(g.people[0]?.asset||''):g.teams[0].members[0].asset;}g.settings={background:g.mode==='gnfull'?g.teams[0].background:'Nightclub'};return g;}
+function drawType(g){
+ const legal=roundTypes(g.mode);
+ // Also clean old saved round decks created under the original nine-game rules.
+ g.deck=(Array.isArray(g.deck)?g.deck:[]).filter(type=>legal.includes(type));
+ if(!g.deck.length)g.deck=mix(legal);
+ return g.deck.pop();
+}
 export function advance(g){if(g.phase!=='round_ready'&&g.phase!=='round_finished')throw Error('Finish the current round first.');if(g.phase==='game_over')return;
  const reps=g.mode==='gnfull'?g.teams.map(t=>nextRepresentative(t)):g.teams.filter(t=>t.members.some(active)).map(t=>t.members.find(active).asset);
  if(reps.length<2)throw Error('The championship is complete.');

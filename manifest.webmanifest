@@ -1,1 +1,31 @@
-{"name":"Strip Games Compendium — Mobile Edition","short_name":"Compendium","description":"Six offline Compendium games with user-selected local character artwork","start_url":"./index.html","scope":"./","display":"standalone","orientation":"any","background_color":"#130d10","theme_color":"#211419","icons":[{"src":"./icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},{"src":"./icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]}
+{
+  "name": "Strip Games Compendium — Mobile Edition",
+  "short_name": "Compendium",
+  "description": "Ten offline Compendium games in a Chrome tab, using local Assets artwork",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "orientation": "any",
+  "background_color": "#130d10",
+  "theme_color": "#211419",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
