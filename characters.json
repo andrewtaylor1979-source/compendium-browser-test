@@ -2208,5 +2208,37 @@
     },
     "roster_added_on": "2026-10-31",
     "roster_added_note": "Fictional original character created for the Compendium. 35-year-old Nottingham housewife and mum, warm, bubbly, practical, occasionally sarcastic, competitive, cheeky when at ease, moderately confident (3/5). Likes a laugh with friends, karaoke, Sunday walks, good coffee and getting everyone organised; dislikes being patronised, losing games and mess left for someone else. Favorite drink: raspberry gin and tonic. Avoids exaggerated Nottingham dialect. Her B state is a green-striped white vest top, not a bra. All 13 state images are stored separately by user."
+  },
+  {
+    "asset_name": "Philippa",
+    "full_name": "Philippa Forrester",
+    "age": 34,
+    "occupation": "Television presenter and broadcaster",
+    "favourite_drink": "Sparkling elderflower tonic",
+    "confidence_level": 4,
+    "nudity_quote": "I am usually the one holding the microphone. It is rather different when the spotlight turns back on me — but I still intend to keep my sense of humour.",
+    "clothing": {
+      "T": "Coral short-sleeved top",
+      "J": "Black fitted mini skirt",
+      "B": "Purple lace bra",
+      "P": "Purple lace knickers"
+    },
+    "stage_dialogue": {
+      "JBP": "The coral top first? You have certainly made an interesting opening decision. I shall try not to look surprised.",
+      "TBP": "Straight for the black skirt? I see we are dispensing with the polite introductory round.",
+      "JP": "Top and bra before the skirt. That is a rather unconventional running order, even by television standards.",
+      "TB": "The skirt and knickers while my top remains? I doubt our production team would have approved that sequence.",
+      "BP": "Both outer layers gone. Right, let us see whether I can get through this with my composure intact.",
+      "B": "Only the purple bra remains. I was under the impression this was meant to be a friendly competition.",
+      "P": "And now only the knickers. Well, this programme has certainly changed format since I arrived.",
+      "Naked": "That is the complete outfit gone. I can still deliver a closing remark, even if the evening has taken an unexpected turn.",
+      "Naked2": "Another pose? Very well. I have dealt with live broadcasts; I can manage an unexpected direction.",
+      "Naked3": "I see we are still adding new challenges. Does anyone have a cue card explaining the next one?",
+      "Naked4": "One more stage to go. I am smiling for the imaginary camera, but I would very much like a rematch.",
+      "Naked5": "Final stage. Thank you, everyone, for this thoroughly unpredictable edition. Next time I choose the format.",
+      "Eliminated": "And that is my exit cue. Congratulations to the winner — I shall be requesting a rematch."
+    },
+    "roster_added_on": "2026-11-01",
+    "roster_added_note": "Fictional Compendium interpretation of a publicly known presenter, depicted as age 34 at the time of the user-provided artwork. Intelligent, articulate, friendly, warm, witty and quietly competitive; confident (4/5) with a mischievous sense of humour and composed broadcast delivery. Character-specific details and relationships are invented for gameplay, not biographical claims. Enjoys wildlife documentaries, walking, lively quiz nights and observing people; dislikes rudeness, sloppy preparation and smug winners. Signature habit: puts on her presenter voice under pressure, then cracks a wry aside. Favourite game-only drink: sparkling elderflower tonic. Artwork is stored separately by the user."
   }
 ]

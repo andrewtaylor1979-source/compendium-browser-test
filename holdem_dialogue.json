@@ -4048,6 +4048,44 @@
           "Worst hand? That's going to cost me, isn't it?"
         ]
       }
+    },
+    "Philippa": {
+      "vulgarity": 2,
+      "swears": [
+        "bloody hell",
+        "damn",
+        "good grief"
+      ],
+      "events": {
+        "deal": [
+          "Two cards. Let us see if they tell me a good story.",
+          "The deal is underway. I hope the ending is better than the opening."
+        ],
+        "flop": [
+          "Three on the board. Now the story is developing.",
+          "A flop worth considering carefully."
+        ],
+        "turn": [
+          "Fourth card. The suspense is building rather nicely.",
+          "The turn card could change everything."
+        ],
+        "river": [
+          "Final card. Time for a definitive result.",
+          "River down. No more speculation now."
+        ],
+        "showdown_win": [
+          "Best hand! I rather like the sound of that.",
+          "A winning showdown. I shall be mentioning this again."
+        ],
+        "showdown_safe": [
+          "Safe. Not a headline victory, but absolutely fine by me.",
+          "I survived that showdown. I shall take it."
+        ],
+        "showdown_lose": [
+          "Last at showdown. Well, that is disappointing.",
+          "Oh dear. I really thought those cards looked promising."
+        ]
+      }
     }
   },
   "final_pose": {
@@ -5167,6 +5205,17 @@
         "naked5_shame": [
           "Oh fuck. I wanted to feel noticed again, not end up squatting here with this dildo inside me while everyone watches.",
           "This is so humiliating. Naked5, legs spread, completely exposed, and every single person is looking at me."
+        ]
+      },
+      "Philippa": {
+        "naked4_warning": [
+          "One more step? This is proving a much longer final segment than I expected."
+        ],
+        "naked5_tease": [
+          "Well, that is the finale. Next time I shall be presenting the rules myself."
+        ],
+        "naked5_shame": [
+          "The finale, then. I think I have earned a quiet moment after all that."
         ]
       }
     },

@@ -2585,6 +2585,43 @@
         "Naked4": "Hands and knees? Fuck. My bum up, everything exposed behind me, and one step from the Dildo Pose.",
         "Naked5": "The Dildo Pose? Oh fuck, {winner}. I really did not think my little adventure would end like this."
       }
+    },
+    {
+      "asset_name": "Philippa",
+      "dialogue": {
+        "deal": "Five cards. Let us see if this hand is worth talking about.",
+        "stand_pat": "I shall keep all five. No dramatic revisions today.",
+        "draw_one": "One replacement, please. Just a small editorial correction.",
+        "draw_two": "Two new cards. Perhaps that will improve the storyline.",
+        "draw_many": "Several replacements. That hand needed a fairly substantial rewrite.",
+        "improved": "Now that is better. It has certainly improved my outlook.",
+        "no_improvement": "Well, that reshuffle was rather less helpful than I had hoped.",
+        "showdown_win": "A winning hand. I am delighted to announce it.",
+        "showdown_safe": "Not last. I shall count that as a fortunate escape.",
+        "showdown_lose": "The weakest hand. Goodness, this is not how I wanted the segment to end."
+      },
+      "winner_choice": {
+        "T": "{loser}, I choose your {garment}. The round has been decided, and I am sticking with my call.",
+        "J": "{loser}, I choose your {garment}. The round has been decided, and I am sticking with my call.",
+        "B": "{loser}, I choose your {garment}. The round has been decided, and I am sticking with my call.",
+        "P": "{loser}, I choose your {garment}. The round has been decided, and I am sticking with my call.",
+        "Naked": "{loser}, we move to the next stage. I am afraid my decision stands.",
+        "Naked2": "{loser}, we move to the next stage. I am afraid my decision stands.",
+        "Naked3": "{loser}, we move to the next stage. I am afraid my decision stands.",
+        "Naked4": "{loser}, we move to the next stage. I am afraid my decision stands.",
+        "Naked5": "{loser}, we move to the next stage. I am afraid my decision stands."
+      },
+      "loser_response": {
+        "T": "My {garment}? All right, {winner}. I had better keep my composure.",
+        "J": "My {garment}? All right, {winner}. I had better keep my composure.",
+        "B": "My {garment}? All right, {winner}. I had better keep my composure.",
+        "P": "My {garment}? All right, {winner}. I had better keep my composure.",
+        "Naked": "That is the next stage, {winner}? I would rather have a rematch, but here we are.",
+        "Naked2": "That is the next stage, {winner}? I would rather have a rematch, but here we are.",
+        "Naked3": "That is the next stage, {winner}? I would rather have a rematch, but here we are.",
+        "Naked4": "That is the next stage, {winner}? I would rather have a rematch, but here we are.",
+        "Naked5": "That is the next stage, {winner}? I would rather have a rematch, but here we are."
+      }
     }
   ],
   "final_pose": {
@@ -3707,6 +3744,17 @@
         "naked5_shame": [
           "Oh fuck. I wanted to feel noticed again, not end up squatting here with this dildo inside me while everyone watches.",
           "This is so humiliating. Naked5, legs spread, completely exposed, and every single person is looking at me."
+        ]
+      },
+      "Philippa": {
+        "naked4_warning": [
+          "I see we are nearing the last challenge."
+        ],
+        "naked5_tease": [
+          "And that is the finale. What a surprising evening."
+        ],
+        "naked5_shame": [
+          "That was a difficult finale. A rematch might be in order."
         ]
       }
     },

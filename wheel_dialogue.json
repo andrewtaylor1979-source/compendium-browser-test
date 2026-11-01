@@ -3756,6 +3756,45 @@
           "I won the wheel. Who would've thought?"
         ]
       }
+    },
+    "Philippa": {
+      "vulgarity": 2,
+      "swears": [
+        "bloody hell",
+        "damn",
+        "good grief"
+      ],
+      "events": {
+        "spin": [
+          "Let us see what this remarkable wheel has planned.",
+          "Round it goes. No way to edit the result after this.",
+          "Well, the wheel is turning. I trust everyone is ready."
+        ],
+        "safe": [
+          "Safe. What a delightful word.",
+          "I shall happily accept that result.",
+          "That was a welcome piece of luck."
+        ],
+        "self_remove": [
+          "My {garment}? Ah. The wheel has developed a sense of humour.",
+          "Right, my {garment} it is. That was not on my running order.",
+          "The {garment} for me? I see how tonight is going."
+        ],
+        "target_remove": [
+          "{target}, the wheel has chosen your {garment}.",
+          "The {garment}, {target}. I am merely reporting the result.",
+          "Well, {target}, the result is official: {garment}."
+        ],
+        "recover": [
+          "A little reprieve. I shall take it.",
+          "That gives me some breathing room.",
+          "Well, that was a useful turn of events."
+        ],
+        "winner": [
+          "A win on the wheel! Quite the finale.",
+          "Thank you, wheel. You have been unusually kind."
+        ]
+      }
     }
   },
   "final_pose": {
@@ -4867,6 +4906,17 @@
         "naked5_shame": [
           "Oh fuck. I wanted to feel noticed again, not end up squatting here with this dildo inside me while everyone watches.",
           "This is so humiliating. Naked5, legs spread, completely exposed, and every single person is looking at me."
+        ]
+      },
+      "Philippa": {
+        "naked4_warning": [
+          "One more step? This is proving a much longer final segment than I expected."
+        ],
+        "naked5_tease": [
+          "Well, that is the finale. Next time I shall be presenting the rules myself."
+        ],
+        "naked5_shame": [
+          "The finale, then. I think I have earned a quiet moment after all that."
         ]
       }
     },

@@ -4301,6 +4301,64 @@
           "I won. Maybe being nervous and staying anyway counts as confidence after all."
         ]
       }
+    },
+    {
+      "asset_name": "Philippa",
+      "confidence": 4,
+      "dialogue": {
+        "intro": [
+          "Well, this is a livelier programme than I expected.",
+          "Good evening, everyone. I suspect we are in for an unpredictable game."
+        ],
+        "choose_target": [
+          "I choose {target}. That ought to make the next round interesting.",
+          "{target}, you are my choice this time. Nothing personal, I assure you."
+        ],
+        "revenge_target": [
+          "{target}, I have not forgotten that last round.",
+          "{target}, I think it is time the tables turned."
+        ],
+        "chosen_target": [
+          "Me? I see I have become the headline.",
+          "I have been selected. Right, let us keep our composure."
+        ],
+        "choose_layer": [
+          "{target}, I am choosing the {garment}.",
+          "The {garment}, {target}. That is my final answer."
+        ],
+        "choose_pose": [
+          "{target}, that is your next challenge.",
+          "The next stage, {target}. I did not write the rules."
+        ],
+        "pre_layer": [
+          "The {garment}? That is certainly a pointed choice.",
+          "Well, there goes my plan for a quiet evening."
+        ],
+        "pre_pose": [
+          "Another stage? I should have asked for a running order.",
+          "That is a rather unexpected direction. Give me a moment."
+        ],
+        "post_layer": [
+          "Right. That is done. On to the next round.",
+          "I am keeping a professional smile, whatever the scoreboard says."
+        ],
+        "post_pose": [
+          "I was not expecting to be put on the spot quite so thoroughly.",
+          "All right, I have managed that stage. Let us see what comes next."
+        ],
+        "bystander": [
+          "That was a memorable result, {target}.",
+          "What an unexpected turn for {target}."
+        ],
+        "eliminated": [
+          "That is my cue to leave. Well played, everyone.",
+          "Eliminated! This programme has had some surprising twists."
+        ],
+        "winner": [
+          "A win! I could get used to announcing that.",
+          "And that concludes the evening with a win. How lovely."
+        ]
+      }
     }
   ],
   "special_pairs": {

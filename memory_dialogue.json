@@ -677,7 +677,8 @@
     "Jasmine": "warm_regal",
     "Smurfette": "playful",
     "Paige": "showwoman",
-    "Lucy": "chatty_nervous"
+    "Lucy": "chatty_nervous",
+    "Philippa": "broadcast"
   },
   "individualVoices": {
     "Jasmine": {
@@ -1359,6 +1360,16 @@
       "attraction": "{target}, you make a very entertaining teammate.",
       "mercy": "{target}, that was surprisingly sporting of you.",
       "recap_tail": "I keep score, and I remember the good players."
+    },
+    "Philippa": {
+      "first": "Good evening, {target}. Let us see who draws the headline card.",
+      "won": "A neat result, {target}. I shall remember that win.",
+      "lost": "Well played, {target}. That one caught me out.",
+      "revenge": "I remember last time, {target}. Perhaps the balance will shift.",
+      "rival": "A proper contest, {target}. Just how I like it.",
+      "attraction": "It is good to have such cheerful company, {target}.",
+      "mercy": "That was kind of you, {target}. I noticed.",
+      "recap_tail": "There is always another story waiting in the next round."
     }
   }
 }

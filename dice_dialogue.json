@@ -4938,6 +4938,59 @@
         "damn",
         "oh for goodness sake"
       ]
+    },
+    "Philippa": {
+      "events": {
+        "high_unique": [
+          "{total}! A lovely roll. Someone ought to put that on the highlights.",
+          "Highest with {total}. I shall try not to look too pleased with myself.",
+          "Well, {total} is exactly the number I hoped to see."
+        ],
+        "high_tie": [
+          "A high tie at {total}. Naturally we have decided on more suspense.",
+          "Shared highest? Well, we shall need a tiebreaker then.",
+          "{total} and still no clear winner. I do enjoy a cliffhanger."
+        ],
+        "low_single": [
+          "Lowest with {total}. That is not the headline I wanted.",
+          "{total}. I see the dice have decided to test my composure.",
+          "Oh, bother. Bottom roll. I may need to revise my strategy."
+        ],
+        "low_tie": [
+          "A low tie. We are prolonging the awkward bit, apparently.",
+          "Joint lowest? How wonderfully inconvenient.",
+          "Well, at least somebody else is sharing this dreadful score."
+        ],
+        "choose_loser": [
+          "I choose {target}. I am sorry, but those are the rules of tonight’s programme.",
+          "{target}, you are my selection. You may quote me on that.",
+          "My choice is {target}. No autocue required."
+        ],
+        "choose_removal": [
+          "{target}, I choose your {garment}. A difficult decision, professionally delivered.",
+          "Your {garment}, {target}. You can blame my competitive streak.",
+          "I shall go with the {garment}, {target}. This is quite the programme."
+        ],
+        "penalty_reaction": [
+          "The {garment}? Very well, {chooser}. That is a rather pointed choice.",
+          "All right, {chooser}. I heard you. The {garment} it is.",
+          "Well, {chooser}, that was direct. I suppose I shall have to accept the result."
+        ],
+        "eliminated": [
+          "That is my exit cue. Congratulations to everyone still playing.",
+          "Eliminated. A disappointing result, but a memorable evening."
+        ],
+        "winner": [
+          "I win! I think that deserves a closing applause.",
+          "Winner. Well, that is a cheerful way to finish the programme."
+        ]
+      },
+      "vulgarity": 2,
+      "swears": [
+        "bloody hell",
+        "damn",
+        "good grief"
+      ]
     }
   },
   "final_pose": {
