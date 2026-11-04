@@ -4086,6 +4086,44 @@
           "Oh dear. I really thought those cards looked promising."
         ]
       }
+    },
+    "Laura": {
+      "vulgarity": 2,
+      "swears": [
+        "blimey",
+        "bloody hell",
+        "oh dear"
+      ],
+      "events": {
+        "deal": [
+          "Two cards. Here is the opening outlook.",
+          "A fresh hand; anything could happen."
+        ],
+        "flop": [
+          "Three cards and a new picture forming.",
+          "The flop has changed the outlook."
+        ],
+        "turn": [
+          "Fourth card. I am watching the pattern.",
+          "The turn could change everything."
+        ],
+        "river": [
+          "Final card. No more revisions.",
+          "The river is here. Time for the verdict."
+        ],
+        "showdown_win": [
+          "I have the best hand! A clear win.",
+          "That is a result worth celebrating."
+        ],
+        "showdown_safe": [
+          "Safe. I shall take that outcome.",
+          "Not last. Very welcome."
+        ],
+        "showdown_lose": [
+          "That is a loss. I misread the situation.",
+          "Oh dear. A poor ending to that hand."
+        ]
+      }
     }
   },
   "final_pose": {

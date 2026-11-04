@@ -4991,6 +4991,56 @@
         "damn",
         "good grief"
       ]
+    },
+    "Laura": {
+      "vulgarity": 2,
+      "swears": [
+        "blimey",
+        "bloody hell",
+        "oh dear"
+      ],
+      "events": {
+        "high_unique": [
+          "{total}! That is a bright result.",
+          "Top roll with {total}. My confidence was justified.",
+          "A high of {total}. I shall take that."
+        ],
+        "high_tie": [
+          "Joint highest at {total}. A cliffhanger!",
+          "A high tie: the pressure continues.",
+          "{total} and a tie. Another roll, then."
+        ],
+        "low_single": [
+          "Lowest on {total}. Oh, that is disappointing.",
+          "A low of {total}. Forecast accuracy: poor.",
+          "Bottom roll. That one hurt."
+        ],
+        "low_tie": [
+          "Tied at the bottom. The suspense continues.",
+          "At least I am not alone in that bad roll.",
+          "A low tie. Another chance to improve."
+        ],
+        "choose_loser": [
+          "I choose {target}. That is my final call.",
+          "{target}, I am afraid the rules have brought us here."
+        ],
+        "choose_removal": [
+          "{target}, my choice is the {garment}.",
+          "I have chosen the {garment}, {target}."
+        ],
+        "penalty_reaction": [
+          "The {garment}, {chooser}? I heard you.",
+          "All right, {chooser}. I accept that call."
+        ],
+        "eliminated": [
+          "I am out. There will be a rematch.",
+          "Eliminated. That was a changeable evening."
+        ],
+        "winner": [
+          "I win! The forecast finally came good.",
+          "What a bright finish!"
+        ]
+      }
     }
   },
   "final_pose": {

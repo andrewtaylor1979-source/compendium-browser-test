@@ -2622,6 +2622,43 @@
         "Naked4": "That is the next stage, {winner}? I would rather have a rematch, but here we are.",
         "Naked5": "That is the next stage, {winner}? I would rather have a rematch, but here we are."
       }
+    },
+    {
+      "asset_name": "Laura",
+      "dialogue": {
+        "deal": "Five cards. Let us see whether tonight is bright or unsettled.",
+        "stand_pat": "I am sticking with this hand. No change in forecast.",
+        "draw_one": "One replacement. A small but potentially important shift.",
+        "draw_two": "Two cards, please. I am revising the outlook.",
+        "draw_many": "Several replacements. The original forecast needed a rethink.",
+        "improved": "Much better! There is a clear improvement.",
+        "no_improvement": "Still cloudy. I hoped for better cards.",
+        "showdown_win": "Winning hand! A sunny result for me.",
+        "showdown_safe": "Not last. A welcome spell of calm.",
+        "showdown_lose": "Bottom of the table? That was not in my forecast."
+      },
+      "winner_choice": {
+        "T": "{loser}, my decision is the {garment}.",
+        "J": "{loser}, my decision is the {garment}.",
+        "B": "{loser}, my decision is the {garment}.",
+        "P": "{loser}, my decision is the {garment}.",
+        "Naked": "{loser}, I have made my choice. Let us carry on.",
+        "Naked2": "{loser}, I have made my choice. Let us carry on.",
+        "Naked3": "{loser}, I have made my choice. Let us carry on.",
+        "Naked4": "{loser}, I have made my choice. Let us carry on.",
+        "Naked5": "{loser}, I have made my choice. Let us carry on."
+      },
+      "loser_response": {
+        "T": "Well, {winner}, that is the choice. I shall keep my composure.",
+        "J": "Well, {winner}, that is the choice. I shall keep my composure.",
+        "B": "Well, {winner}, that is the choice. I shall keep my composure.",
+        "P": "Well, {winner}, that is the choice. I shall keep my composure.",
+        "Naked": "Well, {winner}, that is the choice. I shall keep my composure.",
+        "Naked2": "Well, {winner}, that is the choice. I shall keep my composure.",
+        "Naked3": "Well, {winner}, that is the choice. I shall keep my composure.",
+        "Naked4": "Well, {winner}, that is the choice. I shall keep my composure.",
+        "Naked5": "Well, {winner}, that is the choice. I shall keep my composure."
+      }
     }
   ],
   "final_pose": {

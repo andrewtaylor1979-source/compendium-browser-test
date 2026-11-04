@@ -678,7 +678,8 @@
     "Smurfette": "playful",
     "Paige": "showwoman",
     "Lucy": "chatty_nervous",
-    "Philippa": "broadcast"
+    "Philippa": "broadcast",
+    "Laura": "broadcast"
   },
   "individualVoices": {
     "Jasmine": {
@@ -1370,6 +1371,16 @@
       "attraction": "It is good to have such cheerful company, {target}.",
       "mercy": "That was kind of you, {target}. I noticed.",
       "recap_tail": "There is always another story waiting in the next round."
+    },
+    "Laura": {
+      "first": "Evening, {target}. I hope you are ready for a changeable round.",
+      "won": "A lovely forecast for me, {target}.",
+      "lost": "Well played, {target}. The outlook turned quickly.",
+      "revenge": "I remember our last game, {target}. Time for a rematch.",
+      "rival": "We both know this is competitive, {target}.",
+      "attraction": "Good company makes a much brighter evening, {target}.",
+      "mercy": "That was kind of you, {target}.",
+      "recap_tail": "There is always another round around the corner."
     }
   }
 }

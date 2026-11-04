@@ -3795,6 +3795,40 @@
           "Thank you, wheel. You have been unusually kind."
         ]
       }
+    },
+    "Laura": {
+      "vulgarity": 2,
+      "swears": [
+        "blimey",
+        "bloody hell",
+        "oh dear"
+      ],
+      "events": {
+        "spin": [
+          "Round it goes. The forecast is uncertain.",
+          "I am watching the wheel with professional interest."
+        ],
+        "safe": [
+          "Safe! I do love a settled spell.",
+          "A welcome bit of calm."
+        ],
+        "self_remove": [
+          "My {garment}? Well, that is unexpected.",
+          "The {garment} for me? All right, rules are rules."
+        ],
+        "target_remove": [
+          "{target}, the wheel chose your {garment}.",
+          "My forecast for {target} is not looking good."
+        ],
+        "recover": [
+          "A reprieve! The outlook improves.",
+          "That was rather lucky."
+        ],
+        "winner": [
+          "I win the wheel round!",
+          "Sunny skies at last!"
+        ]
+      }
     }
   },
   "final_pose": {

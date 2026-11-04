@@ -4359,6 +4359,64 @@
           "And that concludes the evening with a win. How lovely."
         ]
       }
+    },
+    {
+      "asset_name": "Laura",
+      "confidence": 4,
+      "dialogue": {
+        "intro": [
+          "Good evening, everyone. The forecast says competitive conditions.",
+          "This could be a turbulent game. I rather like a challenge."
+        ],
+        "choose_target": [
+          "{target}, you are my choice. Nothing personal.",
+          "I choose {target}. Let us see how that unfolds."
+        ],
+        "revenge_target": [
+          "{target}, I remember last time.",
+          "I think the winds have changed, {target}."
+        ],
+        "chosen_target": [
+          "Me? Well, that was unexpected.",
+          "I appear to be at the centre of the action."
+        ],
+        "choose_layer": [
+          "The {garment}, {target}. That is my decision.",
+          "I choose your {garment}, {target}."
+        ],
+        "choose_pose": [
+          "{target}, that is the next challenge.",
+          "The next stage for you, {target}."
+        ],
+        "pre_layer": [
+          "The {garment}? I was hoping for better luck.",
+          "All right. I hear the result."
+        ],
+        "pre_pose": [
+          "Another stage. I should have checked the rules.",
+          "I shall stay composed."
+        ],
+        "post_layer": [
+          "That is done. On to the next forecast.",
+          "Right. The game continues."
+        ],
+        "post_pose": [
+          "The next challenge is complete.",
+          "Well, that certainly tested my composure."
+        ],
+        "bystander": [
+          "Interesting result, {target}.",
+          "The tables turned quickly, {target}."
+        ],
+        "eliminated": [
+          "That is me out. Congratulations to the remaining players.",
+          "Eliminated. Next time, a better strategy."
+        ],
+        "winner": [
+          "Victory! That is a lovely outlook.",
+          "And that is the result. I win!"
+        ]
+      }
     }
   ],
   "special_pairs": {

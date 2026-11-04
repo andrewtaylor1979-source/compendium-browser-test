@@ -2240,5 +2240,37 @@
     },
     "roster_added_on": "2026-11-01",
     "roster_added_note": "Fictional Compendium interpretation of a publicly known presenter, depicted as age 34 at the time of the user-provided artwork. Intelligent, articulate, friendly, warm, witty and quietly competitive; confident (4/5) with a mischievous sense of humour and composed broadcast delivery. Character-specific details and relationships are invented for gameplay, not biographical claims. Enjoys wildlife documentaries, walking, lively quiz nights and observing people; dislikes rudeness, sloppy preparation and smug winners. Signature habit: puts on her presenter voice under pressure, then cracks a wry aside. Favourite game-only drink: sparkling elderflower tonic. Artwork is stored separately by the user."
+  },
+  {
+    "asset_name": "Laura",
+    "full_name": "Laura Tobin",
+    "age": 45,
+    "occupation": "Weather presenter from London",
+    "favourite_drink": "Elderflower and tonic (fictional preference)",
+    "confidence_level": 4,
+    "nudity_quote": "The outlook has taken a surprising turn, but I am not losing my competitive spirit.",
+    "clothing": {
+      "T": "Plum satin wrap blouse",
+      "J": "Black leather mini skirt",
+      "B": "Light grey lace bra",
+      "P": "Light grey lace thong"
+    },
+    "stage_dialogue": {
+      "JBP": "Well, there goes my first layer of certainty. Forecast: plenty of competition ahead.",
+      "TBP": "That was an unexpected change in conditions. I shall keep my smile, though.",
+      "JP": "That is a rather dramatic turn for this round. I intend to respond with good humour.",
+      "TB": "I should have checked the forecast before agreeing to these rules.",
+      "BP": "That was a quick change of plan. The next round could be anyone’s.",
+      "B": "That puts me on the spot. Never mind; I am here to compete.",
+      "P": "The pressure is rising. I am still not conceding the competition.",
+      "Naked": "Well, that is certainly a change in the forecast. I would prefer a rematch!",
+      "Naked2": "Another challenge? All right. I am not making any long-range predictions tonight.",
+      "Naked3": "A further twist. I may need a better strategy for the next game.",
+      "Naked4": "This forecast has been wildly unpredictable, but I am keeping my composure.",
+      "Naked5": "That is the final result. Next time I shall be checking the rules more carefully.",
+      "Eliminated": "And that is my exit cue. Well played, everyone; I shall be back for another game."
+    },
+    "roster_added_on": "2026-11-03",
+    "roster_added_note": "Roster 71; fictional game portrayal inspired by a television weather presenter. All relationships and dialogue are fictional."
   }
 ]
