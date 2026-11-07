@@ -3829,6 +3829,108 @@
           "Sunny skies at last!"
         ]
       }
+    },
+    "Isa": {
+      "vulgarity": 1,
+      "swears": [
+        "blimey",
+        "good grief",
+        "oh dear"
+      ],
+      "events": {
+        "spin": [
+          "The wheel is spinning. Who knows where it will land?",
+          "Here we go. A little luck would be welcome."
+        ],
+        "safe": [
+          "Safe! That is a welcome result.",
+          "I will happily take that reprieve."
+        ],
+        "self_remove": [
+          "The {garment}? Right, that is the wheel’s call.",
+          "My {garment}? Fair enough — on we go."
+        ],
+        "target_remove": [
+          "{target}, the wheel picked your {garment}.",
+          "It has chosen {target} and the {garment}."
+        ],
+        "recover": [
+          "A recovery! Always good to get another chance.",
+          "Back in play. Love a comeback."
+        ],
+        "winner": [
+          "The wheel went my way!",
+          "I win this one. Very pleased with that."
+        ]
+      }
+    },
+    "Liara": {
+      "vulgarity": 1,
+      "swears": [
+        "oh dear",
+        "goodness",
+        "by the Goddess"
+      ],
+      "events": {
+        "spin": [
+          "The wheel turns. Such a peculiar method of deciding fate.",
+          "Let us see where the probabilities converge."
+        ],
+        "safe": [
+          "Safe! A relief, though not a proof of skill.",
+          "Fortune was generous this time."
+        ],
+        "self_remove": [
+          "My {garment}? That is the wheel’s decision.",
+          "The {garment}. I shall accept the result."
+        ],
+        "target_remove": [
+          "{target}, the wheel selected your {garment}.",
+          "An unfortunate result for {target} and the {garment}."
+        ],
+        "recover": [
+          "A recovery. Evidently the story is not over.",
+          "Back in play. A most welcome revision."
+        ],
+        "winner": [
+          "A victory! I confess I am pleased.",
+          "The wheel favoured me. Quite unexpectedly."
+        ]
+      }
+    },
+    "Panam": {
+      "vulgarity": 2,
+      "swears": [
+        "damn",
+        "hell",
+        "crap"
+      ],
+      "events": {
+        "spin": [
+          "Let's spin this thing and get it over with.",
+          "All right, wheel. Don't make me regret this."
+        ],
+        "safe": [
+          "Safe! Ha, finally a break.",
+          "I'll take that. No complaints here."
+        ],
+        "self_remove": [
+          "My {garment}? Damn it, wheel.",
+          "The {garment}. You have terrible timing."
+        ],
+        "target_remove": [
+          "{target}, looks like your {garment} is up.",
+          "Sorry, {target}. The wheel made that call."
+        ],
+        "recover": [
+          "Back in it! Now we're talking.",
+          "Another chance? That's all I need."
+        ],
+        "winner": [
+          "Ha! Never bet against me.",
+          "That's a win. I'll take it."
+        ]
+      }
     }
   },
   "final_pose": {

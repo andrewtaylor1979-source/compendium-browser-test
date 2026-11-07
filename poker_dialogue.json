@@ -2659,6 +2659,117 @@
         "Naked4": "Well, {winner}, that is the choice. I shall keep my composure.",
         "Naked5": "Well, {winner}, that is the choice. I shall keep my composure."
       }
+    },
+    {
+      "asset_name": "Isa",
+      "dialogue": {
+        "deal": "Opening hand. Let us see what the first over brings.",
+        "stand_pat": "I am keeping my hand. Sometimes you trust the opening line-up.",
+        "draw_one": "One new card. A little tactical adjustment.",
+        "draw_two": "Two replacements. Time to change the field.",
+        "draw_many": "A proper reshuffle. The original plan needed a rethink.",
+        "improved": "That is much better! A well-timed comeback.",
+        "no_improvement": "No improvement. I misread the pitch on that one.",
+        "showdown_win": "That is a winning hand! I enjoyed that contest.",
+        "showdown_safe": "Safely through. I shall take the result.",
+        "showdown_lose": "Last place? That one went for six against me."
+      },
+      "winner_choice": {
+        "T": "{loser}, I choose the {garment}.",
+        "J": "{loser}, I choose the {garment}.",
+        "B": "{loser}, I choose the {garment}.",
+        "P": "{loser}, I choose the {garment}.",
+        "Naked": "{loser}, that is my call.",
+        "Naked2": "{loser}, that is my call.",
+        "Naked3": "{loser}, that is my call.",
+        "Naked4": "{loser}, that is my call.",
+        "Naked5": "{loser}, that is my call."
+      },
+      "loser_response": {
+        "T": "Fair play, {winner}. I shall regroup.",
+        "J": "Fair play, {winner}. I shall regroup.",
+        "B": "Fair play, {winner}. I shall regroup.",
+        "P": "Fair play, {winner}. I shall regroup.",
+        "Naked": "Fair play, {winner}. I shall regroup.",
+        "Naked2": "Fair play, {winner}. I shall regroup.",
+        "Naked3": "Fair play, {winner}. I shall regroup.",
+        "Naked4": "Fair play, {winner}. I shall regroup.",
+        "Naked5": "Fair play, {winner}. I shall regroup."
+      }
+    },
+    {
+      "asset_name": "Liara",
+      "dialogue": {
+        "deal": "A fresh set of cards. What might these symbols reveal?",
+        "stand_pat": "I shall retain this hand. My confidence is reasonably high.",
+        "draw_one": "One replacement, please. A small adjustment to the model.",
+        "draw_two": "Two replacements. It is time to reconsider the evidence.",
+        "draw_many": "A substantial revision is required. Several cards, please.",
+        "improved": "Ah, better. A most satisfying development.",
+        "no_improvement": "A disappointing sample. I must reconsider my assumptions.",
+        "showdown_win": "I have won? Perhaps my theories are sound after all.",
+        "showdown_safe": "Not last. The experiment continues.",
+        "showdown_lose": "Last place. I may have underestimated the other researchers."
+      },
+      "winner_choice": {
+        "T": "{loser}, I select the {garment}. I hope you will forgive my curiosity.",
+        "J": "{loser}, I select the {garment}. I hope you will forgive my curiosity.",
+        "B": "{loser}, I select the {garment}. I hope you will forgive my curiosity.",
+        "P": "{loser}, I select the {garment}. I hope you will forgive my curiosity.",
+        "Naked": "{loser}, the next challenge is yours. I wish you luck.",
+        "Naked2": "{loser}, the next challenge is yours. I wish you luck.",
+        "Naked3": "{loser}, the next challenge is yours. I wish you luck.",
+        "Naked4": "{loser}, the next challenge is yours. I wish you luck.",
+        "Naked5": "{loser}, the next challenge is yours. I wish you luck."
+      },
+      "loser_response": {
+        "T": "I see, {winner}. An unexpected decision, but I accept it.",
+        "J": "I see, {winner}. An unexpected decision, but I accept it.",
+        "B": "I see, {winner}. An unexpected decision, but I accept it.",
+        "P": "I see, {winner}. An unexpected decision, but I accept it.",
+        "Naked": "A surprising outcome, {winner}. I shall make a note of it.",
+        "Naked2": "A surprising outcome, {winner}. I shall make a note of it.",
+        "Naked3": "A surprising outcome, {winner}. I shall make a note of it.",
+        "Naked4": "A surprising outcome, {winner}. I shall make a note of it.",
+        "Naked5": "A surprising outcome, {winner}. I shall make a note of it."
+      }
+    },
+    {
+      "asset_name": "Panam",
+      "dialogue": {
+        "deal": "Let's see what the cards have got. I've faced worse odds.",
+        "stand_pat": "I'm keeping these. Sometimes you've got to trust your gut.",
+        "draw_one": "One new card. Make it a good one.",
+        "draw_two": "Two cards out. Time to change the plan.",
+        "draw_many": "This hand's a wreck. Give me a fresh start.",
+        "improved": "There we go! Knew I could turn it around.",
+        "no_improvement": "Oh, come on! That was supposed to help.",
+        "showdown_win": "Ha! Told you I don't go down easy.",
+        "showdown_safe": "Still in the fight. Works for me.",
+        "showdown_lose": "Damn it. That one stings, I'll admit."
+      },
+      "winner_choice": {
+        "T": "{loser}, the {garment}. Don't say I never gave you fair warning.",
+        "J": "{loser}, the {garment}. Don't say I never gave you fair warning.",
+        "B": "{loser}, the {garment}. Don't say I never gave you fair warning.",
+        "P": "{loser}, the {garment}. Don't say I never gave you fair warning.",
+        "Naked": "{loser}, you're up for the next challenge. Tough luck.",
+        "Naked2": "{loser}, you're up for the next challenge. Tough luck.",
+        "Naked3": "{loser}, you're up for the next challenge. Tough luck.",
+        "Naked4": "{loser}, you're up for the next challenge. Tough luck.",
+        "Naked5": "{loser}, you're up for the next challenge. Tough luck."
+      },
+      "loser_response": {
+        "T": "Okay, {winner}. The {garment}, huh? I'll remember that.",
+        "J": "Okay, {winner}. The {garment}, huh? I'll remember that.",
+        "B": "Okay, {winner}. The {garment}, huh? I'll remember that.",
+        "P": "Okay, {winner}. The {garment}, huh? I'll remember that.",
+        "Naked": "All right, {winner}. You got me this time.",
+        "Naked2": "All right, {winner}. You got me this time.",
+        "Naked3": "All right, {winner}. You got me this time.",
+        "Naked4": "All right, {winner}. You got me this time.",
+        "Naked5": "All right, {winner}. You got me this time."
+      }
     }
   ],
   "final_pose": {

@@ -2272,5 +2272,101 @@
     },
     "roster_added_on": "2026-11-03",
     "roster_added_note": "Roster 71; fictional game portrayal inspired by a television weather presenter. All relationships and dialogue are fictional."
+  },
+  {
+    "asset_name": "Isa",
+    "full_name": "Isa Guha",
+    "age": 41,
+    "occupation": "Former England international cricketer; BBC sports presenter and pundit",
+    "favourite_drink": "Sparkling lime and soda (fictional in-game preference)",
+    "confidence_level": 4,
+    "nudity_quote": "I have faced some tense finishes, but I am not losing my competitive spirit now.",
+    "clothing": {
+      "T": "Bright pink blouse with rolled sleeves",
+      "J": "Black pencil skirt",
+      "B": "Black lace bra",
+      "P": "Black lace knickers"
+    },
+    "stage_dialogue": {
+      "JBP": "First setback of the match. Plenty of play left, though.",
+      "TBP": "That was a surprising call. I shall keep my eye on the next round.",
+      "JP": "A bold result! Right, time to concentrate on the comeback.",
+      "TB": "Well, the game has taken a sharp turn. I can still turn this around.",
+      "BP": "Not quite the position I wanted, but I have recovered from worse starts.",
+      "B": "I shall need a strong final over to get back into this.",
+      "P": "A difficult spot, certainly. But I am not throwing in the towel.",
+      "Naked": "Well played. I am already looking forward to a rematch.",
+      "Naked2": "Another twist! There is no substitute for keeping your nerve.",
+      "Naked3": "All right, that is quite enough surprises for one contest.",
+      "Naked4": "One more round. I know how to handle pressure.",
+      "Naked5": "The final whistle. I will be coming back better prepared.",
+      "Eliminated": "And that is me out. Good game, everyone. See you in the next one."
+    },
+    "roster_added_on": "2026-11-04",
+    "roster_added_note": "Roster 72; fictional in-game personality inspired by a former international cricketer and broadcaster. Starting relationships and game banter are invented."
+  },
+  {
+    "asset_name": "Liara",
+    "full_name": "Liara T'Soni",
+    "age": 106,
+    "occupation": "Asari archaeologist and Prothean researcher from Thessia (Mass Effect)",
+    "favourite_drink": "Thessian herbal infusion (fictional in-game preference)",
+    "confidence_level": 3,
+    "nudity_quote": "I had not anticipated this outcome. Clearly my model needs revising.",
+    "clothing": {
+      "T": "Black-and-white N7 jacket",
+      "J": "Black leather mini skirt",
+      "B": "White fitted tank top",
+      "P": "Light grey lace thong"
+    },
+    "stage_dialogue": {
+      "JBP": "An unexpected variable. I should have allowed for greater uncertainty.",
+      "TBP": "The result was less favourable than predicted. I shall recalibrate.",
+      "JP": "Interesting. Perhaps my strategy was not as sound as I believed.",
+      "TB": "A surprising turn. I am beginning to understand the appeal of this chaos.",
+      "BP": "My calculations did not account for quite so many setbacks.",
+      "B": "This is becoming a rather instructive lesson in probability.",
+      "P": "I confess I am somewhat flustered. That is unusual for me.",
+      "Naked": "Well. That is an outcome I did not include in my notes.",
+      "Naked2": "Another challenge? Very well. I will remain composed.",
+      "Naked3": "An extraordinary custom. I shall record it for further study.",
+      "Naked4": "My dignity has survived worse odds. I believe.",
+      "Naked5": "The experiment has concluded. Next time, I shall revise the parameters.",
+      "Eliminated": "A disappointing result, but every experiment yields useful data."
+    },
+    "roster_added_on": "2026-11-05",
+    "roster_added_note": "Roster 73; adult 106-year-old Asari scientist from Mass Effect. Character dialogue and reciprocal relationships are fictional."
+  },
+  {
+    "asset_name": "Panam",
+    "full_name": "Panam Palmer",
+    "age": 33,
+    "occupation": "Independent mercenary, nomad and expert driver",
+    "favourite_drink": "An ice-cold beer after a long drive (fictional in-game preference)",
+    "confidence_level": 3,
+    "nudity_quote": "Well, that's one way to make me lose my cool. Don't get used to it.",
+    "clothing": {
+      "T": "Red-and-black cropped leather jacket",
+      "J": "Black leather belted mini-skirt",
+      "B": "Red-and-black zip-front cropped top",
+      "P": "Black lace panties"
+    },
+    "stage_dialogue": {
+      "JBP": "All right, first hit landed. Don't mistake that for a surrender.",
+      "TBP": "Damn. I thought I had that one. It's not over.",
+      "JP": "You got lucky. I'll make you work for the next one.",
+      "TB": "Seriously? Fine. I'm still in this fight.",
+      "BP": "Not my finest moment. But I've come back from worse.",
+      "B": "Okay, now you're pushing it. Better hope I don't win the next hand.",
+      "P": "I can feel myself blushing, and I hate that you can tell.",
+      "Naked": "Well, shit. You win this round. Not the whole night.",
+      "Naked2": "Again? You really know how to test my patience.",
+      "Naked3": "Still here, still fighting. That's what I do.",
+      "Naked4": "I should've walked away. But quitting isn't my style.",
+      "Naked5": "All right, you got me. Enjoy the victory while it lasts.",
+      "Eliminated": "I'm out. But the next time we meet, I call the shots."
+    },
+    "roster_added_on": "2026-11-07",
+    "roster_added_note": "Roster 74; 33-year-old adult nomad mercenary. Fictional personality, dialogue and relationships for Compendium gameplay."
   }
 ]

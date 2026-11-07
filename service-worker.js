@@ -1,6 +1,6 @@
 'use strict';
-const CACHE='sgc-ten-games-browser-v1.4.6';
-const SHELL=['./','./index.html','./app.js','./app.js?v=laura146','./engine.js','./engine.js?v=laura146','./dialogue-director.js','./dialogue-director.js?v=laura146','./games-night.js','./games-night.js?v=laura146','./boot-guard.js','./boot-guard.js?v=fix101','./style.css','./style.css?v=laura146','./icon.svg','./icon-192.png','./icon-512.png','./header_logo.png'];
+const CACHE='sgc-ten-games-browser-v1.4.9';
+const SHELL=['./','./index.html','./app.js','./app.js?v=panam149','./engine.js','./engine.js?v=panam149','./dialogue-director.js','./dialogue-director.js?v=panam149','./games-night.js','./games-night.js?v=panam149','./boot-guard.js','./boot-guard.js?v=fix101','./style.css','./style.css?v=panam149','./icon.svg','./icon-192.png','./icon-512.png','./header_logo.png'];
 const DATA=['characters','dice_dialogue','wheel_dialogue','holdem_dialogue','poker_dialogue','memory_dialogue','showdown_dialogue','mayhem_dialogue'];
 self.addEventListener('install',e=>e.waitUntil((async()=>{
  const c=await caches.open(CACHE);

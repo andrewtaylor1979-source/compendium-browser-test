@@ -679,7 +679,10 @@
     "Paige": "showwoman",
     "Lucy": "chatty_nervous",
     "Philippa": "broadcast",
-    "Laura": "broadcast"
+    "Laura": "broadcast",
+    "Isa": "broadcast",
+    "Liara": "wry",
+    "Panam": "aggressive"
   },
   "individualVoices": {
     "Jasmine": {
@@ -1381,6 +1384,36 @@
       "attraction": "Good company makes a much brighter evening, {target}.",
       "mercy": "That was kind of you, {target}.",
       "recap_tail": "There is always another round around the corner."
+    },
+    "Isa": {
+      "first": "Ready for the next round, {target}? I certainly am.",
+      "won": "That is a fine result, {target}. Good game.",
+      "lost": "Well played, {target}. You deserved that one.",
+      "revenge": "I remember our last contest, {target}. Here we go again.",
+      "rival": "I know you will bring your best game, {target}. So will I.",
+      "attraction": "I always enjoy playing with you, {target}.",
+      "mercy": "That was kind of you, {target}. Thank you.",
+      "recap_tail": "There is always another match to look forward to."
+    },
+    "Liara": {
+      "first": "{target}, would you join me in a small experiment?",
+      "won": "A satisfying result, {target}. My hypothesis seems correct.",
+      "lost": "Well played, {target}. I shall rethink my approach.",
+      "revenge": "We have an unresolved data point, {target}. Another round?",
+      "rival": "You make an intriguing adversary, {target}.",
+      "attraction": "I always enjoy our conversations, {target}.",
+      "mercy": "That was generous, {target}. Thank you.",
+      "recap_tail": "I should like to study the results before we play again."
+    },
+    "Panam": {
+      "first": "{target}, you ready to see who's quicker on the draw?",
+      "won": "Told you, {target}. I remember who beats who.",
+      "lost": "Yeah, you got me, {target}. Don't get used to it.",
+      "revenge": "Still remember our last round, {target}. Time to settle that score.",
+      "rival": "{target}, you're making this personal. I like a challenge.",
+      "attraction": "You know, {target}, I don't mind having you on my side.",
+      "mercy": "Appreciate that, {target}. Don't tell anyone I said so.",
+      "recap_tail": "The road's long, and I've got a damn good memory."
     }
   }
 }

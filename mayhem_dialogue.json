@@ -4417,6 +4417,180 @@
           "And that is the result. I win!"
         ]
       }
+    },
+    {
+      "asset_name": "Isa",
+      "confidence": 4,
+      "dialogue": {
+        "intro": [
+          "Right, everyone. Let us make this a proper contest.",
+          "The field is set, and I am ready to play."
+        ],
+        "choose_target": [
+          "{target}, you are my pick this round.",
+          "My call is {target}. Nothing personal."
+        ],
+        "revenge_target": [
+          "I remember that last game, {target}.",
+          "{target}, it is time for a friendly rematch."
+        ],
+        "chosen_target": [
+          "Me? I suppose that makes things interesting.",
+          "Apparently I am in the spotlight now."
+        ],
+        "choose_layer": [
+          "I choose the {garment}, {target}.",
+          "{target}, the {garment} is my call."
+        ],
+        "choose_pose": [
+          "{target}, you are next in the sequence.",
+          "Next challenge for {target}."
+        ],
+        "pre_layer": [
+          "The {garment}? Right, I hear the decision.",
+          "That is the call. Let us keep the match moving."
+        ],
+        "pre_pose": [
+          "Another stage. I will keep my composure.",
+          "I can handle a little extra pressure."
+        ],
+        "post_layer": [
+          "Done. Time to focus on the next round.",
+          "One result settled. Plenty more to play for."
+        ],
+        "post_pose": [
+          "Challenge complete. On we go.",
+          "That one certainly tested my nerve."
+        ],
+        "bystander": [
+          "Good effort, {target}.",
+          "That was a tough call, {target}."
+        ],
+        "eliminated": [
+          "I am out. Congratulations to the others.",
+          "That is my exit. I shall analyse what went wrong."
+        ],
+        "winner": [
+          "That is a victory! Lovely finish.",
+          "I am very pleased with that result."
+        ]
+      }
+    },
+    {
+      "asset_name": "Liara",
+      "confidence": 3,
+      "dialogue": {
+        "intro": [
+          "How fascinating. A game in which strategy and chaos coexist.",
+          "I am ready. Let us begin the experiment."
+        ],
+        "choose_target": [
+          "I select {target}. You seem a worthy subject.",
+          "{target}, I have chosen you. I hope you will not object."
+        ],
+        "revenge_target": [
+          "A previous result still troubles me, {target}.",
+          "I believe we have unfinished business, {target}."
+        ],
+        "chosen_target": [
+          "You chose me? How interesting.",
+          "I appear to have become the subject of this trial."
+        ],
+        "choose_layer": [
+          "The {garment}, {target}. My decision is final.",
+          "I choose the {garment}, {target}. I hope you understand."
+        ],
+        "choose_pose": [
+          "{target}, I must choose the next challenge.",
+          "The next stage is yours, {target}."
+        ],
+        "pre_layer": [
+          "The {garment}? I shall accept the observation.",
+          "I had not predicted that decision."
+        ],
+        "pre_pose": [
+          "I believe I can remain composed.",
+          "An unfamiliar custom. Still, I agreed to the rules."
+        ],
+        "post_layer": [
+          "The outcome is recorded. Now, what next?",
+          "An illuminating round, if rather surprising."
+        ],
+        "post_pose": [
+          "That concludes this stage.",
+          "I shall need time to analyse that experience."
+        ],
+        "bystander": [
+          "An interesting result, {target}.",
+          "You handled that well, {target}."
+        ],
+        "eliminated": [
+          "I am out. Another lesson in uncertainty.",
+          "My experiment concludes earlier than expected."
+        ],
+        "winner": [
+          "I won? My strategy appears to have worked.",
+          "Victory. A satisfying outcome indeed."
+        ]
+      }
+    },
+    {
+      "asset_name": "Panam",
+      "confidence": 3,
+      "dialogue": {
+        "intro": [
+          "All right, who's ready to make some trouble?",
+          "No rules of the road here, huh? Fine. I'm in."
+        ],
+        "choose_target": [
+          "{target}, you're up. Nothing personal. Mostly.",
+          "My pick is {target}. Let's see what you've got."
+        ],
+        "revenge_target": [
+          "Remember last time, {target}? I sure as hell do.",
+          "{target}, we have unfinished business."
+        ],
+        "chosen_target": [
+          "Me again? Oh, you're asking for trouble.",
+          "You picked me? Better be ready for the consequences."
+        ],
+        "choose_layer": [
+          "{target}, the {garment}. Sorry, not sorry.",
+          "I'm calling the {garment}, {target}. Rules are rules."
+        ],
+        "choose_pose": [
+          "{target}, you've got another challenge coming.",
+          "Your turn again, {target}. Don't look at me like that."
+        ],
+        "pre_layer": [
+          "The {garment}? Damn. All right.",
+          "I liked that {garment}. Just saying."
+        ],
+        "pre_pose": [
+          "Another round? I'll tough it out.",
+          "This is ridiculous. Fine, I'm ready."
+        ],
+        "post_layer": [
+          "There. Happy? Let's move on.",
+          "Fine, one more loss. Still here."
+        ],
+        "post_pose": [
+          "Done. Can we get back to the game now?",
+          "Took that hit, too. Next."
+        ],
+        "bystander": [
+          "Hang in there, {target}.",
+          "Ouch, {target}. That had to hurt."
+        ],
+        "eliminated": [
+          "I'm out. Don't you dare get smug about it.",
+          "Well, shit. You got me. Enjoy it."
+        ],
+        "winner": [
+          "Ha! That's what you get for counting me out.",
+          "Winner. Told you I could handle the heat."
+        ]
+      }
     }
   ],
   "special_pairs": {

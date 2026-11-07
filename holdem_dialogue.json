@@ -4124,6 +4124,120 @@
           "Oh dear. A poor ending to that hand."
         ]
       }
+    },
+    "Isa": {
+      "vulgarity": 1,
+      "swears": [
+        "blimey",
+        "good grief",
+        "oh dear"
+      ],
+      "events": {
+        "deal": [
+          "Opening hand. Every match starts somewhere.",
+          "Two cards. Let us see how they play."
+        ],
+        "flop": [
+          "The flop is down. Interesting new options.",
+          "Three community cards. Plenty to consider."
+        ],
+        "turn": [
+          "One more card. I am judging the odds.",
+          "Fourth card. The pressure builds."
+        ],
+        "river": [
+          "The river. Time for the final verdict.",
+          "Last card. No more second chances."
+        ],
+        "showdown_win": [
+          "Winning hand! That is a fine result.",
+          "I have taken this round. Good game."
+        ],
+        "showdown_safe": [
+          "Safe for now. I shall take it.",
+          "Not last, and still in contention."
+        ],
+        "showdown_lose": [
+          "A loss. I misjudged the play.",
+          "Bottom of the table. Not my finest innings."
+        ]
+      }
+    },
+    "Liara": {
+      "vulgarity": 1,
+      "swears": [
+        "oh dear",
+        "goodness",
+        "by the Goddess"
+      ],
+      "events": {
+        "deal": [
+          "Two cards. A small but promising sample.",
+          "An opening hand. Let us assess the probabilities."
+        ],
+        "flop": [
+          "Three new observations. Interesting.",
+          "The flop expands our possible outcomes."
+        ],
+        "turn": [
+          "Another variable enters the equation.",
+          "The fourth card may change everything."
+        ],
+        "river": [
+          "The final card. Now the evidence is complete.",
+          "The river. Time to test the hypothesis."
+        ],
+        "showdown_win": [
+          "I have won. How satisfying.",
+          "An excellent result for my calculations."
+        ],
+        "showdown_safe": [
+          "Safe for now. An acceptable outcome.",
+          "The data suggests I remain in contention."
+        ],
+        "showdown_lose": [
+          "A loss. Clearly I misjudged the odds.",
+          "Last place? I had hoped for a better outcome."
+        ]
+      }
+    },
+    "Panam": {
+      "vulgarity": 2,
+      "swears": [
+        "damn",
+        "hell",
+        "crap"
+      ],
+      "events": {
+        "deal": [
+          "Two cards. I've started with less than that.",
+          "Deal me in. Let's see what we're working with."
+        ],
+        "flop": [
+          "Three on the table. Time to make a move.",
+          "All right, that's interesting. Maybe very interesting."
+        ],
+        "turn": [
+          "Fourth card. Come on, give me something good.",
+          "That's changed things. Not saying how."
+        ],
+        "river": [
+          "Last card. No more room to hide.",
+          "River's down. Show me what you've got."
+        ],
+        "showdown_win": [
+          "Ha! That's a win I earned.",
+          "Told you not to count me out."
+        ],
+        "showdown_safe": [
+          "Still standing. That's enough for now.",
+          "Safe. I'll take that."
+        ],
+        "showdown_lose": [
+          "Damn. That hand went sideways.",
+          "Lost that one. I won't forget it."
+        ]
+      }
     }
   },
   "final_pose": {

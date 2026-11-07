@@ -5041,6 +5041,156 @@
           "What a bright finish!"
         ]
       }
+    },
+    "Isa": {
+      "vulgarity": 1,
+      "swears": [
+        "blimey",
+        "good grief",
+        "oh dear"
+      ],
+      "events": {
+        "high_unique": [
+          "{total}! That is a fine score.",
+          "Top roll on {total}. I shall take it.",
+          "A high {total}. Excellent timing."
+        ],
+        "high_tie": [
+          "Joint top on {total}. The match is not over.",
+          "A tie at the top? Good contest.",
+          "Both on {total}. Another chance to pull ahead."
+        ],
+        "low_single": [
+          "Bottom on {total}. That is disappointing.",
+          "Lowest roll. I need a better next over.",
+          "A low {total}. I shall own that mistake."
+        ],
+        "low_tie": [
+          "A tie at the bottom. We can both improve.",
+          "Low tie. This needs a replay.",
+          "Another throw to separate us."
+        ],
+        "choose_loser": [
+          "My decision is {target}. Nothing personal.",
+          "{target}, I am afraid it is your turn."
+        ],
+        "choose_removal": [
+          "{target}, my choice is the {garment}.",
+          "It is the {garment}, {target}. The rules are clear."
+        ],
+        "penalty_reaction": [
+          "The {garment}, {chooser}? Understood.",
+          "All right, {chooser}. I shall take the call."
+        ],
+        "eliminated": [
+          "Out of the contest. Time for the analysis.",
+          "That is me eliminated. I will be back."
+        ],
+        "winner": [
+          "I have won! Wonderful finish.",
+          "A winning result — very satisfying."
+        ]
+      }
+    },
+    "Liara": {
+      "vulgarity": 1,
+      "swears": [
+        "oh dear",
+        "goodness",
+        "by the Goddess"
+      ],
+      "events": {
+        "high_unique": [
+          "{total}! A promising statistical result.",
+          "Top throw on {total}. Remarkable.",
+          "A high roll of {total}. My calculations approve."
+        ],
+        "high_tie": [
+          "We share the lead at {total}. Curious.",
+          "A tie at the top. Another trial will clarify matters.",
+          "Equal results on {total}. We should roll again."
+        ],
+        "low_single": [
+          "Only {total}? The sample was unkind.",
+          "Lowest throw. Perhaps the dice dislike me.",
+          "A low {total}. I shall record it without enthusiasm."
+        ],
+        "low_tie": [
+          "We are tied for last. How unfortunate.",
+          "A low tie; I suggest another experiment.",
+          "One more roll should settle our dispute."
+        ],
+        "choose_loser": [
+          "I have selected {target}. This is strictly procedural.",
+          "My choice is {target}. Nothing personal."
+        ],
+        "choose_removal": [
+          "{target}, I choose the {garment}.",
+          "The {garment}, {target}. That is my considered decision."
+        ],
+        "penalty_reaction": [
+          "The {garment}, {chooser}? I see.",
+          "Understood, {chooser}. I shall adjust my expectations."
+        ],
+        "eliminated": [
+          "The experiment is over for me.",
+          "Eliminated. I shall return with an improved strategy."
+        ],
+        "winner": [
+          "Success! That was unexpectedly enjoyable.",
+          "A victory! I shall remember this data point."
+        ]
+      }
+    },
+    "Panam": {
+      "vulgarity": 2,
+      "swears": [
+        "damn",
+        "hell",
+        "crap"
+      ],
+      "events": {
+        "high_unique": [
+          "{total}! Ha, that's how you roll.",
+          "Top with {total}. Not bad, huh?",
+          "Beat that: {total}."
+        ],
+        "high_tie": [
+          "Tied at {total}? Come on, we can settle this.",
+          "A tie for first? Run it back.",
+          "{total} each. Fine, rematch."
+        ],
+        "low_single": [
+          "Only {total}? You've got to be kidding.",
+          "Lowest with {total}. Damn it.",
+          "{total}. Yeah, that's not my best work."
+        ],
+        "low_tie": [
+          "Tied for last? Oh, hell no.",
+          "We're both down here? Roll again.",
+          "Not staying stuck at the bottom. Again."
+        ],
+        "choose_loser": [
+          "I'm picking {target}. Tough luck.",
+          "{target}, you're up. Don't hate me."
+        ],
+        "choose_removal": [
+          "{target}, I'm calling the {garment}.",
+          "The {garment}, {target}. Let's move this along."
+        ],
+        "penalty_reaction": [
+          "The {garment}, {chooser}? Seriously?",
+          "All right, {chooser}. I'll remember that."
+        ],
+        "eliminated": [
+          "Out? Damn. You haven't heard the last of me.",
+          "That's me done. For now."
+        ],
+        "winner": [
+          "Ha! Still got it.",
+          "Winner! Guess the luck was riding shotgun."
+        ]
+      }
     }
   },
   "final_pose": {
